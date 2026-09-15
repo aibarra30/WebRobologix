@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast & Artículos | Centro de Recursos Técnicos e Ingeniería | Robologix Automation</title>
+    <meta name="description"
+        content="Explora el Centro de Recursos Técnicos de Robologix Automation: Cero Paros Podcast (episodios en audio/video con investigaciones descargables) y Artículos Técnicos de Ingeniería (guías de PLC, robótica, refaccionamiento y normatividad).">
+    <meta name="keywords"
+        content="podcast automatizacion industrial, articulos plc saltillo, cero paros podcast, guias tecnicas robotica saltillo, capacitacion plc ramos arizpe, robologix automation">
+    <meta name="author" content="Robologix Automation">
+    <link rel="canonical" href="https://rbl-automation.com/podcast-y-articulos.html" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rbl-automation.com/podcast-y-articulos.html">
+    <meta property="og:title" content="Podcast & Artículos | Centro de Recursos Técnicos | Robologix Automation">
+    <meta property="og:description" content="Selecciona tu contenido de preferencia: Episodios de Podcast 'Cero Paros' o Artículos Técnicos de Ingeniería de Automatización y Robótica.">
+    <meta property="og:image" content="https://rbl-automation.com/podcast/Portada_Podcast_Cero_Paros.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rbl-automation.com/podcast-y-articulos.html">
+    <meta name="twitter:title" content="Podcast & Artículos | Robologix Automation">
+    <meta name="twitter:description" content="Accede a nuestro podcast industrial Cero Paros y a nuestra biblioteca de artículos de ingeniería.">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Podcast & Artículos - Centro de Recursos Técnicos Robologix",
+      "description": "Hub principal de contenidos de ingeniería industrial, episodios del podcast Cero Paros y artículos técnicos de programación de PLC y robótica.",
+      "url": "https://rbl-automation.com/podcast-y-articulos.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation S.A. de C.V.",
+        "url": "https://rbl-automation.com/"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .hub-hero {
+            padding: 130px 5% 50px 5%;
+            background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #0a0a0a 100%);
+            text-align: center;
+            border-bottom: 2px solid rgba(0, 243, 255, 0.2);
+            position: relative;
+        }
+
+        .hub-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            padding: 6px 18px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .hub-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.6rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .hub-hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 850px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+        }
+
+        .hub-selection-wrapper {
+            padding: 4rem 5%;
+            background-color: var(--bg-dark);
+        }
+
+        .hub-split-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hub-card {
+            background: rgba(18, 18, 18, 0.85);
+            border: 1px solid #2a2a2a;
+            border-radius: 14px;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hub-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .hub-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 35px rgba(0, 243, 255, 0.2);
+        }
+
+        .hub-card-podcast {
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .hub-card-podcast:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 15px 35px rgba(255, 0, 85, 0.25);
+        }
+
+        .hub-card-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .hub-card-icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-podcast {
+            background: rgba(255, 0, 85, 0.15);
+            color: var(--secondary-color);
+            border: 1px solid rgba(255, 0, 85, 0.4);
+        }
+
+        .icon-articles {
+            background: rgba(0, 243, 255, 0.15);
+            color: var(--primary-color);
+            border: 1px solid rgba(0, 243, 255, 0.4);
+        }
+
+        .hub-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .hub-card-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.8rem;
+        }
+
+        .hub-card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+
+        .hub-card-features li {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hub-card-features li i {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .hub-card-podcast .hub-card-features li i {
+            color: var(--secondary-color);
+        }
+
+        .hub-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .hub-btn-podcast {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #b3003b 100%);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+        }
+
+        .hub-btn-podcast:hover {
+            background: linear-gradient(135deg, #ff1a66 0%, var(--secondary-color) 100%);
+            box-shadow: 0 6px 20px rgba(255, 0, 85, 0.6);
+            transform: scale(1.02);
+        }
+
+        .hub-btn-articles {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0099b8 100%);
+            color: #050811;
+            box-shadow: 0 4px 15px rgba(0, 243, 255, 0.4);
+        }
+
+        .hub-btn-articles:hover {
+            background: linear-gradient(135deg, #33f6ff 0%, var(--primary-color) 100%);
+            box-shadow: 0 6px 20px rgba(0, 243, 255, 0.6);
+            transform: scale(1.02);
+        }
+
+        .preview-section {
+            padding: 4rem 5%;
+            background-color: var(--bg-card);
+            border-top: 1px solid #222;
+        }
+
+        .preview-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .preview-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .preview-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mini-card {
+            background: var(--bg-dark);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s ease;
+        }
+
+        .mini-card:hover {
+            border-color: var(--primary-color);
+        }
+
+        .mini-card-tag {
+            font-size: 0.75rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .mini-card-title {
+            color: #fff;
+            font-size: 1.05rem;
+            font-family: var(--font-heading);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .mini-card-link {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: var(--font-heading);
+        }
+
+        .mini-card-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hub-hero h1 {
+                font-size: 2rem;
+            }
+            .hub-hero p {
+                font-size: 1rem;
+            }
+            .hub-card-title {
+                font-size: 1.35rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Inicio</a></li>
+                <li><a href="index.html#services">Servicios</a></li>
+                <li><a href="programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                <li><a href="podcast-y-articulos.html" class="active-nav">Podcast &amp; Artículos</a></li>
+                <li><a href="index.html#about">Nosotros</a></li>
+                <li><a href="index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hub-hero">
+            <span class="hub-badge"><i class="fas fa-cubes"></i> Centro de Conocimiento e Ingeniería</span>
+            <h1>Podcast &amp; Artículos Técnicos</h1>
+            <p>
+                Accede a nuestro contenido especializado sobre automatización industrial, programación de PLC, robótica, normatividad STPS y análisis de nearshoring en Saltillo, Ramos Arizpe y Monterrey. Selecciona la opción de tu preferencia a continuación:
+            </p>
+        </section>
+
+        <!-- Main Selection Section -->
+        <section class="hub-selection-wrapper">
+            <div class="hub-split-grid">
+                
+                <!-- Card 1: Podcast -->
+                <div class="hub-card hub-card-podcast">
+                    <div>
+                        <div class="hub-card-header">
+                            <div class="hub-card-icon-box icon-podcast">
+                                <i class="fas fa-podcast"></i>
+                            </div>
+                            <span style="color: var(--secondary-color); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Audio &amp; Video Podcast</span>
+                            <h2 class="hub-card-title">Podcast "Cero Paros"</h2>
+                        </div>
+                        <p class="hub-card-desc">
+                            Episodios oficiales conducidos por el <strong>Mtro. Aaron Ibarra Cepeda</strong> orientados a resolver paros no programados, evaluar la obsolescencia de PLCs, entender normativas STPS (DC-3) y analizar carreras técnicas.
+                        </p>
+                        <ul class="hub-card-features">
+                            <li><i class="fas fa-check-circle"></i> 17 Episodios en Audio y Video</li>
+                            <li><i class="fas fa-check-circle"></i> Disponibles en Spotify y YouTube</li>
+                            <li><i class="fas fa-check-circle"></i> Investigaciones y Documentos PDF Descargables</li>
+                            <li><i class="fas fa-check-circle"></i> Casos Reales de la Industria en Coahuila</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="podcast/index.html" class="hub-btn hub-btn-podcast">
+                            Explorar Podcasts <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Artículos -->
+                <div class="hub-card">
+                    <div>
+                        <div class="hub-card-header">
+                            <div class="hub-card-icon-box icon-articles">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <span style="color: var(--primary-color); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Guías Técnicas &amp; Ingeniería</span>
+                            <h2 class="hub-card-title">Artículos de Ingeniería</h2>
+                        </div>
+                        <p class="hub-card-desc">
+                            Biblioteca de documentación técnica escrita sobre programación de PLC (Allen-Bradley Studio 5000, Siemens TIA Portal), montaje de maquinaria, refaccionamiento industrial y comparativas tecnológicas.
+                        </p>
+                        <ul class="hub-card-features">
+                            <li><i class="fas fa-check-circle"></i> Guías de Programación de PLC y HMI</li>
+                            <li><i class="fas fa-check-circle"></i> Estrategias de Obsolescencia y Migración SLC 500</li>
+                            <li><i class="fas fa-check-circle"></i> Manuales de Rigging e Instalación de Maquinaria</li>
+                            <li><i class="fas fa-check-circle"></i> Suministro de Sensores y Refacciones Industriales</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="articulos/index.html" class="hub-btn hub-btn-articles">
+                            Explorar Artículos <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Preview Section -->
+        <section class="preview-section">
+            <div class="preview-header">
+                <h2>¿Por dónde empezar?</h2>
+                <p>Explora algunas de nuestras entregas más populares en audio, video y formato escrito:</p>
+            </div>
+            <div class="preview-grid">
+                
+                <!-- Mini Card 1 -->
+                <div class="mini-card">
+                    <div>
+                        <span class="mini-card-tag" style="color: var(--secondary-color);"><i class="fas fa-podcast"></i> Podcast Ep. 17</span>
+                        <h3 class="mini-card-title">El PLC "Huérfano" y Paros de Línea</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.5;">Cómo evitar paros millonarios cuando el programador original ya no está en la empresa.</p>
+                    </div>
+                    <a href="podcast/investigacion-plc-huerfano-respaldos-codigo-2026.html" class="mini-card-link" style="color: var(--secondary-color);">Escuchar / Ver Episodio <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Mini Card 2 -->
+                <div class="mini-card">
+                    <div>
+                        <span class="mini-card-tag"><i class="fas fa-file-alt"></i> Guía Técnica</span>
+                        <h3 class="mini-card-title">Suministro de Sensores y Refacciones</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.5;">Importación en menos de una semana de sensores Cognex, Keyence, Sick y refacciones Siemens/Rockwell.</p>
+                    </div>
+                    <a href="articulos/refaccionamiento-y-mantenimiento-industrial-soporte-maquinaria-saltillo.html" class="mini-card-link">Leer Artículo <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Mini Card 3 -->
+                <div class="mini-card">
+                    <div>
+                        <span class="mini-card-tag" style="color: var(--secondary-color);"><i class="fas fa-podcast"></i> Podcast Ep. 3</span>
+                        <h3 class="mini-card-title">¿Cómo Evitar Multas de la STPS?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.5;">Importancia del adiestramiento técnico certificado con DC-3 en Saltillo y Ramos Arizpe.</p>
+                    </div>
+                    <a href="podcast/investigacion-dc3-stps-empresas.html" class="mini-card-link" style="color: var(--secondary-color);">Escuchar / Ver Episodio <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Mini Card 4 -->
+                <div class="mini-card">
+                    <div>
+                        <span class="mini-card-tag"><i class="fas fa-file-alt"></i> Manual de Ingeniería</span>
+                        <h3 class="mini-card-title">Instalación y Rigging de Maquinaria</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.5;">Montaje electromecánico, alineación láser y puesta en marcha de celdas de automatización.</p>
+                    </div>
+                    <a href="articulos/instalacion-de-maquinaria-industrial-guia-montaje-y-puesta-en-marcha.html" class="mini-card-link">Leer Artículo <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ROBOLOGIX <span class="highlight">AUTOMATION</span></h3>
+                <p>Empresa integradora de automatización industrial, programación de PLC y celdas robóticas en Saltillo, Ramos Arizpe y Monterrey.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="index.html#services">Servicios</a></li>
+                    <li><a href="programacion-plc-saltillo.html">Programación PLC</a></li>
+                    <li><a href="integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                    <li><a href="sensores-y-refacciones-industriales-saltillo.html">Sensores &amp; Refacciones</a></li>
+                    <li><a href="podcast-y-articulos.html">Podcast &amp; Artículos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contenido</h3>
+                <ul>
+                    <li><a href="podcast/index.html">Catálogo de Podcasts (17 Episodios)</a></li>
+                    <li><a href="articulos/index.html">Biblioteca de Artículos Técnicos</a></li>
+                    <li><a href="cursos-de-plc-y-robotica-en-saltillo.html">Cursos de PLC y Robótica DC-3</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto Directo</h3>
+                <p><i class="fas fa-phone"></i> +52 844 455 1869</p>
+                <p><i class="fas fa-envelope"></i> ventas@rbl-automation.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Saltillo, Coahuila, México</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Robologix Automation S.A. de C.V. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

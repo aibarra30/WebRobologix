@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rbl-automation.com/sitemap.xml
