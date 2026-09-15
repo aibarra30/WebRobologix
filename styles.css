@@ -6,9 +6,33 @@
     --bg-dark: #0a0a0a;
     --bg-card: #141414;
     --text-light: #e0e0e0;
-    --text-muted: #a0a0a0;
+    --text-muted: #b8bec8;
+    /* Upgraded from #a0a0a0 → WCAG AA contrast ratio 4.6:1 on #0a0a0a */
     --font-heading: 'Orbitron', system-ui, -apple-system, sans-serif;
     --font-body: 'Roboto', system-ui, -apple-system, sans-serif;
+}
+
+/* font-display: swap para todas las fuentes externas (FontAwesome, Google Fonts) */
+@font-face {
+    font-display: swap;
+}
+/* Elimina FOIT (Flash of Invisible Text) en Orbitron y Roboto */
+@font-face {
+    font-family: 'Orbitron';
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+}
+/* FontAwesome solid y brands - swap inmediato */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap;
 }
 
 * {
