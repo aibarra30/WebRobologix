@@ -95,13 +95,19 @@ header {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: url('assets/hero-bg.png') no-repeat center center/cover;
+    background: url('assets/hero-bg-mobile.webp') no-repeat center center/cover;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 110px 2rem 4rem 2rem;
+}
+
+@media (min-width: 769px) {
+    .hero {
+        background-image: url('assets/hero-bg.webp');
+    }
 }
 
 .hero-overlay {

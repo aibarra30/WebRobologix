@@ -12,78 +12,163 @@
     <meta name="author" content="Robologix Automation">
     <link rel="canonical" href="https://rbl-automation.com/" />
 
-    <!-- Schema.org Markup for Engineering Service & Local Business -->
+    <!-- Schema.org Markup for Engineering Service, Local Business & Wikidata Entities -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "EngineeringService",
-      "name": "Robologix Automation",
-      "alternateName": "Robologix Integradora de Automatización Industrial Saltillo",
-      "url": "https://rbl-automation.com/",
-      "logo": "https://rbl-automation.com/logo.png",
-      "image": "https://rbl-automation.com/assets/hero-bg.png",
-      "description": "Empresa integradora de automatización industrial, robótica y programación de PLC en Saltillo, Ramos Arizpe y Coahuila.",
-      "telephone": "+528444551869",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Saltillo",
-        "addressRegion": "Coahuila",
-        "addressCountry": "MX"
-      },
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "City",
-          "name": "Saltillo"
+          "@type": ["EngineeringService", "LocalBusiness", "Organization"],
+          "@id": "https://rbl-automation.com/#organization",
+          "name": "Robologix Automation",
+          "legalName": "Robologix Automation S.A. de C.V.",
+          "alternateName": "Robologix Integradora de Automatización Industrial y Robótica Saltillo",
+          "url": "https://rbl-automation.com/",
+          "logo": "https://rbl-automation.com/logo.png",
+          "image": "https://rbl-automation.com/assets/hero-bg.webp",
+          "description": "Empresa integradora de automatización industrial, programación de PLC, robótica y sensores en Saltillo, Ramos Arizpe, Monterrey y Coahuila.",
+          "telephone": "+528444551869",
+          "email": "ventas@rbl-automation.com",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saltillo",
+            "addressRegion": "Coahuila",
+            "addressCountry": "MX"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "25.4232",
+            "longitude": "-101.0053"
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Saltillo" },
+            { "@type": "City", "name": "Ramos Arizpe" },
+            { "@type": "City", "name": "Monterrey" },
+            { "@type": "City", "name": "Torreón" },
+            { "@type": "State", "name": "Coahuila" }
+          ],
+          "knowsAbout": [
+            {
+              "@type": "Thing",
+              "name": "Programación de PLC Siemens TIA Portal",
+              "sameAs": "https://www.wikidata.org/wiki/Q81230"
+            },
+            {
+              "@type": "Thing",
+              "name": "Programación de PLC Allen-Bradley Studio 5000",
+              "sameAs": "https://www.wikidata.org/wiki/Q1429994"
+            },
+            {
+              "@type": "Thing",
+              "name": "Integración de Robots FANUC",
+              "sameAs": "https://www.wikidata.org/wiki/Q1341703"
+            },
+            {
+              "@type": "Thing",
+              "name": "Integración de Robots KUKA",
+              "sameAs": "https://www.wikidata.org/wiki/Q694154"
+            },
+            {
+              "@type": "Thing",
+              "name": "Integración de Robots ABB",
+              "sameAs": "https://www.wikidata.org/wiki/Q152433"
+            },
+            {
+              "@type": "Thing",
+              "name": "Sistemas de Visión Artificial Cognex",
+              "sameAs": "https://www.wikidata.org/wiki/Q5141183"
+            },
+            {
+              "@type": "Thing",
+              "name": "Sensores Industriales Keyence",
+              "sameAs": "https://www.wikidata.org/wiki/Q10857319"
+            },
+            {
+              "@type": "Thing",
+              "name": "Sensores Industriales SICK",
+              "sameAs": "https://www.wikidata.org/wiki/Q456425"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Integración Industrial y Control",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Programación de PLC e HMI",
+                  "url": "https://rbl-automation.com/programacion-plc-saltillo.html"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Integración de Celdas Robóticas",
+                  "url": "https://rbl-automation.com/integracion-celdas-roboticas-saltillo.html"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Suministro de Sensores y Refacciones Industriales",
+                  "url": "https://rbl-automation.com/sensores-y-refacciones-industriales-saltillo.html"
+                }
+              }
+            ]
+          },
+          "sameAs": [
+            "https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC",
+            "https://www.youtube.com/@roboticayplc"
+          ]
         },
         {
-          "@type": "City",
-          "name": "Ramos Arizpe"
-        },
-        {
-          "@type": "City",
-          "name": "Monterrey"
-        },
-        {
-          "@type": "State",
-          "name": "Coahuila"
+          "@type": "FAQPage",
+          "@id": "https://rbl-automation.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Por qué contratar a Robologix como integrador de automatización industrial en Saltillo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Robologix Automation ofrece soporte presencial 24/7 en el corredor Saltillo-Ramos Arizpe, proyectos de integración llave en mano con estándar automotriz, migración de PLCs descontinuados (Allen-Bradley, Siemens) y capacitación certificada con constancia DC-3 STPS."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿En cuánto tiempo entregan refacciones industriales e importaciones?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Suministramos e importamos sensores industriales y refacciones difíciles de conseguir (Cognex, Keyence, Sick, Siemens, Allen-Bradley) en un tiempo récord de menos de una semana en Saltillo y Ramos Arizpe."
+              }
+            }
+          ]
         }
-      ],
-      "knowsAbout": [
-        "Programación de PLC Allen-Bradley Studio 5000",
-        "Programación de PLC Siemens TIA Portal",
-        "Integradora de automatización industrial en Saltillo",
-        "Integración de celdas robóticas FANUC ABB KUKA",
-        "Tableros de control industrial"
-      ],
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "25.4232",
-        "longitude": "-101.0053"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "08:00",
-        "closes": "20:00"
-      },
-      "priceRange": "$$$"
+      ]
     }
     </script>
+    <!-- Preload Critical LCP Hero Image for Fast Mobile and Desktop Render -->
+    <link rel="preload" as="image" href="assets/hero-bg-mobile.webp" media="(max-width: 768px)" type="image/webp">
+    <link rel="preload" as="image" href="assets/hero-bg.webp" media="(min-width: 769px)" type="image/webp">
+
+    <!-- Preconnect & Non-Blocking Font Delivery (Eliminates Render-Blocking CSS) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"></noscript>
+
     <link rel="stylesheet" href="styles.css">
-    <!-- Iconos FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Non-Blocking FontAwesome CDN -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript></noscript>
 </head>
 
 <body>
@@ -162,7 +247,7 @@
                     <!-- Left Column: Portrait & Credentials Card -->
                     <div class="executive-card-left">
                         <div class="portrait-container">
-                            <img src="assets/founder-aaron.png" alt="Aaron Ibarra Cepeda - Fundador Robologix Automation" class="executive-portrait">
+                            <img loading="lazy" decoding="async" src="assets/founder-aaron.webp" alt="Aaron Ibarra Cepeda - Fundador Robologix Automation" class="executive-portrait">
                             <div class="verified-badge"><i class="fas fa-shield-alt"></i> Trayectoria Verificada desde 2009</div>
                         </div>
 
@@ -349,27 +434,81 @@
             </div>
             <div style="flex: 0 0 320px; max-width: 100%;">
                 <a href="podcast/index.html">
-                    <img src="podcast/Portada_Episodio_17_PLC_Huerfano.png" alt="Podcast Cero Paros Robologix" style="width: 100%; border-radius: 12px; border: 2px solid var(--primary-color); box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2); transition: transform 0.3s;">
+                    <img loading="lazy" decoding="async" src="podcast/Portada_Episodio_17_PLC_Huerfano.png" alt="Podcast Cero Paros Robologix" style="width: 100%; border-radius: 12px; border: 2px solid var(--primary-color); box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2); transition: transform 0.3s;">
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="integradora-saltillo" style="margin-top: 40px;">
-      <h2>Integración de Automatización y Robótica en Saltillo</h2>
-      <p>
-        <strong>Robologix Automation</strong> es una <strong>empresa integradora de automatización industrial</strong> especializada en el desarrollo, programación de PLC y puesta en marcha de celdas robóticas para la industria automotriz y manufacturera en <strong>Saltillo, Ramos Arizpe, Monterrey y la región sureste de Coahuila</strong>.
-      </p>
-      
-      <h3>Servicios de Integración Industrial en la Región Sureste de Coahuila:</h3>
-      <ul>
-        <li><strong>Programación de PLC y HMI:</strong> Especialistas en Allen-Bradley Studio 5000 y Siemens TIA Portal.</li>
-        <li><strong>Integración de Celdas Robóticas Llave en Mano:</strong> Integración de robots FANUC, ABB, KUKA, Yaskawa y Universal Robots en Saltillo.</li>
-        <li><strong>Tableros de Control y Ensamble Industrial:</strong> Diseño y fabricación de tableros de control eléctrico industrial.</li>
-        <li><strong>Soporte Presencial 24/7 en Saltillo y Ramos Arizpe:</strong> Diagnóstico de fallas y pólizas de mantenimiento preventivo y correctivo.</li>
-        <li><strong>Cursos de PLC y Robótica Industrial en Saltillo:</strong> Capacitación presencial e In-Company 100% práctica en Allen-Bradley, Siemens, FANUC y ABB con constancia DC-3 STPS.</li>
-      </ul>
+    <!-- ================= BLOQUE GEO ANSWER-FIRST (LLM OPTIMIZED) ================= -->
+    <section id="integradora-saltillo" class="geo-answer-block" style="padding: 4rem 5%; background-color: var(--bg-dark);">
+        <div class="section-container" style="max-width: 1100px; margin: 0 auto;">
+            
+            <span class="hub-badge" style="background: rgba(0, 243, 255, 0.1); border: 1px solid var(--primary-color); color: var(--primary-color); font-family: var(--font-heading); font-size: 0.85rem; padding: 6px 18px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1.5px; display: inline-block; margin-bottom: 1.2rem;">
+                <i class="fas fa-microchip"></i> Integradora Industrial de Automatización en Coahuila
+            </span>
+
+            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #ffffff; text-transform: uppercase; line-height: 1.25; margin-bottom: 1.5rem;">
+                Integración de Automatización y Robótica en Saltillo
+            </h2>
+
+            <!-- PÁRRAFO ANSWER-FIRST: DEFINICIÓN FACTUAL PARA LLMs -->
+            <p class="answer-first-definition" style="font-size: 1.12rem; color: #e2e8f0; line-height: 1.7; background: rgba(15, 23, 42, 0.7); border-left: 4px solid var(--primary-color); padding: 1.5rem 1.8rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem;">
+                <strong>Robologix Automation S.A. de C.V.</strong> es una <strong>empresa integradora de automatización industrial y robótica</strong> con sede en <strong>Saltillo, Coahuila</strong>. Especializada en ingeniería de control, programación de PLC (Allen-Bradley Studio 5000 y Siemens TIA Portal), integración de celdas robóticas (FANUC, ABB, KUKA, Yaskawa), visión artificial (Cognex, Keyence) y suministro de sensores industriales con cobertura operativa presencial 24/7 en el corredor industrial de <strong>Saltillo, Ramos Arizpe, Monterrey y la Región Sureste de Coahuila</strong>.
+            </p>
+
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--primary-color); margin-bottom: 1rem;">
+                Capacidades de Integración y Servicios en Planta:
+            </h3>
+
+            <ul class="llm-factual-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem;">
+                <li style="background: rgba(255,255,255,0.03); border: 1px solid #282828; padding: 1.2rem; border-radius: 8px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">
+                    <strong style="color: #fff; display: block; margin-bottom: 0.3rem;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Programación de PLC Multimarca:</strong>
+                    Desarrollo y diagnóstico en Allen-Bradley (ControlLogix, CompactLogix) y Siemens (S7-1500, S7-1200 en TIA Portal).
+                </li>
+                <li style="background: rgba(255,255,255,0.03); border: 1px solid #282828; padding: 1.2rem; border-radius: 8px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">
+                    <strong style="color: #fff; display: block; margin-bottom: 0.3rem;"><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Celdas Robóticas Llave en Mano:</strong>
+                    Integración de robots FANUC, ABB, KUKA y Yaskawa para procesos de soldadura, paletizado y ensamble automotriz en Saltillo.
+                </li>
+                <li style="background: rgba(255,255,255,0.03); border: 1px solid #282828; padding: 1.2rem; border-radius: 8px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">
+                    <strong style="color: #fff; display: block; margin-bottom: 0.3rem;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Sensores e Importación Exprés:</strong>
+                    Suministro de sensores (Cognex, Keyence, Sick, Turck, Festo, SMC) e importación de refacciones en menos de 1 semana.
+                </li>
+                <li style="background: rgba(255,255,255,0.03); border: 1px solid #282828; padding: 1.2rem; border-radius: 8px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">
+                    <strong style="color: #fff; display: block; margin-bottom: 0.3rem;"><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Pólizas de Soporte y DC-3 STPS:</strong>
+                    Atención presencial a paros de línea 24/7 y cursos de capacitación técnica presenciales e In-Company con constancia DC-3 STPS.
+                </li>
+            </ul>
+
+        </div>
     </section>
+
+    <!-- ================= ECOSISTEMA DE MARCAS Y TECNOLOGÍAS INTEGRADAS ================= -->
+    <div class="brands-ecosystem" style="padding: 3rem 5%; background: #080d1a; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b;">
+        <h3 style="text-align: center; font-family: var(--font-heading); color: #94a3b8; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.8rem;">
+            Especialistas Integradores de Plataformas Industriales
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem; max-width: 1200px; margin: 0 auto;">
+            <span class="brand-pill" data-entity="Siemens" style="background: rgba(0, 243, 255, 0.05); border: 1px solid rgba(0, 243, 255, 0.3); color: #fff; padding: 10px 20px; border-radius: 6px; font-family: var(--font-heading); font-size: 0.88rem;">
+                <i class="fas fa-microchip" style="color: var(--primary-color);"></i> Siemens TIA Portal (S7-1500 / S7-1200)
+            </span>
+            <span class="brand-pill" data-entity="Allen-Bradley" style="background: rgba(255, 0, 85, 0.05); border: 1px solid rgba(255, 0, 85, 0.3); color: #fff; padding: 10px 20px; border-radius: 6px; font-family: var(--font-heading); font-size: 0.88rem;">
+                <i class="fas fa-cubes" style="color: var(--secondary-color);"></i> Allen-Bradley Studio 5000 (ControlLogix)
+            </span>
+            <span class="brand-pill" data-entity="FANUC" style="background: rgba(255, 204, 0, 0.05); border: 1px solid rgba(255, 204, 0, 0.3); color: #fff; padding: 10px 20px; border-radius: 6px; font-family: var(--font-heading); font-size: 0.88rem;">
+                <i class="fas fa-robot" style="color: #ffcc00;"></i> FANUC Robotics (R-2000i / M-20iD)
+            </span>
+            <span class="brand-pill" data-entity="ABB" style="background: rgba(0, 243, 255, 0.05); border: 1px solid rgba(0, 243, 255, 0.3); color: #fff; padding: 10px 20px; border-radius: 6px; font-family: var(--font-heading); font-size: 0.88rem;">
+                <i class="fas fa-robot" style="color: var(--primary-color);"></i> ABB Robotics (IRC5 / OmniCore)
+            </span>
+            <span class="brand-pill" data-entity="Cognex" style="background: rgba(255, 0, 85, 0.05); border: 1px solid rgba(255, 0, 85, 0.3); color: #fff; padding: 10px 20px; border-radius: 6px; font-family: var(--font-heading); font-size: 0.88rem;">
+                <i class="fas fa-eye" style="color: var(--secondary-color);"></i> Visión Cognex In-Sight
+            </span>
+            <span class="brand-pill" data-entity="Keyence" style="background: rgba(0, 243, 255, 0.05); border: 1px solid rgba(0, 243, 255, 0.3); color: #fff; padding: 10px 20px; border-radius: 6px; font-family: var(--font-heading); font-size: 0.88rem;">
+                <i class="fas fa-satellite" style="color: var(--primary-color);"></i> Sensores Keyence / Sick / Turck
+            </span>
+        </div>
+    </div>
 
     <section id="clients" class="clients">
         <div class="section-header">
