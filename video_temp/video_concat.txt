@@ -1,0 +1,17 @@
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_1.png'
+duration 12.94
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_2.png'
+duration 11.879999999999999
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_3.png'
+duration 12.12
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_4.png'
+duration 14.16
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_5.png'
+duration 13.37
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_6.png'
+duration 11.06
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_7.png'
+duration 12.91
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_8.png'
+duration 14.69
+file 'C:/Users/PC3/Documents/Antigravity/video_temp/slide_8.png'
