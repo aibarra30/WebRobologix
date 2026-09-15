@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Técnica: IMCO Compara Carreras 2026 - Electrónica, Automatización y Mecatrónica | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 950px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #1e3a8a 50%, #0f172a 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-cyan);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.15);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-cyan);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.orange { border-left-color: var(--accent-orange); }
+        .section-header.purple { border-left-color: var(--accent-purple); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.orange { background: #fff7ed; border-color: #ffedd5; }
+        .highlight-box.purple { background: #f5f3ff; border-color: #ddd6fe; }
+        .highlight-box.green { background: #f0fdf4; border-color: #dcfce7; }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.blue { color: #0284c7; }
+        .box-title.orange { color: #ea580c; }
+        .box-title.purple { color: #6d28d9; }
+        .box-title.green { color: #15803d; }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .tech-table tr:nth-child(even) { background: #f8fafc; }
+
+        .badge-cyan { background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-orange { background: #ffedd5; color: #c2410c; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-purple { background: #f3e8ff; color: #6b21a8; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: #00f3ff;
+            color: #0f172a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN IMCO 2026 -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-graduation-cap"></i> INVESTIGACIÓN TÉCNICA • PODCAST EPISODIO 10</span>
+            <h1 class="cover-title">IMCO COMPARA CARRERAS 2026: ELECTRÓNICA, AUTOMATIZACIÓN Y MECATRÓNICA EN EL TOP 10 DE MÉXICO</h1>
+            <p class="cover-subtitle">Análisis de la Brecha entre la Oferta Académica y la Realidad Industrial: Datos del Instituto Mexicano para la Competitividad (IMCO) y Roadmap de Capacitación STPS DC-3.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Formación e Ingeniería Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-podcast"></i> Podcast Asociado:</strong><br>
+                    Cero Paros: Automatización Industrial (Ep. 10)
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-chart-line"></i> Fuente Estadística:</strong><br>
+                    IMCO Compara Carreras 2026 (imco.org.mx)
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO Y ANÁLISIS DE MERCADO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: DATOS CLAVE DEL IMCO COMPARA CARRERAS 2026 -->
+            <div class="section-header">
+                <h2>1. DATOS CLAVE DEL REPORTE IMCO COMPARA CARRERAS 2026</h2>
+            </div>
+
+            <p>De acuerdo con el informe anual del **Instituto Mexicano para la Competitividad (IMCO)** en su edición <em>Compara Carreras 2026</em>, el grupo disciplinar de **"Electrónica, Automatización y Aplicaciones de la Mecánica-Eléctrica"** se consolida como un pilar fundamental para el desarrollo económico del país:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>INDICADOR CLAVE IMCO (2026)</th>
+                        <th>DATO ESTADÍSTICO NACIONAL</th>
+                        <th>RELEVANCIA EN EL SECTOR INDUSTRIAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Posición en el Ranking Nacional</strong></td>
+                        <td><span class="badge-cyan">6° LUGAR EN EL TOP 10 NACIONAL</span></td>
+                        <td>Se ubica dentro de las carreras con mayor competitividad y formalidad en México.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Matrícula Nacional Activa</strong></td>
+                        <td><strong>162,734 estudiantes</strong> matriculados.</td>
+                        <td>Alta preferencia entre jóvenes, pero dispersa en enfoques teóricos diversos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Demanda por Relocalización (Nearshoring)</strong></td>
+                        <td><span class="badge-orange">ALTA DEMANDA EN EL NORTE Y BAJÍO</span></td>
+                        <td>Crecimiento acelerado en parques industriales de Coahuila, NL y Querétaro.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Índice de Formalidad Laboral</strong></td>
+                        <td>Superior al 88% nacional.</td>
+                        <td>Acceso directo a contrataciones directas en plantas automotrices y Tier-1.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 2: BRECHA ENTRE LA ENSEÑANZA ACADÉMICA Y EL PISO DE PLANTA -->
+            <div class="section-header orange">
+                <h2>2. LA BRECHA DE HABILIDADES: LO QUE ENSEÑA LA UNIVERSIDAD VS PISO DE PLANTA</h2>
+            </div>
+
+            <p>A pesar de la alta valoración que el IMCO otorga a las carreras de automatización y mecatrónica, existe un desencuentro técnico entre los planes de estudio universitarios y las exigencias de operación de una planta industrial en 2026:</p>
+
+            <div class="highlight-box orange">
+                <div class="box-title orange"><i class="fas fa-exclamation-triangle"></i> ANÁLISIS DE LA BRECHA TÉCNICA EN MÉXICO</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Enfoque Académico Tradicional:</strong> Uso intensivo de microcontroladores educativos (Arduino, PIC, ESP32) y simulaciones teóricas en proteus/matlab sin aplicación industrial real.</li>
+                    <li style="margin-bottom: 8px;"><strong>Exigencia Real en Piso de Planta:</strong> Programación bajo norma IEC 61131-3 en plataformas robustas como Allen-Bradley Studio 5000 (ControlLogix/CompactLogix) y Siemens TIA Portal (S7-1500).</li>
+                    <li style="margin-bottom: 8px;"><strong>Redes Industriales y Seguridad:</strong> La industria exige dominio de EtherNet/IP CIP, PROFINET IRT, redes PROFIsafe y protocolos de seguridad física (NOM-004-STPS / ISO 13849-1).</li>
+                    <li style="margin-bottom: 0;"><strong>Requisito de Certificación STPS DC-3:</strong> Las empresas requieren que el personal cuente con constancias de competencias laborales formalizadas ante la Secretaría del Trabajo.</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 3: DIFERENCIACIÓN TÉCNICA DE DISCIPLINAS -->
+            <div class="page-break"></div>
+
+            <div class="section-header purple">
+                <h2>3. DIFERENCIACIÓN TÉCNICA: MECATRÓNICA VS ELECTRÓNICA VS AUTOMATIZACIÓN</h2>
+            </div>
+
+            <p>Aunque el reporte del IMCO agrupa a estas áreas para fines estadísticos, en la práctica industrial desempeñan funciones complementarias muy claras:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>DISCIPLINA INGENIERIL</th>
+                        <th>ENFOQUE PRINCIPAL DE DISEÑO</th>
+                        <th>APLICACIÓN TÍPICA EN PLANTA AUTOMOTRIZ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ingeniería en Mecatrónica</strong></td>
+                        <td>Integración multidisciplinaria de mecánica, electrónica y sistemas informáticos.</td>
+                        <td>Diseño de efectores finales (EOAT), celdas robóticas integradas y sistemas mecatrónicos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ingeniería Electrónica</strong></td>
+                        <td>Especialización en circuitos, semiconductores, tarjetas de E/S y acondicionamiento de señal.</td>
+                        <td>Diagnóstico de tarjetas de control a nivel componente, fuentes 24V y sensores industriales.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ingeniería en Automatización y Control</strong></td>
+                        <td>Optimización de procesos secuenciales, arquitectura de red industrial y programación de PLC.</td>
+                        <td>Estructuración de lógica de control, SCADA, redes industriales y eliminación de paros no programados.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 4: ROADMAP DE CAPACITACIÓN ACELERADA PARA EL TALENTO REGIONAL -->
+            <div class="section-header green">
+                <h2>4. ROADMAP DE CAPACITACIÓN ACELERADA PARA INGENIEROS Y PLANTA</h2>
+            </div>
+
+            <p>Para cerrar la brecha reportada por el IMCO y asegurar la empleabilidad inmediata del personal técnico recién egresado o en activo, Robologix Automation ha diseñado un esquema de nivelación práctica:</p>
+
+            <ol class="step-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <strong>Transición de Microcontroladores a PLC Industrial:</strong> Cursos prácticos en bancos de entrenamiento con procesadores CompactLogix 5380 y Siemens S7-1500 reales.
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <strong>Estandarización de Programación IEC 61131-3:</strong> Dominio de Diagrama de Escalera (Ladder), Texto Estructurado (SCL/ST) y Bloques de Función (FB/AOI).
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <strong>Integración de Celdas Robóticas y Visión:</strong> Prácticas directas con controladores Fanuc R-30iB, KUKA KRC4/KRC5 y sistemas de visión Cognex/Keyence.
+                </li>
+                <li>
+                    <span class="step-number">4</span>
+                    <strong>Certificación Oficial STPS DC-3:</strong> Emisión de constancias de competencias laborales para cumplimiento de requisitos de planta y auditorías IATF 16949.
+                </li>
+            </ol>
+
+            <!-- SECCIÓN 5: CAPACIDADES DE SOPORTE E INGENIERÍA EN EL NORTE -->
+            <div class="section-header">
+                <h2>5. CAPACIDADES DE INGENIERÍA Y TIEMPOS REALES DE EJECUCIÓN</h2>
+            </div>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-check-circle"></i> VINCULACIÓN DIRECTA ROBOLOGIX AUTOMATION</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Cursos In-Plant y Certificación STPS DC-3:</strong> Impartición de capacitaciones prácticas adaptadas a turnos de producción en **3 a 7 días** desde su contratación.</li>
+                    <li style="margin-bottom: 8px;"><strong>Suministro de Equipo de Entrenamiento y Refacciones:</strong> Importación y entrega de componentes industriales de control en **menos de una semana**.</li>
+                    <li style="margin-bottom: 0;"><strong>Ingeniería de Campo 24/7:</strong> Soporte de guardia presencial para plantas en Saltillo, Ramos Arizpe, Derramadero y Monterrey.</li>
+                </ul>
+            </div>
+
+            <div class="footer-bar">
+                <span>Investigación Técnica: IMCO Compara Carreras 2026 • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

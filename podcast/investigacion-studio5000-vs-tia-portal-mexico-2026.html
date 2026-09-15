@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Avanzada: Studio 5000 vs TIA Portal (Ventajas y Desventajas) | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-red: #ef4444;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 950px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #1e1b4b 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-cyan);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.15);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-cyan);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.red { border-left-color: var(--accent-red); }
+        .section-header.blue { border-left-color: var(--accent-blue); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.red { background: #fef2f2; border-color: #fee2e2; }
+        .highlight-box.green { background: #f0fdf4; border-color: #dcfce7; }
+        .highlight-box.orange { background: #fff7ed; border-color: #ffedd5; }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.red { color: #dc2626; }
+        .box-title.blue { color: #0284c7; }
+        .box-title.green { color: #15803d; }
+        .box-title.orange { color: #ea580c; }
+
+        .cmp-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .cmp-table th, .cmp-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .cmp-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .cmp-table tr:nth-child(even) { background: #f8fafc; }
+
+        .tag-rockwell { background: #fee2e2; color: #991b1b; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .tag-siemens { background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .pro-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .con-box {
+            background: #fef2f2;
+            border: 1px solid #fecdd3;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .pro-box h3 { color: #15803d; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; margin-top: 0; }
+        .con-box h3 { color: #b91c1c; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; margin-top: 0; }
+
+        .pro-box ul, .con-box ul { padding-left: 20px; margin: 0; font-size: 0.9rem; color: #334155; }
+        .pro-box li, .con-box li { margin-bottom: 8px; }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN DEEP-DIVE -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-microchip"></i> INVESTIGACIÓN TÉCNICA • PODCAST EPISODIO 06</span>
+            <h1 class="cover-title">STUDIO 5000 VS TIA PORTAL: COMPARATIVA TÉCNICA Y VENTAJAS VS DESVENTAJAS EN MÉXICO</h1>
+            <p class="cover-subtitle">Análisis Detallado de Edición Online, Arquitectura de Redes, Estructura de Memoria, Gemelo Digital y Evaluación Exhaustiva de Pros y Contras.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-podcast"></i> Podcast Asociado:</strong><br>
+                    Cero Paros: Automatización Industrial (Ep. 06)
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-map-marked-alt"></i> Cobertura de Mercado:</strong><br>
+                    Norte (Saltillo/Ramos/Monterrey), Bajío y México
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO PROFUNDO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: ESTÁNDARES DE ARMADORAS (OEMs) Y DIPLOMACIA DE MARCAS -->
+            <div class="section-header red">
+                <h2>1. ESTÁNDARES DE ARMADORAS (OEMs) EN EL MERCADO MEXICANO</h2>
+            </div>
+
+            <p>La adopción de **Studio 5000 Logix Designer (Rockwell Automation)** o **SIMATIC TIA Portal (Siemens Industry)** en las plantas de México responde directamente a las especificaciones técnicas obligatorias de las plantas matrices (OEMs):</p>
+
+            <table class="cmp-table">
+                <thead>
+                    <tr>
+                        <th>ESTÁNDAR OEM GLOBAL</th>
+                        <th>ARMADORAS / TIER-1 EN MÉXICO</th>
+                        <th>PLATAFORMA OBLIGATORIA</th>
+                        <th>ENFOQUE PRINCIPAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>GCCH / FAST Standard</strong></td>
+                        <td>General Motors, Stellantis (Chrysler), RAM, Martinrea, Magna, Caterpillar, John Deere.</td>
+                        <td><span class="tag-rockwell">STUDIO 5000 (ROCKWELL)</span></td>
+                        <td>ControlLogix / CompactLogix 5380, GuardLogix Safety, EtherNet/IP CIP.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VASS Standard (VW Group)</strong></td>
+                        <td>Volkswagen Puebla, Audi San José Chiapa, proveedores Tier-1 alemanes.</td>
+                        <td><span class="tag-siemens">TIA PORTAL (SIEMENS)</span></td>
+                        <td>S7-1500F, Safety F-Blocks, Profinet IRT, WinCC Unified.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integra Standard (BMW)</strong></td>
+                        <td>BMW San Luis Potosí, proveedores de chasis y baterías.</td>
+                        <td><span class="tag-siemens">TIA PORTAL (SIEMENS)</span></td>
+                        <td>S7-1500F, PROFIsafe, EPLAN Electric P8.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 2: VENTAJAS Y DESVENTAJAS DE STUDIO 5000 (ROCKWELL) -->
+            <div class="section-header blue">
+                <h2>2. STUDIO 5000 (ROCKWELL AUTOMATION): VENTAJAS VS DESVENTAJAS</h2>
+            </div>
+
+            <div class="pros-cons-grid">
+                <div class="pro-box">
+                    <h3><i class="fas fa-check-circle"></i> VENTAJAS DE STUDIO 5000</h3>
+                    <ul>
+                        <li><strong>Online Editing Imbatible:</strong> Permite insertar, modificar y probar peldaños (Rungs) en caliente en tiempo real sin detener la CPU ni compilar el proyecto entero.</li>
+                        <li><strong>Diagnóstico Intuitivo en Piso:</strong> La visualización en verde centelleante facilita a los técnicos de mantenimiento ubicar contactos abiertos en el turno nocturno.</li>
+                        <li><strong>Variables Tag-Based Globales:</strong> Programación simbólica limpia (`Estacion_10_Sensor_Presente`) sin manejo de direccionamiento octal o hexadecimal.</li>
+                        <li><strong>Dominio Total en Norte de México:</strong> Es el estándar del 68% de las plantas automotrices de Coahuila y Nuevo León.</li>
+                    </ul>
+                </div>
+
+                <div class="con-box">
+                    <h3><i class="fas fa-times-circle"></i> DESVENTAJAS DE STUDIO 5000</h3>
+                    <ul>
+                        <li><strong>Licenciamiento Elevado:</strong> Esquema de licencias por nivel (Professional, Standard, Mini) con costos de renovación anual altos.</li>
+                        <li><strong>AOI No Modificable Online:</strong> Las instrucciones personalizadas Add-On (AOI) no se pueden alterar en vivo mientras el PLC está ejecutando.</li>
+                        <li><strong>Software HMI Separado:</strong> FactoryTalk View exige instalación y proyectos independientes de Studio 5000.</li>
+                        <li><strong>Sensibilidad Multicast en EtherNet/IP:</strong> Requiere switches administrados configurados para evitar tormentas de broadcast.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: VENTAJAS Y DESVENTAJAS DE TIA PORTAL (SIEMENS) -->
+            <div class="page-break"></div>
+
+            <div class="section-header green">
+                <h2>3. SIEMENS SIMATIC TIA PORTAL: VENTAJAS VS DESVENTAJAS</h2>
+            </div>
+
+            <div class="pros-cons-grid">
+                <div class="pro-box">
+                    <h3><i class="fas fa-check-circle"></i> VENTAJAS DE TIA PORTAL</h3>
+                    <ul>
+                        <li><strong>Framework Totalmente Integrado:</strong> PLC (Step7), HMI (WinCC), Drives (Startdrive) y Safety (PROFIsafe) conviven en un solo software y archivo de proyecto.</li>
+                        <li><strong>Potencia Máxima en SCL (Texto Estructurado):</strong> Compilación ultra-eficiente de algoritmos matemáticos complejos, recetas y manejo de cadenas de texto.</li>
+                        <li><strong>Estructura Modular FB/DB Reutilizable:</strong> Los Bloques de Función con memoria Instancia permiten crear librerías masivas de código limpio.</li>
+                        <li><strong>Gemelo Digital y Simulación Avanzada:</strong> PLCSIM Advanced v6.0 se conecta mediante API abierta a NX Process Simulate para Digital Twins.</li>
+                    </ul>
+                </div>
+
+                <div class="con-box">
+                    <h3><i class="fas fa-times-circle"></i> DESVENTAJAS DE TIA PORTAL</h3>
+                    <ul>
+                        <li><strong>Consumo Extremo de Recursos de PC:</strong> Requiere laptops industriales de alto rendimiento (32GB+ RAM, procesadores i7/i9) y es lento al iniciar.</li>
+                        <li><strong>Diagnóstico Online Complejo para Piso:</strong> Exige compilar bloques y monitorear variables en tablas de observación (Watch Tables), dificultando el diagnóstico rápido.</li>
+                        <li><strong>Riesgo de Reajuste en DBs:</strong> Modificar una estructura DB en caliente puede resetear las variables a valores iniciales si no se activa *Memory Enlarge*.</li>
+                        <li><strong>Licenciamiento por Módulos:</strong> Adquirir Step 7 Professional + WinCC Advanced/Unified + Safety requiere múltiples llaves de licencia.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: MATRIZ DE COMPARACIÓN TÉCNICA DIRECTA -->
+            <div class="section-header orange">
+                <h2>4. MATRIZ DE COMPARACIÓN TÉCNICA DIRECTA</h2>
+            </div>
+
+            <table class="cmp-table">
+                <thead>
+                    <tr>
+                        <th>FUNCIONALIDAD CLAVE</th>
+                        <th>STUDIO 5000 LOGIX DESIGNER</th>
+                        <th>SIEMENS TIA PORTAL (V18 / V19)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Edición en Vivo (Online Editing)</strong></td>
+                        <td><span class="tag-rockwell">GANADOR</span> (Rungs en caliente instantáneos).</td>
+                        <td>Carga por bloques; requiere compilar.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integración HMI + PLC + Drives</strong></td>
+                        <td>Software FactoryTalk independiente.</td>
+                        <td><span class="tag-siemens">GANADOR</span> (WinCC y Startdrive unificados).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Programación en Texto Estructurado (SCL)</strong></td>
+                        <td>Funcional en ST, pero secundario.</td>
+                        <td><span class="tag-siemens">GANADOR</span> (Compilación de alto rendimiento).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diagnóstico Rápido para Mantenimiento</strong></td>
+                        <td><span class="tag-rockwell">GANADOR</span> (Verde centelleante muy claro).</td>
+                        <td>Más complejo por tablas de observación.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Simulación y Gemelo Digital (Digital Twin)</strong></td>
+                        <td>FactoryTalk Logix Echo / Emulate.</td>
+                        <td><span class="tag-siemens">GANADOR</span> (PLCSIM Advanced API Abierta).</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 5: VERDICTO FINAL Y RECOMENDACIÓN -->
+            <div class="section-header">
+                <h2>5. VERDICTO Y RECOMENDACIÓN TÉCNICA</h2>
+            </div>
+
+            <p><strong>Para Plantas e Ingenieros en Coahuila y Nuevo León:</strong> **Studio 5000** es la herramienta indispensable para el soporte diario en piso de planta debido a la velocidad de depuración en vivo y la hegemonía de las armadoras norteamericanas.</p>
+
+            <p><strong>Para Integradores de Maquinaria y Celdas Complejas:</strong> **TIA Portal** ofrece mayor potencia para construir plataformas modulares reutilizables, integrar HMI WinCC y realizar simulación de gemelos digitales antes del montaje físico.</p>
+
+            <div class="footer-bar">
+                <span>Investigación Técnica: Studio 5000 vs TIA Portal • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

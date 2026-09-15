@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Ejecutiva: Importancia de la Constancia STPS DC-3 | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent-cyan: #00b8d4;
+            --accent-orange: #e65100;
+            --accent-green: #2e7d32;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid #00f3ff;
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.15);
+            border: 1px solid #00f3ff;
+            color: #00f3ff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-cyan);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.warning {
+            border-left-color: var(--accent-orange);
+        }
+
+        .section-header.success {
+            border-left-color: var(--accent-green);
+        }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.danger {
+            background: #fff1f2;
+            border-color: #fecdd3;
+        }
+
+        .highlight-box.success {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.blue { color: #0284c7; }
+        .box-title.red { color: #e11d48; }
+        .box-title.green { color: #15803d; }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        .legal-table th, .legal-table td {
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .legal-table th {
+            background: var(--primary);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .legal-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .penalty-badge {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.82rem;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefit-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .benefit-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #10b981;
+        }
+
+        .penalty-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .penalty-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .penalty-list li::before {
+            content: "\f00d";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #ef4444;
+        }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body {
+                background: #ffffff !important;
+            }
+            .document-container {
+                box-shadow: none !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+            }
+            .cover-page {
+                page-break-after: always !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .page-break {
+                page-break-before: always !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DEL REPORTE EJECUTIVO -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-shield-alt"></i> REPORTE DE INVESTIGACIÓN NORMATIVA Y OPERATIVA</span>
+            <h1 class="cover-title">LA IMPORTANCIA DE LA CONSTANCIA STPS DC-3 EN LAS EMPRESAS INDUSTRIALES</h1>
+            <p class="cover-subtitle">Análisis integral del Marco Legal de la Ley Federal del Trabajo, Beneficios Operativos/Financieros y las Severas Consecuencias por Incumplimiento Patronal.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Elaborado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Capacitación Técnica Registrado STPS</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-calendar-alt"></i> Fecha de Emisión:</strong><br>
+                    Septiembre 2026
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-map-marker-alt"></i> Región Objetivo:</strong><br>
+                    Saltillo, Ramos Arizpe, Monterrey y México
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO DEL REPORTE -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: INTRODUCCIÓN Y MARCO LEGAL -->
+            <div class="section-header">
+                <h2>1. MARCO LEGAL Y DEFINICIÓN DEL FORMATO STPS DC-3</h2>
+            </div>
+
+            <p>La <strong>Constancia de Competencias o Habilidades Laborales (Formato DC-3)</strong> es el documento oficial emitido en México por la Secretaría del Trabajo y Previsión Social (STPS) que acredita que un trabajador ha sido capacitado y cuenta con las competencias teóricas y prácticas necesarias para desarrollar actividades de alto riesgo en piso de planta (tales como operación de robots industriales, diagnóstico de tableros con voltaje activo 480V, programación de PLC y trabajo con energías peligrosas).</p>
+
+            <div class="highlight-box">
+                <div class="box-title blue"><i class="fas fa-gavel"></i> FUNDAMENTO EN LA LEY FEDERAL DEL TRABAJO (LFT)</div>
+                <p style="margin-bottom:0;">Conforme a los <strong>Artículos 153-A al 153-X de la Ley Federal del Trabajo</strong>, la capacitación y adiestramiento no es una opción voluntaria para las empresas, sino una <strong>obligación legal de carácter patronal e intransferible</strong>. Todo patrón tiene el deber constitucional de proporcionar a sus trabajadores la capacitación necesaria que les permita elevar su nivel de vida, productividad y prevenir riesgos laborales.</p>
+            </div>
+
+            <p>Para que un Formato DC-3 cuente con plena validez jurídica ante inspectores de la STPS y auditorías EHS, debe ser expedido por un **Agente Capacitador Externo con Registro Vigente ante la STPS** (persona física o moral autorizada) y contar con la firma del capacitador, la Comisión Mixta de Capacitación y el representante legal de la empresa.</p>
+
+            <!-- SECCIÓN 2: VENTAJAS Y BENEFICIOS PARA LA EMPRESA -->
+            <div class="section-header success">
+                <h2>2. VENTAJAS Y BENEFICIOS DE CONTAR CON CONSTANCIAS DC-3</h2>
+            </div>
+
+            <p>Implementar un programa sistemático de capacitación acreditado con DC-3 genera un impacto positivo directo en la rentabilidad, la legalidad y la seguridad operativa de la planta industrial:</p>
+
+            <div class="highlight-box success">
+                <div class="box-title green"><i class="fas fa-check-circle"></i> BENEFICIOS CLAVE PARA LA EMPRESA</div>
+                <ul class="benefit-list">
+                    <li><strong>Blindaje 100% Legal ante Inspecciones de la STPS:</strong> Aprobación inmediata de revisiones del programa de Capacitación, Adiestramiento y Productividad (Formatos DC-1, DC-2, DC-3 y DC-4).</li>
+                    <li><strong>Reducción Drástica de Accidentes e Incapacidades:</strong> Personal entrenado en maniobras seguras, interlocks de seguridad PROFIsafe y candadeo LOTO, disminuyendo el riesgo de amputaciones o choques eléctricos.</li>
+                    <li><strong>Reducción en la Prima de Riesgo de Trabajo del IMSS:</strong> Al disminuir el número y la gravedad de los accidentes de trabajo, la empresa logra una disminución directa en las cuotas patronales anuales del IMSS.</li>
+                    <li><strong>Deducibilidad Fiscal del 100% de la Capacitación:</strong> Los costos incurridos en capacitación técnica externa certificada son completamente deducibles de impuestos bajo la Ley del Impuesto Sobre la Renta (LSR).</li>
+                    <li><strong>Cumplimiento de Estándares Internacionales (ISO 45001 e IATF 16949):</strong> Requisito indispensable para calificar como proveedor confiable Tier-1 y OEM en el sector automotriz y metalmecánico.</li>
+                    <li><strong>Aumento del OEE y Reducción de Tiempos Muertos:</strong> Técnicos capacitados diagnostican fallas de PLC y robot en minutos, evitando paros de producción costosos de varias horas o días.</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 3: CONSECUENCIAS Y SANCIONES POR NO TENER DC-3 -->
+            <div class="page-break"></div>
+
+            <div class="section-header warning">
+                <h2>3. CONSECUENCIAS GRAVES Y SANCIONES POR INCUMPLIMIENTO</h2>
+            </div>
+
+            <p>La omisión o negligencia patronal al no capacitar al personal técnico en áreas de alto riesgo acarrea severas consecuencias jurídicas, financieras y operativas sancionadas por la Ley Federal del Trabajo:</p>
+
+            <table class="legal-table">
+                <thead>
+                    <tr>
+                        <th>TIPO DE RIESGO / INCUMPLIMIENTO</th>
+                        <th>FUNDAMENTO LEGAL</th>
+                        <th>SANCION / CONSECUENCIA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Multas Económicas Directas por Trabajador</strong></td>
+                        <td>Art. 994 Fracc. IV de la LFT</td>
+                        <td><span class="penalty-badge">50 a 5,000 UMAs</span><br>Multas desde $5,400 hasta más de $540,000 MXN <em>por cada trabajador</em> sin DC-3.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clausura Temporal o Restricción de Acceso</strong></td>
+                        <td>Art. 540 de la LFT y Reglamento de Inspecciones</td>
+                        <td><span class="penalty-badge">SUSPENSIÓN DE LÍNEA</span><br>Inspectores de la STPS pueden ordenar el paro de maquinaria si detectan riesgo inminente y falta de capacitación.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsabilidad Penal en Accidentes Graves</strong></td>
+                        <td>Código Penal Federal y Estatal</td>
+                        <td><span class="penalty-badge">RESPONSABILIDAD PENAL</span><br>Gerentes y representantes legales enfrentan demandas penales por negligencia patronal en caso de mutilación o muerte.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Recargo e Incremento en Cuota IMSS</strong></td>
+                        <td>Ley del Seguro Social (Art. 73 y 75)</td>
+                        <td><span class="penalty-badge">AUMENTO DE PRIMA</span><br>Aumento al límite máximo de la Prima de Riesgo de Trabajo, encareciendo la nómina patronal durante años.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pérdida de Contratos y Certificación Tier-1</strong></td>
+                        <td>Requerimientos de Auditoría IATF 16949 / ISO 45001</td>
+                        <td><span class="penalty-badge">CANCELACIÓN DE CLIENTE</span><br>Inhabilitación inmediata para cotizar o surtir componentes a plantas armadoras (OEMs).</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box danger">
+                <div class="box-title red"><i class="fas fa-exclamation-triangle"></i> RIESGO PATRONAL EN CASO DE ACCIDENTE LABORAL</div>
+                <p style="margin-bottom:0;">Si ocurre un accidente de trabajo en una celda robótica o tablero eléctrico y el trabajador <strong>NO cuenta con la Constancia DC-3 vigente</strong> que acredite su aptitud, el Instituto Mexicano del Seguro Social (IMSS) dictaminará el evento como <strong>Capital Constitutivo</strong>, cobrando a la empresa la totalidad de los gastos médicos, hospitalización e indemnización, además de las sanciones de la STPS.</p>
+            </div>
+
+            <!-- SECCIÓN 4: SOLUCIÓN ROBOLOGIX Y CONCLUSIÓN -->
+            <div class="section-header">
+                <h2>4. SOLUCIÓN INTEGRAL: CAPACITACIÓN STPS DC-3 CON ROBOLOGIX</h2>
+            </div>
+
+            <p><strong>Robologix Automation</strong> cuenta con registro oficial de Agente Capacitador Externo ante la STPS. Impartimos cursos **100% prácticos In-Company o en nuestras instalaciones** diseñados para que tus técnicos aprendan sobre hardware industrial real:</p>
+
+            <ul class="benefit-list">
+                <li><strong>Cursos de PLC Multimarca:</strong> Allen-Bradley Studio 5000, Siemens TIA Portal, Mitsubishi, Schneider.</li>
+                <li><strong>Cursos de Robótica Industrial:</strong> FANUC HandlingTool, ABB RAPID, YASKAWA Motoman y KUKA.</li>
+                <li><strong>Constancia Oficial DC-3 Incluida:</strong> Con validez ante la STPS y valor curricular al aprobar las evaluaciones teóricas y prácticas.</li>
+                <li><strong>Adaptado a los Turnos de la Planta:</strong> Módulos de 20 a 40 horas diseñados para no interrumpir los esquemas de producción.</li>
+            </ul>
+
+            <div class="footer-bar">
+                <span>Investigación STPS DC-3 • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

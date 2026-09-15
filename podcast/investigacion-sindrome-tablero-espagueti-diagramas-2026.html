@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Técnica: El Síndrome del Tablero Espagueti y Levantamiento Eléctrico | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 950px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #c2410c 50%, #0f172a 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-orange);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(255, 102, 0, 0.15);
+            border: 1px solid var(--accent-orange);
+            color: var(--accent-orange);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-orange);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.cyan { border-left-color: var(--accent-cyan); }
+        .section-header.purple { border-left-color: var(--accent-purple); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #fff7ed;
+            border: 1px solid #ffedd5;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.cyan { background: #f0f9ff; border-color: #bae6fd; }
+        .highlight-box.purple { background: #f5f3ff; border-color: #ddd6fe; }
+        .highlight-box.green { background: #f0fdf4; border-color: #dcfce7; }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.orange { color: #ea580c; }
+        .box-title.cyan { color: #0284c7; }
+        .box-title.purple { color: #6d28d9; }
+        .box-title.green { color: #15803d; }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .tech-table tr:nth-child(even) { background: #f8fafc; }
+
+        .badge-cyan { background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-orange { background: #ffedd5; color: #c2410c; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-green { background: #dcfce7; color: #15803d; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN TABLERO ESPAGUETI -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-exclamation-triangle"></i> INVESTIGACIÓN TÉCNICA • PODCAST EPISODIO 16</span>
+            <h1 class="cover-title">EL SÍNDROME DEL TABLERO ESPAGUETI EN PLANTA</h1>
+            <p class="cover-subtitle">Análisis del Impacto en Tiempos de Paro (MTTR), Riesgos de Seguridad Eléctrica, Metodología de Levantamiento en CAD y Re-acondicionamiento de Gabinetes de Control.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-podcast"></i> Podcast Asociado:</strong><br>
+                    Cero Paros: Automatización Industrial (Ep. 16)
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-tools"></i> Enfoque Operativo:</strong><br>
+                    Ingeniería Inversa, Diagramas EPLAN/CAD, Normas IEC 60204 / NFPA 79
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO Y ESTRATÉGICO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: CAUSAS Y SÍNTOMAS DEL TABLERO ESPAGUETI -->
+            <div class="section-header">
+                <h2>1. ANATOMÍA DEL "TABLERO ESPAGUETI" Y CAUSAS RAÍZ EN PLANTA</h2>
+            </div>
+
+            <p>Se conoce coloquialmente como <strong>"Tablero Espagueti"</strong> al gabinete de control eléctrico que, tras años de modificaciones no documentadas y parches de emergencia, presenta un desorden masivo de conductores, pérdida de etiquetas y falta de planos unifilares actualizados:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>SÍNTOMA OPERATIVO</th>
+                        <th>CAUSA RAÍZ TÉCNICA</th>
+                        <th>CONSECUENCIA EN TIEMPO DE PARO (MTTR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Conductores Sueltos y Enredados</strong></td>
+                        <td>Retiro de tapas de canaletas para meter puentes temporales que nunca se retiraron.</td>
+                        <td>Aumento del tiempo de diagnóstico de 15 minutos a más de 6 horas por falla.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cables sin Rotular (Etiquetas caídas)</strong></td>
+                        <td>Uso de etiquetas de papel ordinarias no resistentes a aceite o calor industrial.</td>
+                        <td>Pruebas de continuidad "hilo por hilo" paralizando la producción del turno.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diagramas Eléctricos Inexistentes</strong></td>
+                        <td>Pérdida de carpetas físicas o modificaciones realizadas sin actualizar el archivo fuente.</td>
+                        <td>Diagnóstico a ciegas con alto riesgo de quemar módulos de I/O de PLC por cortocircuito.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clemas y Bornes Saturados</strong></td>
+                        <td>Conexión de múltiples cables en un solo borne sin respetar la capacidad de torque.</td>
+                        <td>Falsos contactos intermitentes que provocan paros "fantasma" difíciles de reproducir.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 2: EL COSTO OCULTO Y RIESGOS DE SEGURIDAD -->
+            <div class="section-header cyan">
+                <h2>2. EL COSTO OCULTO DE LA DESORGANIZACIÓN ELÉCTRICA</h2>
+            </div>
+
+            <p>Mantener gabinetes de control desordenados no es solo un problema estético; representa un riesgo financiero y de seguridad industrial crítico para la planta:</p>
+
+            <div class="highlight-box orange">
+                <div class="box-title orange"><i class="fas fa-fire-extinguisher"></i> 1. Riesgo de Arcos Eléctricos y Cortocircuitos</div>
+                <p style="margin: 0; font-size: 0.93rem;">Los cables apretados fuera de canaletas sufren fricción y sobrecalentamiento. La acumulación de polvo metálico sobre bornes al descubierto puede provocar arcos eléctricos que destruyen variadores de frecuencia y tarjetas de comunicación PLC.</p>
+            </div>
+
+            <div class="highlight-box cyan">
+                <div class="box-title cyan"><i class="fas fa-clock"></i> 2. Explosión del Tiempo Medio de Reparación (MTTR)</div>
+                <p style="margin: 0; font-size: 0.93rem;">Cuando ocurre una falla nocturna y el diagrama no coincide con el cableado real, el técnico de turno se ve obligado a rastrear señal por señal. Un paro de 10 minutos por un sensor dañado se convierte en un evento de 8 horas de línea parada.</p>
+            </div>
+
+            <div class="highlight-box purple">
+                <div class="box-title purple"><i class="fas fa-user-slash"></i> 3. Dependencia del "Conocimiento Informal"</div>
+                <p style="margin: 0; font-size: 0.93rem;">La planta se vuelve rehén de un solo técnico que "sabe cómo está puenteado el tablero". Si esa persona renuncia o enferma, la planta queda vulnerable ante cualquier falla de control.</p>
+            </div>
+
+            <!-- SECCIÓN 3: METODOLOGÍA DE RE-ACONDICIONAMIENTO Y LEVANTAMIENTO -->
+            <div class="page-break"></div>
+
+            <div class="section-header purple">
+                <h2>3. METODOLOGÍA DE RE-ACONDICIONAMIENTO Y LEVANTAMIENTO EN CAD</h2>
+            </div>
+
+            <p>Robologix Automation aplica una metodología estructurada en 4 pasos para transformar un gabinete obsoleto y desordenado en un tablero industrial normado:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>FASE DE INGENIERÍA</th>
+                        <th>ACTIVIDADES TÉCNICAS EJECUTADAS</th>
+                        <th>ENTREGABLE AL CLIENTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Auditoría y Levantamiento</strong></td>
+                        <td>Rastreo de entradas/salidas de PLC, mapeo de campo y verificación de voltajes 24VDC / 120VAC / 480VAC.</td>
+                        <td>Lista de señales (I/O List) y reporte de inconsistencias.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Elaboración de Diagramas CAD</strong></td>
+                        <td>Diseño de planos eléctricos unifilares y multifilares en EPLAN / AutoCAD Electrical bajo norma IEC 60204-1.</td>
+                        <td>Carpetas digitales de planos en PDF y DWG editables.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Peinado y Rotulación en Piso</strong></td>
+                        <td>Instalación de canaletas ranuradas, sustitución de cableado dañado y marcado con termofit industrial indestructible.</td>
+                        <td>Gabinete reacondicionado con identificación 1:1.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Validación y Marcado de Bornes</strong></td>
+                        <td>Prueba de aislamiento, torque normativo en clemas y etiquetado exterior de componentes (HMI, botones, paros).</td>
+                        <td>Certificado de reacondicionamiento y protocolo de pruebas.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 4: BUENAS PRÁCTICAS Y ESTÁNDARES INTERNACIONALES -->
+            <div class="section-header green">
+                <h2>4. BUENAS PRÁCTICAS DE NORMATIVIDAD ELÉCTRICA (NFPA 79 / IEC 60204)</h2>
+            </div>
+
+            <p>Para asegurar que los tableros reacondicionados mantengan su orden a largo plazo, Robologix implementa los siguientes estándares internacionales:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>ESTÁNDAR DE MONTAJE</th>
+                        <th>ESPECIFICACIÓN TÉCNICA APLICADA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Código de Colores de Cableado</strong></td>
+                        <td>Azul para 24VDC, Rojo para 120VAC control, Negro para fuerza 480VAC, Verde/Amarillo para tierra física (GND).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Separación de Potencia y Control</strong></td>
+                        <td>Canaletas independientes para cables de fuerza de motor (VFD) y señales sensibles de comunicación (EtherNet/IP, sensores).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Etiquetado Termofit Indestructible</strong></td>
+                        <td>Impresión térmica de alta densidad resistente a aceites, refrigerantes y fricción industrial.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 5: CAPACIDADES DE ROBOLOGIX AUTOMATION S.A. DE C.V. -->
+            <div class="section-header">
+                <h2>5. CAPACIDADES DE INGENIERÍA Y SERVICIO DE ROBOLOGIX AUTOMATION</h2>
+            </div>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-handshake"></i> SOLUCIÓN INTEGRAL PARA REHABILITACIÓN DE TABLEROS</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Levantamiento y Diagramación Exprés:</strong> Elaboración de planos eléctricos en CAD entregados con código de identificación normado.</li>
+                    <li style="margin-bottom: 8px;"><strong>Reacondicionamiento en Ventanas Cortas:</strong> Peinado de gabinetes y reacondicionamiento de cableado ejecutado en paros programados de fin de semana o ventanas de **3 a 7 días**.</li>
+                    <li style="margin-bottom: 8px;"><strong>Suministro de Materiales e Importaciones:</strong> Entrega de canaletas, clemas, fuentes de poder y bornes industriales en **menos de una semana**.</li>
+                    <li style="margin-bottom: 0;"><strong>Garantía y Cumplimiento Documental:</strong> Trabajo ejecutado por ingenieros certificados con constancias STPS DC-3, opinión positiva SAT 32-D y cobertura presencial 24/7 en Saltillo, Ramos Arizpe, Derramadero y Monterrey. *(Registro REPSE opcional según requerimiento del cliente)*.</li>
+                </ul>
+            </div>
+
+            <div class="footer-bar">
+                <span>Investigación Técnica: El Síndrome del Tablero Espagueti • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

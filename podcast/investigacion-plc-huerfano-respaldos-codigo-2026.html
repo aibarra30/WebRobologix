@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Técnica Detallada: El PLC Huérfano y Gestión de Respaldos de Código Industrial | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 980px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #991b1b 50%, #0f172a 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-red);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid var(--accent-red);
+            color: var(--accent-red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-red);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.cyan { border-left-color: var(--accent-cyan); }
+        .section-header.orange { border-left-color: var(--accent-orange); }
+        .section-header.purple { border-left-color: var(--accent-purple); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.cyan { background: #f0f9ff; border-color: #bae6fd; }
+        .highlight-box.orange { background: #fff7ed; border-color: #ffedd5; }
+        .highlight-box.purple { background: #f5f3ff; border-color: #ddd6fe; }
+        .highlight-box.green { background: #f0fdf4; border-color: #dcfce7; }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.red { color: #dc2626; }
+        .box-title.cyan { color: #0284c7; }
+        .box-title.orange { color: #ea580c; }
+        .box-title.purple { color: #6d28d9; }
+        .box-title.green { color: #15803d; }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .tech-table tr:nth-child(even) { background: #f8fafc; }
+
+        .badge-cyan { background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-red { background: #fee2e2; color: #991b1b; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-orange { background: #ffedd5; color: #c2410c; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-green { background: #dcfce7; color: #15803d; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN DETALLADA PLC HUÉRFANO -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-microchip"></i> INVESTIGACIÓN TÉCNICA DETALLADA • PODCAST EPISODIO 17</span>
+            <h1 class="cover-title">INVESTIGACIÓN A DETALLE: EL PLC HUÉRFANO Y LA GESTIÓN CRÍTICA DE RESPALDOS DE CÓDIGO</h1>
+            <p class="cover-subtitle">Análisis Profundo de Arquitecturas de Memoria en Controladores Industriales, Degradación de Baterías de Litio, Des-compilado de Tags y Protocolos de Bóveda de Ingeniería 2026.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-podcast"></i> Podcast Asociado:</strong><br>
+                    Cero Paros: Automatización Industrial (Ep. 17)
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-layer-group"></i> Cobertura Multimarca:</strong><br>
+                    Rockwell ControlLogix/CompactLogix/SLC, Siemens S7-300/1200/1500, Omron, Mitsubishi
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO Y ESTRATÉGICO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: ARQUITECTURA DE MEMORIA Y MECANISMOS DE PERDIDA -->
+            <div class="section-header">
+                <h2>1. ARQUITECTURA DE MEMORIA EN PLCs Y MECANISMOS DE PÉRDIDA DE CÓDIGO</h2>
+            </div>
+
+            <p>Para comprender por qué ocurre el fenómeno del <strong>"PLC Huérfano"</strong>, es necesario analizar cómo gestionan la memoria los controladores automáticos industriales. A diferencia de una computadora corporativa convencional, los PLCs dividen su almacenamiento en tres capas principales:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>TIPO DE MEMORIA PLC</th>
+                        <th>TECNOLOGÍA Y FUNCIÓN OPERATIVA</th>
+                        <th>VULNERABILIDAD AL APAGADO / FALLA ELÉCTRICA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Memoria RAM Volátil</strong></td>
+                        <td>Almacena el código ejecutable en tiempo real, valores de temporizadores, contadores y mapa de entradas/salidas (I/O). Requiere respaldo de batería.</td>
+                        <td><span class="badge-red">PÉRDIDA TOTAL</span> Si la batería interna de 3.6V se agota, al cortar la energía del tablero la RAM se borra completamente (Memory Loss).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memoria Flash / SD Non-Volatile</strong></td>
+                        <td>Tarjetas de memoria no volátiles (SD, MMC, CF) donde se graba la copia de respaldo que el PLC carga al encender en caso de pérdida de RAM.</td>
+                        <td><span class="badge-orange">CORRUPCIÓN DE SECTORES</span> Sobretensiones, cortes brutos durante escritura o descargas estáticas inutilizan la tarjeta SD.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memoria ROM / Firmware</strong></td>
+                        <td>Almacena el sistema operativo del controlador (Firmware/Revision) grabado de fábrica por el fabricante (Rockwell, Siemens).</td>
+                        <td><span class="badge-cyan">FIRMWARE CORRUPTO</span> Picos de voltaje intensos colocan la CPU en "Major Non-Recoverable Fault" (pantalla roja).</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 2: DEGRADACIÓN DE BATERÍAS Y EL EFECTO FIN DE SEMANA -->
+            <div class="section-header orange">
+                <h2>2. DEGRADACIÓN DE BATERÍAS DE LITIO Y EL "EFECTO FIN DE SEMANA"</h2>
+            </div>
+
+            <p>En miles de plantas industriales de México (Saltillo, Ramos Arizpe, Monterrey), existe un riesgo latente denominado el <em>"Efecto Fin de Semana"</em>:</p>
+
+            <div class="highlight-box orange">
+                <div class="box-title orange"><i class="fas fa-battery-quarter"></i> El Diagnóstico de la Batería de Litio (3.6V CR14250)</div>
+                <p style="margin: 0; font-size: 0.93rem;">Mientras la máquina permanece energizada a 480V/120V, la memoria RAM del PLC se alimenta de la fuente de poder interna. Sin embargo, las baterías de litio sufren autodegradación pasiva tras 3 a 5 años de servicio. Cuando la planta apaga la producción durante un fin de semana o periodo vacacional, la CPU pasa a consumir energía de la batería agotada. Al encender el lunes por la mañana, la CPU enciende con el LED de <strong>BAT/FAULT en rojo</strong> y la memoria en cero.</p>
+            </div>
+
+            <!-- SECCIÓN 3: EL DESAFÍO DE LOS UPLOADS DES-COMPILADOS -->
+            <div class="page-break"></div>
+
+            <div class="section-header purple">
+                <h2>3. EL DESAFÍO TÉCNICO DE LOS UPLOADS "DES-COMPILADOS" (SIN TAGS)</h2>
+            </div>
+
+            <p>Un error muy común en mantenimiento es asumir que hacer un "Upload" del PLC a la laptop al momento de la falla resuelve el problema. En plataformas legacy o proyectos mal configurados, el archivo extraído presenta graves limitaciones:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>PLATAFORMA PLC</th>
+                        <th>ARCHIVO FUENTE CON NOMBRES</th>
+                        <th>RESULTADO DE UN UPLOAD SIN PROYECTO FUENTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Allen-Bradley SLC 500 / MicroLogix</strong></td>
+                        <td>Archivo `.RSS` (RSLogix 500) con base de datos de símbolos.</td>
+                        <td>Extrae solo direcciones de memoria crudas (ej. `I:1/4`, `O:2/1`, `N7:10`). Se pierden todos los nombres de motores y sensores.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Siemens S7-300 / S7-400 (STEP 7)</strong></td>
+                        <td>Proyecto `.s7p` con bloques de datos (DB) y tabla de símbolos.</td>
+                        <td>Extrae bloques de programa con variables genéricas (`STAT0`, `STAT1`), haciendo imposible entender la lógica de falla.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rockwell ControlLogix / CompactLogix</strong></td>
+                        <td>Archivo `.ACD` (Studio 5000 / RSLogix 5000).</td>
+                        <td>Si no se habilitó la descarga de comentarios en la memoria del controlador, los nombres de rutinas y tags de seguridad desaparecen.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 4: METODOLOGÍA DE BÓVEDA DIGITAL Y AUDITORÍA ROBOLOGIX -->
+            <div class="section-header cyan">
+                <h2>4. METODOLOGÍA DE BÓVEDA DIGITAL Y AUDITORÍA DE RESPALDOS ROBOLOGIX</h2>
+            </div>
+
+            <p>Robologix Automation ha desarrollado un protocolo estandarizado de ingeniería para auditar, respaldar y certificar la Bóveda Digital de código en plantas industriales:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>FASE DE INGENIERÍA</th>
+                        <th>ACCIONES TÉCNICAS EJECUTADAS POR ROBOLOGIX</th>
+                        <th>ENTREGABLE AL CLIENTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Relevamiento y Mapeo de Hardware</strong></td>
+                        <td>Auditoría física gabinete por gabinete. Identificación de marca, modelo, número de serie, versión de firmware y estado de batería.</td>
+                        <td>Inventario consolidado de PLCs, HMIs y Drives.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Extracción y Verificación "Online"</strong></td>
+                        <td>Conexión en línea con la CPU. Comparación de Checksum ("Compare Online vs Offline") para garantizar coincidencia exacta de lógica.</td>
+                        <td>Reporte de discrepancias de programa.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Reconstrucción de Etiquetas (Tags)</strong></td>
+                        <td>En proyectos des-compilados, vinculación mediante esquemáticos eléctricos para renombrar entradas, salidas y temporizadores.</td>
+                        <td>Proyecto `.ACD` / `.ap16` 100% comentado y estructurado.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Estructuración de la Bóveda Digital</strong></td>
+                        <td>Carga del árbol de proyectos en la Bóveda Redundante de Robologix (servidor seguro con cifrado) y entrega de repositorio local.</td>
+                        <td>Acceso inmediato a la versión correcta 24/7.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 5: RECOMENDACIONES PREVENTIVAS Y MATRIZ DE MANTENIMIENTO -->
+            <div class="section-header green">
+                <h2>5. RECOMENDACIONES PREVENTIVAS DE GESTIÓN DE HARDWARE</h2>
+            </div>
+
+            <p>Para evitar que un PLC quede en estado de huérfano, la jefatura de mantenimiento debe implementar la siguiente matriz de control:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>ACTIVIDAD PREVENTIVA</th>
+                        <th>FRECUENCIA Y PROCEDIMIENTO TÉCNICO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Reemplazo de Baterías de Litio</strong></td>
+                        <td>Cada 24 a 36 meses. El reemplazo **DEBE** realizarse con el PLC energizado para no borrar la memoria RAM durante el cambio.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grabado en Memoria No Volátil (Non-Volatile Store)</strong></td>
+                        <td>Tras cada cambio de código aprobado, ejecutar la función "Store to EEPROM / SD" para garantizar copia física permanente.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resguardo de Pantallas HMI y Servo-Drives</strong></td>
+                        <td>Extraer el runtime `.mer` (Panel automation) y parámetros `.drives` (Kinetix/PowerFlex) de forma simultánea al PLC.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 6: CAPACIDADES DE SOPORTE E INGENIERÍA DE ROBOLOGIX AUTOMATION -->
+            <div class="section-header">
+                <h2>6. CAPACIDADES DE SOPORTE Y RESCATE INDUSTRIAL DE ROBOLOGIX AUTOMATION</h2>
+            </div>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-shield-alt"></i> RESPALDO Y RECONSTRUCCIÓN TÉCNICA GARANTIZADA</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Servicio de Bóveda y Auditoría de Código:</strong> Diagnóstico integral, extracción online y resguardo verificado de proyectos PLC/HMI/Drive para plantas en Saltillo, Ramos Arizpe, Derramadero y Monterrey.</li>
+                    <li style="margin-bottom: 8px;"><strong>Ingeniería Inversa y Reconstrucción:</strong> En caso de pérdida total de programa, reprogramación e ingeniería de secuencias entregados en tiempo récord de **3 a 7 días**.</li>
+                    <li style="margin-bottom: 8px;"><strong>Suministro de Baterías y Tarjetas de Memoria:</strong> Importación y suministro de baterías de litio industriales y tarjetas SD normadas en **menos de una semana**.</li>
+                    <li style="margin-bottom: 0;"><strong>Cumplimiento Documental Riguroso:</strong> Equipo de ingenieros certificados con constancias STPS DC-3, Opinión Positiva SAT 32-D y atención de emergencia presencial 24/7. *(Registro REPSE opcional según requerimiento específico del cliente)*.</li>
+                </ul>
+            </div>
+
+            <div class="footer-bar">
+                <span>Investigación Técnica Detallada: El PLC Huérfano y Gestión de Respaldos • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Técnica: Índice de Competitividad Urbana (ICU IMCO) - Saltillo y el Noreste frente al Nearshoring 2026 | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 950px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #0284c7 50%, #0f172a 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-cyan);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.15);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-cyan);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.orange { border-left-color: var(--accent-orange); }
+        .section-header.purple { border-left-color: var(--accent-purple); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.orange { background: #fff7ed; border-color: #ffedd5; }
+        .highlight-box.purple { background: #f5f3ff; border-color: #ddd6fe; }
+        .highlight-box.green { background: #f0fdf4; border-color: #dcfce7; }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.blue { color: #0284c7; }
+        .box-title.orange { color: #ea580c; }
+        .box-title.purple { color: #6d28d9; }
+        .box-title.green { color: #15803d; }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .tech-table tr:nth-child(even) { background: #f8fafc; }
+
+        .badge-cyan { background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-orange { background: #ffedd5; color: #c2410c; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-green { background: #dcfce7; color: #15803d; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN ICU IMCO -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-chart-line"></i> INVESTIGACIÓN TÉCNICA • PODCAST EPISODIO 14</span>
+            <h1 class="cover-title">ANÁLISIS DEL ÍNDICE DE COMPETITIVIDAD URBANA (ICU IMCO) 2026</h1>
+            <p class="cover-subtitle">Saltillo y el Noreste Industrial frente al Nearshoring: Factores de Competitividad, Formalidad Laboral, Desafíos de Infraestructura y el Rol de la Automatización Industrial.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-podcast"></i> Podcast Asociado:</strong><br>
+                    Cero Paros: Automatización Industrial (Ep. 14)
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-globe-americas"></i> Enfoque Regional:</strong><br>
+                    Saltillo, Ramos Arizpe, Derramadero, Monterrey y Zona Noreste
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO Y ESTRATÉGICO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: RESULTADOS DEL ICU IMCO Y LIDERAZGO DE SALTILLO -->
+            <div class="section-header">
+                <h2>1. RESULTADOS DEL ICU IMCO Y EL POSICIONAMIENTO DE SALTILLO</h2>
+            </div>
+
+            <p>El <strong>Índice de Competitividad Urbana (ICU) 2026</strong> elaborado por el Instituto Mexicano para la Competitividad (IMCO) posiciona a la Zona Metropolitana de <strong>Saltillo en el 4° lugar nacional</strong> entre las ciudades con más de un millón de habitantes, consolidándose como uno de los polos industriales más atractivos y estables para la inversión extranjera directa (IED):</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>INDICADOR CLAVE IMCO</th>
+                        <th>DESEMPEÑO Y VALOR MEDIDO</th>
+                        <th>IMPACTO EN LA INDUSTRIA DE MANUFACTURA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Formalidad Laboral</strong></td>
+                        <td><span class="badge-green">25.55% INFORMALIDAD</span> La más baja de todo México</td>
+                        <td>Garantiza estabilidad en contrataciones, cumplimiento fiscal y capacitación técnica del personal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Especialización Industrial</strong></td>
+                        <td>Polo automotriz y manufactura avanzada de exportación</td>
+                        <td>Alta concentración de proveedores Tier-1/Tier-2 y cadenas de suministro integradas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mercado de Trabajo</strong></td>
+                        <td>Alta retención de talento en carreras STEM</td>
+                        <td>Demanda constante de especialización en programación PLC, robótica e integración.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Atracción de Nearshoring</strong></td>
+                        <td>Top 5 nacional en captación de plantas industriales</td>
+                        <td>Exige acelerar la automatización para mantener estándares globales de OEE y productividad.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 2: FACTORES QUE IMPULSAN EL NEARSHORING EN EL NORESTE -->
+            <div class="section-header orange">
+                <h2>2. FACTORES CLAVE DE COMPETITIVIDAD INDUSTRIAL Y TECNOLÓGICA</h2>
+            </div>
+
+            <p>El reporte del IMCO destaca que el éxito competitivo de Saltillo y la región noreste (Ramos Arizpe, Derramadero, Monterrey) se sostiene sobre tres pilares fundamentales que impactan directamente las operaciones de planta:</p>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-industry"></i> 1. Madurez de la Cadena de Suministro Industrial</div>
+                <p style="margin: 0; font-size: 0.93rem;">La cercanía geográfica con Estados Unidos y la alta densidad de plantas ensambladoras (OEMs) permiten tiempos de respuesta logística en <strong>menos de una semana</strong> para importación de insumos y refacciones de control.</p>
+            </div>
+
+            <div class="highlight-box orange">
+                <div class="box-title orange"><i class="fas fa-cogs"></i> 2. Requerimientos de Automatización e Integración Robótica</div>
+                <p style="margin: 0; font-size: 0.93rem;">Para competir con estándares internacionales, las nuevas plantas que se instalan bajo la ola del Nearshoring demandan líneas de ensamble 100% automatizadas con comunicación Industrial Ethernet (EtherNet/IP, PROFINET) y monitoreo en tiempo real.</p>
+            </div>
+
+            <div class="highlight-box purple">
+                <div class="box-title purple"><i class="fas fa-shield-alt"></i> 3. Seguridad Jurídica y Cumplimiento Normativo</div>
+                <p style="margin: 0; font-size: 0.93rem;">Las empresas multinacionales priorizan trabajar con proveedores altamente profesionalizados que cumplan con la norma fiscal SAT 32-D, obligaciones IMSS/INFONAVIT y certificaciones de seguridad laboral STPS DC-3 para el personal técnico en piso.</p>
+            </div>
+
+            <!-- SECCIÓN 3: RETOS DE INFRAESTRUCTURA Y AUTOMATIZACIÓN -->
+            <div class="page-break"></div>
+
+            <div class="section-header purple">
+                <h2>3. DESAFÍOS DE INFRAESTRUCTURA Y LA NECESIDAD DE AUTOMATIZAR</h2>
+            </div>
+
+            <p>A pesar de sus altas calificaciones en el ICU del IMCO, la región enfrenta importantes retos que las empresas deben resolver mediante tecnología de automatización:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>DESAFÍO REGIONAL IMCO</th>
+                        <th>SOLUCIÓN MEDIANTE AUTOMATIZACIÓN INDUSTRIAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Saturación de Capacidad Eléctrica e Infraestructura</strong></td>
+                        <td>Implementación de VFDs (variadores de frecuencia) de alta eficiencia, control de demanda máxima en PLC y monitoreo energético por red IO-Link.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Escasez de Mano de Obra Técnica Especializada</strong></td>
+                        <td>Células de paletizado y soldadura robótica (Fanuc, ABB, KUKA) para absorber tareas repetitivas y reasignar al personal a supervisión técnica.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paros No Programados en Líneas de Alta Velocidad</strong></td>
+                        <td>Migración de sistemas de control obsoletos a arquitecturas modernas (ControlLogix, S7-1500) ejecutados en ventanas de **3 a 7 días**.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 4: RECOMENDACIONES ESTRATÉGICAS PARA EMPRESAS -->
+            <div class="section-header green">
+                <h2>4. RECOMENDACIONES ESTRATÉGICAS PARA INVERSIONISTAS E INTEGRADORES</h2>
+            </div>
+
+            <p>Para aprovechar el dinamismo económico de Saltillo y el Noreste documentado por el IMCO, las plantas de manufactura deben ejecutar las siguientes acciones:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>RECOMENDACIÓN ESTRATÉGICA</th>
+                        <th>ACCIÓN DE IMPLEMENTACIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Retrofit de Maquinaria Existente</strong></td>
+                        <td>Actualizar tableros de control antiguos para extender la vida útil de las líneas de producción y cumplir metas de OEE sin requerir naves industriales nuevas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Certificación Técnica STPS DC-3</strong></td>
+                        <td>Capacitar al personal interno de mantenimiento en diagnóstico de PLCs y seguridad eléctrica bajo normas oficiales STPS.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Alianzas con Proveedores Especializados Locales</strong></td>
+                        <td>Colaborar con integradores locales homologados con tiempos de respuesta presencial inmediata en el corredor Saltillo-Monterrey.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 5: CAPACIDADES DE SOPORTE E INGENIERÍA DE ROBOLOGIX AUTOMATION -->
+            <div class="section-header">
+                <h2>5. CAPACIDADES DE SOPORTE E INGENIERÍA DE ROBOLOGIX AUTOMATION</h2>
+            </div>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-handshake"></i> IMPULSANDOLA COMPETITIVIDAD INDUSTRIAL DEL NORESTE</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Integración y Retrofit en Ventanas Cortas:</strong> Actualización de líneas de ensamble, celdas robóticas y tableros PLC entregados en tiempo récord de **3 a 7 días**.</li>
+                    <li style="margin-bottom: 8px;"><strong>Suministro de Componentes e Importación:</strong> Tiempos de entrega de refacciones electrónicas y hardware de control en **menos de una semana**.</li>
+                    <li style="margin-bottom: 8px;"><strong>Cumplimiento Documental Riguroso:</strong> Opinión positiva SAT 32-D, cumplimiento IMSS/INFONAVIT y constancias STPS DC-3 del equipo de ingenieros. *(Registro REPSE opcional según requerimiento específico del cliente)*.</li>
+                    <li style="margin-bottom: 0;"><strong>Atención Presencial 24/7:</strong> Cobertura directa en los parques industriales de Saltillo, Ramos Arizpe, Derramadero y la Zona Metropolitana de Monterrey.</li>
+                </ul>
+            </div>
+
+            <div class="footer-bar">
+                <span>Investigación Técnica: Competitividad Urbana IMCO 2026 • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

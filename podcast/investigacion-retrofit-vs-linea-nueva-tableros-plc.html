@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitepaper Técnico: Retrofit vs Línea Nueva - Modernización de Tableros de Control | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent-cyan: #00b8d4;
+            --accent-orange: #e65100;
+            --accent-green: #2e7d32;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #090d16 0%, #172554 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-cyan);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(0, 184, 212, 0.15);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-cyan);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.orange { border-left-color: var(--accent-orange); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.green {
+            background: #f0fdf4;
+            border-color: #dcfce7;
+        }
+
+        .highlight-box.orange {
+            background: #fff7ed;
+            border-color: #ffedd5;
+        }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.blue { color: #0284c7; }
+        .box-title.green { color: #15803d; }
+        .box-title.orange { color: #c2410c; }
+
+        .cmp-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .cmp-table th, .cmp-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .cmp-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .cmp-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .tag-win {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.78rem;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--accent-cyan);
+            color: #0f172a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-chart-line"></i> WHITEPAPER DE INVERSIÓN Y RENTABILIDAD INDUSTRIAL</span>
+            <h1 class="cover-title">RETROFIT VS LÍNEA NUEVA: ¿CUÁNDO CONVIENE MODERNIZAR UN TABLERO ANTIGUO?</h1>
+            <p class="cover-subtitle">Análisis Técnico-Financiero de CapEx vs OpEx, Retorno de Inversión (ROI), Normativa UL508A, Diagramación EPLAN y Mitigación de Riesgo de Paro.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-calendar-alt"></i> Fecha de Publicación:</strong><br>
+                    Septiembre 2026
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-industry"></i> Alcance Industrial:</strong><br>
+                    Plantas Automotrices, Metalmecánicas, Plásticos y Manufactura
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO DETALLADO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: LA ENCRUCIJADA DE LA DIRECCIÓN DE PLANTA -->
+            <div class="section-header">
+                <h2>1. LA ENCRUCIJADA DE INVERSIÓN: CAPEX VS OPEX EN 2026</h2>
+            </div>
+
+            <p>Ante una línea de producción que presenta micro-paros continuos, obsolescencia de componentes o la imposibilidad de integrar sistemas de trazabilidad y calidad, la gerencia de planta en el corredor Saltillo, Ramos Arizpe y Monterrey enfrenta una encrucijada estratégica:</p>
+
+            <p><strong>¿Comprar una máquina o línea de producción totalmente nueva (CapEx) o realizar un Retrofit Integral de Control en la máquina existente?</strong></p>
+
+            <p>El **Retrofit de Control** consiste en reemplazar el 100% de la arquitectura eléctrica, controladores (PLC), pantallas HMI, variadores de frecuencia, sensores y gabinetes bajo normativa UL508A, **conservando intacta la estructura mecánica pesada, hidráulica y neumática principal de la máquina**.</p>
+
+            <div class="highlight-box">
+                <div class="box-title blue"><i class="fas fa-calculator"></i> LA REGLA DEL 20/80 EN MAQUINARIA INDUSTRIAL</div>
+                <p style="margin-bottom:0;">En la mayoría de las prensas mecánicas, troqueladoras, celdas de soldadura y líneas de formado, **el 75% al 80% del valor físico de la máquina reside en su estructura metálica pesada, chasis de hierro fundido y herramental**. El sistema de control eléctrico y electrónico representa solo entre el 20% y 25% del costo total, pero es responsable del 95% de las fallas de paro de línea. Reemplazar la máquina completa por fallas eléctricas es un desperdicio de capital masivo.</p>
+            </div>
+
+            <!-- SECCIÓN 2: MATRIZ DE COMPARACIÓN TÉCNICO-FINANCIERA -->
+            <div class="section-header orange">
+                <h2>2. MATRIZ COMPARATIVA: RETROFIT VS ADQUISICIÓN DE LÍNEA NUEVA</h2>
+            </div>
+
+            <table class="cmp-table">
+                <thead>
+                    <tr>
+                        <th>CRITERIO DE EVALUACIÓN</th>
+                        <th>RETROFIT INTEGRAL DE CONTROL</th>
+                        <th>ADQUISICIÓN DE LÍNEA NUEVA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Inversión Financiera (Costo)</strong></td>
+                        <td><span class="tag-win">15% a 25% DEL COSTO NUEVO</span></td>
+                        <td>100% del costo de inversión (CapEx elevado).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiempo de Entrega / Puesta en Marcha</strong></td>
+                        <td><span class="tag-win">3 a 6 SEMANAS</span> (Trabajo en taller)</td>
+                        <td>24 a 48 semanas (Fletes internacionales e importación).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiempo de Paro de Planta Requerido</strong></td>
+                        <td><span class="tag-win">3 a 7 DÍAS</span> (Ventana programada)</td>
+                        <td>2 a 4 semanas (Desmontaje, obras civiles y rigging).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Período de Amortización (Payback)</strong></td>
+                        <td><span class="tag-win">3 a 8 MESES</span> mediante ahorro de paros.</td>
+                        <td>24 a 48 meses para recuperar la inversión.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Curva de Aprendizaje del Personal</strong></td>
+                        <td><span class="tag-win">MÍNIMA</span> (Misma mecánica conocida).</td>
+                        <td>ALTA (Capacitación completa en mecánica y operación).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adecuación de Obras Civiles y Servicios</strong></td>
+                        <td><span class="tag-win">CERO MODIFICACIONES</span> (Mismo footprint).</td>
+                        <td>Requiere modificaciones en cimentación, 480V y neumática.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 3: CUÁNDO SÍ Y CUÁNDO NO CONVIENE HACER RETROFIT -->
+            <div class="page-break"></div>
+
+            <div class="section-header green">
+                <h2>3. CRITERIOS TÉCNICOS: ¿CUÁNDO SÍ Y CUÁNDO NO HACER RETROFIT?</h2>
+            </div>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-thumbs-up"></i> ¿CUÁNDO SÍ CONVIENE UN RETROFIT? (3 ESCENARIOS CLAVE)</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>1. Estructura Mecánica Robusta y Sin Desgaste Crítico:</strong> Prensas, troqueladoras, extrusoras y roladoras de construcción pesada cuyo chasis no presenta grietas ni deformaciones estructurales.</li>
+                    <li style="margin-bottom: 8px;"><strong>2. Obsolescencia Exclusiva del Sistema de Control:</strong> La máquina falla por falta de tarjetas de PLC (SLC 500, S7-300), variadores descontinuados o pantallas HMI falladas, pero su movimiento mecánico sigue siendo preciso.</li>
+                    <li style="margin-bottom: 0;"><strong>3. Exigencia de Cumplimiento Normativo u OEE:</strong> Necesidad urgente de integrar seguridad **PROFIsafe**, visión artificial **Cognex**, lectores de código o conexión a sistemas **SCADA (Ignition/WinCC)** exigidos por auditorías IATF 16949.</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box orange">
+                <div class="box-title orange"><i class="fas fa-thumbs-down"></i> ¿CUÁNDO NO CONVIENE UN RETROFIT? (COMPRAR LÍNEA NUEVA)</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>1. Desgaste Mecánico Severo e Irrecuperable:</strong> Guías, bancadas, transmisiones o moldes con juego mecánico excesivo cuyo costo de reparación mecánica supere el 50% de la máquina nueva.</li>
+                    <li style="margin-bottom: 0;"><strong>2. Necesidad de Duplicar la Velocidad o Reducir Tiempos de Ciclo a la Mitad:</strong> Si el requerimiento de producción exige una tecnología cinemática totalmente distinta que la estructura mecánica actual no puede soportar.</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 4: METODOLOGÍA DE RETROFIT ROBOLOGIX EN 5 ETAPAS -->
+            <div class="section-header">
+                <h2>4. METODOLOGÍA ROBOLOGIX EN 5 ETAPAS (CERO PAROS DE LÍNEA)</h2>
+            </div>
+
+            <p>Para garantizar que la modernización del tablero no interrumpa la producción semanal de la planta, Robologix Automation ejecuta el proyecto mediante este protocolo de 5 etapas:</p>
+
+            <ol class="step-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <strong>Levantamiento Inicial y Reingeniería Eléctrica en EPLAN:</strong> Inspección presencial sin costo. Diseñamos el nuevo gabinete eléctrico bajo **normativa UL508A, CE y NOM**, generando diagramas unifilares y trifilares completos en EPLAN.
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <strong>Ensamble del Nuevo Gabinete de Control en Taller:</strong> Armado del tablero con componentes de última generación (Studio 5000 CompactLogix 5380 o Siemens S7-1500 TIA Portal, variadores y clemas). Cableado 100% probado en seco en nuestras instalaciones antes de enviarlo a planta.
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <strong>Comisionamiento Virtual y Pruebas en Software:</strong> Simulación completa de la lógica de programación y secuencias en software para validar que la máquina funcione sin errores antes de la instalación física.
+                </li>
+                <li>
+                    <span class="step-number">4</span>
+                    <strong>Intervención en Paro Programado (3 a 7 Días):</strong> Durante la ventana programada, retiramos el gabinete obsoleto, montamos el nuevo tablero pre-ensamblado y realizamos la integración electromecánica.
+                </li>
+                <li>
+                    <span class="step-number">5</span>
+                    <strong>Puesta en Marcha, Capacitación STPS DC-3 y Manuales FDS:</strong> Ajustes finales de producción, documentación de código con IA y capacitación formal con constancia DC-3 al equipo de mantenimiento de la planta.
+                </li>
+            </ol>
+
+            <div class="footer-bar">
+                <span>Whitepaper: Retrofit vs Línea Nueva • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

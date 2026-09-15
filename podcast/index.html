@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Cero Paros: Automatización Industrial | Catálogo Completo | Robologix Automation</title>
+    <meta name="description"
+        content="Escucha Cero Paros, el podcast oficial de automatización industrial, programación de PLC, robótica y nearshoring conducido por el Mtro. Aaron Ibarra Cepeda. Explora los 17 episodios completos.">
+    <meta name="keywords"
+        content="podcast automatizacion industrial, cero paros podcast, podcast plc mexico, robologix automation, aaron ibarra cepeda, podcast manufactura saltillo monterrey">
+    <meta name="author" content="Robologix Automation">
+    <link rel="canonical" href="https://rbl-automation.com/podcast/" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rbl-automation.com/podcast/">
+    <meta property="og:title" content="Podcast Cero Paros: Automatización Industrial | Robologix Automation">
+    <meta property="og:description" content="Escucha Cero Paros, el podcast oficial de automatización industrial, programación de PLC, robótica y nearshoring conducido por el Mtro. Aaron Ibarra Cepeda. Explora los 17 episodios oficiales con investigaciones descargables.">
+    <meta property="og:image" content="https://rbl-automation.com/podcast/Portada_Podcast_Cero_Paros.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rbl-automation.com/podcast/">
+    <meta name="twitter:title" content="Podcast Cero Paros: Automatización Industrial | Robologix Automation">
+    <meta name="twitter:description" content="Escucha Cero Paros, el podcast oficial de automatización industrial conducido por el Mtro. Aaron Ibarra Cepeda. Explora los 17 episodios oficiales.">
+    <meta name="twitter:image" content="https://rbl-automation.com/podcast/Portada_Podcast_Cero_Paros.png">
+
+    <!-- Schema.org Structured Data for Podcast Series -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "name": "Cero Paros: Automatización Industrial",
+      "description": "El podcast oficial de automatización industrial, programación de PLC, robótica, nearshoring y normatividad STPS conducido por el Mtro. Aaron Ibarra Cepeda.",
+      "url": "https://rbl-automation.com/podcast/",
+      "image": "https://rbl-automation.com/podcast/Portada_Podcast_Cero_Paros.png",
+      "author": {
+        "@type": "Person",
+        "name": "Mtro. Aaron Ibarra Cepeda"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation S.A. de C.V.",
+        "url": "https://rbl-automation.com/"
+      },
+      "webFeed": "https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .podcast-hero {
+            padding: 140px 5% 60px 5%;
+            background: linear-gradient(135deg, #050811 0%, #0f172a 50%, #0a0a0a 100%);
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .podcast-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            padding: 6px 18px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .podcast-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .podcast-hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 850px;
+            margin: 0 auto 30px auto;
+        }
+
+        .podcast-spotify-banner {
+            background: linear-gradient(135deg, #1db954 0%, #191414 100%);
+            border-radius: 12px;
+            padding: 25px 35px;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 30px rgba(29, 185, 84, 0.2);
+        }
+
+        .spotify-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .spotify-info i {
+            font-size: 3.5rem;
+            color: #fff;
+        }
+
+        .spotify-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .spotify-info p {
+            color: #e0e0e0;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .btn-spotify {
+            background: #fff;
+            color: #191414;
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 0.95rem;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-spotify:hover {
+            background: #1db954;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .episodes-section {
+            padding: 60px 5%;
+            background-color: var(--bg-dark);
+        }
+
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .episode-card {
+            background-color: var(--bg-card);
+            border: 1px solid #262626;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.15);
+        }
+
+        .episode-cover {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .episode-cover img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .episode-card:hover .episode-cover img {
+            transform: scale(1.04);
+        }
+
+        .episode-num-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(10, 10, 10, 0.85);
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .episode-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .episode-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: #fff;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .episode-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .episode-bullets {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--primary-color);
+            padding: 12px 15px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 25px;
+            font-size: 0.88rem;
+            color: #d1d5db;
+        }
+
+        .episode-bullets ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .episode-bullets li {
+            margin-bottom: 6px;
+        }
+
+        .episode-bullets li:last-child {
+            margin-bottom: 0;
+        }
+
+        .episode-actions {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-ep-spotify {
+            background: #1db954;
+            color: #fff;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .btn-ep-spotify:hover {
+            background: #179b45;
+        }
+
+        .ep-docs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn-doc {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 8px;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.3s;
+        }
+
+        .btn-doc:hover {
+            background: var(--primary-color);
+            color: #000;
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="text-decoration:none; color:inherit;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Inicio</a></li>
+                <li><a href="../index.html#services">Servicios</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                <li><a href="../podcast-y-articulos.html" style="color: var(--primary-color);">Podcast &amp; Artículos</a></li>
+                <li><a href="../index.html#about">Nosotros</a></li>
+                <li><a href="../index.html#clients">Clientes</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PODCAST HERO -->
+    <section class="podcast-hero">
+        <span class="podcast-badge"><i class="fas fa-podcast"></i> PODCAST OFICIAL ROBOLOGIX</span>
+        <h1>Cero Paros: <span class="neon-text">Automatización Industrial</span></h1>
+        <p>Conducido por el <strong>Mtro. Aaron Ibarra Cepeda</strong>. Analizamos los problemas reales de planta, fallas en PLCs, robótica, nearshoring, normatividad STPS/SAT y cómo lograr la máxima eficiencia operativa sin paros de producción. <strong>17 Episodios Oficiales</strong>.</p>
+
+        <div class="podcast-spotify-banner">
+            <div class="spotify-info">
+                <i class="fab fa-spotify"></i>
+                <div>
+                    <h3>Disponible en Spotify Podcasts</h3>
+                    <p>Suscríbete para escuchar la serie completa de 17 episodios desde cualquier dispositivo.</p>
+                </div>
+            </div>
+            <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-spotify">
+                <i class="fas fa-play"></i> Escuchar en Spotify
+            </a>
+        </div>
+    </section>
+
+    <!-- EPISODES SECTION -->
+    <section class="episodes-section">
+        <div class="section-header">
+            <h2>Catálogo Oficial de <span class="neon-text">Episodios en Spotify (1 al 17)</span></h2>
+            <div class="underline"></div>
+            <p style="color: var(--text-muted); margin-top: 15px;">Explora los títulos oficiales de la serie y descarga las investigaciones técnicas en PDF/HTML asociadas a cada episodio.</p>
+        </div>
+
+        <div class="episodes-grid">
+
+            <!-- EPISODIO 17 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_17_PLC_Huerfano.png" alt="Episodio 17: El PLC Huérfano">
+                    <span class="episode-num-badge">EPISODIO 17</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">El PLC Huérfano: ¿Qué pasa cuando tu máquina falla y NO tienes respaldo del código?</h3>
+                    <p class="episode-desc">Analizamos las causas por las que un controlador borra su programa (descarga de batería de litio, corrupción de memoria SD) y cómo la Bóveda Digital de Robologix evita paros no planificados.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Causas de pérdida de código RAM y corrupción en SD.</li>
+                            <li>Riesgo de uploads des-compilados sin tags ni comentarios.</li>
+                            <li>Bóveda Digital y resguardo preventivo 24/7.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_PLC_Huerfano_Respaldos_Codigo_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-plc-huerfano-respaldos-codigo-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 16 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_16_Tablero_Espagueti.png" alt="Episodio 16: El Síndrome del Tablero Espagueti">
+                    <span class="episode-num-badge">EPISODIO 16</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">El Síndrome del Tablero Espagueti: Horas de paro por falta de diagramas y etiquetas</h3>
+                    <p class="episode-desc">Exponemos cómo los gabinetes desordenados y la falta de planos unifilares disparan el Tiempo Medio de Reparación (MTTR) de 15 minutos a más de 6 horas.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Causas raíz del desorden eléctrico en planta.</li>
+                            <li>Riesgo de arcos eléctricos y fallas en tarjetas I/O.</li>
+                            <li>Levantamiento e ingeniería inversa en EPLAN/CAD.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Sindrome_Tablero_Espagueti_Diagramas_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-sindrome-tablero-espagueti-diagramas-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 15 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_15_Persona_Fisica_vs_Moral.png" alt="Episodio 15: Persona Física vs Persona Moral">
+                    <span class="episode-num-badge">EPISODIO 15</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">¿Persona Física o Persona Moral? Estructuración Legal y Fiscal para Proveedores</h3>
+                    <p class="episode-desc">Evaluación del impacto en blindaje patrimonial, tasas de ISR (RESICO vs Régimen General) y exigencias de Vendor Onboarding en plantas automotrices Tier-1.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Protección patrimonial y límites de responsabilidad.</li>
+                            <li>Por qué los OEMs exigen Personas Morales.</li>
+                            <li>Estrategia de escalabilidad de RESICO a S.A. de C.V.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Persona_Fisica_vs_Moral_Automatizacion_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-persona-fisica-vs-persona-moral-automatizacion-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 14 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_14_Competitividad_IMCO.png" alt="Episodio 14: Competitividad IMCO">
+                    <span class="episode-num-badge">EPISODIO 14</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Índice de Competitividad Urbana (IMCO): Por qué Saltillo y el Noreste Lideran el Nearshoring</h3>
+                    <p class="episode-desc">Análisis del reporte IMCO 2026 donde la Zona Metropolitana de Saltillo ocupa el 4° lugar nacional, su baja informalidad laboral (25.55%) y retos de automatización.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Liderazgo industrial de Saltillo y Monterrey.</li>
+                            <li>Requerimientos de automatización en Nearshoring.</li>
+                            <li>Solución de retos de capacidad eléctrica en planta.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_ICU_IMCO_Competitividad_Saltillo_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-icu-imco-competitividad-saltillo-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 13 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_13_Alta_Proveedores.png" alt="Episodio 13: Vendor Onboarding">
+                    <span class="episode-num-badge">EPISODIO 13</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Cómo darse de alta como proveedor en grandes empresas (Vendor Onboarding)</h3>
+                    <p class="episode-desc">Guía paso a paso para navegar portales de compras (SAP Ariba, Coupa), cumplimiento fiscal SAT 32-D, constancias STPS DC-3 y financiamiento a crédito.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Proceso de pre-calificación y obtención de Vendor Number.</li>
+                            <li>Lista de verificación legal y fiscal en México.</li>
+                            <li>Manejo de crédito a 60/90 días y factoraje.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Alta_Proveedores_Empresas_Requisitos_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-alta-proveedores-empresas-requisitos-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 12 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_12_4Claves_Proveedor_Preferido.png" alt="Episodio 12: 4 Claves Proveedor Preferido CCMTY">
+                    <span class="episode-num-badge">EPISODIO 12</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Las 4 Claves para Ser un Proveedor Preferido de las Grandes Empresas (Reporte CCMTY)</h3>
+                    <p class="episode-desc">Análisis del Capitulo 12 de la Cátedra de CADELEC / CCMTY sobre los criterios de selección de proveedores en la industria manufacturera.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Capacidad técnica y tiempos de respuesta.</li>
+                            <li>Flexibilidad operativa y soporte en sitio.</li>
+                            <li>Solvencia financiera e importación exprés.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_4Claves_Proveedor_Preferido_CCMTY_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-4claves-proveedor-preferido-ccmty-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 11 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_11_Proveedor_Aliado_Estrategico.png" alt="Episodio 11: El Proveedor Especializado">
+                    <span class="episode-num-badge">EPISODIO 11</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">El Proveedor Especializado como Aliado Estratégico: Tu multiplicador de ingeniería</h3>
+                    <p class="episode-desc">Por qué intentar resolver proyectos complejos in-house genera ineficiencias financieras y cómo ver al proveedor como un multiplicador operativo.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Modelo OpEx vs. Costos Fijos permanentes.</li>
+                            <li>Cero experimentación en líneas de producción.</li>
+                            <li>Agilidad en refacciones e importaciones.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Proveedor_Aliado_Estrategico_Automatizacion_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-proveedor-aliado-estrategico-automatizacion-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 10 -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_10_IMCO_Compara_Carreras_2026.png" alt="Episodio 10: IMCO Compara Carreras">
+                    <span class="episode-num-badge">EPISODIO 10</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">IMCO Compara Carreras 2026: El panorama de Automatización y Mecatrónica en México</h3>
+                    <p class="episode-desc">Estudio del reporte IMCO sobre las carreras técnicas y universitarias en automatización, demanda de talento y competencias clave.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Posicionamiento de Mecatrónica y Electrónica.</li>
+                            <li>Habilidades técnicas más cotizadas en la industria.</li>
+                            <li>Brechas de empleabilidad y capacitación STPS.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_IMCO_Compara_Carreras_Automatizacion_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-imco-compara-carreras-automatizacion-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 09 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_9_Deficit_Tecnico_CAINTRA.png" alt="Episodio 09: Alerta en el Norte">
+                    <span class="episode-num-badge">EPISODIO 09</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 9 | Alerta en el Norte: El Déficit de Técnicos y la Solución con Automatización</h3>
+                    <p class="episode-desc">Análisis del reporte de CAINTRA Nuevo León sobre la escasez crítica del 81% de mano de obra técnica y cómo la automatización robótica resuelve la vacancia laboral.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Impacto de la vacancia técnica en manufactura.</li>
+                            <li>Absorción de tareas repetitivas mediante Cobots.</li>
+                            <li>Programas de certificación DC-3 de personal.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Deficit_Personal_Tecnico_CAINTRA_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-deficit-personal-tecnico-caintra-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 08 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_8_Futuro_Robotica_Industrial.png" alt="Episodio 08: El Futuro de la Robótica Industrial">
+                    <span class="episode-num-badge">EPISODIO 08</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 8 | El Futuro de la Robótica Industrial: Cobots & AMRs</h3>
+                    <p class="episode-desc">Evolución de la robótica colaborativa y los robots móviles autónomos (AMR) en las plantas de ensamblaje de Saltillo, Ramos Arizpe y Monterrey.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Diferencias entre Robots Industriales y Cobots.</li>
+                            <li>Logística interna optimizada con AMRs.</li>
+                            <li>Normas de seguridad interactiva ISO 10218.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Futuro_Robotica_Industrial_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-futuro-robotica-industrial-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 07 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_7_Monitoreo_Predictivo_IA.png" alt="Episodio 07: Monitoreo Predictivo e IA">
+                    <span class="episode-num-badge">EPISODIO 07</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 7 | El Fin de los Paros Indeseados: Monitoreo Predictivo e IA</h3>
+                    <p class="episode-desc">Implementación de sensores de vibración y temperatura IO-Link conectados a modelos predictivos para evitar fallas mecánicas en motores y reductores.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Monitoreo en tiempo real de salud de activos.</li>
+                            <li>Integración de IO-Link Master con PLC.</li>
+                            <li>Algoritmos de FFT para detección de fallas.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Monitoreo_Predictivo_IA_IOLink_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-monitoreo-predictivo-ia-iolink-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 06 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_6_Studio5000_vs_TIAPortal.png" alt="Episodio 06: Studio 5000 vs TIA Portal">
+                    <span class="episode-num-badge">EPISODIO 06</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 6 | Studio 5000 vs TIA Portal: ¿Cuál domina en México?</h3>
+                    <p class="episode-desc">Comparativa técnica entre las dos plataformas de automatización más dominantes del mercado: Allen-Bradley Logix vs. Siemens SIMATIC.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Diferencias de arquitectura de software y tags.</li>
+                            <li>Redes deterministas EtherNet/IP vs Profinet.</li>
+                            <li>Criterios de elección por sector industrial.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Studio5000_vs_TIAPortal_Mexico_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-studio5000-vs-tia-portal-mexico-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 05 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_5_Retrofit_vs_Linea_Nueva.png" alt="Episodio 05: Retrofit vs Línea Nueva">
+                    <span class="episode-num-badge">EPISODIO 05</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 5: Retrofit vs Línea Nueva</h3>
+                    <p class="episode-desc">Análisis de costo-beneficio entre actualizar tableros y PLCs existentes frente a invertir en una línea completa nueva, ahorrando hasta 60% de CapEx.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Análisis financiero de CapEx vs OpEx.</li>
+                            <li>Actualización de gabinetes en ventanas cortas.</li>
+                            <li>Integración de sensores modernos en máquinas legacy.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Retrofit_vs_Linea_Nueva_Tableros_PLC.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-retrofit-vs-linea-nueva-tableros-plc.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 04 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_4_Bomba_de_Tiempo.png" alt="Episodio 04: Tu fábrica es una bomba de tiempo">
+                    <span class="episode-num-badge">EPISODIO 04</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 4: Tu fábrica es una bomba de tiempo</h3>
+                    <p class="episode-desc">Por qué mantener PLCs descontinuados (SLC 500, S7-300), tableros sin diagramas y cero respaldos pone a tu planta en riesgo crítico de paro prolongado.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Riesgos de paros no planificados por obsolescencia.</li>
+                            <li>Identificación de componentes vulnerables.</li>
+                            <li>Planes de prevención y migración por etapas.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Whitepaper_PLCs_Obsoletos_SLC500_S7300_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="whitepaper-plcs-obsoletos-slc500-s7300-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 03 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_3_Evita_Multas_STPS.png" alt="Episodio 03: Evita multas y detenciones con la STPS">
+                    <span class="episode-num-badge">EPISODIO 03</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 3: Evita multas y detenciones con la STPS (DC-3)</h3>
+                    <p class="episode-desc">La importancia de certificar las habilidades laborales de tu personal técnico con constancias STPS DC-3 en PLC y Robótica para superar auditorías.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Cumplimiento normativo ante inspecciones STPS.</li>
+                            <li>Certificación oficial en Studio 5000 y TIA Portal.</li>
+                            <li>Reducción de riesgos de trabajo en piso.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_Importancia_DC3_STPS_Empresas.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-dc3-stps-empresas.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 02 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Episodio_2_Ganas_Mas.png" alt="Episodio 2: ¿Ganas más que un gerente? El salario de un programador de PLC al descubierto">
+                    <span class="episode-num-badge">EPISODIO 02</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 2: ¿Ganas más que un gerente? El salario de un programador de PLC al descubierto</h3>
+                    <p class="episode-desc">En este episodio, analizamos a fondo la realidad económica de los especialistas en automatización en el clúster industrial del norte de México con el boom del nearshoring.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>Posicionamiento y valor profesional de la especialidad en PLC.</li>
+                            <li>Competencias técnicas y gerenciales más valoradas en el mercado.</li>
+                            <li>Desarrollo de carrera técnica y consultoría en automatización.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Investigacion_IMCO_Compara_Carreras_Automatizacion_2026.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="investigacion-imco-compara-carreras-automatizacion-2026.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPISODIO 01 (TÍTULO OFICIAL SPOTIFY) -->
+            <div class="episode-card">
+                <div class="episode-cover">
+                    <img src="Portada_Podcast_Cero_Paros.png" alt="Episodio 1: Menos Estrés, Cero Paros: El Lado Humano de la Automatización">
+                    <span class="episode-num-badge">EPISODIO 01</span>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">Episodio 1: Menos Estrés, Cero Paros: El Lado Humano de la Automatización</h3>
+                    <p class="episode-desc">¿Es posible hablar de robótica de última generación, PLCs y celdas industriales poniendo a las personas en el centro? Analizamos la propuesta de Robologix Automation.</p>
+                    <div class="episode-bullets">
+                        <strong>En este episodio aprenderás:</strong>
+                        <ul>
+                            <li>La filosofía operativa de Robologix Automation.</li>
+                            <li>Cómo eliminar el estrés y la preocupación por fallas en planta.</li>
+                            <li>Estrategia de estabilidad operativa y lado humano en líneas.</li>
+                        </ul>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" class="btn-ep-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                        <div class="ep-docs-grid">
+                            <a href="Presentacion_Corporativa_Robologix_Automation.pdf" target="_blank" class="btn-doc"><i class="fas fa-file-pdf"></i> Reporte PDF</a>
+                            <a href="presentacion-robologix-automation.html" target="_blank" class="btn-doc"><i class="fas fa-globe"></i> Ver HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #050505; border-top: 1px solid #222; padding: 50px 5% 30px 5%; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="logo" style="margin-bottom: 20px;">ROBOLOGIX <span class="highlight">AUTOMATION</span></div>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 30px auto; font-size: 0.95rem;">
+                Empresa integradora de automatización industrial, programación de PLC, robótica y tableros de control. Cobertura presencial en Saltillo, Ramos Arizpe, Derramadero, Monterrey y zona noreste de México.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; font-size: 1.5rem;">
+                <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" style="color: #1db954;"><i class="fab fa-spotify"></i></a>
+                <a href="https://wa.me/528444551869" target="_blank" style="color: #25d366;"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:aibarra.cepeda@gmail.com" style="color: var(--primary-color);"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="color: #666; font-size: 0.85rem;">&copy; 2026 Robologix Automation S.A. de C.V. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Estratégica: Las 4 Claves para Ser un Proveedor Preferido (Reporte CCMTY) | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 950px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #1e3a8a 50%, #0f172a 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-blue);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.orange { border-left-color: var(--accent-orange); }
+        .section-header.cyan { border-left-color: var(--accent-cyan); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.orange { background: #fff7ed; border-color: #ffedd5; }
+        .highlight-box.cyan { background: #f0f9ff; border-color: #bae6fd; }
+        .highlight-box.green { background: #f0fdf4; border-color: #dcfce7; }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.blue { color: #1d4ed8; }
+        .box-title.orange { color: #ea580c; }
+        .box-title.cyan { color: #0284c7; }
+        .box-title.green { color: #15803d; }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .tech-table tr:nth-child(even) { background: #f8fafc; }
+
+        .badge-blue { background: #dbeafe; color: #1e40af; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-orange { background: #ffedd5; color: #c2410c; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-green { background: #dcfce7; color: #15803d; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: #2563eb;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN CCMTY -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-award"></i> INVESTIGACIÓN ESTRATÉGICA • PODCAST EPISODIO 12</span>
+            <h1 class="cover-title">LAS 4 CLAVES PARA SER UN PROVEEDOR PREFERIDO DE LAS GRANDES EMPRESAS (REPORTE CCMTY)</h1>
+            <p class="cover-subtitle">Análisis de Desarrollo de Proveedores Industriales: Expectativas de Tier-1/OEMs, Operaciones Predecibles Lean, Gestión por KPIs y Solución Causa Raíz.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-podcast"></i> Podcast Asociado:</strong><br>
+                    Cero Paros: Automatización Industrial (Ep. 12)
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-building-columns"></i> Fuente Institucional:</strong><br>
+                    Centro de Competitividad de Monterrey (CCMTY / ccmty.com)
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO Y ESTRATÉGICO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: EXPECTATIVAS DE LAS GRANDES EMPRESAS (OEMs / TIER-1) -->
+            <div class="section-header">
+                <h2>1. EXPECTATIVAS DE LAS GRANDES EMPRESAS AL SELECCIONAR PROVEEDORES</h2>
+            </div>
+
+            <p>De acuerdo con el análisis del **Centro de Competitividad de Monterrey (CCMTY)**, las grandes plantas automotrices y de manufactura global en el norte de México evalúan a sus proveedores bajo un conjunto de expectativas estrictas para garantizar la continuidad operativa de su cadena de suministro:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>EXPECTATIVA CLAVE DEL CLIENTE (CCMTY)</th>
+                        <th>REQUERIMIENTO EN AUTOMATIZACIÓN E INGENIERÍA</th>
+                        <th>MÉTRICA ROBOLOGIX DE CUMPLIMIENTO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Compromiso Estricto con Plazos</strong></td>
+                        <td>Importación e instalación puntual de piezas sin excusas.</td>
+                        <td><span class="badge-blue">MENOS DE 1 SEMANA EN IMPORTACIONES</span> Puesto en piso de planta.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Adaptabilidad a Cambios Operativos</strong></td>
+                        <td>Flexibilidad para trabajar en ventanas de mantenimiento.</td>
+                        <td><span class="badge-green">EJECUCIÓN EN 3 A 7 DÍAS</span> En paros programados.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Comunicación Directa y Transparente</strong></td>
+                        <td>Atención presencial inmediata y reporte continuo de avance.</td>
+                        <td><span class="badge-blue">SOPORTE PRESENCIAL 24/7</span> Con tiempo de respuesta <2h local.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Enfoque en Competitividad y Cero Defectos</strong></td>
+                        <td>Entrega de código limpio, planos EPLAN y certificaciones.</td>
+                        <td><span class="badge-green">DOCUMENTACIÓN COMPLETA + DC-3</span> Entrega llave en mano.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 2: LAS 4 CLAVES DE DESARROLLO DE PROVEEDORES PREFERIDOS -->
+            <div class="section-header orange">
+                <h2>2. LAS 4 CLAVES PARA SER UN PROVEEDOR PREFERIDO</h2>
+            </div>
+
+            <p>El CCMTY establece que para trascender de ser un proveedor ocasional y convertirse en un **Proveedor Preferido (Key Partner)**, la empresa debe dominar cuatro pilares fundamentales:</p>
+
+            <div class="highlight-box orange">
+                <div class="box-title orange"><i class="fas fa-key"></i> PILARES DEL PROVEEDOR PREFERIDO (MARCO CCMTY)</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Clave 1: Mentalidad Confiable y Modo Retador (Mindset):</strong> Proactividad constante, cultura de innovación continua ("Modo Start-up") y compromiso incesante con resolver problemas antes de que afecten la producción.</li>
+                    <li style="margin-bottom: 8px;"><strong>Clave 2: Operaciones Predecibles mediante Filosofía Esbelta:</strong> Eliminación sistemática de desperdicios, variabilidad e inflexibilidad. La gran empresa debe saber exactamente qué nivel de calidad recibirá en cada intervención.</li>
+                    <li style="margin-bottom: 8px;"><strong>Clave 3: Gestión Rigurosa por KPIs Alineados al Cliente:</strong> Medición en tiempo real de indicadores de calidad, tiempo de respuesta SLA, OEE de celda y tasa de paros no programados.</li>
+                    <li style="margin-bottom: 0;"><strong>Clave 4: Capacidad de Solución de Problemas de Causa Raíz:</strong> Capacidad técnica para contener desviaciones al instante y aplicar metodologías de análisis profundo (5 Whys, 8D) para no colocar parches temporales.</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 3: OPERACIONES PREDECIBLES Y LEAN MANUFACTURING -->
+            <div class="page-break"></div>
+
+            <div class="section-header cyan">
+                <h2>3. OPERACIONES PREDECIBLES: ELIMINACIÓN DE DESPERDICIOS E INFLEXIBILIDAD</h2>
+            </div>
+
+            <p>El reporte del Centro de Competitividad de Monterrey enfatiza que la confiabilidad no ocurre por casualidad, sino por la estandarización de procesos. Aplicado a la automatización industrial, esto implica:</p>
+
+            <ol class="step-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <strong>Estandarización de Programación PLC (IEC 61131-3):</strong> Uso estricto de plantillas AOIs y FBs probadas en Studio 5000 o TIA Portal, eliminando estilos individuales de programación que generan confusión en el turno nocturno.
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <strong>Pre-Comisionamiento en Simulación (Digital Twins):</strong> Probar la lógica en software previo al montaje físico para asegurar que las operaciones en piso sean 100% predecibles sin margen de error.
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <strong>Protocolo de Pruebas de Aceptación en Fábrica (FAT/SAT):</strong> Lista de verificación estandarizada antes de entregar la celda robótica o el tablero de control al equipo de producción.
+                </li>
+            </ol>
+
+            <!-- SECCIÓN 4: GESTIÓN DE KPIS Y SOLUCIÓN DE CAUSA RAÍZ -->
+            <div class="section-header green">
+                <h2>4. GESTIÓN POR KPIS ALINEADOS Y SOLUCIÓN DE CAUSA RAÍZ</h2>
+            </div>
+
+            <p>Para estar en la misma sintonía telemática con las grandes armadoras y plantas Tier-1, Robologix Automation alinea su métrica de desempeño con los indicadores del cliente:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>KPI ALINEADO AL CLIENTE</th>
+                        <th>OBJETIVO DE DESEMPEÑO ROBOLOGIX</th>
+                        <th>MÉTODO DE SOLUCIÓN CAUSA RAÍZ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SLA de Respuesta Presencial</strong></td>
+                        <td>Tiempo de arribo a planta &lt; 2 horas en zona metropolitana.</td>
+                        <td>Personal de guardia capacitado 24/7 en Saltillo y Ramos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiempo Medio de Reparación (MTTR)</strong></td>
+                        <td>Diagnóstico de fallas complejas en menos de 60 minutos.</td>
+                        <td>Uso de analizadores de red Ethernet/IP, osciloscopios y Wireshark.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cero Reincidencia de Micro-paros</strong></td>
+                        <td>Eliminación del 100% de la falla intermitente detectada.</td>
+                        <td>Análisis de causa raíz en 24VDC, ruido EMC e integraciones STP M12.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 5: CAPACIDADES Y COMPROMISO DE ROBOLOGIX AUTOMATION -->
+            <div class="section-header">
+                <h2>5. EL COMPROMISO DE ROBOLOGIX COMO PROVEEDOR PREFERIDO</h2>
+            </div>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-shield-alt"></i> VALOR DE PROVEEDOR PREFERIDO EN COAHUILA Y NUEVO LEÓN</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Garantía de Suministro de Refacciones:</strong> Importación express de componentes obsoletos entregados en piso de planta en **menos de una semana**.</li>
+                    <li style="margin-bottom: 8px;"><strong>Ejecución de Retrofits e Integración:</strong> Trabajos completados en ventanas de **3 a 7 días** con pruebas FAT/SAT y capacitación oficial STPS DC-3.</li>
+                    <li style="margin-bottom: 0;"><strong>Atención Inmediata 24/7:</strong> Soporte de ingeniería presencial continuo en los parques industriales de Saltillo, Ramos Arizpe, Derramadero y Monterrey.</li>
+                </ul>
+            </div>
+
+            <div class="footer-bar">
+                <span>Investigación Estratégica: Las 4 Claves del Proveedor Preferido • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

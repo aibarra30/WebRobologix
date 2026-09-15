@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Técnica: Historias de Terror en el Turno Nocturno - El Micro-Paro Intermitente | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-red: #ef4444;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #1e1b4b 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-red);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid var(--accent-red);
+            color: var(--accent-red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-red);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.blue { border-left-color: var(--accent-cyan); }
+        .section-header.orange { border-left-color: var(--accent-orange); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #fef2f2;
+            border: 1px solid #fee2e2;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.cyan {
+            background: #f0f9ff;
+            border-color: #bae6fd;
+        }
+
+        .highlight-box.success {
+            background: #f0fdf4;
+            border-color: #dcfce7;
+        }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.red { color: #dc2626; }
+        .box-title.blue { color: #0284c7; }
+        .box-title.green { color: #15803d; }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .tech-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .badge-err {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: #dc2626;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA GUÍA TÉCNICA -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-bug"></i> GUÍA TÉCNICA DE DIAGNÓSTICO AVANZADO</span>
+            <h1 class="cover-title">HISTORIAS DE TERROR EN EL TURNO NOCTURNO: EL MICRO-PARO QUE NADIE ENCONTRABA</h1>
+            <p class="cover-subtitle">Protocolo de Diagnóstico de Fallas Intermitentes en Redes EtherNet/IP y Entradas/Salidas de PLC Bajo Presión de Planta.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Elaborado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Diagnóstico e Ingeniería de Control</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección Técnica:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-calendar-alt"></i> Fecha de Publicación:</strong><br>
+                    Septiembre 2026
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Escenario:</strong><br>
+                    Turno Nocturno (3:00 AM) • Presión por Minuto de Paro
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO DE LA GUÍA -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: EL ESCENARIO DE LA PESADILLA INDUSTRIAL -->
+            <div class="section-header">
+                <h2>1. LA PESADILLA DE LAS 3:00 AM: ANATOMÍA DEL MICRO-PARO</h2>
+            </div>
+
+            <p>Es la 3:15 AM de un martes. La celda de ensamble o soldadura en una nave automotriz de Saltillo o Ramos Arizpe se detiene repentinamente. La luz ámbar de la torre de señalización parpadea y la HMI solo despliega un mensaje genérico: <em>"Error de Comunicación con Celda 4"</em> o <em>"Fallo de Seguridad No Definido"</em>. El técnico presiona el botón de restablecimiento (Reset), la máquina vuelve a arrancar y funciona perfectamente durante 20 minutos... hasta que vuelve a caerse.</p>
+
+            <p>Este fenómeno es el terror de los equipos de mantenimiento: el **micro-paro intermitente**. A diferencia de una falla franca (donde una bobina se quemó o un cable se rompió por completo), la falla intermitente desaparece al momento de inspeccionarla, no deja un rastro claro en la HMI y genera penalizaciones por minuto de paro mientras la gerencia exige respuestas inmediatas.</p>
+
+            <div class="highlight-box">
+                <div class="box-title red"><i class="fas fa-fire-alt"></i> EL ERROR MORTAL: CAMBIAR COMPONENTES AL AZAR</div>
+                <p style="margin-bottom:0;">Bajo la intensa presión del turno nocturno, el error más común es el **diagnóstico por eliminación empírica**: reemplazar tarjetas de E/S, cambiar la fuente de poder o sustituir la HMI sin un análisis de causa raíz. Esto solo incrementa el tiempo de paro, desperdicia presupuesto y deja la causa real oculta, provocando que la máquina vuelva a fallar al día siguiente.</p>
+            </div>
+
+            <!-- SECCIÓN 2: LAS 4 CAUSAS RAÍZ MÁS FRECUENTES -->
+            <div class="section-header orange">
+                <h2>2. LAS 4 CAUSAS RAÍZ MÁS FRECUENTES EN REDES DE PLC</h2>
+            </div>
+
+            <p>Tras diagnosticar más de 85 celdas automatizadas en Coahuila y Nuevo León, Robologix Automation ha identificado que el 90% de los micro-paros intermitentes se originan en 4 problemas físicos y lógicos muy concretos:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>CAUSA RAÍZ</th>
+                        <th>SÍNTOMA EN PISO DE PLANTA</th>
+                        <th>CÓDIGO / EVIDENCIA EN PLC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Ruido Electromagnético (EMC / VFD)</strong></td>
+                        <td>Cables de red EtherNet/IP pasados por la misma canaleta que cables de motor de 480V con variadores.</td>
+                        <td><span class="badge-err">Module Fault 16#0109</span> Connection Timed Out en Studio 5000 o caída de paquetes CRC.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Caída Milimétrica de Voltaje 24VDC</strong></td>
+                        <td>Solenoide o actuador grande activándose que provoca que la fuente baje de 24V a 20.2V por 15 milisegundos.</td>
+                        <td>Módulo Point I/O o ET200SP reinicia su CPU interna por bajo voltaje sin marcar corto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. RPI (Requested Packet Interval) Saturado</strong></td>
+                        <td>Switches no administrados (Unmanaged Switches) saturados por tormentas de broadcast (Broadcast Storms).</td>
+                        <td>RPI configurado a 2ms cuando el switch comercial solo tolera 20ms en multicast.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Micro-Corte en Cable de Flexión Robótica</strong></td>
+                        <td>El robot gira a la posición del eje 4, el conductor interno se abre 5ms y se vuelve a unir al regresar.</td>
+                        <td>Caída intermitente de la red PROFIsafe o EtherNet/IP GuardLogix (F-Trip de seguridad).</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 3: PROTOCOLO DE DIAGNÓSTICO EN 4 PASOS -->
+            <div class="page-break"></div>
+
+            <div class="section-header blue">
+                <h2>3. PROTOCOLO DE DIAGNÓSTICO EN 4 PASOS (METODOLOGÍA ROBOLOGIX)</h2>
+            </div>
+
+            <p>Para resolver una falla intermitente en minutos y no en semanas, el equipo de mantenimiento debe seguir este protocolo estructurado de diagnóstico avanzado:</p>
+
+            <ol class="step-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <strong>Lectura del Diagnostic Buffer y Web Server del PLC:</strong> En lugar de mirar la HMI comercial, conéctate directamente al controlador en Studio 5000 o TIA Portal. Revisa la pestaña <em>Module Properties -> Diagnostics</em> y filtra el registro de eventos por código de error exacto (ej. `Connection Fault`, `Major Fault 3-23`, `Safety Task Timeout`).
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <strong>Análisis de Tráfico de Red con Wireshark o Managed Switch:</strong> Conecta una laptop al puerto de espejo (Port Mirroring) de un switch administrado industrial (Hirschmann, Stratix o Siemens Scalance). Filtra los paquetes CIP (Common Industrial Protocol) o Profinet PN-DCP. Si observas un incremento de retransmisiones TCP o caídas de paquetes ARP, el problema es interferencia física de cableado o RPI saturado.
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <strong>Medición de Rizado (Ripple) en Fuentes de 24VDC con Osciloscopio:</strong> Un multímetro convencional es demasiado lento para capturar una caída de voltaje de 10 milisegundos. Conecta un osciloscopio o registrador de eventos a la fuente de 24V. Activa manualmente todas las válvulas y solenoides de la estación para verificar si el voltaje cae por debajo de 21.6VDC (límite inferior según norma IEC 61131-2).
+                </li>
+                <li>
+                    <span class="step-number">4</span>
+                    <strong>Verificación de Malla de Tierra (Shield Integrity):</strong> Revisa con un probador de cables de red industrial la continuidad de la malla metálica del conector RJ45 o M12 D-Coded. Un cable Ethernet sin tierra conectada a la carcasa metálica del gabinete absorbe las descargas de estática del proceso de soldadura o estampado.
+                </li>
+            </ol>
+
+            <!-- SECCIÓN 4: DIAGNÓSTICO TÉCNICO EN PLANTA DE SALTILLO -->
+            <div class="section-header green">
+                <h2>4. ANÁLISIS TÉCNICO DE CAMPO: RESOLUCIÓN DE MICRO-PARO INTERMITENTE</h2>
+            </div>
+
+            <div class="highlight-box success">
+                <div class="box-title green"><i class="fas fa-search-minus"></i> DIAGNÓSTICO Y RESOLUCIÓN EN PLANTA AUTOMOTRIZ DE COAHUILA</div>
+                <p style="margin-bottom:8px;"><strong>El Problema:</strong> Una celda de soldadura por resistencia sufría entre 10 y 15 micro-paros por turno. El equipo interno de la planta llevaba 3 semanas cambiando sensores inductivos, reemplazando tarjetas Point I/O y reformateando la pantalla HMI sin éxito. La gerencia exigía identificar la causa raíz.</p>
+                <p style="margin-bottom:8px;"><strong>El Diagnóstico de Robologix:</strong> Nuestro equipo intervino la línea en el turno nocturno. Al conectar el osciloscopio a la fuente de 24VDC, descubrimos que cada vez que el transformador de soldadura hacía el disparo de corriente, la fuente bajaba a 18.5V durante 8 milisegundos por falta de separación entre la alimentación de potencia y de control.</p>
+                <p style="margin-bottom:0;"><strong>La Solución:</strong> Instalamos una fuente independiente para la red de control (Point I/O y PLC), reemplazamos el cable de red comercial por cable blindado clase robot M12 d-coded y reconfiguramos el RPI a 10ms en el switch Stratix 5700. <strong>Resultado: Cero micro-paros registrados en el monitoreo continuo.</strong></p>
+            </div>
+
+            <!-- SECCIÓN 5: RECOMENDACIONES Y CHECKLIST -->
+            <div class="section-header">
+                <h2>5. CHECKLIST DE PREVENCIÓN PARA TURNOS NOCTURNOS</h2>
+            </div>
+
+            <ul style="color: #334155; font-size: 0.95rem; line-height: 1.7;">
+                <li>✔ <strong>Separar Fuentes 24VDC:</strong> Mantener fuentes independientes para entradas/salidas de sensores y para solenoides/motores de potencia.</li>
+                <li>✔ <strong>Usar Cableado Ethernet Industrial Blindado (STP M12):</strong> Evitar cables de red comerciales UTP en piso de planta.</li>
+                <li>✔ <strong>Configurar Switches Administrados (Managed Switches):</strong> Activar detección de tormentas de broadcast y port mirroring.</li>
+                <li>✔ <strong>Capacitación STPS DC-3 al Personal Nocturno:</strong> Asegurar que los técnicos de todos los turnos sepan leer el buffer de diagnóstico del PLC en Studio 5000 y TIA Portal.</li>
+            </ul>
+
+            <div class="footer-bar">
+                <span>Guía Técnica: Historias de Terror en el Turno Nocturno • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

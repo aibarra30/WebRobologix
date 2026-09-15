@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitepaper Técnico: El Peligro Silencioso de los PLCs Obsoletos en 2026 | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent-cyan: #00b8d4;
+            --accent-orange: #e65100;
+            --accent-red: #c62828;
+            --accent-green: #2e7d32;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #0f1c33 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid #ff6600;
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(255, 102, 0, 0.15);
+            border: 1px solid #ff6600;
+            color: #ff6600;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-orange);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.blue { border-left-color: var(--accent-cyan); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #fff7ed;
+            border: 1px solid #ffedd5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.danger {
+            background: #fef2f2;
+            border-color: #fee2e2;
+        }
+
+        .highlight-box.success {
+            background: #f0fdf4;
+            border-color: #dcfce7;
+        }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.orange { color: #c2410c; }
+        .box-title.red { color: #b91c1c; }
+        .box-title.green { color: #15803d; }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        .data-table th, .data-table td {
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .data-table th {
+            background: var(--primary);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .stat-badge {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.82rem;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--accent-orange);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DEL WHITEPAPER TÉCNICO -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-exclamation-triangle"></i> WHITEPAPER TÉCNICO &amp; INFORME ESTRATÉGICO 2026</span>
+            <h1 class="cover-title">EL PELIGRO SILENCIOSO DE LOS PLCs OBSOLETOS: SLC 500 Y S7-300 EN 2026</h1>
+            <p class="cover-subtitle">Análisis de Riesgo de Paro Crítico de Planta, Estrategias de Suministro de Emergencia e Ingeniería de Migración Sin Detener la Producción.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Autor &amp; Dirección Técnica:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-calendar-alt"></i> Fecha de Edición:</strong><br>
+                    Septiembre 2026
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-industry"></i> Alcance Industrial:</strong><br>
+                    Plantas Automotrices, Metalmecánicas y de Manufactura Continua
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO DETALLADO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: EL ESTADO DE OBSOLESCENCIA EN 2026 -->
+            <div class="section-header">
+                <h2>1. LA REALIDAD TECNOLÓGICA EN 2026: DISCONTINUACIÓN OFICIAL</h2>
+            </div>
+
+            <p>En el panorama industrial actual de 2026, cientos de naves de manufactura en Coahuila, Nuevo León y todo México continúan operando líneas de producción críticas respaldadas por autómatas programables (PLCs) concebidos en las décadas de 1990 y 2000. Dos familias de controladores concentran la mayor vulnerabilidad operativa en piso de planta: **Allen-Bradley SLC 500 (Serie 1747)** y **Siemens SIMATIC S7-300**.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>PLATAFORMA PLC OBSOLETA</th>
+                        <th>FABRICANTE ORIGINAL</th>
+                        <th>ESTATUS OFICIAL EN 2026</th>
+                        <th>DISPONIBILIDAD DE TARJETAS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Allen-Bradley SLC 500 (1747)</strong></td>
+                        <td>Rockwell Automation</td>
+                        <td><span class="stat-badge">END OF LIFE (DISCONTINUADO)</span></td>
+                        <td>Sin producción de refacciones originales. Mercado secundario con precios inflados hasta un 400%.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Siemens SIMATIC S7-300</strong></td>
+                        <td>Siemens Industry</td>
+                        <td><span class="stat-badge">FASE DE RETIRO Y OBSOLESCENCIA</span></td>
+                        <td>Módulos de CPU y E/S discontinuados. Migración obligatoria hacia plataforma S7-1500 TIA Portal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Allen-Bradley PLC-5 (1785)</strong></td>
+                        <td>Rockwell Automation</td>
+                        <td><span class="stat-badge">OBSOLETO DESDE 2017</span></td>
+                        <td>Sin soporte técnico de fábrica. Extremado riesgo de corrupción de memoria en chasis DH+.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box danger">
+                <div class="box-title red"><i class="fas fa-skull-crossbones"></i> EL RIESGO MORTAL DE LA BATERÍA DE RESPALDO</div>
+                <p style="margin-bottom:0;">Tanto el controlador **SLC 500** como el **S7-300** dependen de una batería interna de litio para mantener el programa cargado en la memoria RAM volátil. Cuando la batería se agota (lo cual ocurre silenciosamente tras 3 a 5 años sin cambio), <strong>el primer apague de máquina por mantenimiento o corte de energía borra por completo el programa del PLC</strong>, dejando la línea inhabilitada e inaccesible si la planta no cuenta con el archivo de respaldo (.RSP o .ZIP) actualizado.</p>
+            </div>
+
+            <!-- SECCIÓN 2: EL COSTO REAL DE LA INACCIÓN -->
+            <div class="section-header red">
+                <h2>2. EL COSTO REAL DEL INCUMPLIMIENTO Y LA INACCIÓN</h2>
+            </div>
+
+            <p>Mantener una postura pasiva de <em>"si funciona, no lo toques"</em> genera un riesgo financiero desproporcionado para los Gerentes de Mantenimiento y Plant Managers:</p>
+
+            <ul style="color: #334155; font-size: 0.95rem; line-height: 1.7;">
+                <li><strong>Penalizaciones por Paro de Línea ($15,000 USD a $120,000 USD / Hora):</strong> En la cadena de suministro automotriz Tier-1/OEM (General Motors, Stellantis, Chrysler, Magna), detener el flujo de ensamble por falta de un módulo SLC 500 implica penalizaciones por minuto que devastan el margen operativo del mes.</li>
+                <li><strong>Tiempos de Entrega Tradicionales de 12 a 16 Semanas:</strong> Los distribuidores locales autorizados no mantienen stock de productos descontinuados. Solicitar un módulo 1747-L552 o 1747-IN16 vía importación convencional puede tomar meses.</li>
+                <li><strong>Imposibilidad de Diagnóstico por Incompatibilidad de Software:</strong> Las computadoras portátiles modernas con Windows 11 no ejecutan de forma nativa software legacy como RSLogix 500 o STEP 7 V5.5 sin máquinas virtuales configuradas expresamente por expertos.</li>
+            </ul>
+
+            <!-- SECCIÓN 3: ESTRATEGIA 1 - IMPORTACIÓN EXPRESS -->
+            <div class="page-break"></div>
+
+            <div class="section-header blue">
+                <h2>3. ESTRATEGIA 1: IMPORTACIÓN EXPRESS DE REFACCIONES OBSOLETAS (MENOS DE UNA SEMANA)</h2>
+            </div>
+
+            <p>Cuando ocurre la emergencia y la línea se encuentra detenida sin refacción en el almacén interno, la migración inmediata no siempre es viable en cuestión de horas. Para esta contingencia, **Robologix Automation actúa como Importador Directo de Automatización Industrial**:</p>
+
+            <div class="highlight-box success">
+                <div class="box-title green"><i class="fas fa-plane-arrival"></i> PROTOCOLO DE SUMINISTRO EXPRESS DE ROBOLOGIX</div>
+                <p>Al contar con una red internacional de proveedores y alianzas con almacenes de remanentes industriales en Estados Unidos, Europa y Asia, localizamos e importamos componentes obsoletos en tiempos récord:</p>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.92rem; color: #1e293b;">
+                    <li><strong>Suministro de Emergencia:</strong> Tarjetas CPU 1747-L541, L551, L552, L553, módulos I/O 1747-IB16, 1747-OW16, 1747-NI8.</li>
+                    <li><strong>Tarjetas Siemens S7-300:</strong> CPUs 314C, 315-2PN/DP, tarjetas SM 321, SM 322 y módulos de comunicación CP 343-1.</li>
+                    <li><strong>Paneles HMI Descontinuados:</strong> PanelView 550, 600, 1000 legacy y pantallas Siemens MP277 / TP177.</li>
+                    <li><strong>Tiempo de Entrega:</strong> En menos de una semana puesto en piso de planta en Saltillo, Ramos Arizpe o Monterrey.</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 4: ESTRATEGIA 2 - PLAN DE MIGRACIÓN SIN DETENER PRODUCCIÓN -->
+            <div class="section-header green">
+                <h2>4. ESTRATEGIA 2: PLAN DE MIGRACIÓN ÁGIL SIN DETENER PRODUCCIÓN</h2>
+            </div>
+
+            <p>La solución definitiva a largo plazo es la modernización o <em>Retrofit</em> del sistema de control. Robologix Automation ha desarrollado una metodología de 4 fases que permite migrar un PLC SLC 500 o S7-300 hacia **CompactLogix 5380 (Studio 5000)** o **Siemens S7-1500 (TIA Portal)** aprovechando las ventanas de mantenimiento programado (3 a 7 días):</p>
+
+            <ol class="step-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <strong>Auditoría e Ingeniería Inversa del Código (Fase Previa):</strong> Extracción del programa original (.RSP o STEP7), respaldo de la lógica, tabla de símbolos, comentarios y mapeo de direcciones físicas de entradas y salidas.
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <strong>Conversión y Estandarización de Lógica en Software:</strong> Traducción del código a la norma IEC 61131-3 (Studio 5000 o TIA Portal v18/v19). Reestructuración de subrutinas y documentación asistida por IA para entregar manuales FDS limpios.
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <strong>Uso de Adaptadores de Cableado Rápidos (Swing-Arm Adapters):</strong> Para evitar el recableado punto a punto de cientos de hilos, utilizamos brazos adaptadores que conectan el arnés existente del SLC 500 directamente a los módulos Compact 5000 I/O de manera eficiente.
+                </li>
+                <li>
+                    <span class="step-number">4</span>
+                    <strong>Comisionamiento Virtual y Pruebas en Ventana de Paro:</strong> Realizamos una simulación previa de la máquina en software. Durante la ventana programada de 3 a 7 días, se reemplaza la CPU, se descarga la nueva lógica probada y se valida la secuencia con la línea en vacío.
+                </li>
+            </ol>
+
+            <!-- SECCIÓN 5: METODOLOGÍA DE IMPLEMENTACIÓN Y CONCLUSIÓN -->
+            <div class="highlight-box">
+                <div class="box-title orange"><i class="fas fa-microchip"></i> METODOLOGÍA Y VALIDACIÓN DE MIGRACIÓN DE CONTROL</div>
+                <p style="margin-bottom:0; font-size: 0.92rem;"><strong>Garantía de Continuidad Operativa:</strong> Al aplicar la ingeniería inversa previa en Studio 5000 o TIA Portal, se pre-validan las rutinas y comunicaciones Ethernet. Durante la ventana de paro programado de 3 a 7 días, se ejecuta el montaje físico del chasis, cableado de adaptadores y puesta en marcha integral con <strong>cero horas de paro no programado</strong>.</p>
+            </div>
+
+            <div class="footer-bar">
+                <span>Whitepaper Técnico: PLCs Obsoletos 2026 • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

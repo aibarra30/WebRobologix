@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Técnica: Monitoreo Predictivo e Inteligencia Artificial con IO-Link | Robologix Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #090d16;
+            --secondary: #0f172a;
+            --accent-cyan: #00f3ff;
+            --accent-orange: #ff6600;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 950px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #050811 0%, #1e1b4b 60%, #0f172a 100%);
+            color: #ffffff;
+            padding: 60px 50px;
+            border-bottom: 5px solid var(--accent-orange);
+            page-break-after: always;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(255, 102, 0, 0.15);
+            border: 1px solid var(--accent-orange);
+            color: var(--accent-orange);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .cover-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .cover-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cover-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .page-content {
+            padding: 50px 55px;
+        }
+
+        .section-header {
+            border-left: 5px solid var(--accent-cyan);
+            padding-left: 15px;
+            margin: 35px 0 20px 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header.orange { border-left-color: var(--accent-orange); }
+        .section-header.purple { border-left-color: var(--accent-purple); }
+        .section-header.green { border-left-color: var(--accent-green); }
+
+        p {
+            font-size: 0.98rem;
+            color: #334155;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .highlight-box.orange { background: #fff7ed; border-color: #ffedd5; }
+        .highlight-box.purple { background: #f5f3ff; border-color: #ddd6fe; }
+        .highlight-box.green { background: #f0fdf4; border-color: #dcfce7; }
+
+        .box-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box-title.blue { color: #0284c7; }
+        .box-title.orange { color: #ea580c; }
+        .box-title.purple { color: #6d28d9; }
+        .box-title.green { color: #15803d; }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.88rem;
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .tech-table tr:nth-child(even) { background: #f8fafc; }
+
+        .badge-cyan { background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-orange { background: #ffedd5; color: #c2410c; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+        .badge-purple { background: #f3e8ff; color: #6b21a8; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem; }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: #ff6600;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .footer-bar {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @page {
+            size: letter;
+            margin: 1.5cm;
+        }
+
+        @media print {
+            body { background: #ffffff !important; }
+            .document-container { box-shadow: none !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+            .cover-page { page-break-after: always !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .page-break { page-break-before: always !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+
+        <!-- PORTADA DE LA INVESTIGACIÓN DEEP-DIVE -->
+        <div class="cover-page">
+            <span class="cover-badge"><i class="fas fa-brain"></i> INVESTIGACIÓN TÉCNICA • PODCAST EPISODIO 07</span>
+            <h1 class="cover-title">MONITOREO PREDICTIVO E INTELIGENCIA ARTIFICIAL: DE MANTENIMIENTO REACTIVO A PREDICCIÓN DE PAROS EN PISO DE PLANTA</h1>
+            <p class="cover-subtitle">Arquitectura IO-Link (IEC 61131-9), Análisis de Vibración por FFT, Monitoreo Térmico Continuo y Algoritmos Edge AI para Prevenir Fallas Catastróficas en Motores, Reductores y Servos.</p>
+
+            <div class="cover-meta">
+                <div>
+                    <strong><i class="fas fa-building"></i> Publicado por:</strong><br>
+                    Robologix Automation S.A. de C.V.<br>
+                    <span>Centro de Ingeniería e Integración Industrial</span>
+                </div>
+                <div>
+                    <strong><i class="fas fa-user-tie"></i> Dirección de Investigación:</strong><br>
+                    Mtro. Aaron Ibarra Cepeda<br>
+                    <span>Mtro. en Gestión de Negocios de Manufactura</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-podcast"></i> Podcast Asociado:</strong><br>
+                    Cero Paros: Automatización Industrial (Ep. 07)
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong><i class="fas fa-microchip"></i> Tecnologías Clave:</strong><br>
+                    IO-Link, FFT Vibration, Edge AI, Studio 5000 / TIA Portal
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO TÉCNICO PROFUNDO -->
+        <div class="page-content">
+
+            <!-- SECCIÓN 1: EVOLUCIÓN DEL MANTENIMIENTO INDUSTRIAL -->
+            <div class="section-header orange">
+                <h2>1. EVOLUCIÓN DEL MANTENIMIENTO: POR QUÉ EL PREVENTIVO A CIEGAS YA NO BASTA</h2>
+            </div>
+
+            <p>En el entorno industrial de 2026 en Coahuila y el norte de México, las plantas de estampado, ensamble automotriz y manufactura pesada enfrentan metas de OEE (Efectividad Global del Equipo) superiores al 85%. En este escenario, los esquemas tradicionales de mantenimiento presentan graves deficiencias financieras y operativas:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>MODELO DE MANTENIMIENTO</th>
+                        <th>OPERACIÓN HABITUAL</th>
+                        <th>RIESGO / IMPACTO EN PISO DE PLANTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Correctivo (Reactivo)</strong></td>
+                        <td>Operar la máquina hasta que rompa. "Apagar fuegos" en el turno nocturno.</td>
+                        <td><span class="badge-orange">PARO CATASTRÓFICO</span> Daño en flechas, engranes y penalizaciones por minuto detenido.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Preventivo Sistemático</strong></td>
+                        <td>Reemplazar rodamientos o aceite cada 6 meses basándose en horas teóricas de catálogo.</td>
+                        <td><span class="badge-cyan">GASTO INNECESARIO</span> Se tiran componentes en buen estado o se generan fallas infantiles tras el rearme.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Predictivo con IA (PdM 4.0)</strong></td>
+                        <td>Monitoreo continuo de salud física (Vibración FFT, Temperatura, Corriente) con sensores inteligentes.</td>
+                        <td><span class="badge-purple">CERO PAROS NO PROGRAMADOS</span> Detección de anomalías con 3 a 6 semanas de anticipación.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 2: LA ARQUITECTURA SENSORIZADA IO-LINK -->
+            <div class="section-header">
+                <h2>2. IO-LINK (IEC 61131-9): LA COLUMNA VERTEBRAL DE LA DIGITALIZACIÓN</h2>
+            </div>
+
+            <p>El sensor fotoeléctrico o inductivo convencional de 24VDC es un elemento "ciego" que solo entrega un 1 o 0 lógico. Por el contrario, la tecnología **IO-Link** transforma cada sensor en un nodo inteligente capaz de transmitir datos digitales de alta resolución sobre el mismo cable estándar de 3 hilos sin blindaje especial:</p>
+
+            <div class="highlight-box orange">
+                <div class="box-title orange"><i class="fas fa-network-wired"></i> DATOS TELEMÁTICOS EXTRACTADOS POR IO-LINK</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Variables del Proceso Físico:</strong> Velocidad RMS de vibración (mm/s), Aceleración Pico (g), Temperatura de carcasa (°C) y Desplazamiento.</li>
+                    <li style="margin-bottom: 8px;"><strong>Datos de Diagnóstico Interno:</strong> Horas acumuladas de operación, contador de ciclos de conmutación y calidad de la señal óptica/magnética.</li>
+                    <li style="margin-bottom: 0;"><strong>Reemplazo Plug & Play (Data Storage):</strong> Al cambiar un sensor dañado, el maestro IO-Link le parametriza automáticamente la configuración sin usar laptop.</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 3: ANÁLISIS DE VIBRACIÓN Y TEMPERATURA POR IA -->
+            <div class="page-break"></div>
+
+            <div class="section-header purple">
+                <h2>3. ANÁLISIS DE VIBRACIÓN (FFT) Y ALGORITMOS EDGE AI</h2>
+            </div>
+
+            <p>El corazón del monitoreo predictivo radica en descomponer la señal de vibración en el dominio del tiempo hacia el dominio de la frecuencia mediante la **Transformada Rápida de Fourier (FFT)**. Esto permite aislar mecánicamente el componente defectuoso antes de que falle:</p>
+
+            <ol class="step-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <strong>Desbalanceo de Rotor (1X RPM):</strong> Pico anómalo en la frecuencia fundamental de giro. Indica acumulación de suciedad o pérdida de contrapeso en ventiladores o poleas.
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <strong>Desalineación de Acoplamiento (2X RPM):</strong> Pico característico a dos veces la velocidad de rotación. Revela desalineación axial o radial entre el motor y la caja reductora.
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <strong>Holgura Mecánica y Soltura (3X - 10X RPM):</strong> Múltiples armónicos que indican pernos de anclaje flojos o desgaste severo en chumacera.
+                </li>
+                <li>
+                    <span class="step-number">4</span>
+                    <strong>Falla Prematura de Rodamiento (Alta Frecuencia 1 kHz - 10 kHz):</strong> Impactos microscópicos en la pista exterior (BPFO), pista interior (BPFI) o canastilla (FTF) detectados por el algoritmo de IA semanas antes del sobrecalentamiento.
+                </li>
+            </ol>
+
+            <div class="highlight-box purple">
+                <div class="box-title purple"><i class="fas fa-brain"></i> MODELOS DE MACHINE LEARNING EN EDGE GATEWAYS</div>
+                <p style="margin-bottom:0; font-size: 0.92rem;">Al procesar la firma de vibración en un **Edge Gateway Industrial** (como Siemens IPC, ifm moneo o Allen-Bradley CompactLogix 5380 con módulo Compute), algoritmos de **Machine Learning (Isolation Forests / Autoencoders)** aprenden la "huella digital normal" de la máquina. Cuando la firma se desvía un 5% de la norma, la IA envía una alerta preventiva a mantenimiento con el diagnóstico preciso.</p>
+            </div>
+
+            <!-- SECCIÓN 4: INTEGRACIÓN CON PLC Y SCADA SIN SATURAR LA RED -->
+            <div class="section-header green">
+                <h2>4. INTEGRACIÓN DUAL: SEGURIDAD EN PLC Y TELEMETRÍA EN SCADA/CLOUD</h2>
+            </div>
+
+            <p>Para evitar saturar el ciclo de scan de los PLCs de control de línea (Allen-Bradley Studio 5000 o Siemens TIA Portal), Robologix Automation implementa una **arquitectura de canal dual (Y-Path)**:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>CANAL DE COMUNICACIÓN</th>
+                        <th>DESTINO DE LA INFORMACIÓN</th>
+                        <th>PROTOCOLOS / USO PRINCIPAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Canal 1: Control OT en Tiempo Real</strong></td>
+                        <td>PLC Principal (CompactLogix / S7-1500)</td>
+                        <td><strong>EtherNet/IP / PROFINET:</strong> Recepción de alarmas críticas de sobretemperatura o paro seguro inmediato.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canal 2: Telemetría de Alta Resolución</strong></td>
+                        <td>SCADA (Ignition/WinCC) / Cloud Industrial</td>
+                        <td><strong>MQTT / OPC UA:</strong> Envío de espectros FFT completos y datos analíticos sin afectar el scan del PLC.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SECCIÓN 5: IMPLEMENTACIÓN ÁGIL Y RETORNO DE INVERSIÓN (ROI) -->
+            <div class="section-header">
+                <h2>5. ESTRATEGIA DE IMPLEMENTACIÓN ÁGIL Y RETORNO DE INVERSIÓN</h2>
+            </div>
+
+            <div class="highlight-box green">
+                <div class="box-title green"><i class="fas fa-chart-line"></i> IMPACTO FINANCIERO Y TIEMPOS REALES DE EJECUCIÓN</div>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.92rem; color: #1e293b;">
+                    <li style="margin-bottom: 8px;"><strong>Suministro e Importación de Componentes:</strong> Garantizamos la entrega de sensores de vibración IO-Link, maestros IP67 y gateways Edge en **menos de una semana**.</li>
+                    <li style="margin-bottom: 8px;"><strong>Instalación y Puesta en Marcha en Planta:</strong> El montaje mecánico no invasivo (prisioneros roscados M8 o bases magnéticas) e integración de software se realiza en una ventana de **3 a 7 días** por celda.</li>
+                    <li style="margin-bottom: 0;"><strong>Retorno de Inversión (Payback):</strong> El sistema se paga por sí mismo entre **2 y 4 meses** al prevenir un único evento de paro catastrófico en prensas, extrusoras o compresores principales.</li>
+                </ul>
+            </div>
+
+            <div class="footer-bar">
+                <span>Investigación Técnica: Monitoreo Predictivo e IA • Robologix Automation</span>
+                <span>Página 2 de 2</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
