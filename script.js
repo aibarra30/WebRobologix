@@ -119,11 +119,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Inyectar Chat Flotante Robologix Automation
-    if (!document.getElementById('rbl-chat-widget')) {
+    // Inyectar Chat Flotante Robologix Automation — diferido con requestIdleCallback
+    // para evitar forced reflow durante la carga crítica
+    function injectChatWidget() {
+        if (document.getElementById('rbl-chat-widget')) return;
+
+        // Batch: crear todo en un DocumentFragment antes de tocar el DOM real
+        const frag = document.createDocumentFragment();
+
         const style = document.createElement('style');
         style.id = 'rbl-chat-style';
-        style.innerHTML = `
+        style.textContent = `
           #rbl-chat-widget { position: fixed; bottom: 25px; right: 25px; z-index: 999999; font-family: sans-serif; }
           .rbl-chat-button { background: linear-gradient(135deg, #00E5FF, #0088FF); color: #0B132B; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0, 229, 255, 0.4); cursor: pointer; border: 2px solid #00E5FF; transition: all 0.3s; }
           .rbl-chat-button:hover { transform: scale(1.1); }
@@ -134,14 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
           .rbl-chat-body { padding: 20px; color: #E0E6ED; font-size: 14px; }
           .rbl-chat-msg { background: #1C2541; border-left: 3px solid #00E5FF; padding: 12px; border-radius: 8px; margin-bottom: 15px; }
           .rbl-chat-wa-btn { display: flex; align-items: center; justify-content: center; background: #25D366; color: #FFF; font-weight: 800; padding: 12px; border-radius: 10px; text-decoration: none; text-align: center; }
-          .rbl-chat-opt-btn { width: 100%; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.3); color: #00E5FF; padding: 99px 12px; border-radius: 8px; margin-bottom: 8px; text-align: left; cursor: pointer; font-size: 13px; padding: 9px; }
+          .rbl-chat-opt-btn { width: 100%; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.3); color: #00E5FF; padding: 9px 12px; border-radius: 8px; margin-bottom: 8px; text-align: left; cursor: pointer; font-size: 13px; }
           .rbl-chat-opt-btn:hover { background: rgba(0, 229, 255, 0.2); }
         `;
-        document.head.appendChild(style);
+        frag.appendChild(style);
 
-        const chatWidgetContainer = document.createElement('div');
-        chatWidgetContainer.id = 'rbl-chat-widget';
-        chatWidgetContainer.innerHTML = `
+        const widget = document.createElement('div');
+        widget.id = 'rbl-chat-widget';
+        widget.innerHTML = `
           <div class="rbl-chat-button" onclick="toggleRblChat()">
             <span class="rbl-chat-badge">1</span>
             💬
@@ -166,9 +172,21 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-        document.body.appendChild(chatWidgetContainer);
+        frag.appendChild(widget);
+
+        // Una sola escritura al DOM real — cero reflows intermedios
+        document.head.appendChild(frag.firstChild); // style
+        document.body.appendChild(frag.lastChild);  // widget
     }
-});
+
+    // requestIdleCallback: corre cuando el navegador está idle (no bloquea LCP/FCP)
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(injectChatWidget, { timeout: 3000 });
+    } else {
+        setTimeout(injectChatWidget, 2000);
+    }
+
+}); // fin DOMContentLoaded
 
 // Funciones globales para interacción del chat
 window.toggleRblChat = function() {
