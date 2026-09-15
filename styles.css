@@ -7,8 +7,8 @@
     --bg-card: #141414;
     --text-light: #e0e0e0;
     --text-muted: #a0a0a0;
-    --font-heading: 'Orbitron', sans-serif;
-    --font-body: 'Roboto', sans-serif;
+    --font-heading: 'Orbitron', system-ui, -apple-system, sans-serif;
+    --font-body: 'Roboto', system-ui, -apple-system, sans-serif;
 }
 
 * {
