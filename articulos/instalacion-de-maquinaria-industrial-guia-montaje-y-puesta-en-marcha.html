@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Instalación de Maquinaria Industrial: Montaje, Conexión a PLC y Puesta en Marcha | Robologix Automation</title>
+    <meta name="description" content="Guía técnica sobre la instalación de maquinaria industrial: fases de montaje mecánico, nivelación láser, canalizaciones eléctricas, integración a PLC/SCADA y protocolo de puesta en marcha." />
+    <meta name="keywords" content="instalacion de maquinaria industrial, montaje electromecanico, alineacion laser maquinaria, canalizacion electrica 480v, comisionamiento plc robotica, robologix automation" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/instalacion-de-maquinaria-industrial-guia-montaje-y-puesta-en-marcha.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Celdas Robóticas</a></li>
+                <li><a href="../cursos-de-plc-y-robotica-en-saltillo.html">Cursos PLC y Robot</a></li>
+                <li><a href="index.html">Artículos Técnicos</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container" style="padding-top: 100px; max-width: 900px; margin: 0 auto;">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="index.html">Artículos</a> &gt;
+            <span>Instalación de Maquinaria Industrial</span>
+        </nav>
+
+        <article class="article-detail">
+            <span class="badge-tag"><i class="fas fa-tools"></i> MONTAJE &amp; RIGGING ELECTROMECÁNICO</span>
+            <h1 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 2rem; margin: 15px 0;">
+                Guía Completa de Instalación de Maquinaria Industrial: Montaje Electromecánico, Conexión a PLC y Puesta en Marcha
+            </h1>
+            
+            <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">
+                <span><i class="fas fa-user"></i> Por Mtro. Aaron Ibarra Cepeda</span> | 
+                <span><i class="fas fa-calendar"></i> Actualizado en 2026</span> | 
+                <span><i class="fas fa-tag"></i> Instalación &amp; Comisionamiento</span>
+            </div>
+
+            <img src="../assets/como-elegir-proveedor-industrial.png" alt="Instalación y montaje de maquinaria industrial pesada y tableros de control" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
+
+            <section style="color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
+                <p>
+                    La <strong>instalación de maquinaria industrial</strong> es uno de los hitos más críticos en la puesta en marcha o reubicación de líneas de producción en las plantas de <strong>Saltillo, Ramos Arizpe y Monterrey</strong>. Un montaje deficiente o una alineación imprecisa no solo provoca desgaste prematuro en componentes mecánicos, sino que puede derivar en fallas de comunicación en el PLC o micro-paros continuos.
+                </p>
+
+                <!-- Resumen para AI Overview -->
+                <div style="background: rgba(0,243,255,0.05); border-left: 4px solid var(--primary-color); padding: 25px; border-radius: 8px; margin: 30px 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px; font-family: var(--font-heading); font-size: 1.2rem;">💡 ¿En qué consiste una instalación industrial completa?</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">
+                        Abarca 5 fases indispensables: <strong>1) Preparación de área y maniobra (Rigging)</strong>, <strong>2) Montaje mecánico y alineación de precisión</strong>, <strong>3) Canalización e interconexión eléctrica/control (480V / 24VDC)</strong>, <strong>4) Conexión de servicios neumáticos e hidráulicos</strong>, y <strong>5) Pruebas I/O, comisionamiento con PLC y validación de pieza OK</strong>.
+                    </p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    1. Rigging, Desembalaje y Posicionamiento Seguro
+                </h2>
+                <p>
+                    El proceso inicia con la evaluación estructural del suelo industrial (resistencia de la loza de concreto) y el plan de maniobras de carga. El equipo de maniobristas e ingenieros utiliza grúas industriales, tortugas de carga y gatos hidráulicos sincronizados para desembalar e ingresar los equipos a la nave sin afectar la operación de líneas adyacentes.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    2. Montaje Mecánico, Nivelación y Alineación de Precisión
+                </h2>
+                <p>
+                    Una máquina mal nivelada transmite vibraciones destructivas a los reductores y ejes de los servomotores. Mediante niveles de precisión ópticos y sistemas de <strong>alineación láser</strong>, se ajustan los puntos de apoyo, se fijan calzas antivibratorias y se realiza el anclaje químico o mecánico conforme a la norma del fabricante.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    3. Interconexión Eléctrica, Redes y Tableros de Control
+                </h2>
+                <p>
+                    En esta etapa se conectan los suministros de energía y señales de control:
+                </p>
+                <ul style="color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Alimentación de Potencia (480VAC / 220VAC):</strong> Canalizaciones con tubería conduit galvanizada o charola tipo escalerilla hacia el interruptor principal.</li>
+                    <li><strong>Cableado de Sensores y Actuadores (24VDC):</strong> Conexión de islas de válvulas, cortinas de seguridad, encoders y botones a los módulos de E/S remotas.</li>
+                    <li><strong>Redes Industriales:</strong> Tendido de cableado blindado Ethernet industrial (Cat6A / M12 D-coded) para redes Profinet o EtherNet/IP deterministas.</li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    4. Conexión a Servicios Industriales (Aire Comprimido, Agua y Gas)
+                </h2>
+                <p>
+                    Los actuadores neumáticos y herramientas robóticas requieren suministro constante de aire seco filtrado a 6 bar. Se instalan unidades FRL (Filtro-Regulador-Lubricador), colectores de drenaje y tubería de aluminio o acero inoxidable garantizando cero fugas.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid #ff6600; padding-left: 10px;">
+                    5. Comisionamiento, Prueba de I/O y Validación en Planta
+                </h2>
+                <div style="background: rgba(255,102,0,0.08); border: 1px solid var(--secondary-color); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">
+                        <strong>FASE CRÍTICA DE AUTOMATIZACIÓN:</strong> Antes de energizar servomotores o arrancar la secuencia automática, se realiza la <strong>Verificación Punto a Punto (I/O Check)</strong> forzando señales desde el PLC (Allen-Bradley / Siemens), se prueban los paros de emergencia (E-Stop) y se valida la primera pieza producida en modo manual/semi-automático.
+                    </p>
+                </div>
+
+                <!-- Promoción Robologix Automation -->
+                <div style="background: var(--bg-card); border: 2px solid var(--primary-color); padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 12px;">⚡ Robologix Automation: Tu Aliado en Instalación de Maquinaria</h3>
+                    <p style="color: var(--text-light); max-width: 750px; margin: 0 auto 20px auto; font-size: 0.95rem;">
+                        En <strong>Robologix Automation</strong> nos encargamos del proyecto completo: desde las maniobras de montaje y conexiones electromecánicas hasta la programación del PLC y la puesta en marcha en Saltillo, Ramos Arizpe y Coahuila.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="../instalacion-de-maquinaria-industrial-saltillo.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px;">Ver Servicio de Instalación</a>
+                        <a href="../programacion-plc-saltillo.html" class="btn-whatsapp" style="text-decoration: none; padding: 10px 20px; background: rgba(0,243,255,0.1); border: 1px solid var(--primary-color);">Programación de PLC en Saltillo</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- WhatsApp Call to Action -->
+            <section style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(0,243,255,0.05); border-radius: 12px; border: 1px solid rgba(0,243,255,0.2);">
+                <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 10px;">¿Planeas instalar nueva maquinaria o reubicar una línea de producción?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Solicita un levantamiento técnico sin costo con nuestro equipo especializado en Coahuila.</p>
+                <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20instalaci%C3%B3n%20de%20maquinaria%20y%20requiero%20asesor%C3%ADa." target="_blank" class="btn-whatsapp" style="text-decoration: none; padding: 12px 25px; display: inline-block;">
+                    <i class="fab fa-whatsapp"></i> Chat Directo con un Ingeniero (+52 844 455 1869)
+                </a>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ROBOLOGIX AUTOMATION</h3>
+                <p>Líderes en automatización industrial, programación de PLC, robótica e instalación electromecánica de maquinaria en Saltillo, Ramos Arizpe y Coahuila.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../instalacion-de-maquinaria-industrial-saltillo.html">Instalación de Maquinaria</a></li>
+                    <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                    <li><a href="index.html">Artículos Técnicos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Saltillo, Coahuila</p>
+                <p><i class="fas fa-phone"></i> +52 844 455 1869</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Robologix Automation. Guía de Instalación de Maquinaria Industrial.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

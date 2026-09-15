@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de PLC: Clasificación, Características y Ejemplos de Uso Industrial | Robologix Automation</title>
+    <meta name="description" content="Conoce los diferentes Tipos de PLC (Compactos, Modulares, Montaje en Rack, SoftPLC y Safety). Guía detallada con ejemplos prácticos para plantas industriales en Coahuila." />
+    <meta name="keywords" content="tipos de plc, clasificacion de plc, plc compacto, plc modular, plc de seguridad, safety plc, tipos de controladores logicos programables, automatizacion saltillo" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/tipos-de-plc-clasificacion-y-ejemplos-industriales.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Celdas Robóticas</a></li>
+                <li><a href="../cursos-de-plc-y-robotica-en-saltillo.html">Cursos PLC y Robot</a></li>
+                <li><a href="index.html">Artículos Técnicos</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container" style="padding-top: 100px; max-width: 900px; margin: 0 auto;">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="index.html">Artículos</a> &gt;
+            <span>Tipos de PLC: Clasificación y Ejemplos</span>
+        </nav>
+
+        <article class="article-detail">
+            <span class="badge-tag"><i class="fas fa-layer-group"></i> CLASIFICACIÓN TÉCNICA INDUSTRIAL</span>
+            <h1 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 2rem; margin: 15px 0;">
+                Tipos de PLC: Clasificación Completa, Características y Ejemplos de Uso en la Industria
+            </h1>
+            
+            <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">
+                <span><i class="fas fa-user"></i> Por Mtro. Aaron Ibarra Cepeda</span> | 
+                <span><i class="fas fa-calendar"></i> Actualizado en 2026</span> | 
+                <span><i class="fas fa-tag"></i> Tendencias Coahuila: Tipos de PLC</span>
+            </div>
+
+            <img src="../assets/tipos-de-plc-compacto-modular.png" alt="Tipos de PLC Compactos Modulares y Rack Industriales" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
+
+            <section style="color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
+                <p>
+                    La búsqueda <strong>"tipos de plc"</strong> ocupa una posición destacada entre las tendencias de interés industrial en Coahuila. Esto se debe a que no todos los procesos requieren el mismo tamaño de procesador o capacidad de expansión. Un fabricante de estampados automotrices en Saltillo no necesita el mismo equipo que una embotelladora o un fabricante de aire acondicionado en Ramos Arizpe.
+                </p>
+                <p>
+                    En esta guía desglosaremos los principales <strong>tipos de PLC</strong> agrupados por su estructura física, su capacidad de procesamiento y su aplicación funcional en la industria.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    1. PLC Compactos (Nano y Micro PLCs)
+                </h2>
+                <p>
+                    Son controladores donde la fuente de alimentación, la CPU (procesador) y los módulos de entrada y salida vienen integrados en <strong>una sola carcasa o bloque indivisible</strong>. Poseen un número fijo de conexiones (por ejemplo, 14 entradas y 10 salidas).
+                </p>
+                <ul style="color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Ventajas:</strong> Económicos, de tamaño reducido y muy sencillos de instalar.</li>
+                    <li><strong>Limitaciones:</strong> Si se dañan un par de terminales o se requieren más entradas, a menudo hay que cambiar el módulo completo.</li>
+                    <li><strong>Ejemplos populares:</strong> Siemens S7-1200, Allen-Bradley Micro800, Logo!, Mitsubishi FX.</li>
+                    <li><strong>Ejemplo de uso en planta:</strong> Control de una mesa giratoria de ensamble manual o una lavadora industrial de piezas metálicas.</li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    2. PLC Modulares
+                </h2>
+                <p>
+                    Son los favoritos para líneas de producción medianas y grandes. En este tipo de PLC, el equipo se construye como un "LEGO": existe un riel DIN donde ensamblas módulo por módulo según lo requiera tu proyecto.
+                </p>
+                <ul style="color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Componentes separados:</strong> Módulo de fuente de poder + Módulo de CPU + Módulos de entradas digitales + Módulos analógicos (4-20mA / 0-10V) + Módulos de comunicación (EtherNet/IP, Profinet, DeviceNet).</li>
+                    <li><strong>Ventajas:</strong> Alta flexibilidad y fácil mantenimiento. Si falla una tarjeta de entradas, solo reemplazas esa tarjeta sin tocar la CPU ni el programa.</li>
+                    <li><strong>Ejemplos populares:</strong> Allen-Bradley CompactLogix 5370/5380, Siemens S7-1500.</li>
+                    <li><strong>Ejemplo de uso en planta:</strong> Celdas robóticas de estampado de chasis automotriz en Ramos Arizpe.</li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    3. PLC de Montaje en Rack (Gama Alta e Industrial Compleja)
+                </h2>
+                <p>
+                    Similar al modular, pero utiliza un chasis reforzado de alta velocidad (Rack) que incluye un bus de comunicación de alta velocidad en la parte posterior (<em>Backplane</em>). Permiten colocar CPUs redundantes (si falla una CPU, la segunda toma el control instantáneamente sin detener la fábrica).
+                </p>
+                <ul style="color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Ejemplos populares:</strong> Allen-Bradley ControlLogix 5570/5580, Siemens S7-400 / S7-1500H.</li>
+                    <li><strong>Ejemplo de uso en planta:</strong> Hornos de fundición de acero, plantas químicas continuo o líneas completas de pintura automotriz.</li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    4. PLC de Seguridad (Safety PLC)
+                </h2>
+                <p>
+                    Son controladores diseñados bajo normativas internacionales de seguridad funcional (SIL 3 / ISO 13848 PL e). Poseen procesadores redundantes que verifican doblemente cada señal.
+                </p>
+                <p><strong>¿Para qué se usan?</strong> Se encargan exclusivamente de la seguridad humana: paros de emergencia, cortinas de luz láser, escáneres de zona y candados de puertas en celdas de robots para evitar accidentes laborales.</p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    5. SoftPLC (PLC basado en Software / PC Industrial)
+                </h2>
+                <p>
+                    Es un programa que ejecuta el ciclo de escaneo de un PLC dentro de una computadora industrial dedicada (IPC) con sistema operativo en tiempo real. Combina la potencia de cálculo de un procesador Intel/AMD con el control de movimiento y visión artificial.
+                </p>
+
+                <!-- Tabla Comparativa -->
+                <div style="margin: 35px 0; overflow-x: auto;">
+                    <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 15px;">📊 Resumen Comparativo de Tipos de PLC</h3>
+                    <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); color: var(--text-light); border: 1px solid rgba(0,243,255,0.2);">
+                        <thead>
+                            <tr style="background: rgba(0,243,255,0.1); color: var(--primary-color); text-align: left;">
+                                <th style="padding: 12px; border: 1px solid rgba(0,243,255,0.2);">Tipo de PLC</th>
+                                <th style="padding: 12px; border: 1px solid rgba(0,243,255,0.2);">Capacidad E/S</th>
+                                <th style="padding: 12px; border: 1px solid rgba(0,243,255,0.2);">Costo relativo</th>
+                                <th style="padding: 12px; border: 1px solid rgba(0,243,255,0.2);">Aplicación Principal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);"><strong>Compacto</strong></td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">10 a 40 entradas/salidas</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1); color: #25d366;">Económico</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">Máquinas individuales sencillas</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);"><strong>Modular</strong></td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">50 a 1,000+ entradas/salidas</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1); color: #ffb703;">Medio / Alto</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">Celdas robóticas y manufactura</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);"><strong>Rack / Redundante</strong></td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">Miles de puntos distribuidos</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1); color: #ff6600;">Alto</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">Plantas automotrices completas</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);"><strong>Safety (Seguridad)</strong></td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">Canales dobles dedicados</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1); color: #ffb703;">Medio / Alto</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0,243,255,0.1);">Protección de personal y cortinas láser</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Promoción Robologix -->
+                <div style="background: var(--bg-card); border: 2px solid var(--primary-color); padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 12px;">⚡ ¿No sabes qué tipo de PLC elegir para tu planta?</h3>
+                    <p style="color: var(--text-light); max-width: 750px; margin: 0 auto 20px auto; font-size: 0.95rem;">
+                        En <strong>Robologix Automation</strong> te asesoramos para seleccionar la arquitectura ideal de PLC (Allen-Bradley, Siemens, Omron, Mitsubishi) sin gastar de más. Además ofrecemos <strong>Cursos Prácticos de PLC en Saltillo</strong> para dominar todos estos sistemas.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="../programacion-plc-saltillo.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px;">Asesoría en Selección de PLC</a>
+                        <a href="../curso-plc-saltillo.html" class="btn-whatsapp" style="text-decoration: none; padding: 10px 20px; background: rgba(0,243,255,0.1); border: 1px solid var(--primary-color);">Ver Cursos de PLC en Saltillo</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- WhatsApp Call to Action -->
+            <section style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(0,243,255,0.05); border-radius: 12px; border: 1px solid rgba(0,243,255,0.2);">
+                <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 10px;">¿Necesitas migrar o integrar un PLC en tu empresa en Coahuila?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Contáctanos por WhatsApp para recibir atención personalizada de un especialista.</p>
+                <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20Tipos%20de%20PLC%20y%20deseo%20asesor%C3%ADa." target="_blank" class="btn-whatsapp" style="text-decoration: none; padding: 12px 25px; display: inline-block;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Directo (+52 844 455 1869)
+                </a>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ROBOLOGIX AUTOMATION</h3>
+                <p>Asesoría en selección, programación y capacitación de todos los tipos de PLC en Saltillo, Ramos Arizpe y Coahuila.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../programacion-plc-saltillo.html">Programación de PLC</a></li>
+                    <li><a href="../curso-plc-saltillo.html">Curso de PLC en Saltillo</a></li>
+                    <li><a href="index.html">Artículos Técnicos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Saltillo, Coahuila</p>
+                <p><i class="fas fa-phone"></i> +52 844 455 1869</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Robologix Automation. Guía sobre los Tipos de PLC.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

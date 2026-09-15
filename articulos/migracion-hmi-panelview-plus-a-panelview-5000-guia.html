@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Migración de HMI PanelView Plus a PanelView 5000 | Robologix</title>
+    <meta name="description"
+        content="Pasos técnicos, diferencias de software (FactoryTalk View ME vs Studio 5000 View Designer) y recomendaciones para actualizar pantallas HMI obsoletas." />
+    <meta name="keywords"
+        content="Migracion PanelView Plus, PanelView 5000, Studio 5000 View Designer, HMI Allen Bradley, Reemplazo Pantalla HMI, Robologix Automation Coahuila" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/migracion-hmi-panelview-plus-a-panelview-5000-guia" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title"
+        content="Guía de Migración de HMI PanelView Plus a PanelView 5000 | Robologix" />
+    <meta property="og:description"
+        content="Pasos técnicos, diferencias de software (FactoryTalk View ME vs Studio 5000 View Designer) y recomendaciones para actualizar pantallas HMI obsoletas." />
+    <meta property="og:url" content="https://rbl-automation.com/articulos/migracion-hmi-panelview-plus-a-panelview-5000-guia" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://rbl-automation.com/assets/panelview-5000-hmi-upgrade.png" />
+
+    <!-- Schema.org TechArticle Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Guía de Migración de Pantallas HMI: De PanelView Plus a PanelView 5000",
+      "description": "Estrategia técnica para modernizar paneles de operador obsoletos en celdas de automatización con Studio 5000 View Designer.",
+      "author": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "url": "https://rbl-automation.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbl-automation.com/assets/hero-bg.png"
+        }
+      },
+      "datePublished": "2026-09-11",
+      "inLanguage": "es"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="text-decoration:none; color:inherit;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Inicio</a></li>
+                <li><a href="../index.html#services">Servicios</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                <li><a href="index.html" class="active-nav">Artículos</a></li>
+                <li><a href="../index.html#about">Nosotros</a></li>
+                <li><a href="../index.html#clients">Clientes</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="service-page-wrapper">
+        <section style="padding: 3rem 5%; background-color: var(--bg-dark);">
+            <article class="technical-post"
+                style="max-width: 850px; margin: 0 auto; padding: 2.5rem; background: var(--bg-card); border: 1px solid #282828; border-radius: 10px; line-height: 1.7; color: var(--text-light); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <span style="color: var(--primary-color); font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">MODERNIZACIÓN DE PANELES HMI</span>
+                <h1 style="color: #fff; font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin: 0.8rem 0 1rem 0;">
+                    Guía de Migración de Pantallas HMI: De PanelView Plus a PanelView 5000
+                </h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #222; padding-bottom: 1rem;">
+                    Publicado por el Equipo de Ingeniería de Robologix Automation | Saltillo, Coahuila
+                </p>
+
+                <!-- Resumen destacado para AI Overview -->
+                <div style="background: rgba(0, 243, 255, 0.05); border-left: 4px solid var(--primary-color); padding: 1.4rem; margin: 1.8rem 0; border-radius: 6px; border-top: 1px solid #222; border-right: 1px solid #222; border-bottom: 1px solid #222;">
+                    <p style="margin: 0; font-weight: 700; color: var(--primary-color); font-family: var(--font-heading);">Resumen de Ingeniería:</p>
+                    <p style="margin: 0.6rem 0 0 0; font-size: 0.98rem; color: var(--text-light); line-height: 1.6;">
+                        La transición de terminales de operador legacy <strong>PanelView Plus 6/7</strong> (programadas en FactoryTalk View ME) a la nueva plataforma <strong>PanelView 5310/5510</strong> (desarrolladas en Studio 5000 View Designer) ofrece ventajas decisivas: integración directa con la base de datos de tags de Studio 5000 sin duplicar nombres, animaciones vectoriales de alto rendimiento y banners de alarmas preconfigurados alineados con la norma ISA 101.
+                    </p>
+                </div>
+
+                <div style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/panelview-5000-hmi-upgrade.png" alt="Pantalla HMI PanelView 5000 en celda industrial" style="max-width: 100%; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,243,255,0.15);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Panel táctil de alta definición PanelView 5000 integrado en tablero de máquina.</p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">1. Ventajas Clave de la Plataforma PanelView 5000</h2>
+                <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Entorno Unificado en Studio 5000:</strong> La programación del PLC (Logix Designer) y de la pantalla HMI (View Designer) residen dentro de la misma suite de software.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Sin Necesidad de Crear Tags Duplicados:</strong> La HMI navega y se suscribe directamente a los tags y UDTs del controlador Logix 5380/5580 en tiempo real.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Gestión Automática de Alarmas:</strong> Soporta alarmas basadas en controlador Logix (<em>Logix-based Alarms</em>), eliminando la necesidad de crear tablas de alarmas secundarias en la pantalla.
+                    </li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">2. Consideraciones para la Conversión de Pantallas</h2>
+                <p style="margin-bottom: 1.2rem;">
+                    Dado que la arquitectura gráfica de <em>Studio 5000 View Designer</em> utiliza gráficos vectoriales modernos y controles estándar de alta resolución, la migración desde un proyecto <code>.APA / .MER</code> de FactoryTalk View ME requiere una estrategia planificada:
+                </p>
+                <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.8rem;"><strong style="color: #fff;">Revisión de Dimensiones de Corte de Gabinete:</strong> Verificar si el nuevo modelo PanelView 5310/5510 coincide con el troquel físico existente en la puerta del tablero o si se requiere una placa adaptadora de montaje.</li>
+                    <li style="margin-bottom: 0.8rem;"><strong style="color: #fff;">Rediseño de Pantallas Bajo ISA 101:</strong> Aprovechar la migración para adoptar diseños HMI de alta situación de conciencia (<em>High-Performance HMI</em>), reduciendo distracciones visuales innecesarias para los operadores.</li>
+                </ol>
+
+                <!-- Bloque de Diferenciadores Robologix Automation -->
+                <div style="background: rgba(0, 243, 255, 0.03); border: 1px solid #282828; border-radius: 8px; padding: 1.8rem; margin: 2.5rem 0;">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.25rem; margin-top: 0; margin-bottom: 1rem;">
+                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i> ¿Por qué actualizar tu HMI con Robologix Automation?
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-laptop" style="color: var(--primary-color); margin-right: 5px;"></i> Dominio de View Designer</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Programación avanzada en Studio 5000 View Designer v30+ con gráficos vectoriales.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-cut" style="color: var(--secondary-color); margin-right: 5px;"></i> Placas de Adaptación Físicas</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Suministro e instalación de marcos biselados de corte para evitar modificar la puerta del tablero.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-history" style="color: var(--primary-color); margin-right: 5px;"></i> Respaldos de Seguridad</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Extracción y conservación de archivos .APA originales y respaldos de firmas digitales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque de Artículos Relacionados -->
+                <div style="border-top: 1px solid #222; padding-top: 1.8rem; margin-top: 2rem;">
+                    <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 1rem;">Artículos Técnicos Relacionados:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem;">
+                        <li><a href="../programacion-plc-saltillo.html" style="color: var(--primary-color); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Programación de PLC en Saltillo</a></li>
+                        <li><a href="diferencias-factorytalk-view-se-vs-me-guia.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Differences FactoryTalk View SE vs ME</a></li>
+                        <li><a href="migracion-slc500-compactlogix-guia-planta.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Migración SLC 500 a CompactLogix 5380</a></li>
+                        <li><a href="guia-familias-plc-allen-bradley.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Guía Familias PLC Allen-Bradley</a></li>
+                    </ul>
+                </div>
+
+                <div style="background: linear-gradient(145deg, #161616 0%, #202020 100%); border: 1px solid var(--primary-color); padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center; box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.8rem;">¿Tiene Pantallas PanelView Dañadas u Obsoletas en Nave?</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; margin-bottom: 1.5rem;">En Robologix Automation realizamos diagnósticos de paneles HMI, conversión de proyectos y reemplazo de hardware sin paros de línea en Saltillo.</p>
+                    <a href="https://wa.me/528444551869?text=Hola%20Robologix,%20necesito%20cotizar/evaluar%20la%20migrac%C3%B3n%20de%20una%20pantalla%20HMI%20PanelView" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fab fa-whatsapp"></i> Solicitar Levantamiento de HMI
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links" style="margin-bottom: 1.2rem; font-family: var(--font-heading); font-size: 0.88rem; display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+                <a href="../index.html#home" style="color: var(--text-light); text-decoration: none;">Inicio</a>
+                <a href="../index.html#services" style="color: var(--text-light); text-decoration: none;">Servicios</a>
+                <a href="../programacion-plc-saltillo.html" style="color: var(--text-light); text-decoration: none;">Programación PLC en Saltillo</a>
+                <a href="../integracion-celdas-roboticas-saltillo.html" style="color: var(--text-light); text-decoration: none;">Celdas Robóticas</a>
+                <a href="index.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Artículos</a>
+                <a href="../index.html#about" style="color: var(--text-light); text-decoration: none;">Nosotros</a>
+                <a href="../index.html#clients" style="color: var(--text-light); text-decoration: none;">Clientes</a>
+                <a href="../index.html#contact" style="color: var(--text-light); text-decoration: none;">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/aaron-ibarra-cepeda/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@roboticayplc" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@plcyrobotica" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Robologix-Automation/61581206799041/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p>&copy; 2026 Robologix Automation. Todos los derechos reservados. | Artículo Técnico: Migración PanelView Plus a PanelView 5000.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

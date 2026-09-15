@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Familias de PLC Allen-Bradley | Robologix</title>
+    <meta name="description"
+        content="Conoce las familias de controladores Allen-Bradley / Rockwell Automation (ControlLogix 5580, CompactLogix 5380, Micro800 y SLC 500), sus diferencias y aplicaciones." />
+    <meta name="keywords"
+        content="PLC Allen Bradley, ControlLogix 5580, CompactLogix 5380, Micro800, Studio 5000, RSLogix 5000, Rockwell Automation Saltillo" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/guia-familias-plc-allen-bradley" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title"
+        content="Guía Completa de Familias de PLC Allen-Bradley | Robologix" />
+    <meta property="og:description"
+        content="Conoce las familias de controladores Allen-Bradley / Rockwell Automation (ControlLogix 5580, CompactLogix 5380, Micro800 y SLC 500), sus diferencias y aplicaciones." />
+    <meta property="og:url" content="https://rbl-automation.com/articulos/guia-familias-plc-allen-bradley" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://rbl-automation.com/assets/allen-bradley-plcs.png" />
+
+    <!-- Schema.org TechArticle Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Guía Completa de Familias de PLC Allen-Bradley (Rockwell Automation)",
+      "description": "Análisis comparativo de las plataformas ControlLogix, CompactLogix y Micro800 de Allen-Bradley, entornos de software Studio 5000 y guías de selección.",
+      "author": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "url": "https://rbl-automation.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbl-automation.com/assets/hero-bg.png"
+        }
+      },
+      "datePublished": "2026-09-11",
+      "inLanguage": "es"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="text-decoration:none; color:inherit;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Inicio</a></li>
+                <li><a href="../index.html#services">Servicios</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                <li><a href="index.html" class="active-nav">Artículos</a></li>
+                <li><a href="../index.html#about">Nosotros</a></li>
+                <li><a href="../index.html#clients">Clientes</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="service-page-wrapper">
+        <section style="padding: 3rem 5%; background-color: var(--bg-dark);">
+            <article class="technical-post"
+                style="max-width: 850px; margin: 0 auto; padding: 2.5rem; background: var(--bg-card); border: 1px solid #282828; border-radius: 10px; line-height: 1.7; color: var(--text-light); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <span style="color: var(--primary-color); font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">TECNOLOGÍA ROCKWELL AUTOMATION</span>
+                <h1 style="color: #fff; font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin: 0.8rem 0 1rem 0;">
+                    Guía Completa de Familias de PLC Allen-Bradley: De Micro800 a ControlLogix 5580
+                </h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #222; padding-bottom: 1rem;">
+                    Publicado por el Equipo de Ingeniería de Robologix Automation | Coahuila, México
+                </p>
+
+                <!-- Resumen destacado para AI Overview -->
+                <div style="background: rgba(0, 243, 255, 0.05); border-left: 4px solid var(--primary-color); padding: 1.4rem; margin: 1.8rem 0; border-radius: 6px; border-top: 1px solid #222; border-right: 1px solid #222; border-bottom: 1px solid #222;">
+                    <p style="margin: 0; font-weight: 700; color: var(--primary-color); font-family: var(--font-heading);">Resumen de Ingeniería:</p>
+                    <p style="margin: 0.6rem 0 0 0; font-size: 0.98rem; color: var(--text-light); line-height: 1.6;">
+                        Las familias de controladores <strong>Allen-Bradley (Rockwell Automation)</strong> dominan el mercado industrial de Norteamérica. Se estructuran en tres niveles principales: <strong>Micro800</strong> (para máquinas pequeñas autónomas con Connected Components Workbench), <strong>CompactLogix 5380</strong> (para celdas de automatización de tamaño medio/alto con Studio 5000 Logix Designer) y <strong>ControlLogix 5580</strong> (para procesos de alta velocidad, movimiento coordinado multieje y redundancia en planta completa).
+                    </p>
+                </div>
+
+                <div style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/allen-bradley-plcs.png" alt="Plataformas Allen-Bradley ControlLogix y CompactLogix" style="max-width: 100%; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,243,255,0.15);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Controladores modulares Allen-Bradley montados en tablero con redes EtherNet/IP.</p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">1. ControlLogix 5580 (Gama Alta de Planta)</h2>
+                <p style="margin-bottom: 1.2rem;">
+                    Es el buque insignia de Rockwell Automation. Diseñado en chasis modular de 4, 7, 10 o 13 ranuras, ofrece:
+                </p>
+                <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.8rem;">Puertos Ethernet gigabit integrados en la CPU para comunicaciones ultra rápidas.</li>
+                    <li style="margin-bottom: 0.8rem;">Soporte de hasta 256 ejes de servo movimiento (CIP Motion).</li>
+                    <li style="margin-bottom: 0.8rem;">Módulos de redundancia en tiempo real para evitar paros en industrias críticas (química, automotriz).</li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">2. CompactLogix 5380 (Estándar para Celdas e Integración Robótica)</h2>
+                <p style="margin-bottom: 1.2rem;">
+                    Ideal para el 80% de las aplicaciones industriales en naves de Saltillo y Ramos Arizpe. Combina el motor de ejecución Logix con un factor de forma compacto montable en riel DIN sin necesidad de chasis físico.
+                </p>
+                <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.8rem;">Programación unificada con <strong>Studio 5000 Logix Designer</strong>.</li>
+                    <li style="margin-bottom: 0.8rem;">Doble puerto Ethernet configurable en modo Dual IP o DLR (Ring Topology).</li>
+                    <li style="margin-bottom: 0.8rem;">Módulos de I/O de alta densidad serie 5069 Compact I/O.</li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">3. Micro800 (Micro820, Micro850, Micro870)</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    Solución económica orientada a fabricantes de maquinaria OEM <em>(Standalone Machines)</em>. Se programa con el software gratuito <strong>CCW (Connected Components Workbench)</strong> y soporta protocolos Modbus TCP y EtherNet/IP básico.
+                </p>
+
+                <!-- Bloque de Diferenciadores Robologix Automation -->
+                <div style="background: rgba(0, 243, 255, 0.03); border: 1px solid #282828; border-radius: 8px; padding: 1.8rem; margin: 2.5rem 0;">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.25rem; margin-top: 0; margin-bottom: 1rem;">
+                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i> Especialistas en Rockwell / Allen-Bradley en Saltillo
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-desktop" style="color: var(--primary-color); margin-right: 5px;"></i> Studio 5000 / RSLogix</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Desarrollo de lógica en ladder, estructurada y UDTs optimizadas en Studio 5000 v20 a v35.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-exchange-alt" style="color: var(--secondary-color); margin-right: 5px;"></i> Migración SLC a CompactLogix</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Reemplazo directo de chasis 1746 por 5069 POINT I/O sin paros prolongados.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-car" style="color: var(--primary-color); margin-right: 5px;"></i> Experiencia Automotriz</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Integración bajo estándares Ford, GM, Stellantis y Tier-1 en Ramos Arizpe y Saltillo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque de Artículos Relacionados -->
+                <div style="border-top: 1px solid #222; padding-top: 1.8rem; margin-top: 2rem;">
+                    <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 1rem;">Artículos Técnicos Relacionados:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem;">
+                        <li><a href="../programacion-plc-saltillo.html" style="color: var(--primary-color); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Programación de PLC en Saltillo</a></li>
+                        <li><a href="migracion-slc500-compactlogix-guia-planta.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Migración de SLC 500 a CompactLogix 5380</a></li>
+                        <li><a href="configurar-direccion-ip-compactlogix-bootp-guia.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Configuración IP con BOOTP Server</a></li>
+                        <li><a href="configurar-instruccion-msg-ethernet-plc-allen-bradley.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Instrucción MSG CIP en Allen-Bradley</a></li>
+                    </ul>
+                </div>
+
+                <div style="background: linear-gradient(145deg, #161616 0%, #202020 100%); border: 1px solid var(--primary-color); padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center; box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.8rem;">¿Requiere Programación o Migración de PLC Allen-Bradley en Coahuila?</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; margin-bottom: 1.5rem;">En Robologix Automation somos especialistas certificados en programación Studio 5000, RSLogix y diagnósticos en planta.</p>
+                    <a href="https://wa.me/528444551869?text=Hola%20Robologix,%20necesito%20soporte%20t%C3%A9cnico/programaci%C3%B3n%20para%20un%20PLC%20Allen-Bradley" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fab fa-whatsapp"></i> Hablar con un Especialista Allen-Bradley
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links" style="margin-bottom: 1.2rem; font-family: var(--font-heading); font-size: 0.88rem; display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+                <a href="../index.html#home" style="color: var(--text-light); text-decoration: none;">Inicio</a>
+                <a href="../index.html#services" style="color: var(--text-light); text-decoration: none;">Servicios</a>
+                <a href="../programacion-plc-saltillo.html" style="color: var(--text-light); text-decoration: none;">Programación PLC en Saltillo</a>
+                <a href="../integracion-celdas-roboticas-saltillo.html" style="color: var(--text-light); text-decoration: none;">Celdas Robóticas</a>
+                <a href="index.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Artículos</a>
+                <a href="../index.html#about" style="color: var(--text-light); text-decoration: none;">Nosotros</a>
+                <a href="../index.html#clients" style="color: var(--text-light); text-decoration: none;">Clientes</a>
+                <a href="../index.html#contact" style="color: var(--text-light); text-decoration: none;">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/aaron-ibarra-cepeda/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@roboticayplc" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@plcyrobotica" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Robologix-Automation/61581206799041/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p>&copy; 2026 Robologix Automation. Todos los derechos reservados. | Artículo Técnico: Familias PLC Allen-Bradley.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

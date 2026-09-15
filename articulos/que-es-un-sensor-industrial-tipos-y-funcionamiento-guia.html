@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensores en Saltillo | ¿Qué es un Sensor Industrial y Suministro? | Robologix</title>
+    <meta name="description" content="Guía sobre Sensores en Saltillo. Tipos de sensores industriales (inductivos, capacitivos, ópticos, ultrasónicos, visión artificial), suministro y conexión a PLC en Coahuila." />
+    <meta name="keywords" content="sensores saltillo, sensores industriales saltillo, distribuidor de sensores saltillo, que es un sensor industrial, tipos de sensores industriales, sensores sick saltillo, sensores turck saltillo, robologix automation" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/que-es-un-sensor-industrial-tipos-y-funcionamiento-guia.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Celdas Robóticas</a></li>
+                <li><a href="../cursos-de-plc-y-robotica-en-saltillo.html">Cursos PLC y Robot</a></li>
+                <li><a href="index.html">Artículos Técnicos</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container" style="padding-top: 100px; max-width: 900px; margin: 0 auto;">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="index.html">Artículos</a> &gt;
+            <span>¿Qué es un Sensor Industrial y Cómo Funciona?</span>
+        </nav>
+
+        <article class="article-detail">
+            <span class="badge-tag"><i class="fas fa-eye"></i> INSTRUMENTACIÓN &amp; SENSORES INDUSTRIALES</span>
+            <h1 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 2rem; margin: 15px 0;">
+                ¿Qué es un Sensor Industrial? Tipos, Funcionamiento y Guía de Conexión a PLC
+            </h1>
+            
+            <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">
+                <span><i class="fas fa-user"></i> Por Mtro. Aaron Ibarra Cepeda</span> | 
+                <span><i class="fas fa-calendar"></i> Actualizado en 2026</span> | 
+                <span><i class="fas fa-tag"></i> Guía Didáctica: Sensores en la Industria</span>
+            </div>
+
+            <img src="../assets/sinking-sourcing-diagram.png" alt="Qué es un Sensor Industrial y Conexión a PLC" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
+
+            <section style="color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
+                <p>
+                    En el mundo de la automatización industrial en <strong>Saltillo, Ramos Arizpe y Coahuila</strong>, los motores y los cilindros neumático son los "músculos" de la fábrica, el PLC es el "cerebro", pero... <strong>¿quiénes son los ojos, el tacto y los oídos de la planta?</strong> La respuesta es: <strong>los sensores industriales</strong>.
+                </p>
+                <p>
+                    En esta guía técnica redactada en lenguaje claro y didáctico explicaremos <strong>qué es un sensor</strong>, cuáles son los principales tipos utilizados en las líneas de producción y cómo envían su información a un controlador PLC.
+                </p>
+
+                <!-- Ejemplo Didáctico Sencillo -->
+                <div style="background: rgba(0,243,255,0.05); border-left: 4px solid var(--primary-color); padding: 25px; border-radius: 8px; margin: 30px 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px; font-family: var(--font-heading); font-size: 1.2rem;">💡 Ejemplo sencillo para entender qué es un sensor:</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">
+                        Piensa en el sensor de una puerta automática de supermercado. Cuando caminas hacia la puerta, un sensor óptico o de movimiento capta tu presencia (detecta un cambio en el entorno) y le envía una señal eléctrica al motor para que abra la puerta. Sin ese sensor, la puerta no sabría en qué momento exacto debes pasar.
+                    </p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    Definición: ¿Qué es un Sensor Industrial?
+                </h2>
+                <p>
+                    Un <strong>sensor industrial</strong> es un dispositivo electrónico que detecta magnitudes físicas o químicas (como presencia, distancia, temperatura, presión, nivel de líquido o luz) y las transforma en una <strong>señal eléctrica</strong> (digital o analógica) que puede ser leída e interpretada por un autómata programable (PLC) o pantalla HMI.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    Sensores Discretos (Digitales) vs. Sensores Analógicos
+                </h2>
+                <p>Existen dos formas fundamentales en las que un sensor entrega información:</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0;">
+                    <div style="background: var(--bg-card); border: 1px solid rgba(0,243,255,0.2); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">1. Sensores Discretos (ON / OFF)</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">
+                            Solo tienen 2 estados posibles: <strong>1 (Encendido / Pieza detectada)</strong> o <strong>0 (Apagado / Sin pieza)</strong>. Son ideales para saber si una puerta está cerrada o si una caja llegó al final de la banda.
+                        </p>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid rgba(0,243,255,0.2); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: var(--secondary-color); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">2. Sensores Analógicos (Variables Continuas)</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">
+                            Entregan una señal proporcional continua (ejemplo: 4 a 20 mA o 0 a 10 V). Sirven para medir valores exactos, como una temperatura de 85.4°C o un tanque de aceite al 73% de su capacidad.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    Principales Tipos de Sensores Industriales y Sus Aplicaciones
+                </h2>
+
+                <h3 style="color: var(--primary-color); font-size: 1.15rem; margin-top: 20px;">1. Sensores Inductivos (Detección de Metales)</h3>
+                <p>
+                    Funcionan generando un campo electromagnético de alta frecuencia en la punta de su bobina. Cuando un objeto metálico (acero, aluminio, cobre) ingresa a ese campo, el sensor altera sus oscilaciones y conmuta su salida.
+                </p>
+                <p><strong>Ejemplo de uso:</strong> Detectar la llegada de una estampa metálica de chasis automotriz en una prensa en Ramos Arizpe.</p>
+
+                <h3 style="color: var(--primary-color); font-size: 1.15rem; margin-top: 20px;">2. Sensores Capacitivos (Detección de Todo Tipo de Materiales)</h3>
+                <p>
+                    Generan un campo electrostático. Pueden detectar materiales metálicos y no metálicos como plástico, vidrio, madera, líquidos, granos o cajas de cartón.
+                </p>
+                <p><strong>Ejemplo de uso:</strong> Medir el nivel de líquido dentro de una botella de plástico sin tocar el producto.</p>
+
+                <h3 style="color: var(--primary-color); font-size: 1.15rem; margin-top: 20px;">3. Sensores Ópticos / Fotocélulas</h3>
+                <p>
+                    Emiten un haz de luz (infrarroja o láser) y evalúan la luz recibida. Se dividen en:
+                </p>
+                <ul style="color: var(--text-light); font-size: 0.95rem; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Barrera (Emitter / Receiver):</strong> Emisor y receptor están separados en dos cuerpos. Si un objeto interrumpe el haz de luz, se activa la señal.</li>
+                    <li><strong>Réflex:</strong> El emisor proyecta la luz hacia un espejo reflector que la devuelve al receptor.</li>
+                    <li><strong>Difuso:</strong> La luz rebota directamente sobre la superficie del objeto a detectar.</li>
+                </ul>
+
+                <h3 style="color: var(--primary-color); font-size: 1.15rem; margin-top: 20px;">4. Sensores Ultrasónicos (Medición por Ondas de Sonido)</h3>
+                <p>
+                    Emiten un ráfaga de ondas de ultrasonido inaudibles para el oído humano y miden el tiempo que tarda el eco en regresar. Son excelentes para medir distancias o niveles sin importar el color o la transparencia del material.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    ¿Cómo se conecta un sensor a un PLC? (Código de Colores M12)
+                </h2>
+                <p>
+                    La inmensa mayoría de los sensores discretos de 3 hilos utilizan el código estándar internacional de colores en su cable industrial:
+                </p>
+                <ul style="color: var(--text-light); font-size: 0.95rem; margin-left: 20px; line-height: 1.8;">
+                    <li><strong style="color: #ff9900;">Cable Café (Brown):</strong> Alimentación Positiva (+24VDC).</li>
+                    <li><strong style="color: #0088ff;">Cable Azul (Blue):</strong> Alimentación Negativa (0V / GND).</li>
+                    <li><strong style="color: #ffffff;">Cable Negro (Black):</strong> Salida de Señal enviada a la tarjeta de entradas del PLC.</li>
+                </ul>
+                <p style="margin-top: 15px;">
+                    Los sensores pueden ser tipo <strong>PNP (Sourcing - Conmutan +24V)</strong> muy utilizados en Europa/Siemens, o tipo <strong>NPN (Sinking - Conmutan 0V)</strong> populares en sistemas asiáticos.
+                </p>
+
+                <!-- Promoción Robologix Automation -->
+                <div style="background: var(--bg-card); border: 2px solid var(--primary-color); padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 12px;">⚡ ¿Necesitas Diagnóstico de Sensores o Capacitación en Saltillo?</h3>
+                    <p style="color: var(--text-light); max-width: 750px; margin: 0 auto 20px auto; font-size: 0.95rem;">
+                        En <strong>Robologix Automation</strong> conectamos, configuramos y diagnosticamos instrumentación industrial en plantas de Coahuila. Además impartimos <strong>Cursos Prácticos de PLC y Sensores en Saltillo</strong> con constancia oficial <strong>STPS DC-3</strong>.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="../sensores-y-refacciones-industriales-saltillo.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px; background: linear-gradient(135deg, var(--secondary-color), #ff9900); border: none;">Catálogo &amp; Suministro de Sensores</a>
+                        <a href="../curso-plc-saltillo.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px;">Ver Cursos de PLC y Sensores</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- WhatsApp Call to Action -->
+            <section style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(0,243,255,0.05); border-radius: 12px; border: 1px solid rgba(0,243,255,0.2);">
+                <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 10px;">¿Tienes dudas sobre la elección de un sensor para tu proyecto?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Habla directamente con nuestro equipo técnico en Saltillo y Ramos Arizpe.</p>
+                <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20Qu%C3%A9%20es%20un%20Sensor%20y%20requiero%20asesor%C3%ADa." target="_blank" class="btn-whatsapp" style="text-decoration: none; padding: 12px 25px; display: inline-block;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Directo (+52 844 455 1869)
+                </a>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ROBOLOGIX AUTOMATION</h3>
+                <p>Especialistas en instrumentación, sensores industriales, programación de PLC y capacitación técnica en Saltillo, Ramos Arizpe y Coahuila.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../programacion-plc-saltillo.html">Programación de PLC</a></li>
+                    <li><a href="../curso-plc-saltillo.html">Curso de PLC en Saltillo</a></li>
+                    <li><a href="index.html">Artículos Técnicos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Saltillo, Coahuila</p>
+                <p><i class="fas fa-phone"></i> +52 844 455 1869</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Robologix Automation. Guía sobre Qué es un Sensor Industrial.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

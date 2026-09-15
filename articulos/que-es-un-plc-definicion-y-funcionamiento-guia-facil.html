@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es un PLC y Cómo Funciona? Guía Explicada Paso a Paso | Robologix Automation</title>
+    <meta name="description" content="¿Qué es un PLC? Explicación sencilla, detallada y con ejemplos prácticos sobre qué es un Controlador Lógico Programable y cómo opera en la industria de Coahuila." />
+    <meta name="keywords" content="que es plc, que es un plc, controlador logico programable, como funciona un plc, partes de un plc, ciclos de escaneo plc, automatizacion industrial saltillo" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Celdas Robóticas</a></li>
+                <li><a href="../cursos-de-plc-y-robotica-en-saltillo.html">Cursos PLC y Robot</a></li>
+                <li><a href="index.html">Artículos Técnicos</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container" style="padding-top: 100px; max-width: 900px; margin: 0 auto;">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="index.html">Artículos</a> &gt;
+            <span>¿Qué es un PLC y Cómo Funciona?</span>
+        </nav>
+
+        <article class="article-detail">
+            <span class="badge-tag"><i class="fas fa-question-circle"></i> CONCEPTOS FUNDAMENTALES DE AUTOMATIZACIÓN</span>
+            <h1 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 2rem; margin: 15px 0;">
+                ¿Qué es un PLC y Cómo Funciona? Explicación Sencilla y Detallada con Ejemplos Reales
+            </h1>
+            
+            <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">
+                <span><i class="fas fa-user"></i> Por Mtro. Aaron Ibarra Cepeda</span> | 
+                <span><i class="fas fa-calendar"></i> Actualizado en 2026</span> | 
+                <span><i class="fas fa-tag"></i> Pregunta Frecuente: Qué es un PLC</span>
+            </div>
+
+            <img src="../assets/que-es-un-plc-diagrama-concepto.png" alt="Qué es un PLC Controlador Lógico Programable Concepto" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
+
+            <section style="color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
+                <p>
+                    Las búsquedas <strong>"qué es plc"</strong> y <strong>"qué es un plc"</strong> son dos de los conceptos más consultados en Coahuila por estudiantes, mecánicos, eléctricos y gerentes de producción. Aunque suena a un término técnico muy complejo, en realidad el concepto es bastante accesible si lo comparamos con elementos de la vida cotidiana.
+                </p>
+                <p>
+                    En esta guía explicaremos detalladamente qué significa la sigla <strong>PLC</strong>, cuáles son sus componentes principales, cómo piensa paso a paso y por qué es indispensable en la industria moderna.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    Definición: ¿Qué significan las siglas PLC?
+                </h2>
+                <p>
+                    <strong>PLC</strong> proviene del inglés <em>Programmable Logic Controller</em>, que en español se traduce como <strong>Controlador Lógico Programable</strong>.
+                </p>
+                <p>
+                    Un PLC es esencialmente una <strong>computadora industrial ultra resistente</strong>, diseñada específicamente para trabajar en entornos hostiles de fábrica donde hay polvo, altas temperaturas, humedad, vibraciones e interferencia eléctrica. A diferencia de una computadora de escritorio (que se traba si le cae polvo o sufre un apagón), un PLC está construido para funcionar 24 horas al día, 365 días al año sin fallar.
+                </p>
+
+                <!-- Analogía del Cuerpo Humano -->
+                <div style="background: rgba(0,243,255,0.05); border-left: 4px solid var(--primary-color); padding: 25px; border-radius: 8px; margin: 30px 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 12px; font-family: var(--font-heading); font-size: 1.2rem;">🧠 La Analogía Perfecta: El PLC y el Cuerpo Humano</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; line-height: 1.7;">
+                        Para entender un PLC, piensa en tu propio cuerpo:
+                    </p>
+                    <ul style="color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Los Sensores (Entradas / Inputs):</strong> Son tus ojos, oídos y piel. Detectan si algo está caliente, si hay luz o si alguien tocó un botón. En la fábrica, son fotoceldas, sensores de temperatura o botones de paro.</li>
+                        <li><strong>El Procesador / CPU (El Cerebro del PLC):</strong> Es tu cerebro. Recibe la información de tus ojos (entrada), evalúa la regla aprendida (si la estufa está caliente, quita la mano) y toma una decisión en milisegundos.</li>
+                        <li><strong>Los Actuadores (Salidas / Outputs):</strong> Son tus músculos y manos. Reciben la orden del cerebro y ejecutan la acción (mover el brazo). En la fábrica, son motores, pistones neumáticos o luces de advertencia.</li>
+                    </ul>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    Las 3 Partes Principales de un PLC
+                </h2>
+
+                <ol style="margin: 15px 0 25px 25px; color: var(--text-light);">
+                    <li style="margin-bottom: 15px;">
+                        <strong>Módulo de Entradas (Inputs):</strong> Recibe las señales eléctricas de los dispositivos del campo (sensores, botones, termopares) y las convierte en datos digitales (unos y ceros) que el procesador entiende.
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong>Unidad Central de Procesamiento (CPU):</strong> Es la memoria y procesador donde vive el programa ejecutable. Analiza el estado de las entradas miles de veces por segundo y calcula qué debe hacer.
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong>Módulo de Salidas (Outputs):</strong> Envía voltajes (24VDC o 120VAC) para activar relevadores, electroválvulas neumáticas, luces piloto o arrancar variadores de frecuencia de motores.
+                    </li>
+                </ol>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    ¿Cómo funciona el Ciclo de Escaneo (Scan Cycle) de un PLC?
+                </h2>
+                <p> Un PLC trabaja ejecutando continuamente un bucle infinito llamado <strong>Ciclo de Escaneo</strong> que consta de 4 pasos rápidos:</p>
+
+                <div style="background: var(--bg-card); border: 1px solid rgba(0,243,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <p style="color: var(--primary-color); font-weight: bold; margin-bottom: 5px;">Paso 1: Leer Entradas</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">El PLC fotografía el estado de todos los botones y sensores conectados.</p>
+                    
+                    <p style="color: var(--primary-color); font-weight: bold; margin-bottom: 5px;">Paso 2: Ejecutar la Lógica del Programa</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">Evalúa el programa (diagrama de escalera o renglones) de arriba a abajo y de izquierda a derecha.</p>
+                    
+                    <p style="color: var(--primary-color); font-weight: bold; margin-bottom: 5px;">Paso 3: Actualizar Salidas</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">Enciende o apaga físicamente los pistones, motores o válvulas según el resultado del programa.</p>
+                    
+                    <p style="color: var(--primary-color); font-weight: bold; margin-bottom: 5px;">Paso 4: Diagnóstico y Comunicaciones</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Verifica que no haya fallas internas y envía datos a las pantallas HMI o computadoras centrales.</p>
+                </div>
+
+                <!-- Promoción Robologix -->
+                <div style="background: var(--bg-card); border: 2px solid var(--primary-color); padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 12px;">⚡ Aprende a Programar PLCs con Robologix Automation</h3>
+                    <p style="color: var(--text-light); max-width: 750px; margin: 0 auto 20px auto; font-size: 0.95rem;">
+                        ¿Quieres dominar la programación de PLC desde cero o necesitas integrar una máquina en tu planta en Saltillo o Ramos Arizpe? En <strong>Robologix Automation</strong> somos expertos integradores y ofrecemos <strong>Cursos de PLC en Saltillo</strong> con constancia <strong>STPS DC-3</strong>.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="../curso-plc-saltillo.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px;">Ver Cursos de PLC en Saltillo</a>
+                        <a href="../programacion-plc-saltillo.html" class="btn-whatsapp" style="text-decoration: none; padding: 10px 20px; background: rgba(0,243,255,0.1); border: 1px solid var(--primary-color);">Servicios de Automatización</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- WhatsApp Call to Action -->
+            <section style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(0,243,255,0.05); border-radius: 12px; border: 1px solid rgba(0,243,255,0.2);">
+                <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 10px;">¿Tienes dudas sobre PLC o deseas cotizar una capacitación?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Habla directamente con nuestro equipo de ingenieros en Saltillo.</p>
+                <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20Qu%C3%A9%20es%20un%20PLC%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="btn-whatsapp" style="text-decoration: none; padding: 12px 25px; display: inline-block;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Directo (+52 844 455 1869)
+                </a>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ROBOLOGIX AUTOMATION</h3>
+                <p>Especialistas en programación de PLC, integración de celdas robóticas y capacitación industrial en Saltillo, Coahuila.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../programacion-plc-saltillo.html">Programación de PLC</a></li>
+                    <li><a href="../curso-plc-saltillo.html">Curso de PLC en Saltillo</a></li>
+                    <li><a href="index.html">Artículos Técnicos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Saltillo, Coahuila</p>
+                <p><i class="fas fa-phone"></i> +52 844 455 1869</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Robologix Automation. Guía sobre qué es un PLC.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

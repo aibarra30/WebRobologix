@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Generativa y ChatGPT en Robótica Industrial (FANUC, ABB, KUKA) | Robologix Automation</title>
+    <meta name="description" content="Análisis sobre la aplicación de Inteligencia Artificial Generativa y ChatGPT en la programación de robots industriales FANUC, ABB y KUKA: automatización de rutinas RAPID, Karel y simulación digital." />
+    <meta name="keywords" content="chatgpt robotica industrial, ia generativa robot fanuc, codigo abb rapid chatgpt, kuka krl inteligencia artificial, roboguide robotstudio simulación, celdas roboticas saltillo, robologix automation" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/ia-generativa-y-chatgpt-en-robotica-industrial-fanuc-abb.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Celdas Robóticas</a></li>
+                <li><a href="../cursos-de-plc-y-robotica-en-saltillo.html">Cursos PLC y Robot</a></li>
+                <li><a href="index.html">Artículos Técnicos</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container" style="padding-top: 100px; max-width: 900px; margin: 0 auto;">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="index.html">Artículos</a> &gt;
+            <span>IA Generativa y ChatGPT en Robótica Industrial</span>
+        </nav>
+
+        <article class="article-detail">
+            <span class="badge-tag"><i class="fas fa-robot"></i> ROBÓTICA INDUSTRIAL &amp; IA 2026</span>
+            <h1 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 2rem; margin: 15px 0;">
+                IA Generativa y ChatGPT en Robótica Industrial: Programación Avanzada de FANUC, ABB y KUKA
+            </h1>
+            
+            <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">
+                <span><i class="fas fa-user"></i> Por Mtro. Aaron Ibarra Cepeda</span> | 
+                <span><i class="fas fa-calendar"></i> Actualizado en 2026</span> | 
+                <span><i class="fas fa-tag"></i> FANUC, ABB &amp; KUKA Robotics</span>
+            </div>
+
+            <img src="../assets/curso-robotica-fanuc.png" alt="ChatGPT e Inteligencia Artificial Generativa aplicada a Robots Industriales FANUC y ABB" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
+
+            <section style="color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
+                <p>
+                    La adopción de modelos de lenguaje extenso (LLMs) como <strong>ChatGPT y Claude</strong> en el sector automotriz y de manufactura de <strong>Saltillo y Ramos Arizpe</strong> está transformando radicalmente la forma en que los programadores interactúan con brazos robóticos articulados. Ya no es necesario programar manualmente cada punto o línea de código desde cero; la <strong>IA Generativa en Robótica</strong> actúa como un multiplicador de la productividad.
+                </p>
+
+                <!-- Resumen para AI Overview -->
+                <div style="background: rgba(0,243,255,0.05); border-left: 4px solid var(--primary-color); padding: 25px; border-radius: 8px; margin: 30px 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px; font-family: var(--font-heading); font-size: 1.2rem;">🤖 ¿Cómo se aplica ChatGPT en Robótica Industrial?</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">
+                        Permite convertir requerimientos operativos explicados en texto ("Crea una matriz de paletizado de 4x3 con offset Z") en scripts ejecutables para controladores como <strong>FANUC R-30iB (Karel y HandlingTool)</strong>, <strong>ABB IRC5/OmniCore (RAPID)</strong> y <strong>KUKA KRC4/KRC5 (KRL)</strong>.
+                    </p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    1. Generación de Algoritmos de Paletizado y Pick &amp; Place
+                </h2>
+                <p>
+                    Programar un ciclo de paletizado o empaque implica calcular iterativamente desplazamientos X, Y, Z respecto a un marco de usuario (User Frame). La Inteligencia Artificial es extremadamente precisa para calcular estas estructuras algebraicas.
+                </p>
+                
+                <h3 style="color: var(--primary-color); font-size: 1.15rem; margin-top: 20px;">Ejemplo en Código ABB RAPID (Módulo de Paletizado Dinámico)</h3>
+                <p>Al indicarle a ChatGPT la geometría de las cajas y la tarima, genera la estructura del módulo RAPID:</p>
+                <div style="background: #111; border: 1px solid #333; padding: 15px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #00f3ff; margin: 15px 0;">
+                    PROC PaletizarCaja(num Cama, num Fila, num Columna)<br>
+                    &nbsp;&nbsp;VAR robtarget pDestino;<br>
+                    &nbsp;&nbsp;pDestino := Offs(pOrigen, Columna*200, Fila*300, Cama*150);<br>
+                    &nbsp;&nbsp;MoveL pDestino, v1000, z50, tGripper;<br>
+                    &nbsp;&nbsp;SetDO do_GripperOpen, 1;<br>
+                    ENDPROC
+                </div>
+                <p>
+                    Esto permite a los integradores acelerar la puesta en marcha de celdas de paletizado en plantas de estampación y ensamblaje.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    2. Integración con Gemelos Digitales (ROBOGUIDE &amp; RobotStudio)
+                </h2>
+                <p>
+                    Antes de tocar un robot real en la línea de producción, la simulación virtual es obligatoria. La IA apoya a los programadores en entornos de gemelo digital:
+                </p>
+                <ul style="color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Scripts Python en RobotStudio:</strong> ChatGPT genera automatizaciones en Python para importar modelos CAD, crear trayectorias sobre curvas 3D complejas y simular tiempos de ciclo sin intervención manual.</li>
+                    <li><strong>Validación de Tiempos de Ciclo (Bottleneck Analysis):</strong> Analiza logs de simulación para recomendar velocidades óptimas en zonas de acercamiento y retracción.</li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid var(--primary-color); padding-left: 10px;">
+                    3. Subrutinas de Recuperación de Errores y Manejo de Señales I/O
+                </h2>
+                <p>
+                    Cuando una celda robótica se detiene por una falla en la garra (Gripper Fault) o una pérdida de vacío, un mal programa requiere que un operador mueva el robot manualmente con el Teach Pendant. 
+                </p>
+                <p>
+                    ChatGPT ayuda a redactar <strong>rutinas de retorno a HOME automáticas</strong> (Home Return Routines) evaluando las condiciones de los sensores de zona de interferencia y cortinas de seguridad, minimizando el tiempo muerto (Downtime) de la línea.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 35px; border-left: 3px solid #ff6600; padding-left: 10px;">
+                    ⚠️ Recomendaciones de Seguridad al Usar IA en Robótica
+                </h2>
+                <div style="background: rgba(255,102,0,0.08); border: 1px solid var(--secondary-color); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">
+                        <strong>PROTOCOLO DE PLANTAS INDUSTRIALES:</strong> Todo código generado por IA debe ser probado a velocidad reducida (T1 / 10% - 25%) con el botón de paro de emergencia (E-Stop) en mano durante la primera corrida física. Los límites de eje (Soft Limits) y las zonas de interferencia DCS (Dual Check Safety en FANUC / EPS en ABB) deben programarse de forma hardware/software independiente de la IA.
+                    </p>
+                </div>
+
+                <!-- Promoción Robologix Automation -->
+                <div style="background: var(--bg-card); border: 2px solid var(--primary-color); padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 12px;">⚡ Robologix Automation: Integración de Celdas Robóticas y Capacitación</h3>
+                    <p style="color: var(--text-light); max-width: 750px; margin: 0 auto 20px auto; font-size: 0.95rem;">
+                        En <strong>Robologix Automation</strong> integramos celdas de soldadura, ensamble y paletizado con robots FANUC, ABB y KUKA en Saltillo, Ramos Arizpe y Arteaga. Capacitamos a ingenieros y técnicos con cursos prácticos presenciales y certificación <strong>STPS DC-3</strong>.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="../integracion-celdas-roboticas-saltillo.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px;">Integración Robótica</a>
+                        <a href="../curso-robot-fanuc-saltillo.html" class="btn-whatsapp" style="text-decoration: none; padding: 10px 20px; background: rgba(0,243,255,0.1); border: 1px solid var(--primary-color);">Cursos Robot FANUC (DC-3)</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- WhatsApp Call to Action -->
+            <section style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(0,243,255,0.05); border-radius: 12px; border: 1px solid rgba(0,243,255,0.2);">
+                <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 10px;">¿Buscas programar o integrar robots industriales en tu planta?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Contacta a nuestros expertos en robótica e ingeniería en Coahuila.</p>
+                <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20IA%20en%20rob%C3%B3tica%20y%20requiero%20asesor%C3%ADa." target="_blank" class="btn-whatsapp" style="text-decoration: none; padding: 12px 25px; display: inline-block;">
+                    <i class="fab fa-whatsapp"></i> Chat Directo (+52 844 455 1869)
+                </a>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ROBOLOGIX AUTOMATION</h3>
+                <p>Líderes en automatización industrial, programación de PLC, robótica FANUC/ABB/KUKA y soluciones avanzadas de ingeniería en Saltillo, Ramos Arizpe y Coahuila.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../integracion-celdas-roboticas-saltillo.html">Celdas Robóticas</a></li>
+                    <li><a href="../curso-robot-fanuc-saltillo.html">Curso de Robot FANUC en Saltillo</a></li>
+                    <li><a href="index.html">Artículos Técnicos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Saltillo, Coahuila</p>
+                <p><i class="fas fa-phone"></i> +52 844 455 1869</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Robologix Automation. IA Generativa &amp; Robótica Industrial.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

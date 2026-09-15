@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Configurar la Dirección IP de un CompactLogix con BOOTP/DHCP | Robologix</title>
+    <meta name="description"
+        content="Guía paso a paso para asignar una dirección IP estática a controladores Allen-Bradley CompactLogix o ControlLogix nuevos utilizando la herramienta BOOTP-DHCP Server." />
+    <meta name="keywords"
+        content="BOOTP DHCP Server Rockwell, Configurar IP CompactLogix, RSLinx Classic Ethernet, Direccion MAC PLC, Allen Bradley Ethernet IP, Robologix Automation Saltillo" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/configurar-direccion-ip-compactlogix-bootp-guia" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title"
+        content="Cómo Configurar la Dirección IP de un CompactLogix con BOOTP/DHCP | Robologix" />
+    <meta property="og:description"
+        content="Guía paso a paso para asignar una dirección IP estática a controladores Allen-Bradley CompactLogix o ControlLogix nuevos utilizando la herramienta BOOTP-DHCP Server." />
+    <meta property="og:url" content="https://rbl-automation.com/articulos/configurar-direccion-ip-compactlogix-bootp-guia" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://rbl-automation.com/assets/bootp-ethernet-configuration.png" />
+
+    <!-- Schema.org TechArticle Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Cómo Configurar la Dirección IP de un CompactLogix utilizando BOOTP/DHCP Server",
+      "description": "Procedimiento paso a paso para ingenieros y técnicos de automatización para asignar IP estática a módulos de comunicación ethernet de Rockwell Automation.",
+      "author": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "url": "https://rbl-automation.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbl-automation.com/assets/hero-bg.png"
+        }
+      },
+      "datePublished": "2026-09-11",
+      "inLanguage": "es"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="text-decoration:none; color:inherit;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Inicio</a></li>
+                <li><a href="../index.html#services">Servicios</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                <li><a href="index.html" class="active-nav">Artículos</a></li>
+                <li><a href="../index.html#about">Nosotros</a></li>
+                <li><a href="../index.html#clients">Clientes</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="service-page-wrapper">
+        <section style="padding: 3rem 5%; background-color: var(--bg-dark);">
+            <article class="technical-post"
+                style="max-width: 850px; margin: 0 auto; padding: 2.5rem; background: var(--bg-card); border: 1px solid #282828; border-radius: 10px; line-height: 1.7; color: var(--text-light); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <span style="color: var(--primary-color); font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">TUTORIAL Y PROTOCOLOS DE RED</span>
+                <h1 style="color: #fff; font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin: 0.8rem 0 1rem 0;">
+                    Cómo Configurar la Dirección IP de un PLC CompactLogix Usando BOOTP/DHCP Server
+                </h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #222; padding-bottom: 1rem;">
+                    Publicado por el Equipo de Ingeniería de Robologix Automation | Saltillo, Coahuila
+                </p>
+
+                <!-- Resumen destacado para AI Overview -->
+                <div style="background: rgba(0, 243, 255, 0.05); border-left: 4px solid var(--primary-color); padding: 1.4rem; margin: 1.8rem 0; border-radius: 6px; border-top: 1px solid #222; border-right: 1px solid #222; border-bottom: 1px solid #222;">
+                    <p style="margin: 0; font-weight: 700; color: var(--primary-color); font-family: var(--font-heading);">Resumen de Ingeniería:</p>
+                    <p style="margin: 0.6rem 0 0 0; font-size: 0.98rem; color: var(--text-light); line-height: 1.6;">
+                        Cuando se instala un controlador Allen-Bradley nuevo de fábrica (como CompactLogix 5370/5380 o tarjeta EN2T), el puerto Ethernet viene configurado en modo DHCP/BOOTP por defecto (dirección IP 0.0.0.0). Para asignarle una dirección IP estática sin necesidad de pantalla ni tarjeta SD, se utiliza la utilidad <strong>BOOTP-DHCP Server</strong> de Rockwell Automation asociando la dirección física MAC del dispositivo con la IP deseada en la red local.
+                    </p>
+                </div>
+
+                <div style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/bootp-ethernet-configuration.png" alt="Herramienta BOOTP DHCP Server de Rockwell Automation" style="max-width: 100%; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,243,255,0.15);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Entorno de la utilidad BOOTP-DHCP Server en enlace con RSLinx Classic.</p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">Procedimiento Paso a Paso:</h2>
+                <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">1. Conexión Física Directa:</strong> Conecte un cable Ethernet de parcheo desde el puerto de la laptop de servicio directamente al puerto Ethernet del CompactLogix. Ajuste la IP de su laptop en la misma subred (ejemplo: 192.168.1.200 / 255.255.255.0).
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">2. Identificar la Dirección MAC:</strong> Anote la dirección MAC impresa en la etiqueta frontal o lateral del procesador (formato: <code>00:00:BC:XX:XX:XX</code>).
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">3. Abrir la herramienta BOOTP-DHCP Server:</strong> Ejecute la aplicación como Administrador en Windows. Asegúrese de seleccionar la tarjeta de red (NIC) adecuada en la configuración inicial.
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">4. Asignar la Dirección IP:</strong> En el panel superior (<em>Request History</em>), ubique la dirección MAC de su equipo. Haga doble clic sobre ella, ingrese la IP estática asignada a la celda (ejemplo: <code>192.168.1.10</code>) y presione OK.
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">5. ¡Paso Crítico! Deshabilitar BOOTP/DHCP:</strong> Una vez asignada la IP, seleccione el dispositivo en el panel inferior (<em>Relation List</em>) y haga clic en <strong>Disable BOOTP/DHCP</strong>. Esto guardará de forma permanente la IP en la memoria no volátil del PLC para que no se pierda al reiniciar la energía.
+                    </li>
+                </ol>
+
+                <!-- Bloque de Diferenciadores Robologix Automation -->
+                <div style="background: rgba(0, 243, 255, 0.03); border: 1px solid #282828; border-radius: 8px; padding: 1.8rem; margin: 2.5rem 0;">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.25rem; margin-top: 0; margin-bottom: 1rem;">
+                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i> Servicios de Redes Industriales Robologix
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-network-wired" style="color: var(--primary-color); margin-right: 5px;"></i> Redes EtherNet/IP &amp; DLR</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Configuración de anillos DLR y segmentación VLAN con switches Stratix administrados.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-laptop-code" style="color: var(--secondary-color); margin-right: 5px;"></i> Diagnóstico RSLinx &amp; FactoryTalk</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Solución a conflictos de IP, pérdidas de paquetes CIP y caídas de comunicación en nave.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-clock" style="color: var(--primary-color); margin-right: 5px;"></i> Soporte Técnico en Planta</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Atención presencial rápida en los parques de Saltillo, Ramos Arizpe y Arteaga.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque de Artículos Relacionados -->
+                <div style="border-top: 1px solid #222; padding-top: 1.8rem; margin-top: 2rem;">
+                    <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 1rem;">Artículos Técnicos Relacionados:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem;">
+                        <li><a href="../programacion-plc-saltillo.html" style="color: var(--primary-color); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Programación de PLC en Saltillo</a></li>
+                        <li><a href="guia-familias-plc-allen-bradley.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Familias de PLC Allen-Bradley</a></li>
+                        <li><a href="configurar-instruccion-msg-ethernet-plc-allen-bradley.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Configuración de Mensajes MSG entre PLCs</a></li>
+                        <li><a href="migracion-slc500-compactlogix-guia-planta.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Migración a CompactLogix 5380</a></li>
+                    </ul>
+                </div>
+
+                <div style="background: linear-gradient(145deg, #161616 0%, #202020 100%); border: 1px solid var(--primary-color); padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center; box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.8rem;">¿Tiene Dificultades para Comunicarse con sus PLC o Configurar Redes EtherNet/IP?</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; margin-bottom: 1.5rem;">En Robologix Automation brindamos soporte de comisionamiento de redes industriales, switches administrados Stratix y diagnóstico de comunicaciones en Saltillo.</p>
+                    <a href="https://wa.me/528444551869?text=Hola%20Robologix,%20requiero%20apoyo%20para%20configurar/comunicar%20mi%20PLC%20Ethernet" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fab fa-whatsapp"></i> Solicitar Asistencia de Redes PLC
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links" style="margin-bottom: 1.2rem; font-family: var(--font-heading); font-size: 0.88rem; display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+                <a href="../index.html#home" style="color: var(--text-light); text-decoration: none;">Inicio</a>
+                <a href="../index.html#services" style="color: var(--text-light); text-decoration: none;">Servicios</a>
+                <a href="../programacion-plc-saltillo.html" style="color: var(--text-light); text-decoration: none;">Programación PLC en Saltillo</a>
+                <a href="../integracion-celdas-roboticas-saltillo.html" style="color: var(--text-light); text-decoration: none;">Celdas Robóticas</a>
+                <a href="index.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Artículos</a>
+                <a href="../index.html#about" style="color: var(--text-light); text-decoration: none;">Nosotros</a>
+                <a href="../index.html#clients" style="color: var(--text-light); text-decoration: none;">Clientes</a>
+                <a href="../index.html#contact" style="color: var(--text-light); text-decoration: none;">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/aaron-ibarra-cepeda/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@roboticayplc" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@plcyrobotica" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Robologix-Automation/61581206799041/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p>&copy; 2026 Robologix Automation. Todos los derechos reservados. | Artículo Técnico: Configurar IP CompactLogix con BOOTP.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

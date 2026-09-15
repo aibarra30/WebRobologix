@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería de PLC en Saltillo: Arquitectura de Control y Eficiencia OEE | Robologix</title>
+    <meta name="description"
+        content="Guía técnica sobre arquitectura modular de PLC (Allen-Bradley, Siemens) para eliminar cuellos de botella, optimizar el OEE y prevenir paros no programados en Saltillo." />
+    <meta name="keywords"
+        content="Ingeniería de PLC Saltillo, Optimización OEE PLC Ramos Arizpe, Programación Modular Studio 5000, Siemens TIA Portal Coahuila, Robologix Automation" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/optimizacion-de-plc-en-saltillo-arquitectura-y-eficiencia-oee" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title"
+        content="Ingeniería de PLC en Saltillo: Arquitectura de Control y Eficiencia OEE | Robologix" />
+    <meta property="og:description"
+        content="Metodología técnica para estructurar código modular en controladores industriales, acelerar diagnósticos en planta e incrementar la disponibilidad en líneas de manufactura en Saltillo." />
+    <meta property="og:url" content="https://rbl-automation.com/articulos/optimizacion-de-plc-en-saltillo-arquitectura-y-eficiencia-oee" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://rbl-automation.com/assets/plc-digital-brain-saltillo.png" />
+
+    <!-- Schema.org TechArticle Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Ingeniería de PLC en Saltillo: Arquitectura de Control y Estrategias para Maximizar el OEE",
+      "description": "Artículo de ingeniería sobre el diseño de lógica modular estructurada en PLC, integración de redes industriales deterministas y estrategias para maximizar el indicador OEE en el sector automotriz e industrial de Coahuila.",
+      "author": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "url": "https://rbl-automation.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbl-automation.com/assets/hero-bg.png"
+        }
+      },
+      "datePublished": "2026-09-11",
+      "inLanguage": "es"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="text-decoration:none; color:inherit;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Inicio</a></li>
+                <li><a href="../index.html#services">Servicios</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                <li><a href="index.html" class="active-nav">Artículos</a></li>
+                <li><a href="../index.html#about">Nosotros</a></li>
+                <li><a href="../index.html#clients">Clientes</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="service-page-wrapper">
+        <section style="padding: 3rem 5%; background-color: var(--bg-dark);">
+            <article class="technical-post"
+                style="max-width: 850px; margin: 0 auto; padding: 2.5rem; background: var(--bg-card); border: 1px solid #282828; border-radius: 10px; line-height: 1.7; color: var(--text-light); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <span style="color: var(--primary-color); font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">INGENIERÍA DE CONTROL EN SALTILLO</span>
+                <h1 style="color: #fff; font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin: 0.8rem 0 1rem 0;">
+                    Ingeniería de PLC en Saltillo: Arquitectura de Control y Estrategias para Maximizar el OEE
+                </h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #222; padding-bottom: 1rem;">
+                    Publicado por el Equipo de Ingeniería de Robologix Automation | Coahuila, México
+                </p>
+
+                <!-- Resumen destacado para AI Overview -->
+                <div style="background: rgba(0, 243, 255, 0.05); border-left: 4px solid var(--primary-color); padding: 1.4rem; margin: 1.8rem 0; border-radius: 6px; border-top: 1px solid #222; border-right: 1px solid #222; border-bottom: 1px solid #222;">
+                    <p style="margin: 0; font-weight: 700; color: var(--primary-color); font-family: var(--font-heading);">Resumen Técnico de Ingeniería:</p>
+                    <p style="margin: 0.6rem 0 0 0; font-size: 0.98rem; color: var(--text-light); line-height: 1.6;">
+                        En las plantas de manufactura del corredor <strong>Saltillo – Ramos Arizpe – Derramadero</strong>, la eficiencia de una línea automatizada no depende únicamente del hardware instalado, sino de la arquitectura del código de PLC. Un diseño modular bajo la norma <strong>IEC 61131-3</strong>, combinado con estructuras de datos organizadas (UDTs, AOIs), diagnostica fallas de sensores en milisegundos, erradica los microparos de proceso e incrementa directamente la Eficiencia General de los Equipos (<strong>OEE</strong>).
+                    </p>
+                </div>
+
+                <div style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/optimizacion-plc-oee-saltillo.png" alt="Optimización de PLC y Métricas OEE en Saltillo" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Panel de control industrial con arquitectura modular de PLC en planta automatizada.</p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">1. El Desafío del Tiempo Real en las Líneas de Coahuila</h2>
+                <p style="margin-bottom: 1.2rem;">
+                    Las líneas de ensamble, estampado y soldadura en el clúster automotriz de Saltillo operan bajo márgenes de tiempo sumamente estrechos. Cuando un controlador industrial ejecuta programas monolíticos, sin estructurar o con rutinas de escaneo ineficientes, se generan cuellos de botella silenciosos y microparos que merman la producción diaria.
+                </p>
+                <p style="margin-bottom: 1.2rem;">
+                    La ingeniería de control moderna aborda este reto mediante la fragmentación del programa en tareas periódicas y de evento, asegurando que la lógica crítica de seguridad y movimiento servo se procese a frecuencias deterministas (por ejemplo, ciclos de 2ms a 5ms).
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">2. Principios de Programación Modular de PLC (IEC 61131-3)</h2>
+                <p style="margin-bottom: 1.2rem;">
+                    En Robologix Automation aplicamos metodologías de diseño de software industrial que facilitan la mantenibilidad del código por parte del personal de planta:
+                </p>
+                <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">Creación de Bloques Reutilizables (AOI / FB):</strong> Encapsulamiento de la lógica para motores, válvulas solenoide, pistones neumáticos y cilindros. Esto garantiza que cualquier cambio técnico se aplique de forma centralizada.
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">Estructuras de Datos Definidas por el Usuario (UDT):</strong> Organización lógica de variables en arreglos limpios (Modo Manual, Modo Auto, Alarmas, Estado de Red, Trazabilidad) para simplificar la comunicación con paneles HMI y SCADA.
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: #fff;">Rutinas de Diagnóstico Avanzado de I/O:</strong> Generación automática de alarmas descriptivas que indican en pantalla el tag exacto y la ubicación física del sensor con falla, reduciendo el tiempo medio de reparación (MTTR).
+                    </li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">3. Impacto Directo de la Lógica de Control en la Eficiencia OEE</h2>
+                <p style="margin-bottom: 1.2rem;">
+                    El indicador OEE mide la Disponibilidad, Rendimiento y Calidad de la producción. Un código de PLC profesional optimiza cada una de estas variables:
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin: 1.5rem 0;">
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid #333; padding: 1.2rem; border-radius: 6px;">
+                        <h4 style="color: var(--primary-color); font-family: var(--font-heading); margin-bottom: 0.5rem;">Disponibilidad (Uptime)</h4>
+                        <p style="font-size: 0.88rem; margin: 0; color: var(--text-muted);">Erradicación de enclavamientos cruzados erróneos que detienen la celda por falsas alarmas de sensores.</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid #333; padding: 1.2rem; border-radius: 6px;">
+                        <h4 style="color: var(--primary-color); font-family: var(--font-heading); margin-bottom: 0.5rem;">Rendimiento (Performance)</h4>
+                        <p style="font-size: 0.88rem; margin: 0; color: var(--text-muted);">Sincronización milimétrica de movimientos coordinados en buses CIP Motion o EtherCAT.</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid #333; padding: 1.2rem; border-radius: 6px;">
+                        <h4 style="color: var(--primary-color); font-family: var(--font-heading); margin-bottom: 0.5rem;">Calidad (First Pass Yield)</h4>
+                        <p style="font-size: 0.88rem; margin: 0; color: var(--text-muted);">Interlocks de validación previa mediante cámaras de visión artificial antes de autorizar el ciclo de ensamble.</p>
+                    </div>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">4. Integración de Redes Industriales y Diagnóstico Preventivo</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    Los sistemas de control modernos en Saltillo requieren comunicar múltiples dispositivos en campo. Estandarizamos redes <strong>EtherNet/IP, PROFINET IRT y tecnología IO-Link</strong> para monitorear el desgaste físico de sensores inductivos, niveles de vibración en variadores y consumo de energía en tiempo real.
+                </p>
+
+                <!-- Bloque de Diferenciadores Robologix Automation -->
+                <div style="background: rgba(0, 243, 255, 0.03); border: 1px solid #282828; border-radius: 8px; padding: 1.8rem; margin: 2.5rem 0;">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.25rem; margin-top: 0; margin-bottom: 1rem;">
+                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i> Metodología de Ingeniería Robologix Automation
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-tachometer-alt" style="color: var(--primary-color); margin-right: 5px;"></i> Auditoría de Tiempo de Ciclo</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Análisis de trazas de escaneo y re-ordenamiento de secuencias para arañar segundos valiosos por pieza.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-cubes" style="color: var(--secondary-color); margin-right: 5px;"></i> Librerías Modulares Reutilizables</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Desarrollo de AOIs y UDTs bajo estándares automotrices probados en plantas Tier-1.</p>
+                        </div>
+                        <div>
+                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-map-marked-alt" style="color: var(--primary-color); margin-right: 5px;"></i> Presencia en Coahuila</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Atención presencial rápida en los parques de Saltillo, Ramos Arizpe y Arteaga.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque de Artículos Relacionados -->
+                <div style="border-top: 1px solid #222; padding-top: 1.8rem; margin-top: 2rem;">
+                    <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 1rem;">Artículos Técnicos Relacionados:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem;">
+                        <li><a href="../programacion-plc-saltillo.html" style="color: var(--primary-color); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Programación de PLC en Saltillo</a></li>
+                        <li><a href="el-cerebro-logico-de-la-planta-programacion-plc-saltillo.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> El Cerebro Lógico de la Planta</a></li>
+                        <li><a href="monitoreo-de-condicion-y-mantenimiento-predictivo-industrial-guia.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Monitoreo de Condición y Mantenimiento Predictivo</a></li>
+                        <li><a href="guia-de-control-de-movimiento-y-automatizacion-industrial-motion-control.html" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Guía de Control de Movimiento (Motion Control)</a></li>
+                    </ul>
+                </div>
+
+                <div style="background: linear-gradient(145deg, #161616 0%, #202020 100%); border: 1px solid var(--primary-color); padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center; box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);">
+                    <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.8rem;">¿Requieres Asesoría o Reestructuración de Código PLC en Coahuila?</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; margin-bottom: 1.5rem;">En Robologix Automation somos ingenieros especialistas en optimización de programas PLC (Allen-Bradley, Siemens), desarrollo HMI y eliminación de paros de línea en Saltillo y Ramos Arizpe.</p>
+                    <a href="https://wa.me/528444551869?text=Hola%20Robologix,%20deseo%20asesor%C3%ADa%20para%20optimizaci%C3%B3n/programaci%C3%B3n%20de%20PLC%20en%20Saltillo" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fab fa-whatsapp"></i> Hablar con un Ingeniero de Robologix
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links" style="margin-bottom: 1.2rem; font-family: var(--font-heading); font-size: 0.88rem; display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+                <a href="../index.html#home" style="color: var(--text-light); text-decoration: none;">Inicio</a>
+                <a href="../index.html#services" style="color: var(--text-light); text-decoration: none;">Servicios</a>
+                <a href="../programacion-plc-saltillo.html" style="color: var(--text-light); text-decoration: none;">Programación PLC en Saltillo</a>
+                <a href="../integracion-celdas-roboticas-saltillo.html" style="color: var(--text-light); text-decoration: none;">Celdas Robóticas</a>
+                <a href="index.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Artículos</a>
+                <a href="../index.html#about" style="color: var(--text-light); text-decoration: none;">Nosotros</a>
+                <a href="../index.html#clients" style="color: var(--text-light); text-decoration: none;">Clientes</a>
+                <a href="../index.html#contact" style="color: var(--text-light); text-decoration: none;">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/aaron-ibarra-cepeda/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@roboticayplc" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@plcyrobotica" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Robologix-Automation/61581206799041/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p>&copy; 2026 Robologix Automation. Todos los derechos reservados. | Artículo Técnico: Arquitectura y Eficiencia OEE de PLC en Saltillo.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
