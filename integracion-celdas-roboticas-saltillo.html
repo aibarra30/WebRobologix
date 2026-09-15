@@ -120,16 +120,28 @@
         .btn-whatsapp{background-color:#25d366;border:2px solid #1a9e4a;color:#fff;padding:.8rem 2rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:2px;display:flex;align-items:center;gap:.5rem}
         @font-face{font-family:'Font Awesome 6 Free';font-display:swap}
         @font-face{font-family:'Font Awesome 6 Brands';font-display:swap}
+        /* CLS Fix: Orbitron fallback font metric overrides — minimize layout shift */
+        @font-face {
+            font-family: 'Orbitron';
+            src: local('Arial Black'), local('Impact');
+            size-adjust: 105%;
+            ascent-override: 88%;
+            descent-override: 12%;
+            line-gap-override: 0%;
+            font-display: swap;
+        }
+        /* Reserve hero H1 height to prevent jump */
+        .hero h1 { min-height: 3.5rem; contain: layout; }
     </style>
 
     <!-- Non-Blocking styles.css -->
     <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel=\'stylesheet\'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript></noscript>
     <style>/* FontAwesome font-display swap override */
     @font-face { font-display: swap; }
     </style>
+    <link rel="stylesheet" href="fa-icons.css">
 </head>
 
 <body>

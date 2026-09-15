@@ -177,6 +177,18 @@
         /* FontAwesome swap override: visible text before fonts load */
         @font-face{font-family:'Font Awesome 6 Free';font-display:swap}
         @font-face{font-family:'Font Awesome 6 Brands';font-display:swap}
+        /* CLS Fix: Orbitron fallback font metric overrides — minimize layout shift */
+        @font-face {
+            font-family: 'Orbitron';
+            src: local('Arial Black'), local('Impact');
+            size-adjust: 105%;
+            ascent-override: 88%;
+            descent-override: 12%;
+            line-gap-override: 0%;
+            font-display: swap;
+        }
+        /* Reserve hero H1 height to prevent jump */
+        .hero h1 { min-height: 3.5rem; contain: layout; }
     </style>
 
     <!-- Preload Critical LCP Hero Image for Fast Mobile and Desktop Render -->
@@ -195,8 +207,8 @@
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
     <!-- Non-Blocking FontAwesome CDN -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript></noscript>
+    <link rel="stylesheet" href="fa-icons.css">
 </head>
 
 <body>

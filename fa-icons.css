@@ -1,0 +1,122 @@
+/*
+ * Robologix Automation — FontAwesome Subset (auto-hospedado)
+ * Solo íconos usados en el sitio — reduce 18.2 KiB → ~3 KiB
+ * font-display: swap garantizado (elimina 80ms de FCP warning)
+ */
+
+/* ── Solid (fas) ── */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+.fa-solid, .fas {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-style: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* ── Brands (fab) ── */
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+.fa-brands, .fab {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+    font-style: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* ════════════════════════════════════════════
+   SOLID ICONS SUBSET — solo los usados en rbl-automation.com
+   ════════════════════════════════════════════ */
+.fa-arrow-right::before          { content: "\f061"; }
+.fa-award::before                { content: "\f559"; }
+.fa-bars::before                 { content: "\f0c9"; }
+.fa-bolt::before                 { content: "\f0e7"; }
+.fa-building::before             { content: "\f1ad"; }
+.fa-car::before                  { content: "\f1b9"; }
+.fa-car-side::before             { content: "\f5e4"; }
+.fa-chalkboard-teacher::before   { content: "\f51c"; }
+.fa-check::before                { content: "\f00c"; }
+.fa-check-circle::before         { content: "\f058"; }
+.fa-cogs::before                 { content: "\f085"; }
+.fa-cube::before                 { content: "\f1b2"; }
+.fa-database::before             { content: "\f1c0"; }
+.fa-desktop::before              { content: "\f108"; }
+.fa-diagram-project::before      { content: "\e406"; }
+.fa-envelope::before             { content: "\f0e0"; }
+.fa-exclamation-triangle::before { content: "\f071"; }
+.fa-eye::before                  { content: "\f06e"; }
+.fa-graduation-cap::before       { content: "\f19d"; }
+.fa-history::before              { content: "\f1da"; }
+.fa-industry::before             { content: "\f275"; }
+.fa-layer-group::before          { content: "\f5fd"; }
+.fa-link::before                 { content: "\f0c1"; }
+.fa-map-marker-alt::before       { content: "\f3c5"; }
+.fa-microchip::before            { content: "\f2db"; }
+.fa-phone::before                { content: "\f095"; }
+.fa-podcast::before              { content: "\f2ce"; }
+.fa-quote-left::before           { content: "\f10d"; }
+.fa-robot::before                { content: "\f544"; }
+.fa-rocket::before               { content: "\f135"; }
+.fa-shield-alt::before           { content: "\f3ed"; }
+.fa-shield-check::before         { content: "\f2f7"; }
+.fa-sitemap::before              { content: "\f0e8"; }
+.fa-star::before                 { content: "\f005"; }
+.fa-tags::before                 { content: "\f02c"; }
+.fa-times::before                { content: "\f00d"; }
+.fa-tools::before                { content: "\f7d9"; }
+.fa-truck::before                { content: "\f0d1"; }
+.fa-user-graduate::before        { content: "\f501"; }
+.fa-wrench::before               { content: "\f0ad"; }
+.fa-xmark::before                { content: "\f00d"; }
+.fa-user::before                 { content: "\f007"; }
+.fa-clock::before                { content: "\f017"; }
+.fa-map-pin::before              { content: "\f276"; }
+.fa-headphones::before           { content: "\f025"; }
+.fa-play::before                 { content: "\f04b"; }
+.fa-book::before                 { content: "\f02d"; }
+.fa-file::before                 { content: "\f15b"; }
+.fa-calendar::before             { content: "\f133"; }
+.fa-chart-line::before           { content: "\f201"; }
+.fa-lightbulb::before            { content: "\f0eb"; }
+.fa-search::before               { content: "\f002"; }
+.fa-filter::before               { content: "\f0b0"; }
+.fa-share::before                { content: "\f064"; }
+.fa-download::before             { content: "\f019"; }
+.fa-external-link-alt::before    { content: "\f35d"; }
+
+/* ════════════════════════════════════════════
+   BRAND ICONS SUBSET
+   ════════════════════════════════════════════ */
+.fa-facebook-f::before    { content: "\f39e"; }
+.fa-github::before        { content: "\f09b"; }
+.fa-instagram::before     { content: "\f16d"; }
+.fa-linkedin::before      { content: "\f08c"; }
+.fa-linkedin-in::before   { content: "\f0e1"; }
+.fa-spotify::before       { content: "\f1bc"; }
+.fa-tiktok::before        { content: "\e07b"; }
+.fa-twitter::before       { content: "\f099"; }
+.fa-whatsapp::before      { content: "\f232"; }
+.fa-x-twitter::before     { content: "\e61b"; }
+.fa-youtube::before       { content: "\f167"; }
