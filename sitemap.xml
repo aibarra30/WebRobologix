@@ -6,287 +6,292 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast-y-articulos.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/programacion-plc-saltillo.html</loc>
+    <loc>https://rbl-automation.com/automatizacion-industrial-y-plc-en-torreon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/integracion-celdas-roboticas-saltillo.html</loc>
+    <loc>https://rbl-automation.com/curso-plc-saltillo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/sensores-y-refacciones-industriales-saltillo.html</loc>
+    <loc>https://rbl-automation.com/curso-robot-fanuc-saltillo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/cursos-de-plc-y-robotica-en-saltillo.html</loc>
+    <loc>https://rbl-automation.com/cursos-de-plc-y-robotica-en-saltillo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/curso-plc-saltillo.html</loc>
+    <loc>https://rbl-automation.com/instalacion-de-maquinaria-industrial-saltillo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/curso-robot-fanuc-saltillo.html</loc>
+    <loc>https://rbl-automation.com/integracion-celdas-roboticas-saltillo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/automatizacion-industrial-y-plc-en-torreon.html</loc>
+    <loc>https://rbl-automation.com/podcast</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/instalacion-de-maquinaria-industrial-saltillo.html</loc>
+    <loc>https://rbl-automation.com/podcast-y-articulos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/articulos/index.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/chatgpt-en-programacion-de-plc-robotica-y-automatizacion-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/como-afecta-el-clima-de-saltillo-al-sobrecalentamiento-de-plc-y-tableros.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/como-elegir-al-proveedor-e-integrador-industrial-adecuado-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/como-la-automatizacion-industrial-transforma-la-manufactura-en-2026-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/conexiones-sinking-y-sourcing-plc-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/configurar-direccion-ip-compactlogix-bootp-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/configurar-instruccion-msg-ethernet-plc-allen-bradley.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/cuanto-gana-un-programador-de-plc-en-saltillo-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/diferencia-entre-plc-y-dcs-guia-automatizacion.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/diferencias-factorytalk-view-se-vs-me-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/el-cerebro-logico-de-la-planta-programacion-plc-saltillo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/guia-cursos-de-plc-y-robotica-industrial-en-saltillo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/guia-de-control-de-movimiento-y-automatizacion-industrial-motion-control.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/guia-familias-plc-allen-bradley.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/ia-generativa-y-chatgpt-en-robotica-industrial-fanuc-abb.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/instalacion-de-maquinaria-industrial-guia-montaje-y-puesta-en-marcha.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/liderazgo-tecnico-e-ingenieria-aaron-ibarra-robologix.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/migracion-hmi-panelview-plus-a-panelview-5000-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/migracion-slc500-compactlogix-guia-planta.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/monitoreo-de-condicion-y-mantenimiento-predictivo-industrial-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/optimizacion-de-plc-en-saltillo-arquitectura-y-eficiencia-oee.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/plc-siemens-guia-completa-saltillo-coahuila.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/plc-vs-pc-industrial-diferencias-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/que-es-un-plc-controlador-logico-programable-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/que-es-un-sensor-industrial-tipos-y-funcionamiento-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/refaccionamiento-y-mantenimiento-industrial-soporte-maquinaria-saltillo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/siemens-industrial-copilot-y-chatgpt-en-tia-portal-guia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/articulos/tipos-de-plc-clasificacion-y-ejemplos-industriales.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rbl-automation.com/podcast/index.html</loc>
+    <loc>https://rbl-automation.com/programacion-plc-saltillo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/guia-tecnica-historias-de-terror-microparos-plc.html</loc>
+    <loc>https://rbl-automation.com/sensores-y-refacciones-industriales-saltillo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/chatgpt-en-programacion-de-plc-robotica-y-automatizacion-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-4claves-proveedor-preferido-ccmty-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/como-afecta-el-clima-de-saltillo-al-sobrecalentamiento-de-plc-y-tableros</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-alta-proveedores-empresas-requisitos-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/como-elegir-al-proveedor-e-integrador-industrial-adecuado-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-dc3-stps-empresas.html</loc>
+    <loc>https://rbl-automation.com/articulos/como-la-automatizacion-industrial-transforma-la-manufactura-en-2026-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-deficit-personal-tecnico-caintra-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/conexiones-sinking-y-sourcing-plc-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-futuro-robotica-industrial-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/configurar-direccion-ip-compactlogix-bootp-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-icu-imco-competitividad-saltillo-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/configurar-instruccion-msg-ethernet-plc-allen-bradley</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-imco-compara-carreras-automatizacion-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/cuanto-gana-un-programador-de-plc-en-saltillo-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-monitoreo-predictivo-ia-iolink-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/diferencia-entre-plc-y-dcs-guia-automatizacion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-persona-fisica-vs-persona-moral-automatizacion-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/diferencias-factorytalk-view-se-vs-me-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-plc-huerfano-respaldos-codigo-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/el-cerebro-logico-de-la-planta-programacion-plc-saltillo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-proveedor-aliado-estrategico-automatizacion-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/guia-cursos-de-plc-y-robotica-industrial-en-saltillo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-retrofit-vs-linea-nueva-tableros-plc.html</loc>
+    <loc>https://rbl-automation.com/articulos/guia-de-control-de-movimiento-y-automatizacion-industrial-motion-control</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-sindrome-tablero-espagueti-diagramas-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/guia-familias-plc-allen-bradley</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/investigacion-studio5000-vs-tia-portal-mexico-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/ia-generativa-y-chatgpt-en-robotica-industrial-fanuc-abb</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/presentacion-robologix-automation.html</loc>
+    <loc>https://rbl-automation.com/articulos/instalacion-de-maquinaria-industrial-guia-montaje-y-puesta-en-marcha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/podcast/whitepaper-plcs-obsoletos-slc500-s7300-2026.html</loc>
+    <loc>https://rbl-automation.com/articulos/liderazgo-tecnico-e-ingenieria-aaron-ibarra-robologix</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/migracion-hmi-panelview-plus-a-panelview-5000-guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/migracion-slc500-compactlogix-guia-planta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/monitoreo-de-condicion-y-mantenimiento-predictivo-industrial-guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/optimizacion-de-plc-en-saltillo-arquitectura-y-eficiencia-oee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/plc-siemens-guia-completa-saltillo-coahuila</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/plc-vs-pc-industrial-diferencias-guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/que-es-un-plc-controlador-logico-programable-guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/que-es-un-sensor-industrial-tipos-y-funcionamiento-guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/refaccionamiento-y-mantenimiento-industrial-soporte-maquinaria-saltillo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/siemens-industrial-copilot-y-chatgpt-en-tia-portal-guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/articulos/tipos-de-plc-clasificacion-y-ejemplos-industriales</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/guia-tecnica-historias-de-terror-microparos-plc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-4claves-proveedor-preferido-ccmty-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-alta-proveedores-empresas-requisitos-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-dc3-stps-empresas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-deficit-personal-tecnico-caintra-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-futuro-robotica-industrial-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-icu-imco-competitividad-saltillo-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-imco-compara-carreras-automatizacion-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-monitoreo-predictivo-ia-iolink-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-persona-fisica-vs-persona-moral-automatizacion-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-plc-huerfano-respaldos-codigo-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-proveedor-aliado-estrategico-automatizacion-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-retrofit-vs-linea-nueva-tableros-plc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-sindrome-tablero-espagueti-diagramas-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/investigacion-studio5000-vs-tia-portal-mexico-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/presentacion-robologix-automation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/podcast/whitepaper-plcs-obsoletos-slc500-s7300-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
