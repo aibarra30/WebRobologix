@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robologix Automation — Blog de Automatización Industrial en Saltillo</title>
+    <link>https://rbl-automation.com/articulos/</link>
+    <description>Guías técnicas de programación PLC, integración de robots industriales, cursos y automatización industrial en Saltillo y Coahuila, México. Especialistas en Siemens TIA Portal, Allen-Bradley Studio 5000 y robots FANUC.</description>
+    <language>es-mx</language>
+    <lastBuildDate>Thu, 17 Sep 2026 08:18:46 -0600</lastBuildDate>
+    <atom:link href="https://rbl-automation.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://rbl-automation.com/assets/logo-robologix.png</url>
+      <title>Robologix Automation</title>
+      <link>https://rbl-automation.com</link>
+    </image>
+    <copyright>Copyright 2026 Robologix Automation</copyright>
+    <managingEditor>contacto@rbl-automation.com (Robologix Automation)</managingEditor>
+    <webMaster>contacto@rbl-automation.com (Robologix Automation)</webMaster>
+    <category>Automatización Industrial</category>
+    <category>Programación PLC</category>
+    <category>Robótica Industrial</category>
+    <ttl>1440</ttl>
+
+    <item>
+      <title>ChatGPT en Programación de PLC, Robótica y Automatización</title>
+      <link>https://rbl-automation.com/articulos/chatgpt-en-programacion-de-plc-robotica-y-automatizacion-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/chatgpt-en-programacion-de-plc-robotica-y-automatizacion-guia</guid>
+      <description>Análisis profundo sobre el uso de ChatGPT e Inteligencia Artificial en la programación de PLC (SCL, ST), robótica industrial (FANUC, ABB) y gestión de proyectos de automatización en 2026.</description>
+      <pubDate>Sat, 15 Aug 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Siemens Industrial Copilot y ChatGPT en TIA Portal</title>
+      <link>https://rbl-automation.com/articulos/siemens-industrial-copilot-y-chatgpt-en-tia-portal-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/siemens-industrial-copilot-y-chatgpt-en-tia-portal-guia</guid>
+      <description>Guía completa sobre Siemens Industrial Copilot y el uso de ChatGPT en TIA Portal V19/V20 para la programación en SCL, creación de pantallas WinCC HMI y reducción de tiempos de desarrollo en PLC S7-1500.</description>
+      <pubDate>Mon, 10 Aug 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>IA Generativa y ChatGPT en Robótica Industrial (FANUC, ABB, KUKA)</title>
+      <link>https://rbl-automation.com/articulos/ia-generativa-y-chatgpt-en-robotica-industrial-fanuc-abb</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/ia-generativa-y-chatgpt-en-robotica-industrial-fanuc-abb</guid>
+      <description>Análisis sobre la aplicación de Inteligencia Artificial Generativa y ChatGPT en la programación de robots industriales FANUC, ABB y KUKA: automatización de rutinas RAPID, Karel y simulación digital.</description>
+      <pubDate>Wed, 05 Aug 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Guía de Migración de PLC SLC 500 a CompactLogix 5380 en Plantas Industriales | Robologix</title>
+      <link>https://rbl-automation.com/articulos/migracion-slc500-compactlogix-guia-planta</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/migracion-slc500-compactlogix-guia-planta</guid>
+      <description>Pasos técnicos, riesgos de obsolescencia y mejores prácticas para migrar controladores Allen-Bradley SLC 500 a plataformas CompactLogix 5380 sin paros de línea prolongados.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Guía de Migración de HMI PanelView Plus a PanelView 5000 | Robologix</title>
+      <link>https://rbl-automation.com/articulos/migracion-hmi-panelview-plus-a-panelview-5000-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/migracion-hmi-panelview-plus-a-panelview-5000-guia</guid>
+      <description>Pasos técnicos, diferencias de software (FactoryTalk View ME vs Studio 5000 View Designer) y recomendaciones para actualizar pantallas HMI obsoletas.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Cómo la Automatización Industrial Transformará la Manufactura en 2026 | Robologix</title>
+      <link>https://rbl-automation.com/articulos/como-la-automatizacion-industrial-transforma-la-manufactura-en-2026-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/como-la-automatizacion-industrial-transforma-la-manufactura-en-2026-guia</guid>
+      <description>Descubre las tendencias clave de automatización industrial en 2026: robótica colaborativa, integración de PLC Studio 5000 / TIA Portal, redes IIoT y Gemelos Digitales para plantas en Coahuila.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Ingeniería de PLC en Saltillo: Arquitectura de Control y Eficiencia OEE | Robologix</title>
+      <link>https://rbl-automation.com/articulos/optimizacion-de-plc-en-saltillo-arquitectura-y-eficiencia-oee</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/optimizacion-de-plc-en-saltillo-arquitectura-y-eficiencia-oee</guid>
+      <description>Guía técnica sobre arquitectura modular de PLC (Allen-Bradley, Siemens) para eliminar cuellos de botella, optimizar el OEE y prevenir paros no programados en Saltillo.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Monitoreo de Condición y Mantenimiento Predictivo Industrial | Robologix</title>
+      <link>https://rbl-automation.com/articulos/monitoreo-de-condicion-y-mantenimiento-predictivo-industrial-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/monitoreo-de-condicion-y-mantenimiento-predictivo-industrial-guia</guid>
+      <description>Descubre por qué el monitoreo de condición (vibraciones, termografía, sensores IO-Link) es esencial para prevenir paros de línea en plantas de Saltillo y Ramos Arizpe.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Guía de Control de Movimiento (Motion Control) y Automatización Industrial | Robologix</title>
+      <link>https://rbl-automation.com/articulos/guia-de-control-de-movimiento-y-automatizacion-industrial-motion-control</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/guia-de-control-de-movimiento-y-automatizacion-industrial-motion-control</guid>
+      <description>Guía técnica sobre Control de Movimiento (Motion Control): servomotores, variadores VFD, sintonización de lazos PID y sincronización multieje mediante PLC en Saltillo y Ramos Arizpe.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Diferencia entre PLC y DCS: Guía de Selección para Control Industrial | Robologix</title>
+      <link>https://rbl-automation.com/articulos/diferencia-entre-plc-y-dcs-guia-automatizacion</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/diferencia-entre-plc-y-dcs-guia-automatizacion</guid>
+      <description>Descubre las diferencias fundamentales entre un PLC (Controlador Lógico Programable) y un DCS (Sistema de Control Distribuido): arquitectura, velocidad, escala e integración HMI/SCADA.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Cómo Configurar Mensajes MSG entre PLCs Allen-Bradley | Robologix</title>
+      <link>https://rbl-automation.com/articulos/configurar-instruccion-msg-ethernet-plc-allen-bradley</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/configurar-instruccion-msg-ethernet-plc-allen-bradley</guid>
+      <description>Guía técnica para comunicar dos PLCs ControlLogix o CompactLogix mediante la instrucción MSG (Message) sobre redes EtherNet/IP en Studio 5000.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Cómo Configurar la Dirección IP de un CompactLogix con BOOTP/DHCP | Robologix</title>
+      <link>https://rbl-automation.com/articulos/configurar-direccion-ip-compactlogix-bootp-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/configurar-direccion-ip-compactlogix-bootp-guia</guid>
+      <description>Guía paso a paso para asignar una dirección IP estática a controladores Allen-Bradley CompactLogix o ControlLogix nuevos utilizando la herramienta BOOTP-DHCP Server.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Conexiones Sinking y Sourcing en PLC: Guía Técnica de Cableado | Robologix</title>
+      <link>https://rbl-automation.com/articulos/conexiones-sinking-y-sourcing-plc-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/conexiones-sinking-y-sourcing-plc-guia</guid>
+      <description>Aprende qué significa Sinking (NPN) y Sourcing (PNP) en entradas y salidas de PLC, la regla del flujo de corriente y cómo evitar fallas de cortocircuito en tableros.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>PLC Siemens en Coahuila: Guía Completa S7-1200, S7-1500 y TIA Portal</title>
+      <link>https://rbl-automation.com/articulos/plc-siemens-guia-completa-saltillo-coahuila</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/plc-siemens-guia-completa-saltillo-coahuila</guid>
+      <description>Descubre todo sobre el PLC Siemens en Coahuila. Guía detallada de modelos S7-1200, S7-1500, entorno TIA Portal y ejemplos prácticos para plantas de Saltillo y Ramos Arizpe.</description>
+      <pubDate>Mon, 25 May 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Guía Completa de Familias de PLC Allen-Bradley | Robologix</title>
+      <link>https://rbl-automation.com/articulos/guia-familias-plc-allen-bradley</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/guia-familias-plc-allen-bradley</guid>
+      <description>Conoce las familias de controladores Allen-Bradley / Rockwell Automation (ControlLogix 5580, CompactLogix 5380, Micro800 y SLC 500), sus diferencias y aplicaciones.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Diferencias entre FactoryTalk View SE y ME: Guía de Selección | Robologix</title>
+      <link>https://rbl-automation.com/articulos/diferencias-factorytalk-view-se-vs-me-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/diferencias-factorytalk-view-se-vs-me-guia</guid>
+      <description>Comparativa técnica entre FactoryTalk View Site Edition (SE) para supervisión de planta completa y Machine Edition (ME) para pantallas HMI PanelView locales.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Tipos de PLC: Clasificación, Características y Ejemplos de Uso Industrial</title>
+      <link>https://rbl-automation.com/articulos/tipos-de-plc-clasificacion-y-ejemplos-industriales</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/tipos-de-plc-clasificacion-y-ejemplos-industriales</guid>
+      <description>Conoce los diferentes Tipos de PLC (Compactos, Modulares, Montaje en Rack, SoftPLC y Safety). Guía detallada con ejemplos prácticos para plantas industriales en Coahuila.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>¿Qué es un PLC? Guía Completa sobre Controladores Lógicos Programables | Robologix</title>
+      <link>https://rbl-automation.com/articulos/que-es-un-plc-controlador-logico-programable-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/que-es-un-plc-controlador-logico-programable-guia</guid>
+      <description>Descubre qué es un PLC (Controlador Lógico Programable), cómo funciona su ciclo de escaneo, arquitecturas de hardware, lenguajes IEC 61131-3 e integración con SCADA e IIoT.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>¿Qué es un PLC y Cómo Funciona? Guía Explicada Paso a Paso</title>
+      <link>https://rbl-automation.com/articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil</guid>
+      <description>¿Qué es un PLC? Explicación sencilla, detallada y con ejemplos prácticos sobre qué es un Controlador Lógico Programable y cómo opera en la industria de Coahuila.</description>
+      <pubDate>Thu, 30 Apr 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Sensores en Saltillo | ¿Qué es un Sensor Industrial y Suministro? | Robologix</title>
+      <link>https://rbl-automation.com/articulos/que-es-un-sensor-industrial-tipos-y-funcionamiento-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/que-es-un-sensor-industrial-tipos-y-funcionamiento-guia</guid>
+      <description>Guía sobre Sensores en Saltillo. Tipos de sensores industriales (inductivos, capacitivos, ópticos, ultrasónicos, visión artificial), suministro y conexión a PLC en Coahuila.</description>
+      <pubDate>Sat, 25 Apr 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>PLC vs. PC Industrial: ¿Cuál es Mejor para la Automatización? | Robologix</title>
+      <link>https://rbl-automation.com/articulos/plc-vs-pc-industrial-diferencias-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/plc-vs-pc-industrial-diferencias-guia</guid>
+      <description>Comparativa técnica entre controladores PLC y PCs Industriales (IPC): determinismo, tolerancia a ambientes hostiles, lenguajes de programación y ciberseguridad.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>¿Cuánto Gana un Programador de PLC en Saltillo? Salarios y Mercado | Robologix</title>
+      <link>https://rbl-automation.com/articulos/cuanto-gana-un-programador-de-plc-en-saltillo-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/cuanto-gana-un-programador-de-plc-en-saltillo-guia</guid>
+      <description>Descubre cuánto gana un programador de PLC en Saltillo y Ramos Arizpe (hasta $100,000+ MXN/mes), las habilidades técnicas más demandadas y el impacto en la industria automotriz.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>¿Cómo Afecta el Clima Extremo de Saltillo al Sobrecalentamiento de PLCs y Tableros? | Robologix</title>
+      <link>https://rbl-automation.com/articulos/como-afecta-el-clima-de-saltillo-al-sobrecalentamiento-de-plc-y-tableros</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/como-afecta-el-clima-de-saltillo-al-sobrecalentamiento-de-plc-y-tableros</guid>
+      <description>Aprende cómo las temperaturas extremas de Saltillo y Ramos Arizpe causan fallas y sobrecalentamiento en PLCs y tableros de control. Soluciones de climatización y prevención 2026.</description>
+      <pubDate>Fri, 10 Apr 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Cómo Elegir al Proveedor Industrial Adecuado en 2026: Guía para Compradores | Robologix</title>
+      <link>https://rbl-automation.com/articulos/como-elegir-al-proveedor-e-integrador-industrial-adecuado-guia</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/como-elegir-al-proveedor-e-integrador-industrial-adecuado-guia</guid>
+      <description>Guía inteligente para compradores y gerentes de planta sobre cómo evaluar proveedores de automatización, refacciones e integradores industriales en 2026.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Guía de Instalación de Maquinaria Industrial: Montaje, Conexión a PLC y Puesta en Marcha</title>
+      <link>https://rbl-automation.com/articulos/instalacion-de-maquinaria-industrial-guia-montaje-y-puesta-en-marcha</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/instalacion-de-maquinaria-industrial-guia-montaje-y-puesta-en-marcha</guid>
+      <description>Guía técnica sobre la instalación de maquinaria industrial: fases de montaje mecánico, nivelación láser, canalizaciones eléctricas, integración a PLC/SCADA y protocolo de puesta en marcha.</description>
+      <pubDate>Mon, 30 Mar 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Refaccionamiento y Mantenimiento Industrial: Soporte Directo con Fabricantes</title>
+      <link>https://rbl-automation.com/articulos/refaccionamiento-y-mantenimiento-industrial-soporte-maquinaria-saltillo</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/refaccionamiento-y-mantenimiento-industrial-soporte-maquinaria-saltillo</guid>
+      <description>Guía sobre el servicio de refaccionamiento directo con fabricantes y soporte de mantenimiento preventivo y correctivo para maquinaria industrial en Saltillo, Ramos Arizpe y Coahuila.</description>
+      <pubDate>Wed, 25 Mar 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Cursos de PLC y Robótica Industrial en Saltillo: Guía de Capacitación</title>
+      <link>https://rbl-automation.com/articulos/guia-cursos-de-plc-y-robotica-industrial-en-saltillo</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/guia-cursos-de-plc-y-robotica-industrial-en-saltillo</guid>
+      <description>Descubre cómo elegir los mejores cursos de PLC en Saltillo y cursos de robot industrial (FANUC, ABB). Temarios prácticos, certificación STPS DC-3 y desarrollo profesional en Coahuila.</description>
+      <pubDate>Fri, 20 Mar 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>El Cerebro Lógico de la Planta: Programación de PLC en Saltillo | Robologix</title>
+      <link>https://rbl-automation.com/articulos/el-cerebro-logico-de-la-planta-programacion-plc-saltillo</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/el-cerebro-logico-de-la-planta-programacion-plc-saltillo</guid>
+      <description>Descubre cómo la programación experta de PLC actúa como el centro de mando digital para optimizar el rendimiento, la seguridad y el flujo continuo en plantas de Saltillo y Ramos Arizpe.</description>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+    <item>
+      <title>Liderazgo Técnico y Experiencia en Automatización Industrial | Mtro. Aaron Ibarra Cepeda</title>
+      <link>https://rbl-automation.com/articulos/liderazgo-tecnico-e-ingenieria-aaron-ibarra-robologix</link>
+      <guid isPermaLink="true">https://rbl-automation.com/articulos/liderazgo-tecnico-e-ingenieria-aaron-ibarra-robologix</guid>
+      <description>Conoce la trayectoria profesional del Mtro. Aaron Ibarra Cepeda: más de 15 años de experiencia en planta, maestría en manufactura y liderazgo en proyectos para Chrysler, Martinrea y Plastic Omnium.</description>
+      <pubDate>Tue, 10 Mar 2026 08:00:00 -0600</pubDate>
+      <category>PLC</category>
+      <category>Automatización Industrial</category>
+    </item>
+  </channel>
+</rss>

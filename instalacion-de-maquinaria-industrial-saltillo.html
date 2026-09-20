@@ -77,7 +77,9 @@
     <style>/* FontAwesome font-display swap override */
     @font-face { font-display: swap; }
     </style>
-    <link rel="stylesheet" href="fa-icons.css">
+    <link rel="preload" as="style" href="fa-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="fa-icons.css"></noscript>
+    <link rel="alternate" type="application/rss+xml" title="Robologix Automation Blog - Automatización Industrial" href="https://rbl-automation.com/feed.xml">
 </head>
 
 <body>

@@ -1,0 +1,4 @@
+# Ignore unrelated or temporary directories
+Vonne boutique/
+video_temp/
+*.mp4

@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Sticky Navbar transparency on scroll
+    // Sticky Navbar transparency on scroll — passive:true elimina forced reflow
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
         } else {
             header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
-            header.style.boxShadow = 'none'; // Or keep the original cyan shadow
+            header.style.boxShadow = 'none';
         }
-    });
+    }, { passive: true });
     // Mobile Menu Toggle
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
