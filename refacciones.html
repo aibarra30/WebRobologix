@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Refacciones Industriales en Saltillo | Robologix Automation</title>
+    <meta name="description"
+        content="Catálogo de refacciones industriales en Saltillo, Ramos Arizpe y Monterrey. Stock local e importación exprés de PLCs Siemens/Rockwell, Baterías y Refacciones FANUC/ABB, HMIs y Sensores. Cotización inmediata por WhatsApp." />
+    <meta name="keywords" content="refacciones industriales Saltillo, refacciones PLC Saltillo, refacciones FANUC, batería robot FANUC, batería robot ABB, 3HAC051036-001, A98L-0031-0026, A02B-0303-K150, CompactLogix, S7-1500, variadores Saltillo, automatización industrial Saltillo" />
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/refacciones.html" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Catálogo de Refacciones Industriales en Saltillo | Robologix Automation" />
+    <meta property="og:description" content="Refacciones de automatización y robótica con entrega exprés en Saltillo y Ramos Arizpe. Cotiza directo vía WhatsApp." />
+    <meta property="og:url" content="https://rbl-automation.com/refacciones.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://rbl-automation.com/assets/hero-bg.webp" />
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"></noscript>
+
+    <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="preload" as="style" href="fa-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="fa-icons.css"></noscript>
+
+    <style>
+        /* Estilos específicos para la tienda y cotizador integrados */
+        .store-hero {
+            padding: 120px 5% 3.5rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(10, 10, 10, 0.96)), url('assets/hero-bg.webp') no-repeat center center/cover;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .hero-badge-rbl {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 4px 16px;
+            border-radius: 2px;
+            margin-bottom: 1.2rem;
+            background: rgba(0, 243, 255, 0.05);
+        }
+
+        .store-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.3;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .store-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 860px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-tag-item {
+            background: #141414;
+            border: 1px solid #333;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .store-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3.5rem 5%;
+            width: 100%;
+        }
+
+        .catalog-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .rbl-input {
+            width: 100%;
+            background-color: #141414;
+            border: 1px solid #333;
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            padding: 0.85rem 1.2rem 0.85rem 3rem;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .rbl-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.25);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            background: #141414;
+            border: 1px solid #333;
+            color: var(--text-muted);
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: rgba(0, 243, 255, 0.1);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: left;
+            z-index: 10;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(0, 243, 255, 0.1);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #080808;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #222;
+        }
+
+        .product-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+
+        .product-brand-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(10, 10, 10, 0.9);
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            border: 1px solid #333;
+            letter-spacing: 1px;
+        }
+
+        .product-badge-condition {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: var(--font-heading);
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-nuevo { background: rgba(37, 211, 102, 0.15); color: #25d366; border: 1px solid #25d366; }
+        .badge-seminuevo { background: rgba(255, 102, 0, 0.15); color: var(--secondary-color); border: 1px solid var(--secondary-color); }
+        .badge-obsoleto { background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid #ef4444; }
+
+        .product-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-sku {
+            font-family: monospace;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .product-title {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.35;
+        }
+
+        .product-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #222;
+            padding-top: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .product-stock {
+            color: #25d366;
+            font-weight: 700;
+        }
+
+        .product-footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .btn-add-cart {
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-add-cart:hover {
+            background: var(--primary-color);
+            color: #000;
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+
+        .btn-cart-nav {
+            background: #141414;
+            border: 1px solid var(--primary-color);
+            color: #fff;
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-cart-nav:hover {
+            background: var(--primary-color);
+            color: #000;
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+
+        .cart-counter {
+            background: var(--primary-color);
+            color: #000;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 2px 7px;
+            border-radius: 3px;
+        }
+
+        .btn-cart-nav:hover .cart-counter {
+            background: #000;
+            color: var(--primary-color);
+        }
+
+        /* Cart Drawer */
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            right: -450px;
+            width: 100%;
+            max-width: 450px;
+            height: 100vh;
+            background-color: #0d0d0d;
+            border-left: 1px solid #333;
+            z-index: 2001;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .cart-drawer.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 1.25rem 1.5rem;
+            background-color: #141414;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cart-header h3 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .close-cart-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.8rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-cart-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .cart-items-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cart-item {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            border-radius: 4px;
+            padding: 1rem;
+            display: flex;
+            gap: 12px;
+        }
+
+        .cart-item-img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            background: #080808;
+            border-radius: 3px;
+            border: 1px solid #222;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-family: var(--font-heading);
+            font-size: 0.88rem;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .cart-item-sku {
+            font-family: monospace;
+            font-size: 0.78rem;
+            color: var(--primary-color);
+        }
+
+        .cart-qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .qty-btn {
+            background: #0a0a0a;
+            border: 1px solid #444;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qty-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-left: auto;
+        }
+
+        .cart-item-remove:hover {
+            color: #ef4444;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            background-color: #141414;
+            border-top: 1px solid #222;
+        }
+
+        .cart-inputs-wrapper {
+            margin-bottom: 12px;
+        }
+
+        .cart-input {
+            font-size: 0.85rem;
+            padding: 0.6rem 0.8rem;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .cart-summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .btn-whatsapp-rbl {
+            width: 100%;
+            background-color: #25d366;
+            border: 2px solid #25d366;
+            color: #fff;
+            padding: 0.9rem 1.5rem;
+            font-family: var(--font-heading);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-whatsapp-rbl:hover {
+            background-color: #1ebc59;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+            border-color: #1ebc59;
+        }
+
+        .emergency-banner {
+            background: linear-gradient(180deg, #0d0d0d 0%, #141414 100%);
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            padding: 3rem 5%;
+        }
+
+        .banner-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link" style="text-decoration: none;">
+                <div class="logo">ROBOLOGIX <span class="highlight">AUTOMATION</span></div>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#home">Inicio</a></li>
+                <li><a href="index.html#services">Servicios</a></li>
+                <li><a href="programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="integracion-celdas-roboticas-saltillo.html">Robótica Industrial</a></li>
+                <li><a href="refacciones.html" style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 4px;">Refacciones</a></li>
+                <li><a href="podcast-y-articulos.html">Podcast &amp; Artículos</a></li>
+                <li><a href="index.html#about">Nosotros</a></li>
+                <li><a href="index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button id="cart-toggle-btn" class="btn-cart-nav">
+                    <span><i class="fas fa-shopping-cart"></i> Mi Cotización</span>
+                    <span class="cart-counter cart-count">0</span>
+                </button>
+                <div class="burger" id="burger-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="store-hero">
+        <div class="hero-content">
+            <div class="hero-badge-rbl">STOCK LOCAL & IMPORTACIÓN EXPRÉS</div>
+            <h1>REFACCIONES INDUSTRIALES <span class="highlight">PARA CERO PAROS</span></h1>
+            <p>Controladores PLC Siemens/Rockwell, Baterías y Refacciones FANUC/ABB, HMIs, Variadores y Sensores para entrega inmediata y soporte técnico en Saltillo, Ramos Arizpe, Derramadero y Monterrey.</p>
+            <div class="hero-tags-row">
+                <span class="hero-tag-item"><i class="fas fa-bolt" style="color: var(--primary-color);"></i> Entrega Inmediata en Planta</span>
+                <span class="hero-tag-item"><i class="fas fa-shield-alt" style="color: #25d366;"></i> Garantía de Funcionamiento</span>
+                <span class="hero-tag-item"><i class="fas fa-user-tie" style="color: var(--primary-color);"></i> Asesoría Técnica con Mtro. Aaron Ibarra</span>
+                <span class="hero-tag-item"><i class="fas fa-search" style="color: var(--secondary-color);"></i> Refacciones Obsoletas (Legacy)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG MAIN -->
+    <main class="store-container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+            <h2>CATÁLOGO DE <span class="highlight">DISPONIBILIDAD</span></h2>
+            <p style="color: var(--text-muted); font-size: 1rem; margin-top: 6px;">Selecciona las piezas que necesitas y solicita cotización formal desglosada directo a WhatsApp.</p>
+        </div>
+
+        <!-- CONTROLES -->
+        <div class="catalog-controls">
+            <div class="search-wrapper">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="search-input" class="rbl-input" placeholder="Buscar por N/P, Modelo (ej: A02B, A98L, 3HAC, 1769, S7-1500, FANUC)...">
+            </div>
+
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="todos">TODOS</button>
+                <button class="filter-btn" data-category="Robótica">ROBÓTICA & CNC</button>
+                <button class="filter-btn" data-category="PLC">PLCs & CONTROL</button>
+                <button class="filter-btn" data-category="HMI">HMIs / PANTALLAS</button>
+                <button class="filter-btn" data-category="Variadores">VARIADORES & SERVOS</button>
+                <button class="filter-btn" data-category="Visión">VISIÓN & SENSORES</button>
+                <button class="filter-btn" data-category="Hidráulica">HIDRÁULICA & NEUMÁTICA</button>
+                <button class="filter-btn" data-category="Rodamientos">RODAMIENTOS</button>
+                <button class="filter-btn" data-category="Iluminación">ILUMINACIÓN</button>
+                <button class="filter-btn" data-category="Herramientas">HERRAMIENTAS</button>
+                <button class="filter-btn" data-category="Mantenimiento">MANTENIMIENTO</button>
+                <button class="filter-btn" data-category="UPS">UPS & ENERGÍA</button>
+                <button class="filter-btn" data-category="Software">SOFTWARE & LICENCIAS</button>
+                <button class="filter-btn" data-category="Legacy">OBSOLETOS / LEGACY</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div id="products-grid" class="products-grid"></div>
+    </main>
+
+    <!-- CART OVERLAY & DRAWER -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> COTIZACIÓN (<span class="cart-count">0</span> PIEZAS)</h3>
+            <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+        </div>
+
+        <div id="cart-items-container" class="cart-items-container"></div>
+
+        <div class="cart-footer">
+            <div class="cart-inputs-wrapper">
+                <label style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-heading); text-transform: uppercase;">Datos para la cotización:</label>
+                <input type="text" id="plant-company" class="rbl-input cart-input" placeholder="Empresa / Planta (ej: Martinrea, Stellantis, etc.)">
+                <input type="text" id="plant-location" class="rbl-input cart-input" placeholder="Ciudad / Parque Industrial (ej: Ramos Arizpe / Derramadero)">
+            </div>
+
+            <div class="cart-summary-line">
+                <span>Modelos Distintos:</span>
+                <span id="cart-subtotal-amount" class="highlight">0 modelo(s)</span>
+            </div>
+            <div class="cart-summary-line" style="font-size: 1.1rem; font-weight: 700;">
+                <span>Total de Piezas:</span>
+                <span id="cart-total-amount" class="highlight">0 pieza(s)</span>
+            </div>
+
+            <button id="whatsapp-checkout-btn" class="btn-whatsapp-rbl">
+                <i class="fab fa-whatsapp"></i> COTIZAR POR WHATSAPP
+            </button>
+            <p style="font-size: 0.75rem; color: #777; text-align: center; margin-top: 10px;">
+                Se enviará la lista completa de números de parte a Robologix para respuesta inmediata.
+            </p>
+        </div>
+    </aside>
+
+    <!-- EMERGENCY BANNER -->
+    <section class="emergency-banner">
+        <div class="store-container banner-inner">
+            <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 6px;">
+                    ¿TIENES UN <span class="highlight">PARO DE LÍNEA</span> O BUSCAS UN N/P DIFÍCIL?
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Atendemos emergencias de diagnóstico y reemplazo exprés en Saltillo, Ramos Arizpe, Derramadero y Monterrey.
+                </p>
+            </div>
+            <a href="https://wa.me/528444551869?text=Hola,%20tengo%20un%20paro%20de%20linea%20y%20requiero%20apoyo%20tecnico%20inmediato" target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> BOTÓN DE PÁNICO 24/7
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/aaron-ibarra-cepeda/" target="_blank" title="LinkedIn Aaron Ibarra"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.youtube.com/@roboticayplc" target="_blank" title="YouTube @roboticayplc"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://www.tiktok.com/@plcyrobotica" target="_blank" title="TikTok @plcyrobotica"><i class="fab fa-tiktok"></i> TikTok</a>
+            <a href="https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC" target="_blank" title="Spotify Podcast Cero Paros"><i class="fab fa-spotify"></i> Spotify</a>
+            <a href="https://wa.me/528444551869" target="_blank" title="WhatsApp Directo"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+
+        <p style="margin-bottom: 8px;">© 2026 <strong>Robologix Automation S.A. de C.V.</strong> — Saltillo, Coahuila, México. Todos los derechos reservados.</p>
+        <p class="case-tech-footer">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">rbl-automation.com</a> • 
+            <a href="programacion-plc-saltillo.html" style="color: var(--text-muted); text-decoration: none;">Programación PLC</a> • 
+            <a href="integracion-celdas-roboticas-saltillo.html" style="color: var(--text-muted); text-decoration: none;">Celdas Robóticas</a> • 
+            <a href="podcast-y-articulos.html" style="color: var(--text-muted); text-decoration: none;">Podcast Cero Paros</a>
+        </p>
+    </footer>
+
+    <script src="refacciones.js?v=2.2"></script>
+</body>
+
+</html>
