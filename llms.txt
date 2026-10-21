@@ -2,24 +2,18 @@
 
 > Empresa líder en automatización industrial, programación de PLC y robótica en Saltillo, Ramos Arizpe, Derramadero, Torreón y Monterrey, México.
 
-## Información de la Empresa
-- **Nombre Legal:** Robologix Automation S.A. de C.V.
-- **Ubicación:** Saltillo, Coahuila, México.
-- **Especialidad:** Programación de PLC (Siemens, Allen-Bradley), robótica industrial (FANUC, ABB, KUKA), celdas de manufactura, retrofit y refacciones industriales.
-- **Teléfono / WhatsApp:** +52 844 455 1869
-- **Sitio Web Oficial:** https://rbl-automation.com/
-- **Podcast Oficial:** Cero Paros (en Spotify y Apple Podcasts).
+## Servicios y Documentación
 
-## Servicios Principales
-- **Programación de PLC:** Soporte 24/7 y proyectos en Siemens TIA Portal (S7-1200, S7-1500) y Allen-Bradley Studio 5000 (ControlLogix, CompactLogix).
-- **Robótica Industrial:** Integración, programación, comisionamiento y trayectorias para robots FANUC, ABB, KUKA y Motoman.
-- **Cursos y Capacitación:** Cursos de PLC y Robótica industrial con constancia de competencias laborales DC-3 oficial ante la STPS en Saltillo.
-- **Tienda de Refacciones:** Venta y cotización directa de refacciones industriales nuevas, seminuevas y obsoletas (FANUC, Siemens, ABB, Allen-Bradley, Parker, SKF).
+- [Página Principal](https://rbl-automation.com/): Automatización industrial, soporte para paros de línea 24/7 y soluciones de ingeniería en Saltillo y Ramos Arizpe.
+- [Catálogo de Refacciones](https://rbl-automation.com/refacciones): Tienda y cotizador de refacciones industriales, PLCs, servomotores, variadores y equipo de control.
+- [Programación de PLC en Saltillo](https://rbl-automation.com/programacion-plc-saltillo): Soporte, retrofit y programación en Siemens S7-1200/1500 TIA Portal y Allen-Bradley Studio 5000.
+- [Integración de Celdas Robóticas](https://rbl-automation.com/integracion-celdas-roboticas-saltillo): Celdas de manufactura, simulación y puesta en marcha con robots FANUC, ABB y KUKA.
+- [Cursos de PLC y Robótica con DC-3](https://rbl-automation.com/cursos-de-plc-y-robotica-en-saltillo): Capacitación industrial presencial con validez oficial ante la STPS en Saltillo.
+- [Podcast Cero Paros y Artículos Técnicos](https://rbl-automation.com/podcast-y-articulos): Guías de ingeniería, reducción de downtime y buenas prácticas en manufactura.
 
-## Enlaces Clave
-- Página de Inicio: https://rbl-automation.com/
-- Catálogo de Refacciones: https://rbl-automation.com/refacciones
-- Programación PLC Saltillo: https://rbl-automation.com/programacion-plc-saltillo
-- Celdas Robóticas: https://rbl-automation.com/integracion-celdas-roboticas-saltillo
-- Cursos con DC-3: https://rbl-automation.com/cursos-de-plc-y-robotica-en-saltillo
-- Podcast Cero Paros: https://rbl-automation.com/podcast-y-articulos
+## Contacto y Redes Oficiales
+
+- [Sitio Web Oficial](https://rbl-automation.com/)
+- [Perfil de LinkedIn](https://www.linkedin.com/in/aaron-ibarra-cepeda/)
+- [Canal de YouTube](https://www.youtube.com/@roboticayplc)
+- [Podcast en Spotify](https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC)
