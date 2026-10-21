@@ -10,6 +10,11 @@
 - [Integración de Celdas Robóticas](https://rbl-automation.com/integracion-celdas-roboticas-saltillo): Celdas de manufactura, simulación y puesta en marcha con robots FANUC, ABB y KUKA.
 - [Cursos de PLC y Robótica con DC-3](https://rbl-automation.com/cursos-de-plc-y-robotica-en-saltillo): Capacitación industrial presencial con validez oficial ante la STPS en Saltillo.
 - [Podcast Cero Paros y Artículos Técnicos](https://rbl-automation.com/podcast-y-articulos): Guías de ingeniería, reducción de downtime y buenas prácticas en manufactura.
+- [Soporte para Paro de Línea y Mantenimiento PLC 24/7 en Saltillo](https://rbl-automation.com/soporte-paro-de-linea-mantenimiento-plc-saltillo): Servicio especializado para plantas en Coahuila.
+- [Migración de PLC SLC 500 a CompactLogix 5380](https://rbl-automation.com/migracion-slc-500-a-compactlogix-saltillo): Servicio especializado para plantas en Coahuila.
+- [Retrofit y Modernización de Maquinaria Industrial](https://rbl-automation.com/retrofit-modernizacion-maquinaria-industrial-saltillo): Servicio especializado para plantas en Coahuila.
+- [Diseño y Ensamble de Tableros de Control Eléctrico](https://rbl-automation.com/tableros-de-control-ul508a-saltillo): Servicio especializado para plantas en Coahuila.
+- [Automatización Industrial y Robótica en Ramos Arizpe](https://rbl-automation.com/automatizacion-industrial-ramos-arizpe): Servicio especializado para plantas en Coahuila.
 - [Guía Técnica PLC Siemens S7-1200](https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal): Modelos de CPU, conexionado DC/DC/DC vs Relé y programación en TIA Portal en Saltillo.
 
 ## Contacto y Redes Oficiales

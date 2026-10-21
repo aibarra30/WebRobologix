@@ -491,4 +491,30 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://rbl-automation.com/soporte-paro-de-linea-mantenimiento-plc-saltillo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/migracion-slc-500-a-compactlogix-saltillo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/retrofit-modernizacion-maquinaria-industrial-saltillo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/tableros-de-control-ul508a-saltillo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/automatizacion-industrial-ramos-arizpe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

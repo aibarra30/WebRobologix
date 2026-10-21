@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migración de PLC SLC 500 a CompactLogix 5380 | Robologix</title>
+    <meta name="description" content="Servicio de migración y retrofit de PLC SLC 500 a CompactLogix 5380 en Saltillo. Conversión de código RSLogix a Studio 5000 sin recableado de campo en planta.">
+    <link rel="canonical" href="https://rbl-automation.com/migracion-slc-500-a-compactlogix-saltillo" />
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rbl-automation.com/migracion-slc-500-a-compactlogix-saltillo">
+    <meta property="og:title" content="Migración de PLC SLC 500 a CompactLogix 5380 | Robologix">
+    <meta property="og:description" content="Servicio de migración y retrofit de PLC SLC 500 a CompactLogix 5380 en Saltillo. Conversión de código RSLogix a Studio 5000 sin recableado de campo en planta.">
+    <meta property="og:image" content="https://rbl-automation.com/assets/hero-bg.webp">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Migración de PLC SLC 500 a CompactLogix 5380 | Robologix">
+    <meta name="twitter:description" content="Servicio de migración y retrofit de PLC SLC 500 a CompactLogix 5380 en Saltillo. Conversión de código RSLogix a Studio 5000 sin recableado de campo en planta.">
+    <meta name="twitter:image" content="https://rbl-automation.com/assets/hero-bg.webp">
+
+    <!-- Schema.org Combined Graph Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://rbl-automation.com/migracion-slc-500-a-compactlogix-saltillo#service",
+          "name": "Migración de PLC SLC 500 a CompactLogix 5380 en Saltillo y Ramos Arizpe",
+          "description": "Servicio de migración y retrofit de PLC SLC 500 a CompactLogix 5380 en Saltillo. Conversión de código RSLogix a Studio 5000 sin recableado de campo en planta.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Robologix Automation",
+            "url": "https://rbl-automation.com/",
+            "telephone": "+528444551869",
+            "email": "aibarra.cepeda@gmail.com"
+          },
+          "areaServed": ["Saltillo", "Ramos Arizpe", "Derramadero", "Arteaga", "Monterrey"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://rbl-automation.com/#services" },
+            { "@type": "ListItem", "position": 3, "name": "Migración de PLC SLC 500 a CompactLogix 5380 en Saltillo y Ramos Arizpe", "item": "https://rbl-automation.com/migracion-slc-500-a-compactlogix-saltillo" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://rbl-automation.com/migracion-slc-500-a-compactlogix-saltillo#faq",
+          "mainEntity": [
+                        {
+              "@type": "Question",
+              "name": "¿Cuánto tiempo de paro de máquina se requiere para la migración?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Gracias al premontaje en taller y arneses de conversión rápida, la intervención física en planta se realiza típicamente durante una ventana de fin de semana (sábado y domingo) con arranque en producción el lunes a primera hora."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué pasa si mi programa SLC 500 no tiene comentarios?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nuestros ingenieros realizan un mapeo previo en línea señal por señal en los bornes para reconstruir los descriptores y nombres de tags antes de la conversión."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Se conserva la misma secuencia de operación?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Exactamente la misma secuencia, interbloqueos de seguridad y tiempos de ciclo, asegurando que los operadores no requieran reentrenamiento de proceso."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"></noscript>
+
+    <style>
+        :root{--primary-color:#00f3ff;--secondary-color:#ff6600;--bg-dark:#0a0a0a;--bg-card:#141414;--text-light:#e0e0e0;--text-muted:#b8bec8;--font-heading:'Orbitron',system-ui,-apple-system,sans-serif;--font-body:'Roboto',system-ui,-apple-system,sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background-color:var(--bg-dark);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+        header{background-color:rgba(10,10,10,.95);position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,243,255,.1)}
+        .navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;max-width:1400px;margin:0 auto}
+        .logo{font-family:var(--font-heading);font-size:1.5rem;font-weight:900;color:#fff;letter-spacing:2px}
+        .logo .highlight{color:var(--primary-color)}
+        .nav-links{list-style:none;display:flex}
+        .nav-links li{margin-left:2rem}
+        .nav-links a{text-decoration:none;color:var(--text-light);font-family:var(--font-heading);font-size:.9rem;font-weight:700;transition:color .3s;text-transform:uppercase;letter-spacing:1px}
+        .burger{display:none;flex-direction:column;cursor:pointer;gap:5px}
+        .burger div{width:25px;height:3px;background:#fff;border-radius:2px;transition:all .3s}
+        .btn-whatsapp{background-color:#138241;border:2px solid #1a9e4a;color:#fff;padding:.9rem 1.8rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:4px;display:inline-flex;align-items:center;gap:.6rem;justify-content:center}
+        .btn-primary{background:transparent;border:2px solid var(--primary-color);color:#fff;padding:.9rem 1.8rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:4px;display:inline-flex;align-items:center;gap:.6rem;justify-content:center}
+        .feature-block{background:var(--bg-card);border:1px solid #282828;border-left:4px solid var(--primary-color);border-radius:8px;padding:24px;margin-bottom:20px}
+        .feature-block h3{color:#fff;font-family:var(--font-heading);font-size:1.15rem;margin-bottom:10px}
+        .faq-item{background:var(--bg-card);border:1px solid #282828;border-radius:8px;padding:20px;margin-bottom:15px}
+        .faq-question{font-family:var(--font-heading);color:#fff;font-size:1.05rem;margin-bottom:8px}
+    </style>
+
+    <link rel="preload" as="style" href="/styles.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
+    <link rel="preload" as="style" href="/fa-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/fa-icons.css"></noscript>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="/" style="color: inherit; text-decoration: none;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/programacion-plc-saltillo">Programación PLC</a></li>
+                <li><a href="/integracion-celdas-roboticas-saltillo">Robótica Industrial</a></li>
+                <li><a href="/cursos-de-plc-y-robotica-en-saltillo">Cursos DC-3</a></li>
+                <li><a href="/refacciones/">Refacciones</a></li>
+                <li><a href="/podcast-y-articulos">Podcast &amp; Artículos</a></li>
+                <li><a href="/#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container" style="padding-top: 100px; max-width: 950px; margin: 0 auto; padding-left: 5%; padding-right: 5%;">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+            <a href="/" style="color: var(--primary-color); text-decoration: none;">Inicio</a> &gt;
+            <a href="/#services" style="color: var(--primary-color); text-decoration: none;">Servicios</a> &gt;
+            <span>Migración de PLC SLC 500 a CompactLogix 5380 en Saltillo y Ramos Arizpe</span>
+        </nav>
+
+        <article>
+            <span style="display: inline-block; background: rgba(0,243,255,0.1); border: 1px solid var(--primary-color); color: var(--primary-color); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; text-transform: uppercase; margin-bottom: 12px;">
+                <i class="fas fa-check-circle"></i> SOLUCIONES DE OBSOLESCENCIA ROCKWELL
+            </span>
+
+            <h1 style="font-family: var(--font-heading); color: #fff; font-size: 2.1rem; line-height: 1.25; margin-bottom: 20px;">
+                Migración de PLC SLC 500 a CompactLogix 5380 en Saltillo y Ramos Arizpe
+            </h1>
+
+            <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.8; margin-bottom: 35px;">
+                Rockwell Automation ha descontinuado oficialmente los procesadores y módulos de la familia SLC 500 (1747 / 1746). Mantener estas CPUs en producción expone a tu planta a paros prolongados de días por falta de refacciones nuevas. En <strong>Robologix Automation</strong> modernizamos tu arquitectura hacia <strong>CompactLogix 5380</strong> de forma limpia y garantizada.
+            </p>
+
+            <section style="margin: 35px 0;">
+                <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 1.4rem; margin-bottom: 25px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    Alcance de Ingeniería y Capacidades Técnicas
+                </h2>
+                
+                <div class="feature-block">
+                    <h3>Conversión de Lógica RSLogix 500 a Studio 5000</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; line-height: 1.7;">Convertimos tus rutinas de direccionamiento por archivos (N7, B3, T4, C5) a estructura moderna basada en Tags de Studio 5000, eliminando instrucciones obsoletas y optimizando el tiempo de escaneo de la máquina.</p>
+                </div>
+                <div class="feature-block">
+                    <h3>Kits de Conversión 1492: Sin Recablear el Gabinete</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; line-height: 1.7;">Utilizamos los módulos y arneses de conversión de cableado rápido Bulletin 1492. Desconectamos el brazo de terminales existente del chasis 1746 y lo enchufamos directamente a los módulos 5069 CompactLogix, reduciendo el paro de instalación de 48 horas a solo 6 horas.</p>
+                </div>
+                <div class="feature-block">
+                    <h3>Actualización de Pantallas HMI PanelView</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; line-height: 1.7;">Si la máquina opera con un PanelView Standard o PanelView Plus antiguo comunicado por DH-485 o RIO, modernizamos la interfaz a PanelView 5310/5510 o PanelView Plus 7 en red EtherNet/IP.</p>
+                </div>
+                <div class="feature-block">
+                    <h3>Enlace con Caso de Estudio Técnico</h3>
+                    <p style="color: var(--text-light); font-size: 0.98rem; line-height: 1.7;">Para más detalles sobre la estrategia técnica, consulta nuestro artículo especializado: <a href='/articulos/migracion-slc500-compactlogix-guia-planta' style='color:var(--primary-color);font-weight:700;'>Guía de Migración SLC 500 a CompactLogix para Jefes de Planta</a>.</p>
+                </div>
+            </section>
+
+            <!-- CTA Banner -->
+            <section style="background: linear-gradient(135deg, rgba(0,243,255,0.08) 0%, rgba(20,20,20,0.95) 100%); border: 2px solid var(--primary-color); border-radius: 12px; padding: 30px; margin: 40px 0; text-align: center;">
+                <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 12px;">
+                    ¿Requieres Soporte Inmediato o una Propuesta Técnica en Coahuila?
+                </h3>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 20px auto; font-size: 0.95rem;">
+                    Habla directamente con nuestros ingenieros de automatización en Saltillo y Ramos Arizpe. Respuesta rápida sin burocracia.
+                </p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20requiero%20apoyo%20t%C3%A9cnico%20en%20migracion%20slc%20500%20a%20compactlogix%20saltillo." target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> WhatsApp Directo (+52 844 455 1869)
+                    </a>
+                    <a href="mailto:aibarra.cepeda@gmail.com" class="btn-primary">
+                        <i class="fas fa-envelope"></i> Enviar Correo Electrónico
+                    </a>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section style="margin: 40px 0;">
+                <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 1.4rem; margin-bottom: 25px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    Preguntas Frecuentes
+                </h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuánto tiempo de paro de máquina se requiere para la migración?</div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Gracias al premontaje en taller y arneses de conversión rápida, la intervención física en planta se realiza típicamente durante una ventana de fin de semana (sábado y domingo) con arranque en producción el lunes a primera hora.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué pasa si mi programa SLC 500 no tiene comentarios?</div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Nuestros ingenieros realizan un mapeo previo en línea señal por señal en los bornes para reconstruir los descriptores y nombres de tags antes de la conversión.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Se conserva la misma secuencia de operación?</div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Exactamente la misma secuencia, interbloqueos de seguridad y tiempos de ciclo, asegurando que los operadores no requieran reentrenamiento de proceso.</p>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer style="margin-top: 60px; padding: 2.5rem 5%; border-top: 1px solid #222; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+        <p>&copy; 2026 Robologix Automation S.A. de C.V. Todos los derechos reservados.</p>
+        <p style="margin-top: 6px;">Saltillo, Ramos Arizpe, Derramadero, Coahuila | Correo: <a href="mailto:aibarra.cepeda@gmail.com" style="color: var(--primary-color); text-decoration: none;">aibarra.cepeda@gmail.com</a></p>
+    </footer>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>
