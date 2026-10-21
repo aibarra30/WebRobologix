@@ -23,45 +23,46 @@
 
     <!-- Schema.org Product Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Product",
+      "name": "Rust Revenge – Líquido Removedor de Óxido (208 Litros / Tambo)",
+      "sku": "RUST-REVENGE-208L",
+      "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-024_RUST-REVENGE-208.png",
+      "description": "Líquido removedor de óxido profesional marca Rust Revenge, presentación en tambo de 208 litros. Formulado para eliminar corrosión en piezas metálicas industriales sin dañar el metal base. Ideal para mantenimiento preventivo y correctivo en planta.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Rust Revenge"
+      },
+      "category": "Mantenimiento Industrial"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Product",
-          "name": "Rust Revenge – Líquido Removedor de Óxido (208 Litros / Tambo)",
-          "sku": "RUST-REVENGE-208L",
-          "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-024_RUST-REVENGE-208.png",
-          "description": "Líquido removedor de óxido profesional marca Rust Revenge, presentación en tambo de 208 litros. Formulado para eliminar corrosión en piezas metálicas industriales sin dañar el metal base. Ideal para mantenimiento preventivo y correctivo en planta.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rust Revenge"
-          },
-          "category": "Mantenimiento Industrial",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://rbl-automation.com/refacciones/rust-revenge-rust-revenge-208l",
-            "priceCurrency": "MXN",
-            "price": "0",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "Robologix Automation",
-              "telephone": "+528444551869",
-              "email": "aibarra.cepeda@gmail.com"
-            }
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Refacciones", "item": "https://rbl-automation.com/refacciones" },
-            { "@type": "ListItem", "position": 3, "name": "RUST-REVENGE-208L", "item": "https://rbl-automation.com/refacciones/rust-revenge-rust-revenge-208l" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Refacciones",
+          "item": "https://rbl-automation.com/refacciones"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "RUST-REVENGE-208L",
+          "item": "https://rbl-automation.com/refacciones/rust-revenge-rust-revenge-208l"
         }
       ]
     }
+  ]
+}
     </script>
 
 <noscript></noscript>

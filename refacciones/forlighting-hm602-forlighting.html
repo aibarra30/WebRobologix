@@ -23,45 +23,46 @@
 
     <!-- Schema.org Product Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Product",
+      "name": "Lámpara Industrial FORLIGHTING 13,000 Lúmenes",
+      "sku": "HM602-FORLIGHTING",
+      "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-009_HM602-FORLIGHTIN.png",
+      "description": "Lámpara industrial de alta potencia FORLIGHTING de 13,000 lúmenes. Ideal para plantas industriales, bodegas y áreas de producción. No incluye instalación. Ref. cliente: HM602.",
+      "brand": {
+        "@type": "Brand",
+        "name": "FORLIGHTING"
+      },
+      "category": "Iluminación Industrial"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Product",
-          "name": "Lámpara Industrial FORLIGHTING 13,000 Lúmenes",
-          "sku": "HM602-FORLIGHTING",
-          "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-009_HM602-FORLIGHTIN.png",
-          "description": "Lámpara industrial de alta potencia FORLIGHTING de 13,000 lúmenes. Ideal para plantas industriales, bodegas y áreas de producción. No incluye instalación. Ref. cliente: HM602.",
-          "brand": {
-            "@type": "Brand",
-            "name": "FORLIGHTING"
-          },
-          "category": "Iluminación Industrial",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://rbl-automation.com/refacciones/forlighting-hm602-forlighting",
-            "priceCurrency": "MXN",
-            "price": "0",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "Robologix Automation",
-              "telephone": "+528444551869",
-              "email": "aibarra.cepeda@gmail.com"
-            }
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Refacciones", "item": "https://rbl-automation.com/refacciones" },
-            { "@type": "ListItem", "position": 3, "name": "HM602-FORLIGHTING", "item": "https://rbl-automation.com/refacciones/forlighting-hm602-forlighting" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Refacciones",
+          "item": "https://rbl-automation.com/refacciones"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HM602-FORLIGHTING",
+          "item": "https://rbl-automation.com/refacciones/forlighting-hm602-forlighting"
         }
       ]
     }
+  ]
+}
     </script>
 
 <noscript></noscript>

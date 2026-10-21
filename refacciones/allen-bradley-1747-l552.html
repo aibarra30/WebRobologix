@@ -23,45 +23,46 @@
 
     <!-- Schema.org Product Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Product",
+      "name": "Procesador SLC 5/05 32K Memoria",
+      "sku": "1747-L552",
+      "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-003_1747-L552.png",
+      "description": "Procesador modular SLC 500 con puerto Ethernet integrado y puerto RS-232. Probado 100% en banco con respaldo y batería nueva. Ideal para paros de emergencia en líneas legacy.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Allen-Bradley"
+      },
+      "category": "PLC Legacy (Obsoletos)"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Product",
-          "name": "Procesador SLC 5/05 32K Memoria",
-          "sku": "1747-L552",
-          "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-003_1747-L552.png",
-          "description": "Procesador modular SLC 500 con puerto Ethernet integrado y puerto RS-232. Probado 100% en banco con respaldo y batería nueva. Ideal para paros de emergencia en líneas legacy.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Allen-Bradley"
-          },
-          "category": "PLC Legacy (Obsoletos)",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://rbl-automation.com/refacciones/allen-bradley-1747-l552",
-            "priceCurrency": "MXN",
-            "price": "0",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "Robologix Automation",
-              "telephone": "+528444551869",
-              "email": "aibarra.cepeda@gmail.com"
-            }
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Refacciones", "item": "https://rbl-automation.com/refacciones" },
-            { "@type": "ListItem", "position": 3, "name": "1747-L552", "item": "https://rbl-automation.com/refacciones/allen-bradley-1747-l552" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Refacciones",
+          "item": "https://rbl-automation.com/refacciones"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "1747-L552",
+          "item": "https://rbl-automation.com/refacciones/allen-bradley-1747-l552"
         }
       ]
     }
+  ]
+}
     </script>
 
 <noscript></noscript>

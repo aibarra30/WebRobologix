@@ -23,45 +23,46 @@
 
     <!-- Schema.org Product Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Product",
+      "name": "Batería para Tarjeta SMB (Serial Measurement Board) ABB",
+      "sku": "SMB-BATTERY-ABB",
+      "image": "https://rbl-automation.com/assets/refacciones/3HAC051036-001.png",
+      "description": "Batería de reemplazo para tarjeta SMB (Serial Measurement Board) de robots ABB. Mantiene los contadores de revolución y la calibración de ejes durante apagados de planta. Consultar compatibilidad con modelo de robot.",
+      "brand": {
+        "@type": "Brand",
+        "name": "ABB"
+      },
+      "category": "Robótica Industrial"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Product",
-          "name": "Batería para Tarjeta SMB (Serial Measurement Board) ABB",
-          "sku": "SMB-BATTERY-ABB",
-          "image": "https://rbl-automation.com/assets/refacciones/3HAC051036-001.png",
-          "description": "Batería de reemplazo para tarjeta SMB (Serial Measurement Board) de robots ABB. Mantiene los contadores de revolución y la calibración de ejes durante apagados de planta. Consultar compatibilidad con modelo de robot.",
-          "brand": {
-            "@type": "Brand",
-            "name": "ABB"
-          },
-          "category": "Robótica Industrial",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://rbl-automation.com/refacciones/abb-smb-battery-abb",
-            "priceCurrency": "MXN",
-            "price": "0",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "Robologix Automation",
-              "telephone": "+528444551869",
-              "email": "aibarra.cepeda@gmail.com"
-            }
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Refacciones", "item": "https://rbl-automation.com/refacciones" },
-            { "@type": "ListItem", "position": 3, "name": "SMB-BATTERY-ABB", "item": "https://rbl-automation.com/refacciones/abb-smb-battery-abb" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Refacciones",
+          "item": "https://rbl-automation.com/refacciones"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SMB-BATTERY-ABB",
+          "item": "https://rbl-automation.com/refacciones/abb-smb-battery-abb"
         }
       ]
     }
+  ]
+}
     </script>
 
 <noscript></noscript>

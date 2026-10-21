@@ -23,45 +23,46 @@
 
     <!-- Schema.org Product Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Product",
+      "name": "Servomódulo SVM1-40i FANUC Alpha i",
+      "sku": "A06B-6114-H104",
+      "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-004_A06B-6114-H104.png",
+      "description": "Amplificador servo de 1 eje serie Alpha i para robots FANUC serie R-2000i / M-710iC. Probado bajo carga con parámetros de fábrica.",
+      "brand": {
+        "@type": "Brand",
+        "name": "FANUC"
+      },
+      "category": "Robótica Industrial"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Product",
-          "name": "Servomódulo SVM1-40i FANUC Alpha i",
-          "sku": "A06B-6114-H104",
-          "image": "https://rbl-automation.com/assets/refacciones/SPEC_RBL-004_A06B-6114-H104.png",
-          "description": "Amplificador servo de 1 eje serie Alpha i para robots FANUC serie R-2000i / M-710iC. Probado bajo carga con parámetros de fábrica.",
-          "brand": {
-            "@type": "Brand",
-            "name": "FANUC"
-          },
-          "category": "Robótica Industrial",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://rbl-automation.com/refacciones/fanuc-a06b-6114-h104",
-            "priceCurrency": "MXN",
-            "price": "0",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "Robologix Automation",
-              "telephone": "+528444551869",
-              "email": "aibarra.cepeda@gmail.com"
-            }
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Refacciones", "item": "https://rbl-automation.com/refacciones" },
-            { "@type": "ListItem", "position": 3, "name": "A06B-6114-H104", "item": "https://rbl-automation.com/refacciones/fanuc-a06b-6114-h104" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Refacciones",
+          "item": "https://rbl-automation.com/refacciones"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "A06B-6114-H104",
+          "item": "https://rbl-automation.com/refacciones/fanuc-a06b-6114-h104"
         }
       ]
     }
+  ]
+}
     </script>
 
 <noscript></noscript>
