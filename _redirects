@@ -20,8 +20,6 @@
 
 /articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil.html /articulos/que-es-un-plc-controlador-logico-programable-guia 301!
 /articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil      /articulos/que-es-un-plc-controlador-logico-programable-guia 301!
-/refacciones/   /refacciones   301!
-/refacciones/index.html   /refacciones   301!
 
 # Redirecciones 301 para articulos y podcast a URLs limpias
 /articulos/chatgpt-en-programacion-de-plc-robotica-y-automatizacion-guia.html         /articulos/chatgpt-en-programacion-de-plc-robotica-y-automatizacion-guia 301!
@@ -74,3 +72,4 @@
 /podcast/whitepaper-plcs-obsoletos-slc500-s7300-2026.html                             /podcast/whitepaper-plcs-obsoletos-slc500-s7300-2026                   301!
 /que-es-la-constancia-dc-3-stps.html                                  /que-es-la-constancia-dc-3-stps                                        301!
 /automatizacion-industrial-monterrey.html                             /automatizacion-industrial-monterrey                                   301!
+/refacciones/index.html   /refacciones   301!
