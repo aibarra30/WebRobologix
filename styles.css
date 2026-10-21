@@ -41,12 +41,15 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: var(--font-body);
     background-color: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    position: relative;
 }
 
 /* Header */
@@ -1198,8 +1201,29 @@ footer p {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        width: 100% !important;
+    }
+
+    .cases-grid,
+    .services-grid,
+    .reviews-grid,
+    .platform-grid,
+    .seo-text-grid,
+    .faq-container,
+    .llm-factual-list,
+    .service-row-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-info,
+    .contact-form,
+    .client-item,
+    .linkedin-verified-info {
+        min-width: 0 !important;
+        width: 100% !important;
     }
 
     .logo, .logo a {
