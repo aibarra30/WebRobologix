@@ -85,28 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Sticky Navbar transparency on scroll — passive:true elimina forced reflow
+    // Sticky Navbar con toggle class para eliminar forced reflow
     const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(10, 10, 10, 0.98)';
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
-        } else {
-            header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
-            header.style.boxShadow = 'none';
-        }
-    }, { passive: true });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('header-scrolled', window.scrollY > 50);
+        }, { passive: true });
+    }
+
     // Mobile Menu Toggle
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
-    if (burger) {
+    if (burger && nav) {
         burger.addEventListener('click', () => {
-            // Toggle Nav
             nav.classList.toggle('nav-active');
-
-            // Burger Animation
             burger.classList.toggle('toggle');
         });
 
@@ -119,31 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Inyectar Chat Flotante Robologix Automation — diferido con requestIdleCallback
-    // para evitar forced reflow durante la carga crítica
+    // Inyectar Chat Flotante Robologix Automation — estilos servidos directamente en styles.css
     function injectChatWidget() {
         if (document.getElementById('rbl-chat-widget')) return;
-
-        // Batch: crear todo en un DocumentFragment antes de tocar el DOM real
-        const frag = document.createDocumentFragment();
-
-        const style = document.createElement('style');
-        style.id = 'rbl-chat-style';
-        style.textContent = `
-          #rbl-chat-widget { position: fixed; bottom: 25px; right: 25px; z-index: 999999; font-family: sans-serif; }
-          .rbl-chat-button { background: linear-gradient(135deg, #00E5FF, #0088FF); color: #0B132B; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0, 229, 255, 0.4); cursor: pointer; border: 2px solid #00E5FF; transition: all 0.3s; }
-          .rbl-chat-button:hover { transform: scale(1.1); }
-          .rbl-chat-badge { position: absolute; top: -2px; right: -2px; background-color: #FFB703; color: #0B132B; font-size: 11px; font-weight: 800; padding: 3px 7px; border-radius: 10px; }
-          .rbl-chat-modal { display: none; position: fixed; bottom: 100px; right: 25px; width: 350px; background-color: #0B132B; border: 2px solid #00E5FF; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); overflow: hidden; z-index: 999999; }
-          .rbl-chat-header { background: #1C2541; padding: 16px 20px; border-bottom: 1px solid rgba(0, 229, 255, 0.3); display: flex; justify-content: space-between; align-items: center; }
-          .rbl-chat-title { color: #FFF; font-weight: 800; font-size: 16px; }
-          .rbl-chat-body { padding: 20px; color: #E0E6ED; font-size: 14px; }
-          .rbl-chat-msg { background: #1C2541; border-left: 3px solid #00E5FF; padding: 12px; border-radius: 8px; margin-bottom: 15px; }
-          .rbl-chat-wa-btn { display: flex; align-items: center; justify-content: center; background: #25D366; color: #FFF; font-weight: 800; padding: 12px; border-radius: 10px; text-decoration: none; text-align: center; }
-          .rbl-chat-opt-btn { width: 100%; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.3); color: #00E5FF; padding: 9px 12px; border-radius: 8px; margin-bottom: 8px; text-align: left; cursor: pointer; font-size: 13px; }
-          .rbl-chat-opt-btn:hover { background: rgba(0, 229, 255, 0.2); }
-        `;
-        frag.appendChild(style);
 
         const widget = document.createElement('div');
         widget.id = 'rbl-chat-widget';
@@ -172,11 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-        frag.appendChild(widget);
-
-        // Una sola escritura al DOM real — cero reflows intermedios
-        document.head.appendChild(frag.firstChild); // style
-        document.body.appendChild(frag.lastChild);  // widget
+        document.body.appendChild(widget);
     }
 
     // requestIdleCallback: corre cuando el navegador está idle (no bloquea LCP/FCP)
