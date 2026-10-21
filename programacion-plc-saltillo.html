@@ -87,11 +87,7 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"></noscript>
+<noscript></noscript>
         <!-- CSS Crítico Inline: Elimina bloqueo de render en ruta crítica -->
     <style>
         :root{--primary-color:#00f3ff;--secondary-color:#ff6600;--bg-dark:#0a0a0a;--bg-card:#141414;--text-light:#e0e0e0;--text-muted:#b8bec8;--font-heading:'Orbitron',system-ui,-apple-system,sans-serif;--font-body:'Roboto',system-ui,-apple-system,sans-serif}
@@ -141,6 +137,8 @@
     </style>
 
     <!-- Non-Blocking styles.css -->
+        <!-- Preload Critical Headings Font (Orbitron 700) -->
+    <link rel="preload" as="font" type="font/woff2" href="/webfonts/orbitron-latin-700-normal.woff2" crossorigin>
     <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
     <noscript></noscript>

@@ -8,31 +8,70 @@
     --text-light: #e0e0e0;
     --text-muted: #b8bec8;
     /* Upgraded from #a0a0a0 → WCAG AA contrast ratio 4.6:1 on #0a0a0a */
-    --font-heading: 'Orbitron', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Orbitron', 'Orbitron Fallback', system-ui, -apple-system, sans-serif;
     --font-body: 'Roboto', system-ui, -apple-system, sans-serif;
 }
 
-/* font-display: swap para todas las fuentes externas (FontAwesome, Google Fonts) */
+/* Orbitron Fallback (Local font metrics to prevent CLS) */
 @font-face {
-    font-display: swap;
+    font-family: 'Orbitron Fallback';
+    src: local('Arial Black'), local('Impact'), local('Arial');
+    ascent-override: 88%;
+    descent-override: 12%;
+    line-gap-override: 0%;
+    size-adjust: 105%;
 }
-/* Elimina FOIT (Flash of Invisible Text) en Orbitron y Roboto */
+
+/* Orbitron (Self-hosted woff2, latin) */
 @font-face {
     font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
     font-display: swap;
+    src: url('/webfonts/orbitron-latin-400-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/webfonts/orbitron-latin-700-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('/webfonts/orbitron-latin-900-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Roboto (Self-hosted woff2, latin) */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/webfonts/roboto-latin-300-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
     font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
     font-display: swap;
+    src: url('/webfonts/roboto-latin-400-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* FontAwesome solid y brands - swap inmediato */
 @font-face {
-    font-family: 'Font Awesome 6 Free';
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
     font-display: swap;
-}
-@font-face {
-    font-family: 'Font Awesome 6 Brands';
-    font-display: swap;
+    src: url('/webfonts/roboto-latin-700-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 * {
@@ -160,6 +199,8 @@ header {
     color: #fff;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+    min-height: 3.5rem;
+    contain: layout;
 }
 
 .neon-text {

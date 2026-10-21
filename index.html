@@ -525,14 +525,11 @@
     <link rel="preload" as="image" href="assets/hero-bg-mobile.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="assets/hero-bg.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high">
 
-    <!-- Preconnect & Non-Blocking Font Delivery (Eliminates Render-Blocking CSS) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=optional">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=optional" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=optional"></noscript>
+<noscript></noscript>
 
     <!-- Non-Blocking styles.css (elimina 185ms de ruta crítica) -->
+        <!-- Preload Critical Headings Font (Orbitron 700) -->
+    <link rel="preload" as="font" type="font/woff2" href="/webfonts/orbitron-latin-700-normal.woff2" crossorigin>
     <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
