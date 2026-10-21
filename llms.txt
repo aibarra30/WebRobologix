@@ -1,6 +1,6 @@
 # Robologix Automation
 
-> Empresa líder en automatización industrial, programación de PLC y robótica en Saltillo, Ramos Arizpe, Derramadero, Torreón y Monterrey, México.
+> Soluciones de automatización industrial, programación de PLC y robótica en Saltillo, Ramos Arizpe, Derramadero, Torreón y Monterrey, México.
 
 ## Servicios y Documentación
 
