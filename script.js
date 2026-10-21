@@ -21,10 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const nameInput = document.getElementById('name');
             const phoneInput = document.getElementById('phone');
+            const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
 
             const name = nameInput ? nameInput.value.trim() : '';
             const phone = phoneInput ? phoneInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
             const message = messageInput ? messageInput.value.trim() : '';
 
             if (name && phone && message) {
@@ -33,7 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Si se está probando abriendo el archivo HTML localmente (file://)
                 if (window.location.protocol === 'file:') {
-                    const mailtoUrl = `mailto:aibarra.cepeda@gmail.com?subject=${encodeURIComponent('Nuevo Mensaje - Robologix Automation')}&body=${encodeURIComponent('Nombre: ' + name + '\nTeléfono: ' + phone + '\nMensaje: ' + message)}`;
+                    let bodyDetails = 'Nombre: ' + name + '\nTeléfono: ' + phone;
+                    if (email) bodyDetails += '\nCorreo: ' + email;
+                    bodyDetails += '\nMensaje: ' + message;
+                    const mailtoUrl = `mailto:aibarra.cepeda@gmail.com?subject=${encodeURIComponent('Nuevo Mensaje - Robologix Automation')}&body=${encodeURIComponent(bodyDetails)}`;
                     alert(`Prueba local en archivo HTML (file://):\n\nServicios de envío directo como FormSubmit requieren estar publicados en un servidor web (http:// / https://).\n\nA continuación se abrirá tu correo para enviar el mensaje a aibarra.cepeda@gmail.com.`);
                     window.location.href = mailtoUrl;
                     return;
@@ -42,19 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.innerText = 'Enviando correo...';
                 submitBtn.disabled = true;
 
+                const formData = {
+                    'Nombre Completo': name,
+                    'Teléfono / WhatsApp': phone,
+                    'Mensaje / Alcance': message,
+                    '_subject': 'Nuevo Mensaje de Contacto - Robologix Automation',
+                    '_template': 'table'
+                };
+                if (email) {
+                    formData['Correo Electrónico'] = email;
+                }
+
                 fetch('https://formsubmit.co/ajax/aibarra.cepeda@gmail.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: JSON.stringify({
-                        'Nombre Completo': name,
-                        'Teléfono / WhatsApp': phone,
-                        'Mensaje / Alcance': message,
-                        '_subject': 'Nuevo Mensaje de Contacto - Robologix Automation',
-                        '_template': 'table'
-                    })
+                    body: JSON.stringify(formData)
                 })
                 .then(response => response.json())
                 .then(data => {
