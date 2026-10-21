@@ -18,87 +18,102 @@
 
         <!-- Schema.org TechArticle & FAQPage Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Qué es un PLC Controlador Lógico Programable | Robologix",
+      "description": "Aprende qué es un PLC (Controlador Lógico Programable), cómo funciona su ciclo de escaneo, arquitecturas de hardware y lenguajes IEC 61131-3.",
+      "author": {
+        "@type": "Person",
+        "name": "Aaron Ibarra Cepeda",
+        "url": "https://www.linkedin.com/in/aaron-ibarra-cepeda/",
+        "jobTitle": "Ingeniero Especialista en Automatización y PLC"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbl-automation.com/assets/og-robologix-1200x630.jpg"
+        }
+      },
+      "datePublished": "2026-09-11",
+      "dateModified": "2026-10-21",
+      "inLanguage": "es-MX"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Qué es un PLC Controlador Lógico Programable | Robologix",
-          "description": "Aprende qué es un PLC (Controlador Lógico Programable), cómo funciona su ciclo de escaneo, arquitecturas de hardware y lenguajes IEC 61131-3.",
-          "author": {
-            "@type": "Person",
-            "name": "Aaron Ibarra Cepeda",
-            "url": "https://www.linkedin.com/in/aaron-ibarra-cepeda/",
-            "jobTitle": "Ingeniero Especialista en Automatización y PLC"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Robologix Automation",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://rbl-automation.com/assets/og-robologix-1200x630.jpg"
-            }
-          },
-          "datePublished": "2026-09-11",
-          "dateModified": "2026-10-21",
-          "inLanguage": "es-MX"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://rbl-automation.com/articulos/" },
-            { "@type": "ListItem", "position": 3, "name": "¿Qué es un PLC?", "item": "https://rbl-automation.com/articulos/que-es-un-plc-controlador-logico-programable-guia" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artículos",
+          "item": "https://rbl-automation.com/articulos/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Cuál es el significado de PLC y su definición formal?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "PLC significa Programmable Logic Controller (Controlador Lógico Programable). Es una computadora industrial diseñada para controlar procesos de manufactura, maquinaria y celdas robóticas en tiempo real."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuál es la función principal de un PLC en una fábrica?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Su función primordial es monitorear sensores de entrada, procesar una lógica de control programada y accionar salidas (motores, válvulas, pistones) de manera ininterrumpida y segura."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cómo funciona el ciclo de escaneo de un PLC?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Opera en cuatro fases continuas: lectura de entradas físicas, ejecución del código de programa del usuario, actualización de salidas físicas y autodiagnóstico de red."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué diferencia existe entre un PLC y una computadora normal (PC)?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "El PLC está blindado contra ruido eléctrico, temperatura y vibración, arranca al instante y ejecuta su ciclo de control de forma determinista en milisegundos sin depender de sistemas operativos comerciales."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Dónde capacitarse en programación de PLC en Saltillo y Ramos Arizpe?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Robologix Automation imparte cursos prácticos presenciales e in-company en Allen-Bradley Studio 5000 y Siemens TIA Portal con entrega de constancia oficial STPS DC-3."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "¿Qué es un PLC?",
+          "item": "https://rbl-automation.com/articulos/que-es-un-plc-controlador-logico-programable-guia"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el significado de PLC y su definición formal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PLC significa Programmable Logic Controller (Controlador Lógico Programable). Es una computadora industrial diseñada para controlar procesos de manufactura, maquinaria y celdas robóticas en tiempo real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la función principal de un PLC en una fábrica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Su función primordial es monitorear sensores de entrada, procesar una lógica de control programada y accionar salidas (motores, válvulas, pistones) de manera ininterrumpida y segura."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona el ciclo de escaneo de un PLC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Opera en cuatro fases continuas: lectura de entradas físicas, ejecución del código de programa del usuario, actualización de salidas físicas y autodiagnóstico de red."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia existe entre un PLC y una computadora normal (PC)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El PLC está blindado contra ruido eléctrico, temperatura y vibración, arranca al instante y ejecuta su ciclo de control de forma determinista en milisegundos sin depender de sistemas operativos comerciales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde capacitarse en programación de PLC en Saltillo y Ramos Arizpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Robologix Automation imparte cursos prácticos presenciales e in-company en Allen-Bradley Studio 5000 y Siemens TIA Portal con entrega de constancia oficial STPS DC-3."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 
 <noscript></noscript>
         <!-- CSS Crítico Inline: Elimina bloqueo de render en ruta crítica -->

@@ -17,79 +17,94 @@
 
         <!-- Schema.org TechArticle & FAQPage Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Monitoreo de Condición y Predictivo en PLC | Robologix",
+      "description": "Implementa monitoreo de condición con sensores IO-Link, análisis de vibración y termografía para prevenir paros críticos en líneas de producción.",
+      "author": {
+        "@type": "Person",
+        "name": "Aaron Ibarra Cepeda",
+        "url": "https://www.linkedin.com/in/aaron-ibarra-cepeda/",
+        "jobTitle": "Ingeniero Especialista en Automatización y PLC"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbl-automation.com/assets/og-robologix-1200x630.jpg"
+        }
+      },
+      "datePublished": "2026-09-11",
+      "dateModified": "2026-10-21",
+      "inLanguage": "es-MX"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Monitoreo de Condición y Predictivo en PLC | Robologix",
-          "description": "Implementa monitoreo de condición con sensores IO-Link, análisis de vibración y termografía para prevenir paros críticos en líneas de producción.",
-          "author": {
-            "@type": "Person",
-            "name": "Aaron Ibarra Cepeda",
-            "url": "https://www.linkedin.com/in/aaron-ibarra-cepeda/",
-            "jobTitle": "Ingeniero Especialista en Automatización y Mantenimiento Industrial"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Robologix Automation",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://rbl-automation.com/assets/og-robologix-1200x630.jpg"
-            }
-          },
-          "datePublished": "2026-09-11",
-          "dateModified": "2026-10-21",
-          "inLanguage": "es-MX"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://rbl-automation.com/articulos/" },
-            { "@type": "ListItem", "position": 3, "name": "Mantenimiento Predictivo", "item": "https://rbl-automation.com/articulos/monitoreo-de-condicion-y-mantenimiento-predictivo-industrial-guia" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artículos",
+          "item": "https://rbl-automation.com/articulos/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Qué es el mantenimiento predictivo industrial y en qué se diferencia del preventivo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "El mantenimiento predictivo monitorea en tiempo real variables físicas (vibración, temperatura, corriente) para intervenir la máquina justo antes de la falla, a diferencia del preventivo que reemplaza piezas por calendario sin considerar su desgaste real."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué es el monitoreo predictivo o de condición (Condition Monitoring)?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Es la recolección continua de datos operativos de la maquinaria mediante sensores inteligentes para detectar anomalías tempranas como desbalance mecánico o sobrecalentamiento."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cómo se comunican los sensores de vibración y temperatura con el PLC?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Mediante tecnología IO-Link conectada a maestros de campo en red EtherNet/IP o PROFINET, transmitiendo datos digitales de salud directamente al controlador sin ruido analógico."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Dónde solicitar soporte para paros de línea y diagnóstico en Saltillo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Robologix Automation brinda soporte técnico de emergencia en menos de 2 horas en Saltillo y Ramos Arizpe para diagnóstico de fallas en PLC, tableros y celdas industriales."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mantenimiento Predictivo",
+          "item": "https://rbl-automation.com/articulos/monitoreo-de-condicion-y-mantenimiento-predictivo-industrial-guia"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el mantenimiento predictivo industrial y en qué se diferencia del preventivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El mantenimiento predictivo monitorea en tiempo real variables físicas (vibración, temperatura, corriente) para intervenir la máquina justo antes de la falla, a diferencia del preventivo que reemplaza piezas por calendario sin considerar su desgaste real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el monitoreo predictivo o de condición (Condition Monitoring)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es la recolección continua de datos operativos de la maquinaria mediante sensores inteligentes para detectar anomalías tempranas como desbalance mecánico o sobrecalentamiento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se comunican los sensores de vibración y temperatura con el PLC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mediante tecnología IO-Link conectada a maestros de campo en red EtherNet/IP o PROFINET, transmitiendo datos digitales de salud directamente al controlador sin ruido analógico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde solicitar soporte para paros de línea y diagnóstico en Saltillo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Robologix Automation brinda soporte técnico de emergencia en menos de 2 horas en Saltillo y Ramos Arizpe para diagnóstico de fallas en PLC, tableros y celdas industriales."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 
 <noscript></noscript>
         <!-- CSS Crítico Inline: Elimina bloqueo de render en ruta crítica -->
