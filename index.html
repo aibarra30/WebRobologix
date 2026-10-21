@@ -469,7 +469,8 @@
         .burger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1002}
         .burger div{width:25px;height:3px;background:#fff;border-radius:2px;transition:all .3s}
         @media (max-width: 1024px) {
-            .burger{display:flex}
+            .burger{display:flex;width:34px;height:34px;min-width:34px;flex-shrink:0}
+            .burger div{width:24px;height:3px}
             .nav-links{display:none;position:fixed;top:70px;right:0;width:100%;max-width:320px;max-height:calc(100vh - 80px);background:rgba(12,12,12,.98);border-left:1px solid #282828;border-bottom:1px solid #282828;border-radius:0 0 0 12px;box-shadow:0 15px 35px rgba(0,0,0,.8);flex-direction:column;align-items:flex-start;padding:1.5rem;gap:1.2rem;z-index:1001;overflow-y:auto}
             .nav-links.nav-active{display:flex}
             .nav-links li{margin-left:0;width:100%}
@@ -524,6 +525,14 @@
         }
         /* Reserve hero H1 height to prevent jump */
         .hero h1 { min-height: 3.5rem; contain: layout; }
+    @media (max-width: 768px) {
+            .navbar{padding:0.65rem 4%;gap:8px}
+            .logo, .logo a{font-size:1.05rem !important;letter-spacing:0.5px !important;white-space:nowrap !important;max-width:65% !important;overflow:hidden !important;text-overflow:ellipsis !important}
+        }
+        @media (max-width: 400px) {
+            .navbar{padding:0.55rem 3%;gap:6px}
+            .logo, .logo a{font-size:0.92rem !important;letter-spacing:0px !important;max-width:58% !important}
+        }
     </style>
 
     <!-- Preload Critical LCP Hero Image with High Fetchpriority -->

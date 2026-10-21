@@ -1202,87 +1202,23 @@ footer p {
         overflow-x: hidden;
     }
 
-    .logo {
+    .logo, .logo a {
+        font-size: 1.05rem !important;
+        letter-spacing: 0.5px !important;
+        white-space: nowrap !important;
+        max-width: 65% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
         z-index: 1001;
-        /* Keep logo above menu text if needed, but menu usually covers */
     }
 
     .navbar {
-        /* Reset flex direction to row to keep logo and burger aligned */
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 5%;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 100vh;
-        /* Full screen height */
-        top: 0;
-        /* Star from top to cover */
-        background-color: rgba(10, 10, 10, 0.98);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        /* Full width for better mobile experience */
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        z-index: 998;
-        /* Below burger but above other content */
-        margin-top: 0;
-        /* Reset margin */
-        gap: 2rem;
-    }
-
-    .nav-links li {
-        margin: 0;
-        opacity: 0;
-        /* Fade in effect can be done in JS, but simpler here just visible */
-        opacity: 1;
-    }
-
-    .nav-links a {
-        font-size: 1.5rem;
-        /* Larger font for mobile */
-    }
-
-    .burger {
-        display: block;
-        cursor: pointer;
-        z-index: 1002;
-        /* Above the menu overlay */
-    }
-
-    .burger div {
-        width: 25px;
-        height: 3px;
-        background-color: var(--text-light);
-        margin: 5px;
-        transition: all 0.3s ease;
-    }
-
-    /* Active State Classes */
-    .nav-active {
-        transform: translateX(0%);
-    }
-
-    /* Burger Animation */
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-        background-color: var(--primary-color);
-    }
-
-    .toggle .line2 {
-        opacity: 0;
-    }
-
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-        background-color: var(--primary-color);
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0.65rem 4% !important;
+        gap: 8px !important;
+        flex-wrap: nowrap !important;
     }
 
     .hero {
@@ -1306,6 +1242,18 @@ footer p {
 
     .executive-founder-wrapper {
         padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo, .logo a {
+        font-size: 0.92rem !important;
+        letter-spacing: 0px !important;
+        max-width: 58% !important;
+    }
+    .navbar {
+        padding: 0.55rem 3% !important;
+        gap: 6px !important;
     }
 }
 
@@ -2054,22 +2002,67 @@ header.header-scrolled { background-color: rgba(10, 10, 10, 0.98) !important; bo
 
 
 /* Responsive Navigation & Chat Modal Fixes */
-@media (max-width: 1024px) {
-    .navbar { padding: 0.8rem 4%; }
+
+/* Responsive Navigation & Drawer */
+.burger {
+    display: none;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    cursor: pointer !important;
+    z-index: 1002 !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    flex-shrink: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.burger div, .burger .line1, .burger .line2, .burger .line3 {
+    width: 24px !important;
+    height: 3px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* Burger Animation on Active */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px) !important;
+    background-color: var(--primary-color) !important;
+}
+.toggle .line2 {
+    opacity: 0 !important;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px) !important;
+    background-color: var(--primary-color) !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .burger {
+        display: flex !important;
+    }
+
     .nav-links {
         display: none !important;
         position: fixed !important;
-        top: 70px !important;
+        top: 60px !important;
         right: 0 !important;
         width: 100% !important;
-        max-width: 340px !important;
+        max-width: 320px !important;
         height: auto !important;
-        max-height: calc(100vh - 80px) !important;
+        max-height: calc(100vh - 70px) !important;
         background: rgba(12, 12, 12, 0.98) !important;
         border-left: 1px solid #282828 !important;
         border-bottom: 1px solid #282828 !important;
-        border-radius: 0 0 0 12px !important;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.8) !important;
+        border-radius: 0 0 0 14px !important;
+        box-shadow: -5px 15px 35px rgba(0, 0, 0, 0.85) !important;
         flex-direction: column !important;
         align-items: flex-start !important;
         justify-content: flex-start !important;
@@ -2079,23 +2072,35 @@ header.header-scrolled { background-color: rgba(10, 10, 10, 0.98) !important; bo
         z-index: 1001 !important;
         overflow-y: auto !important;
     }
+
     .nav-links.nav-active {
         display: flex !important;
     }
+
     .nav-links li {
         margin: 0 !important;
         width: 100% !important;
     }
+
     .nav-links a {
-        font-size: 0.95rem !important;
+        font-size: 0.92rem !important;
         display: block !important;
-        padding: 0.5rem 0 !important;
+        padding: 0.45rem 0 !important;
         border-bottom: 1px solid #1a1a1a !important;
         width: 100% !important;
+        color: #fff !important;
     }
-    .burger {
-        display: flex !important;
-        z-index: 1002 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-cart-nav {
+        padding: 0.45rem 0.65rem !important;
+        font-size: 0.8rem !important;
+        gap: 5px !important;
+        flex-shrink: 0 !important;
+    }
+    .btn-cart-nav .cart-text {
+        display: none !important;
     }
 }
 

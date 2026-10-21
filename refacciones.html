@@ -614,7 +614,114 @@
             gap: 20px;
             padding: 0;
         }
+    /* Mobile Navbar & Burger Fix */
+        .burger {
+            display: none;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 5px !important;
+            cursor: pointer !important;
+            z-index: 1002 !important;
+            width: 34px !important;
+            height: 34px !important;
+            min-width: 34px !important;
+            flex-shrink: 0 !important;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+        .burger div, .burger .line1, .burger .line2, .burger .line3 {
+            width: 24px !important;
+            height: 3px !important;
+            background-color: #ffffff !important;
+            border-radius: 2px !important;
+            transition: all 0.3s ease !important;
+            margin: 0 !important;
+            display: block !important;
+        }
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px) !important;
+            background-color: var(--primary-color) !important;
+        }
+        .toggle .line2 { opacity: 0 !important; }
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px) !important;
+            background-color: var(--primary-color) !important;
+        }
+
+        @media (max-width: 1024px) {
+            .burger { display: flex !important; }
+            .nav-links {
+                display: none !important;
+                position: fixed !important;
+                top: 65px !important;
+                right: 0 !important;
+                width: 100% !important;
+                max-width: 320px !important;
+                max-height: calc(100vh - 75px) !important;
+                background: rgba(12, 12, 12, 0.98) !important;
+                border-left: 1px solid #282828 !important;
+                border-bottom: 1px solid #282828 !important;
+                border-radius: 0 0 0 14px !important;
+                box-shadow: -5px 15px 35px rgba(0,0,0,0.85) !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                padding: 1.5rem !important;
+                gap: 1.2rem !important;
+                z-index: 1001 !important;
+                overflow-y: auto !important;
+            }
+            .nav-links.nav-active { display: flex !important; }
+            .nav-links li { margin: 0 !important; width: 100% !important; }
+            .nav-links a {
+                font-size: 0.92rem !important;
+                display: block !important;
+                padding: 0.45rem 0 !important;
+                border-bottom: 1px solid #1a1a1a !important;
+                width: 100% !important;
+                color: #fff !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.65rem 4% !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 8px !important;
+                flex-wrap: nowrap !important;
+            }
+            .logo, .logo a {
+                font-size: 1.05rem !important;
+                letter-spacing: 0.5px !important;
+                white-space: nowrap !important;
+                max-width: 62% !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+            .btn-cart-nav {
+                padding: 0.4rem 0.65rem !important;
+                font-size: 0.78rem !important;
+                gap: 5px !important;
+                flex-shrink: 0 !important;
+            }
+            .btn-cart-nav .cart-text {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar { padding: 0.55rem 3% !important; gap: 6px !important; }
+            .logo, .logo a {
+                font-size: 0.92rem !important;
+                letter-spacing: 0px !important;
+                max-width: 55% !important;
+            }
+        }
     </style>
+
     <!-- Schema.org Product & ItemList Catalog Markup -->
     <script type="application/ld+json">
     {
@@ -688,8 +795,8 @@
                 <li><a href="/#contact" class="btn-contact">Contáctanos</a></li>
             </ul>
             <div style="display: flex; align-items: center; gap: 15px;">
-                <button id="cart-toggle-btn" class="btn-cart-nav">
-                    <span><i class="fas fa-shopping-cart"></i> Mi Cotización</span>
+                <button id="cart-toggle-btn" class="btn-cart-nav" aria-label="Ver Cotización">
+                    <i class="fas fa-shopping-cart"></i><span class="cart-text"> Mi Cotización</span>
                     <span class="cart-counter cart-count">0</span>
                 </button>
                 <div class="burger" id="burger-menu">

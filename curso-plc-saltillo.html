@@ -105,7 +105,8 @@
         .burger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1002}
         .burger div{width:25px;height:3px;background:#fff;border-radius:2px;transition:all .3s}
         @media (max-width: 1024px) {
-            .burger{display:flex}
+            .burger{display:flex;width:34px;height:34px;min-width:34px;flex-shrink:0}
+            .burger div{width:24px;height:3px}
             .nav-links{display:none;position:fixed;top:70px;right:0;width:100%;max-width:320px;max-height:calc(100vh - 80px);background:rgba(12,12,12,.98);border-left:1px solid #282828;border-bottom:1px solid #282828;border-radius:0 0 0 12px;box-shadow:0 15px 35px rgba(0,0,0,.8);flex-direction:column;align-items:flex-start;padding:1.5rem;gap:1.2rem;z-index:1001;overflow-y:auto}
             .nav-links.nav-active{display:flex}
             .nav-links li{margin-left:0;width:100%}
@@ -127,6 +128,15 @@
         }
         /* Reserve hero H1 height to prevent jump */
         .hero h1 { min-height: 3.5rem; contain: layout; }
+    .service-hero-header{position:static !important;background:transparent !important;box-shadow:none !important;width:100% !important;z-index:1 !important;padding:15px 0 !important;margin-bottom:20px !important}
+        @media (max-width: 768px) {
+            .navbar { padding: 0.65rem 4% !important; gap: 8px !important; }
+            .logo, .logo a { font-size: 1.05rem !important; letter-spacing: 0.5px !important; white-space: nowrap !important; max-width: 65% !important; overflow: hidden !important; text-overflow: ellipsis !important; }
+        }
+        @media (max-width: 400px) {
+            .navbar { padding: 0.55rem 3% !important; gap: 6px !important; }
+            .logo, .logo a { font-size: 0.92rem !important; letter-spacing: 0px !important; max-width: 58% !important; }
+        }
     </style>
 
     <!-- Non-Blocking styles.css -->
@@ -176,7 +186,7 @@
             <span>Curso de PLC en Saltillo</span>
         </nav>
 
-        <header class="service-hero-header">
+        <section class="service-hero-header">
             <span class="badge-tag"><i class="fas fa-microchip"></i> CAPACITACIÓN ESPECIALIZADA EN COAHUILA</span>
             <h1>Curso de PLC en Saltillo (Allen-Bradley &amp; Siemens)</h1>
             <p class="hero-lead">
@@ -186,7 +196,7 @@
                 <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20solicito%20informaci%C3%B3n%20y%20fechas%20del%20Curso%20de%20PLC%20en%20Saltillo." target="_blank" class="btn-primary" style="text-decoration:none;"><i class="fab fa-whatsapp"></i> Solicitar Temario del Curso de PLC</a>
                 <a href="/curso-robot-fanuc-saltillo" class="btn-whatsapp" style="background: rgba(0, 243, 255, 0.1); border: 1px solid var(--primary-color); text-decoration:none;">Ver Curso Robot FANUC →</a>
             </div>
-        </header>
+        </section>
 
         <!-- SEO Content Block -->
         <section style="background: var(--bg-card); border-left: 4px solid var(--primary-color); padding: 25px; margin: 30px 0; border-radius: 8px;">
