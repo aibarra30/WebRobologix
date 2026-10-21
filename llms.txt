@@ -23,3 +23,5 @@
 - [Perfil de LinkedIn](https://www.linkedin.com/in/aaron-ibarra-cepeda/)
 - [Canal de YouTube](https://www.youtube.com/@roboticayplc)
 - [Podcast en Spotify](https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC)
+
+- [Automatización Industrial en Saltillo](https://rbl-automation.com/automatizacion-industrial-saltillo): Integración de celdas robóticas, programación de PLC Siemens y Allen-Bradley, retrofit y tableros UL508A en Saltillo y Ramos Arizpe.
