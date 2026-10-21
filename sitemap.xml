@@ -191,11 +191,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rbl-automation.com/articulos/que-es-un-plc-definicion-y-funcionamiento-guia-facil</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://rbl-automation.com/articulos/que-es-un-sensor-industrial-tipos-y-funcionamiento-guia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -516,5 +511,10 @@
     <loc>https://rbl-automation.com/automatizacion-industrial-ramos-arizpe</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rbl-automation.com/consulta-obsolescencia-rockwell-saltillo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
