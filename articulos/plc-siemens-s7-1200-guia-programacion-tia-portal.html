@@ -4,93 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLC Siemens S7-1200: Qué Es, Modelos y Programación TIA Portal | Saltillo</title>
-    <meta name="description" content="Guía técnica del PLC Siemens S7-1200 en Saltillo y Ramos Arizpe: modelos de CPU (1212C, 1214C, 1215C), cableado DC/DC/DC vs RLY, conexión TIA Portal y cursos con DC-3." />    <meta name="author" content="Mtro. Aaron Ibarra Cepeda - Robologix Automation" />
+    <title>PLC Siemens S7-1200 y TIA Portal: Guía | Robologix</title>
+    <meta name="description" content="Guía del PLC Siemens S7-1200: CPUs 1212C, 1214C y 1215C, cableado de entradas/salidas y programación en TIA Portal para la industria manufacturera.">    <meta name="author" content="Mtro. Aaron Ibarra Cepeda - Robologix Automation" />
     <link rel="canonical" href="https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal" />
 
     <!-- Open Graph / Redes Sociales -->
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal" />
-    <meta property="og:title" content="PLC Siemens S7-1200: Qué Es, Modelos y Programación en TIA Portal  | Robologix Automation Saltillo" />
-    <meta property="og:description" content="Aprende qué es el PLC Siemens S7-1200, diferencias entre CPU 1212C, 1214C y 1215C, tipos de salidas (DC vs Relé) y cómo programarlo en TIA Portal para la industria en Coahuila." />
+    <meta property="og:title" content="PLC Siemens S7-1200 y TIA Portal: Guía | Robologix">
+    <meta property="og:description" content="Guía del PLC Siemens S7-1200: CPUs 1212C, 1214C y 1215C, cableado de entradas/salidas y programación en TIA Portal para la industria manufacturera.">
     <meta property="og:image" content="https://rbl-automation.com/assets/curso-plc-siemens-tia-portal.webp" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PLC Siemens S7-1200: Guía Completa de Programación y Hardware" />
-    <meta name="twitter:description" content="Todo sobre el SIMATIC S7-1200 en la industria de Saltillo y Ramos Arizpe. Modelos, conexionado y TIA Portal." />
+    <meta name="twitter:title" content="PLC Siemens S7-1200 y TIA Portal: Guía | Robologix">
+    <meta name="twitter:description" content="Guía del PLC Siemens S7-1200: CPUs 1212C, 1214C y 1215C, cableado de entradas/salidas y programación en TIA Portal para la industria manufacturera.">
     <meta name="twitter:image" content="https://rbl-automation.com/assets/curso-plc-siemens-tia-portal.webp" />
 
     <!-- Schema.org TechArticle & FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "PLC Siemens S7-1200 y TIA Portal: Guía | Robologix",
+      "description": "Guía del PLC Siemens S7-1200: CPUs 1212C, 1214C y 1215C, cableado de entradas/salidas y programación en TIA Portal para la industria manufacturera.",
+      "image": "https://rbl-automation.com/assets/curso-plc-siemens-tia-portal.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Mtro. Aaron Ibarra Cepeda",
+        "jobTitle": "Especialista en Automatización y Robótica Industrial",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Robologix Automation S.A. de C.V."
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robologix Automation S.A. de C.V.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rbl-automation.com/assets/logo.png"
+        }
+      },
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "mainEntityOfPage": "https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "TechArticle",
-          "headline": "PLC Siemens S7-1200: Qué Es, Modelos, Cableado y Programación en TIA Portal",
-          "description": "Manual completo y guía de ingeniería sobre el controlador lógico programable Siemens SIMATIC S7-1200, análisis de CPUs (1211C a 1217C), módulos de expansión y mejores prácticas en la industria automotriz de Coahuila.",
-          "image": "https://rbl-automation.com/assets/curso-plc-siemens-tia-portal.webp",
-          "author": {
-            "@type": "Person",
-            "name": "Mtro. Aaron Ibarra Cepeda",
-            "jobTitle": "Especialista en Automatización y Robótica Industrial",
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Robologix Automation S.A. de C.V."
-            }
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Robologix Automation S.A. de C.V.",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://rbl-automation.com/assets/logo.png"
-            }
-          },
-          "datePublished": "2026-10-20",
-          "dateModified": "2026-10-20",
-          "mainEntityOfPage": "https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal.html"
+          "@type": "Question",
+          "name": "¿Qué es un PLC Siemens S7-1200 y para qué sirve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El SIMATIC S7-1200 es un Controlador Lógico Programable (PLC) modular y compacto diseñado por Siemens para automatizar máquinas independientes, poka-yokes, bancos de prueba y celdas industriales medianas mediante sensores, actuadores y comunicación Profinet."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Qué es un PLC Siemens S7-1200 y para qué sirve?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "El SIMATIC S7-1200 es un Controlador Lógico Programable (PLC) modular y compacto diseñado por Siemens para automatizar máquinas independientes, poka-yokes, bancos de prueba y celdas industriales medianas mediante sensores, actuadores y comunicación Profinet."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuál es la diferencia entre un S7-1200 DC/DC/DC y uno AC/DC/RLY?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "DC/DC/DC indica alimentación a 24VDC, entradas digitales a 24VDC y salidas a transistor (24VDC), ideales para control PWM y servomotores a alta frecuencia. AC/DC/RLY indica alimentación de 120/230VAC, entradas a 24VDC y salidas a relé seco (contactores mecánicos de hasta 2A)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué software se necesita para programar un PLC S7-1200?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Se programa mediante Siemens TIA Portal (Totally Integrated Automation Portal) en sus versiones Basic o Professional (v16, v17, v18 o v19), soportando lenguajes Ladder (LAD), Bloques de Funciones (FBD) y Texto Estructurado (SCL)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿El S7-1200 requiere tarjeta de memoria obligatoria para operar?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No, a diferencia del S7-1500, el PLC S7-1200 cuenta con memoria de carga no volátil integrada en la CPU. La Siemens Memory Card (SMC) es opcional y se utiliza para respaldo de código sin software, transferencia o actualización de firmware."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre un S7-1200 DC/DC/DC y uno AC/DC/RLY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DC/DC/DC indica alimentación a 24VDC, entradas digitales a 24VDC y salidas a transistor (24VDC), ideales para control PWM y servomotores a alta frecuencia. AC/DC/RLY indica alimentación de 120/230VAC, entradas a 24VDC y salidas a relé seco (contactores mecánicos de hasta 2A)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué software se necesita para programar un PLC S7-1200?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se programa mediante Siemens TIA Portal (Totally Integrated Automation Portal) en sus versiones Basic o Professional (v16, v17, v18 o v19), soportando lenguajes Ladder (LAD), Bloques de Funciones (FBD) y Texto Estructurado (SCL)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El S7-1200 requiere tarjeta de memoria obligatoria para operar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, a diferencia del S7-1500, el PLC S7-1200 cuenta con memoria de carga no volátil integrada en la CPU. La Siemens Memory Card (SMC) es opcional y se utiliza para respaldo de código sin software, transferencia o actualización de firmware."
+          }
         }
       ]
     }
+  ]
+}
     </script>
 
 <noscript></noscript>
