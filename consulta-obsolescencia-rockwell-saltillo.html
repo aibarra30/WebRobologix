@@ -200,6 +200,79 @@
             </div>
         </section>
 
+
+        <!-- Guía de Ingeniería: Ciclo de Vida y Obsolescencia Rockwell -->
+        <section style="margin-top: 45px; border-top: 1px solid #222; padding-top: 35px;">
+            <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.5rem; margin-bottom: 20px;">
+                ¿Qué es el Ciclo de Vida de Producto en Rockwell Automation / Allen-Bradley?
+            </h2>
+            <p style="color: var(--text-light); font-size: 0.98rem; line-height: 1.7; margin-bottom: 20px;">
+                Rockwell Automation clasifica sus controladores programables, módulos de E/S, variadores de frecuencia y terminales HMI en cuatro fases oficiales de ciclo de vida. Conocer en qué fase opera tu equipo te permite anticipar paros de línea no programados, evitar sobrecostos por compra de piezas descontinuadas y programar ventanas de modernización rentables:
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 30px;">
+                <div style="background: #141414; border: 1px solid #282828; border-radius: 8px; padding: 20px;">
+                    <span class="status-active" style="margin-bottom: 10px;">Activo (Active)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 8px;">
+                        El producto se encuentra en plena producción comercial, recibe soporte técnico estándar de ingeniería, actualizaciones de firmware y disponibilidad inmediata de partes nuevas en almacén.
+                    </p>
+                </div>
+
+                <div style="background: #141414; border: 1px solid #282828; border-radius: 8px; padding: 20px;">
+                    <span class="status-eol" style="margin-bottom: 10px;">Activo Maduro (Active Mature)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 8px;">
+                        El producto sigue disponible para la venta y reposición, pero existe una familia tecnológica más moderna recomendada para proyectos nuevos. Conviene evaluar planes de migración a mediano plazo.
+                    </p>
+                </div>
+
+                <div style="background: #141414; border: 1px solid #282828; border-radius: 8px; padding: 20px;">
+                    <span class="status-eol" style="background: rgba(255,102,0,0.25); margin-bottom: 10px;">Fin de Vida (End of Life)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 8px;">
+                        Se ha anunciado la fecha oficial de discontinuación. La fabricación disminuye y los tiempos de entrega se prolongan considerablemente. Es la última oportunidad para adquirir repuestos de stock.
+                    </p>
+                </div>
+
+                <div style="background: #141414; border: 1px solid #282828; border-radius: 8px; padding: 20px;">
+                    <span class="status-obsolete" style="margin-bottom: 10px;">Descontinuado (Discontinued)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 8px;">
+                        El fabricante ya no manufactura ni repara el componente. Las únicas opciones son refacciones remanentes de stock o una migración de ingeniería hacia familias activas como CompactLogix 5380 o ControlLogix 5580.
+                    </p>
+                </div>
+            </div>
+
+            <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.35rem; margin-bottom: 15px;">
+                ¿Cuándo Conviene Migrar un Controlador o Pantalla Obsoleta?
+            </h2>
+            <p style="color: var(--text-light); font-size: 0.98rem; line-height: 1.7; margin-bottom: 15px;">
+                Operar con plataformas descontinuadas como SLC 500 (1747/1746), PLC-5 (1771/1785), MicroLogix o PanelView Standard representa un riesgo financiero severo para plantas de manufactura en Saltillo y Ramos Arizpe. Las señales clave que indican la urgencia de una migración incluyen:
+            </p>
+            <ul style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.8; margin-left: 20px; margin-bottom: 25px;">
+                <li><strong>Inexistencia de refacciones críticas:</strong> Cuando un paro imprevisto de CPU o tarjeta de comunicación Ethernet/IP no puede resolverse en menos de 24 horas por falta de refacción en el mercado.</li>
+                <li><strong>Incompatibilidad informática:</strong> Software de programación antiguo (RSLogix 500, PanelBuilder32) que no ejecuta en sistemas operativos modernos Windows 10/11 sin máquinas virtuales inestables.</li>
+                <li><strong>Aislamiento de red:</strong> Dificultad para interconectar maquinaria antigua a sistemas SCADA, redes industriales Gigabit o protocolos modernos de planta.</li>
+            </ul>
+
+            <div style="background: #121212; border: 1px solid #282828; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
+                <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.15rem; margin-bottom: 12px;">
+                    Servicios de Ingeniería Robologix para Migración y Suministro
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 15px;">
+                    En Robologix Automation acompañamos a plantas industriales de Coahuila y Nuevo León en la transición segura hacia hardware moderno:
+                </p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="/migracion-slc-500-a-compactlogix-saltillo" class="btn-primary" style="font-size: 0.85rem;">
+                        <i class="fas fa-microchip"></i> Guía y Servicio de Migración SLC 500
+                    </a>
+                    <a href="/articulos/guia-familias-plc-allen-bradley" class="btn-primary" style="font-size: 0.85rem;">
+                        <i class="fas fa-book"></i> Guía Completa de Familias Allen-Bradley
+                    </a>
+                    <a href="/refacciones" class="btn-primary" style="font-size: 0.85rem; border-color: var(--secondary-color);">
+                        <i class="fas fa-boxes"></i> Ver Catálogo de Refacciones Industriales
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer style="margin-top: 60px; padding: 2.5rem 5%; border-top: 1px solid #222; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
