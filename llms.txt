@@ -10,6 +10,7 @@
 - [Integración de Celdas Robóticas](https://rbl-automation.com/integracion-celdas-roboticas-saltillo): Celdas de manufactura, simulación y puesta en marcha con robots FANUC, ABB y KUKA.
 - [Cursos de PLC y Robótica con DC-3](https://rbl-automation.com/cursos-de-plc-y-robotica-en-saltillo): Capacitación industrial presencial con validez oficial ante la STPS en Saltillo.
 - [Podcast Cero Paros y Artículos Técnicos](https://rbl-automation.com/podcast-y-articulos): Guías de ingeniería, reducción de downtime y buenas prácticas en manufactura.
+- [Guía Técnica PLC Siemens S7-1200](https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal): Modelos de CPU, conexionado DC/DC/DC vs Relé y programación en TIA Portal en Saltillo.
 
 ## Contacto y Redes Oficiales
 

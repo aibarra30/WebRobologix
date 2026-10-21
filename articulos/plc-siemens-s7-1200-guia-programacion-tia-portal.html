@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC Siemens S7-1200: Qué Es, Modelos y Programación TIA Portal | Saltillo</title>
+    <meta name="description" content="Guía técnica del PLC Siemens S7-1200 en Saltillo y Ramos Arizpe: modelos de CPU (1212C, 1214C, 1215C), cableado DC/DC/DC vs RLY, conexión TIA Portal y cursos con DC-3." />
+    <meta name="keywords" content="plc siemens s7-1200, que es un plc, plc que es, plc siemens, s7-1200 tia portal, cpu 1214c, programacion plc saltillo, cursos plc siemens saltillo, automatizacion ramos arizpe, robologix automation" />
+    <meta name="author" content="Mtro. Aaron Ibarra Cepeda - Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal" />
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal.html" />
+    <meta property="og:title" content="PLC Siemens S7-1200: Qué Es, Modelos y Programación en TIA Portal | Robologix" />
+    <meta property="og:description" content="Aprende qué es el PLC Siemens S7-1200, diferencias entre CPU 1212C, 1214C y 1215C, tipos de salidas (DC vs Relé) y cómo programarlo en TIA Portal para la industria en Coahuila." />
+    <meta property="og:image" content="https://rbl-automation.com/assets/curso-plc-siemens-tia-portal.webp" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PLC Siemens S7-1200: Guía Completa de Programación y Hardware" />
+    <meta name="twitter:description" content="Todo sobre el SIMATIC S7-1200 en la industria de Saltillo y Ramos Arizpe. Modelos, conexionado y TIA Portal." />
+    <meta name="twitter:image" content="https://rbl-automation.com/assets/curso-plc-siemens-tia-portal.webp" />
+
+    <!-- Schema.org TechArticle & FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "PLC Siemens S7-1200: Qué Es, Modelos, Cableado y Programación en TIA Portal",
+          "description": "Manual completo y guía de ingeniería sobre el controlador lógico programable Siemens SIMATIC S7-1200, análisis de CPUs (1211C a 1217C), módulos de expansión y mejores prácticas en la industria automotriz de Coahuila.",
+          "image": "https://rbl-automation.com/assets/curso-plc-siemens-tia-portal.webp",
+          "author": {
+            "@type": "Person",
+            "name": "Mtro. Aaron Ibarra Cepeda",
+            "jobTitle": "Especialista en Automatización y Robótica Industrial",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Robologix Automation S.A. de C.V."
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Robologix Automation S.A. de C.V.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://rbl-automation.com/assets/logo.png"
+            }
+          },
+          "datePublished": "2026-10-20",
+          "dateModified": "2026-10-20",
+          "mainEntityOfPage": "https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal.html"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es un PLC Siemens S7-1200 y para qué sirve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El SIMATIC S7-1200 es un Controlador Lógico Programable (PLC) modular y compacto diseñado por Siemens para automatizar máquinas independientes, poka-yokes, bancos de prueba y celdas industriales medianas mediante sensores, actuadores y comunicación Profinet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la diferencia entre un S7-1200 DC/DC/DC y uno AC/DC/RLY?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "DC/DC/DC indica alimentación a 24VDC, entradas digitales a 24VDC y salidas a transistor (24VDC), ideales para control PWM y servomotores a alta frecuencia. AC/DC/RLY indica alimentación de 120/230VAC, entradas a 24VDC y salidas a relé seco (contactores mecánicos de hasta 2A)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué software se necesita para programar un PLC S7-1200?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se programa mediante Siemens TIA Portal (Totally Integrated Automation Portal) en sus versiones Basic o Professional (v16, v17, v18 o v19), soportando lenguajes Ladder (LAD), Bloques de Funciones (FBD) y Texto Estructurado (SCL)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿El S7-1200 requiere tarjeta de memoria obligatoria para operar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, a diferencia del S7-1500, el PLC S7-1200 cuenta con memoria de carga no volátil integrada en la CPU. La Siemens Memory Card (SMC) es opcional y se utiliza para respaldo de código sin software, transferencia o actualización de firmware."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"></noscript>
+    
+    <!-- CSS Crítico Inline -->
+    <style>
+        :root{--primary-color:#00f3ff;--secondary-color:#ff6600;--bg-dark:#0a0a0a;--bg-card:#141414;--text-light:#e0e0e0;--text-muted:#b8bec8;--font-heading:'Orbitron',system-ui,-apple-system,sans-serif;--font-body:'Roboto',system-ui,-apple-system,sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background-color:var(--bg-dark);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+        header{background-color:rgba(10,10,10,.95);position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,243,255,.1)}
+        .navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;max-width:1400px;margin:0 auto}
+        .logo{font-family:var(--font-heading);font-size:1.5rem;font-weight:900;color:#fff;letter-spacing:2px}
+        .logo .highlight{color:var(--primary-color)}
+        .nav-links{list-style:none;display:flex}
+        .nav-links li{margin-left:2rem}
+        .nav-links a{text-decoration:none;color:var(--text-light);font-family:var(--font-heading);font-size:.9rem;font-weight:700;transition:color .3s;text-transform:uppercase;letter-spacing:1px}
+        .burger{display:none;flex-direction:column;cursor:pointer;gap:5px}
+        .burger div{width:25px;height:3px;background:#fff;border-radius:2px;transition:all .3s}
+        .btn-primary{background:transparent;border:2px solid var(--primary-color);color:#fff;padding:.8rem 2rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:2px}
+        .btn-whatsapp{background-color:#138241;border:2px solid #1a9e4a;color:#fff;padding:.8rem 2rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:2px;display:flex;align-items:center;gap:.5rem}
+        @font-face{font-family:'Font Awesome 6 Free';font-display:swap}
+        @font-face{font-family:'Font Awesome 6 Brands';font-display:swap}
+        @font-face {
+            font-family: 'Orbitron';
+            src: local('Arial Black'), local('Impact');
+            size-adjust: 105%;
+            ascent-override: 88%;
+            descent-override: 12%;
+            line-gap-override: 0%;
+            font-display: swap;
+        }
+        .hero h1 { min-height: 3.5rem; contain: layout; }
+        .tech-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95rem; }
+        .tech-table th, .tech-table td { border: 1px solid #333; padding: 12px 14px; text-align: left; }
+        .tech-table th { background: rgba(0, 243, 255, 0.1); color: var(--primary-color); font-family: var(--font-heading); }
+        .tech-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+        .highlight-box { background: rgba(0, 243, 255, 0.05); border-left: 4px solid var(--primary-color); padding: 20px; border-radius: 8px; margin: 25px 0; }
+        .warning-box { background: rgba(255, 102, 0, 0.08); border-left: 4px solid var(--secondary-color); padding: 20px; border-radius: 8px; margin: 25px 0; }
+        .faq-item { background: var(--bg-card); border: 1px solid #282828; border-radius: 8px; padding: 20px; margin-bottom: 15px; }
+        .faq-question { font-family: var(--font-heading); color: #fff; font-size: 1.1rem; margin-bottom: 8px; }
+    </style>
+
+    <link rel="preload" as="style" href="../styles.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../styles.css"></noscript>
+    <link rel="preload" as="style" href="../fa-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../fa-icons.css"></noscript>
+</head>
+
+<body>
+    <!-- Header Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../programacion-plc-saltillo.html">Programación PLC</a></li>
+                <li><a href="../integracion-celdas-roboticas-saltillo.html">Celdas Robóticas</a></li>
+                <li><a href="../cursos-de-plc-y-robotica-en-saltillo.html">Cursos PLC y Robot</a></li>
+                <li><a href="index.html">Artículos Técnicos</a></li>
+                <li><a href="../index.html#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container" style="padding-top: 100px; max-width: 900px; margin: 0 auto; padding-left: 5%; padding-right: 5%;">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+            <a href="../index.html" style="color: var(--primary-color); text-decoration: none;">Inicio</a> &gt;
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Artículos</a> &gt;
+            <span>PLC Siemens S7-1200: Guía de Programación y Hardware</span>
+        </nav>
+
+        <article class="article-detail">
+            <span style="display: inline-block; background: rgba(0,243,255,0.1); border: 1px solid var(--primary-color); color: var(--primary-color); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; text-transform: uppercase; margin-bottom: 12px;">
+                <i class="fas fa-microchip"></i> Guía Técnica de Ingeniería | Tendencia Coahuila
+            </span>
+
+            <h1 style="font-family: var(--font-heading); color: #fff; font-size: 2.2rem; line-height: 1.25; margin-bottom: 15px;">
+                PLC Siemens S7-1200: Qué Es, Modelos de CPU y Guía de Programación en TIA Portal
+            </h1>
+            
+            <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 15px;">
+                <span><i class="fas fa-user-tie"></i> Mtro. Aaron Ibarra Cepeda</span> | 
+                <span><i class="fas fa-calendar-alt"></i> Octubre 2026</span> | 
+                <span><i class="fas fa-map-marker-alt"></i> Saltillo & Ramos Arizpe, Coahuila</span>
+            </div>
+
+            <img width="1024" height="600" loading="eager" fetchpriority="high" src="../assets/curso-plc-siemens-tia-portal.webp" alt="PLC Siemens SIMATIC S7-1200 con pantalla HMI y TIA Portal en Saltillo" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.25);">
+
+            <section style="color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
+                <p>
+                    En los parques industriales de <strong>Saltillo, Ramos Arizpe, Derramadero y Monterrey</strong>, el <strong>PLC Siemens S7-1200</strong> se ha convertido en el controlador estándar indiscutible para máquinas empacadoras, estaciones de atornillado, poka-yokes, bancos de pruebas hidráulicas y células de subensamble.
+                </p>
+                <p>
+                    Si eres técnico de mantenimiento, ingeniero de proyectos o estudiante que busca entender qué es un PLC y cómo programarlo, esta guía práctica te llevará desde la anatomía física del hardware hasta las mejores prácticas de conexión con <strong>Siemens TIA Portal</strong>.
+                </p>
+
+                <!-- Sección 1 -->
+                <h2 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.5rem; margin-top: 40px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    1. ¿Qué es un PLC y qué hace especial al Siemens S7-1200?
+                </h2>
+                <p>
+                    Un <strong>PLC (Controlador Lógico Programable)</strong> es una computadora industrial reforzada diseñada para resistir ruido electromagnético, vibraciones, polvo y calor extremo en planta. Su misión fundamental es ejecutar de forma cíclica (en milisegundos) un programa:
+                </p>
+                <ol style="margin-left: 25px; margin-bottom: 20px;">
+                    <li><strong>Lectura de Entradas:</strong> Detecta el estado de sensores ópticos, botones de paro de emergencia, fotoceldas y transductores de presión.</li>
+                    <li><strong>Ejecución del Programa Lógico:</strong> Evalúa las condiciones booleanas y rutinas matemáticas en su microprocesador.</li>
+                    <li><strong>Actualización de Salidas:</strong> Activa electroválvulas neumáticas, arranca servomotores, acciona contactores y envía señales a robots industriales.</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <h3 style="color: var(--primary-color); margin-bottom: 8px; font-family: var(--font-heading); font-size: 1.15rem;">¿Por qué el S7-1200 sustituyó al legendario S7-200?</h3>
+                    <p style="font-size: 0.95rem;">
+                        A diferencia del viejo S7-200 (que usaba el software Micro/WIN y cables seriales PPI), el <strong>S7-1200</strong> integra un puerto <strong>Ethernet / PROFINET</strong> nativo en todas sus CPUs, servidor web integrado, soporte para protocolo <strong>OPC UA</strong> para Industria 4.0 y compatibilidad total con la plataforma unificada <strong>TIA Portal</strong>.
+                    </p>
+                </div>
+
+                <!-- Sección 2 -->
+                <h2 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.5rem; margin-top: 40px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    2. Tabla Comparativa de Familias de CPU Siemens S7-1200
+                </h2>
+                <p>
+                    La familia S7-1200 cuenta con cinco procesadores modulares (con variantes estándar y versiones de seguridad <em>Fail-Safe</em> S7-1200F identificables por su carcasa amarilla):
+                </p>
+
+                <div style="overflow-x: auto;">
+                    <table class="tech-table">
+                        <thead>
+                            <tr>
+                                <th>Modelo CPU</th>
+                                <th>Memoria de Trabajo</th>
+                                <th>E/S Integradas</th>
+                                <th>Módulos de Expansión (SM)</th>
+                                <th>Puertos PROFINET</th>
+                                <th>Aplicación Típica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CPU 1211C</strong></td>
+                                <td>50 KB</td>
+                                <td>6 DI / 4 DO / 2 AI</td>
+                                <td>0 (No expandible con SM)</td>
+                                <td>1 puerto RJ45</td>
+                                <td>Máquinas compactas y bombeo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CPU 1212C</strong></td>
+                                <td>75 KB</td>
+                                <td>8 DI / 6 DO / 2 AI</td>
+                                <td>Hasta 2 módulos SM</td>
+                                <td>1 puerto RJ45</td>
+                                <td>Bancos de prueba y celdas manuales</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CPU 1214C</strong></td>
+                                <td>100 KB</td>
+                                <td>14 DI / 10 DO / 2 AI</td>
+                                <td>Hasta 8 módulos SM</td>
+                                <td>1 puerto RJ45</td>
+                                <td><strong>El estándar industrial en Ramos Arizpe</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>CPU 1215C</strong></td>
+                                <td>125 KB</td>
+                                <td>14 DI / 10 DO / 2 AI / 2 AO</td>
+                                <td>Hasta 8 módulos SM</td>
+                                <td>2 puertos con switch integrado</td>
+                                <td>Líneas continuas con HMI y servomotores</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CPU 1217C</strong></td>
+                                <td>150 KB</td>
+                                <td>14 DI / 10 DO (con 4 diff 1.5V)</td>
+                                <td>Hasta 8 módulos SM</td>
+                                <td>2 puertos RJ45</td>
+                                <td>Control de movimiento ultra rápido (1 MHz)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Sección 3 -->
+                <h2 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.5rem; margin-top: 40px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    3. ¿Qué significan las siglas: DC/DC/DC vs AC/DC/RLY?
+                </h2>
+                <p>
+                    Al solicitar una cotización o seleccionar una refacción en almacén, verás siempre una nomenclatura de tres términos divididos por diagonales (ej. <em>CPU 1214C DC/DC/DC</em>). Estas siglas corresponden a:
+                </p>
+                <ul style="margin-left: 25px; margin-bottom: 20px;">
+                    <li><strong>Primer término (Alimentación de la CPU):</strong> <code>DC</code> = Requiere fuente conmutada de 24VDC; <code>AC</code> = Se alimenta directamente con 120V a 240VAC.</li>
+                    <li><strong>Segundo término (Entradas Digitales):</strong> Siempre es <code>DC</code> = Opera con sensores industriales PNP o NPN a 24VDC.</li>
+                    <li><strong>Tercer término (Salidas Digitales):</strong> <code>DC</code> = Salidas a transistor de estado sólido (24VDC); <code>RLY</code> = Salidas de contacto seco tipo relé mecánico.</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 8px; font-family: var(--font-heading); font-size: 1.15rem;">⚠️ Regla de Oro para Mantenimiento Eléctrico:</h3>
+                    <p style="font-size: 0.95rem;">
+                        Si requieres controlar un <strong>servomotor con tren de pulsos (PTO) o modulación por ancho de pulso (PWM)</strong>, <strong>debes usar obligatoriamente salidas a transistor (DC/DC/DC)</strong>. Los relés mecánicos de las versiones RLY no pueden conmutar a más de 1 Hz sin destruirse en pocos días.
+                    </p>
+                </div>
+
+                <!-- Sección 4 -->
+                <h2 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.5rem; margin-top: 40px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    4. Programación en Siemens TIA Portal
+                </h2>
+                <p>
+                    Para configurar y programar el S7-1200, la herramienta oficial de Siemens es <strong>TIA Portal (Totally Integrated Automation)</strong>. Los pasos básicos para una puesta en marcha exitosa son:
+                </p>
+
+                <h3 style="color: #fff; font-size: 1.2rem; margin-top: 20px;">A. Detección Online y Asignación de IP</h3>
+                <p>
+                    Conecta un cable Ethernet directo de tu PC a la CPU. En TIA Portal dirígete a <em>"Dispositivos Accesibles"</em>. El software detectará la dirección MAC del equipo sin importar en qué subred esté configurado tu adaptador de red, permitiéndote asignarle una dirección IP fija (ej. <code>192.168.0.1</code>) en segundos.
+                </p>
+
+                <h3 style="color: #fff; font-size: 1.2rem; margin-top: 20px;">B. Lenguajes de Programación Soportados (IEC 61131-3)</h3>
+                <ul style="margin-left: 25px; margin-bottom: 20px;">
+                    <li><strong>LAD (Diagrama de Contactos / Escalera):</strong> El preferido por el 90% de los técnicos en plantas automotrices debido a su similitud con los circuitos eléctricos tradicionales.</li>
+                    <li><strong>FBD (Diagrama de Bloques de Funciones):</strong> Ideal para lógica booleana, comparadores y compuertas lógicas continuas.</li>
+                    <li><strong>SCL (Structured Control Language):</strong> Lenguaje de alto nivel tipo Pascal/C, perfecto para el manejo de recetas, cálculos matemáticos complejos, bucles <code>FOR / WHILE</code> y comunicación con bases de datos SQL o escáneres MES.</li>
+                </ul>
+
+                <h3 style="color: #fff; font-size: 1.2rem; margin-top: 20px;">C. Diagnóstico de LEDs de Estado</h3>
+                <ul style="margin-left: 25px; margin-bottom: 20px;">
+                    <li><strong>RUN/STOP (Verde/Amarillo):</strong> Verde fijo indica ejecución normal; amarillo indica CPU detenida; parpadeo amarillo/verde indica arranque o descarga.</li>
+                    <li><strong>ERROR (Rojo):</strong> Parpadeo indica falla de hardware, módulo desconectado o error de programación en un bloque de organización (OB).</li>
+                    <li><strong>MAINT (Mantenimiento - Amarillo):</strong> Señala advertencias no críticas, como batería baja en módulos RTU o tarjeta SD solicitando atención.</li>
+                </ul>
+
+                <!-- Sección 5 -->
+                <h2 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.5rem; margin-top: 40px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    5. Siemens S7-1200 vs Allen-Bradley CompactLogix en Coahuila
+                </h2>
+                <p>
+                    Ambas marcas dominan el corredor industrial Saltillo - Monterrey. ¿Cuál conviene elegir para un nuevo proyecto?
+                </p>
+                <div style="overflow-x: auto;">
+                    <table class="tech-table">
+                        <thead>
+                            <tr>
+                                <th>Criterio</th>
+                                <th>Siemens S7-1200</th>
+                                <th>Allen-Bradley CompactLogix (5069/1769)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Costo de Hardware</strong></td>
+                                <td>Muy competitivo para celdas pequeñas y medianas.</td>
+                                <td>Costo más elevado, orientado a líneas completas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Software de Programación</strong></td>
+                                <td>TIA Portal (licencia única para PLC + HMI).</td>
+                                <td>Studio 5000 + FactoryTalk View por separado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comunicación Nativa</strong></td>
+                                <td>PROFINET RT / Modbus TCP / OPC UA.</td>
+                                <td>EtherNet/IP CIP nativo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Disponibilidad en Saltillo</strong></td>
+                                <td>Stock inmediato de refacciones locales y reemplazos.</td>
+                                <td>Excelente red de distribución regional.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Bloque de Servicios Robologix -->
+                <div style="background: var(--bg-card); border: 2px solid var(--primary-color); padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 12px;">
+                        ⚡ Soporte Industrial 24/7 y Cursos Prácticos en Saltillo
+                    </h3>
+                    <p style="color: var(--text-light); max-width: 750px; margin: 0 auto 20px auto; font-size: 0.95rem;">
+                        ¿Tienes una celda detenida por falla en un PLC Siemens S7-1200 o requieres capacitar a tus técnicos con constancia oficial <strong>DC-3 ante la STPS</strong>? En <strong>Robologix Automation</strong> contamos con bancos de entrenamiento reales con PLC Siemens S7-1200, pantallas HMI Comfort/Basic y variadores Sinamics G120.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="../programacion-plc-saltillo.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px;">Soporte de PLC en Saltillo</a>
+                        <a href="../curso-plc-saltillo.html" class="btn-whatsapp" style="text-decoration: none; padding: 10px 20px; background: rgba(0,243,255,0.1); border: 1px solid var(--primary-color); color: #fff;">Curso Práctico S7-1200 con DC-3</a>
+                        <a href="../refacciones.html" class="btn-primary" style="text-decoration: none; padding: 10px 20px; border-color: var(--secondary-color); color: #fff;">Cotizar Refacciones Siemens</a>
+                    </div>
+                </div>
+
+                <!-- Preguntas Frecuentes -->
+                <h2 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.5rem; margin-top: 40px; border-left: 4px solid var(--primary-color); padding-left: 12px;">
+                    Preguntas Frecuentes sobre el PLC Siemens S7-1200
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué versión de TIA Portal necesito para programar un S7-1200?</div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        Las versiones más actuales del firmware de las CPUs S7-1200 (firmware v4.5 en adelante) se programan típicamente con TIA Portal v16, v17, v18 o v19. Con la versión básica "TIA Portal Basic" es suficiente para programar cualquier CPU S7-1200 y pantallas Basic Panel.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">¿Se requiere tarjeta de memoria Memory Card (SMC)?</div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        No es estrictamente requerida para arrancar el PLC, ya que cuenta con memoria integrada. Sin embargo, en la industria de Coahuila se recomienda utilizarla para respaldo automático, permitiendo que el personal de mantenimiento reemplace una CPU averiada sin necesidad de conectar una laptop con TIA Portal.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">¿Dónde capacitarse en Saltillo con certificación con validez curricular?</div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        Robologix Automation imparte el curso presencial intensivo de PLC Siemens S7-1200 y TIA Portal en Saltillo, con constancia oficial de habilidades laborales Formato DC-3 ante la Secretaría del Trabajo y Previsión Social (STPS).
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Call to action WhatsApp -->
+            <section style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(0,243,255,0.05); border-radius: 12px; border: 1px solid rgba(0,243,255,0.2);">
+                <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 10px;">¿Necesitas asesoría técnica, refacciones o capacitación en S7-1200?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Contacta directamente con nuestros especialistas de Robologix Automation en Saltillo.</p>
+                <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20le%C3%AD%20la%20gu%C3%ADa%20del%20PLC%20Siemens%20S7-1200%20y%20me%20gustar%C3%ADa%20cotizar%20soporte%2C%20refacciones%20o%20el%20curso%20con%20DC-3." target="_blank" class="btn-whatsapp" style="text-decoration: none; padding: 14px 28px; display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
+                    <i class="fab fa-whatsapp" style="font-size: 1.2rem; margin-right: 8px;"></i> Contactar por WhatsApp (+52 844 455 1869)
+                </a>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container" style="max-width: 1400px; margin: 0 auto; padding: 3rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; border-top: 1px solid #222;">
+            <div class="footer-col">
+                <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem;">ROBOLOGIX <span class="highlight">AUTOMATION</span></h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Especialistas en programación de PLC Siemens y Allen-Bradley, integración robótica FANUC y ABB, y capacitación industrial con certificación DC-3 en Coahuila.</p>
+            </div>
+            <div class="footer-col">
+                <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem;">Navegación</h3>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 8px;"><a href="../index.html" style="color: var(--text-muted); text-decoration: none;">Inicio</a></li>
+                    <li style="margin-bottom: 8px;"><a href="../programacion-plc-saltillo.html" style="color: var(--text-muted); text-decoration: none;">Programación PLC</a></li>
+                    <li style="margin-bottom: 8px;"><a href="../curso-plc-saltillo.html" style="color: var(--text-muted); text-decoration: none;">Curso PLC Saltillo</a></li>
+                    <li style="margin-bottom: 8px;"><a href="../refacciones.html" style="color: var(--text-muted); text-decoration: none;">Catálogo de Refacciones</a></li>
+                    <li style="margin-bottom: 8px;"><a href="index.html" style="color: var(--text-muted); text-decoration: none;">Artículos Técnicos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem;">Contacto</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;"><i class="fas fa-map-marker-alt"></i> Saltillo, Ramos Arizpe, Coahuila</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;"><i class="fas fa-phone"></i> +52 844 455 1869</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-envelope"></i> ventas@rbl-automation.com</p>
+            </div>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; border-top: 1px solid #1a1a1a; font-size: 0.85rem; color: var(--text-muted);">
+            <p>&copy; 2026 Robologix Automation S.A. de C.V. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+
+</html>

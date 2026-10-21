@@ -171,6 +171,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://rbl-automation.com/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://rbl-automation.com/articulos/plc-siemens-guia-completa-saltillo-coahuila</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
