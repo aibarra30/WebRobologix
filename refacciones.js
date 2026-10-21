@@ -971,6 +971,13 @@ function setupEventListeners() {
   }
 }
 
+// Generador de slugs canónicos para fichas de refacciones
+function slugProducto(item) {
+  const marca = item.marca || '';
+  const sku = item.sku || '';
+  return `${marca}-${sku}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
 // Renderizar Productos
 function renderProducts() {
   if (!productsGrid) return;
@@ -1015,16 +1022,21 @@ function renderProducts() {
         badgeClass = 'badge-obsoleto';
       }
 
+      const slug = slugProducto(item);
       return `
       <article class="product-card">
-        <div class="product-img-wrapper">
-          <img src="${item.imagen}" alt="${item.nombre}" class="product-img" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=600&auto=format&fit=crop&q=80'">
-          <span class="product-brand-tag">${item.marca}</span>
-          <span class="product-badge-condition ${badgeClass}">${item.condicion}</span>
-        </div>
+        <a href="/refacciones/${slug}" style="text-decoration: none; color: inherit; display: block;">
+          <div class="product-img-wrapper">
+            <img src="${item.imagen}" alt="${item.nombre}" class="product-img" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=600&auto=format&fit=crop&q=80'">
+            <span class="product-brand-tag">${item.marca}</span>
+            <span class="product-badge-condition ${badgeClass}">${item.condicion}</span>
+          </div>
+        </a>
         <div class="product-body">
           <span class="product-sku">N/P: ${item.sku}</span>
-          <h3 class="product-title">${item.nombre}</h3>
+          <a href="/refacciones/${slug}" style="text-decoration: none; color: inherit; display: block;">
+            <h3 class="product-title">${item.nombre}</h3>
+          </a>
           <p class="product-desc">${item.descripcion}</p>
           
           <div class="product-meta">
