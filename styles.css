@@ -230,7 +230,7 @@ header {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 2px;
 }
 
@@ -249,7 +249,7 @@ header {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 2px;
     display: flex;
     align-items: center;
@@ -375,7 +375,7 @@ header {
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -637,7 +637,7 @@ header {
     padding: 0.5rem 0.8rem;
     border-radius: 4px;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-btn.linkedin { background-color: #0077b5; }
@@ -802,7 +802,7 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -865,7 +865,7 @@ header {
     padding: 0.7rem 1.4rem;
     border-radius: 4px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -1077,7 +1077,7 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .seo-tag i {
@@ -1349,7 +1349,7 @@ footer p {
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-link-btn:hover {
@@ -1461,7 +1461,7 @@ footer p {
     border: 1px solid #2a2a2a;
     border-radius: 8px;
     padding: 2.2rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -1542,7 +1542,7 @@ footer p {
     border: 1px solid #262626;
     border-radius: 8px;
     padding: 2rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item-box:hover {
@@ -2029,7 +2029,7 @@ footer p {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #integradora-saltillo li:hover {
@@ -2052,7 +2052,7 @@ footer p {
 
 /* Chat Flotante Robologix Automation */
 #rbl-chat-widget { position: fixed; bottom: 25px; right: 25px; z-index: 999999; font-family: sans-serif; }
-.rbl-chat-button { background: linear-gradient(135deg, #00E5FF, #0088FF); color: #0B132B; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0, 229, 255, 0.4); cursor: pointer; border: 2px solid #00E5FF; transition: all 0.3s; }
+.rbl-chat-button { background: linear-gradient(135deg, #00E5FF, #0088FF); color: #0B132B; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0, 229, 255, 0.4); cursor: pointer; border: 2px solid #00E5FF; transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
 .rbl-chat-button:hover { transform: scale(1.1); }
 .rbl-chat-badge { position: absolute; top: -2px; right: -2px; background-color: #FFB703; color: #0B132B; font-size: 11px; font-weight: 800; padding: 3px 7px; border-radius: 10px; }
 .rbl-chat-modal { display: none; position: fixed; bottom: 100px; right: 25px; width: 350px; background-color: #0B132B; border: 2px solid #00E5FF; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); overflow: hidden; z-index: 999999; }
@@ -2091,7 +2091,7 @@ header.header-scrolled { background-color: rgba(10, 10, 10, 0.98) !important; bo
     height: 3px !important;
     background-color: #ffffff !important;
     border-radius: 2px !important;
-    transition: all 0.3s ease !important;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     margin: 0 !important;
     display: block !important;
 }

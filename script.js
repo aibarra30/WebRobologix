@@ -88,8 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sticky Navbar con toggle class para eliminar forced reflow
     const header = document.querySelector('header');
     if (header) {
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            header.classList.toggle('header-scrolled', window.scrollY > 50);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    header.classList.toggle('header-scrolled', window.scrollY > 50);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         }, { passive: true });
     }
 
