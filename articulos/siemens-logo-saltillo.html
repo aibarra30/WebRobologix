@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siemens LOGO! y Cuándo Migrar a S7-1200 | Robologix</title>
+    <meta name="description" content="Guía técnica sobre Siemens LOGO! en Saltillo: capacidades, microautomatización y criterios clave para migrar a PLC S7-1200 en TIA Portal. Asesoría técnica.">
+    <meta name="author" content="Robologix Automation" />
+    <link rel="canonical" href="https://rbl-automation.com/articulos/siemens-logo-saltillo" />
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="Siemens LOGO! y Cuándo Migrar a S7-1200 | Robologix">
+    <meta property="og:description" content="Guía técnica sobre Siemens LOGO! en Saltillo: capacidades, microautomatización y criterios clave para migrar a PLC S7-1200 en TIA Portal. Asesoría técnica.">
+    <meta property="og:url" content="https://rbl-automation.com/articulos/siemens-logo-saltillo">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://rbl-automation.com/assets/og-robologix-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Robologix Automation, ingeniería de automatización industrial en Saltillo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Siemens LOGO! y Cuándo Migrar a S7-1200 | Robologix">
+    <meta name="twitter:description" content="Guía técnica sobre Siemens LOGO! en Saltillo: capacidades, microautomatización y criterios clave para migrar a PLC S7-1200 en TIA Portal. Asesoría técnica.">
+    <meta name="twitter:image" content="https://rbl-automation.com/assets/og-robologix-1200x630.jpg">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://rbl-automation.com/#organization",
+      "name": "Robologix Automation",
+      "url": "https://rbl-automation.com/",
+      "telephone": "+528444551869",
+      "email": "aibarra.cepeda@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Saltillo",
+        "addressRegion": "Coahuila",
+        "addressCountry": "MX"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://rbl-automation.com/articulos/siemens-logo-saltillo#main",
+      "name": "Siemens LOGO! y Cuándo Migrar a S7-1200 | Robologix",
+      "headline": "Siemens LOGO!: Capacidades y Cuándo Migrar a S7-1200",
+      "description": "Guía técnica sobre Siemens LOGO! en Saltillo: capacidades, microautomatización y criterios clave para migrar a PLC S7-1200 en TIA Portal. Asesoría técnica.",
+      "provider": {
+        "@id": "https://rbl-automation.com/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Aaron Ibarra Cepeda",
+        "url": "https://www.linkedin.com/in/aaron-ibarra-cepeda/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rbl-automation.com/articulos/siemens-logo-saltillo#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://rbl-automation.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Siemens LOGO!: Capacidades y Cuándo Migrar a S7-1200",
+          "item": "https://rbl-automation.com/articulos/siemens-logo-saltillo"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rbl-automation.com/articulos/siemens-logo-saltillo#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son las principales limitaciones de un Siemens LOGO! frente a un S7-1200?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El LOGO! tiene límite en cantidad de bloques de función (máximo 400), no maneja control de movimiento sincronizado con servomotores, su soporte para redes complejas es limitado y no cuenta con la potencia de TIA Portal para diagnósticos estructurados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede conectar un LOGO! a un PLC S7-1200 o a una pantalla HMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, a través del protocolo S7 Ethernet o Modbus TCP, un LOGO! 8 puede intercambiar variables con un S7-1200 o conectarse a pantallas Siemens Simatic Basic Panel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo es estrictamente necesario migrar a S7-1200?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuando se requiere control de ejes servo, manejo de más de 4 lazos PID analógicos, recetas de producto dinámicas, integración en red PROFINET RT/IRT o cumplimiento con estándares corporativos de planta automotriz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Robologix Automation realiza la conversión de programas LOGO! a TIA Portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, analizamos los diagramas de bloques FBD en LOGO! Soft Comfort y rediseñamos la arquitectura en TIA Portal aprovechando funciones estructuradas, arrays y tipos de datos de usuario."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.min.css">
+    <link rel="stylesheet" href="/fa-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="/" style="text-decoration:none; color:inherit;">ROBOLOGIX <span class="highlight">AUTOMATION</span></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/automatizacion-industrial-saltillo">Automatización</a></li>
+                <li><a href="/programacion-plc-saltillo">Programación PLC</a></li>
+                <li><a href="/integracion-celdas-roboticas-saltillo">Robótica Industrial</a></li>
+                <li><a href="/cursos-de-plc-y-robotica-en-saltillo">Cursos DC-3</a></li>
+                <li><a href="/refacciones">Refacciones</a></li>
+                <li><a href="/podcast-y-articulos">Podcast &amp; Artículos</a></li>
+                <li><a href="#contact" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-plc">
+            <div class="hero-plc-overlay"></div>
+            <div class="hero-plc-container">
+                <span class="badge" style="display:inline-block; padding:0.4rem 1rem; background:rgba(0,243,255,0.1); border:1px solid var(--primary-color); color:var(--primary-color); border-radius:4px; font-family:var(--font-heading); font-size:0.85rem; font-weight:700; margin-bottom:1rem; letter-spacing:1px; text-transform:uppercase;">Artículo Técnico · Microautomatización</span>
+                <h1>Siemens LOGO!: Capacidades y Cuándo Migrar a S7-1200</h1>
+                <p class="hero-lead">Análisis de arquitectura del microcontrolador Siemens LOGO! 8, sus aplicaciones industriales recomendadas y los 5 puntos de quiebre donde se debe dar el salto a un PLC modular S7-1200.</p>
+                <div class="hero-cta-group">
+                    <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20solicito%20soporte%20y%20cotizaci%C3%B3n%20para%20Siemens%20LOGO!%20&%20S7-1200." class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contactar a un Ingeniero (+52 844 455 1869)</a>
+                    <a href="#servicios" class="btn-primary">Ver Capacidades de Ingeniería</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido Técnico Principal -->
+        <section class="section-container" style="padding: 4rem 5%; max-width: 1200px; margin: 0 auto;">
+            <div style="background: var(--bg-card); border: 1px solid rgba(0,243,255,0.2); border-radius: 8px; padding: 2.5rem; margin-bottom: 3.5rem;">
+                <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.7rem; margin-bottom: 1.2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                    Ingeniería Especializada en Siemens LOGO! & S7-1200
+                </h2>
+                <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.2rem;">
+                    El <strong>Siemens LOGO!</strong> (actualmente en su generación LOGO! 8 con soporte web server integrado y comunicación Ethernet) es uno de los módulos lógicos programables más populares del mundo. En la industria de Saltillo y Ramos Arizpe es habitual encontrarlo gobernando bombas dosificadoras, sistemas de extracción de humos, hornos de precalentamiento, transportadores sencillos y pequeñas celdas de prueba semiautomáticas.
+                </p>
+                <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                    Sin embargo, muchos proyectos industriales inician con un LOGO! por economía y, con el tiempo, las demandas de comunicación industrial, manejo de recetas complejas, integración de servomotores y trazabilidad terminan saturando el hardware. En esta guía técnica explicamos las capacidades reales del LOGO! y los criterios de ingeniería para determinar cuándo es momento de migrar a un <strong>PLC Siemens SIMATIC S7-1200</strong> programado en TIA Portal.
+                </p>
+            </div>
+
+            <!-- Capacidades y Servicios -->
+            <div id="servicios" style="margin-bottom: 4rem;">
+                <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.8rem; margin-bottom: 1.8rem; text-align: center;">
+                    Alcance de Servicios en Siemens LOGO! & S7-1200
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem;">
+                    
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.8rem; transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Programación de PLC Siemens S7-1200 en TIA Portal</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.2rem;">Diseño de arquitecturas modulares con bloques de función optimizados, alarmas y comunicación PROFINET nativa.</p>
+                        <a href="/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal" style="color: var(--primary-color); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Más información &rarr;</a>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.8rem; transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Guía Completa de PLCs Siemens en Coahuila</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.2rem;">Comparativa profunda entre arquitecturas S7-1200 y S7-1500 para plantas industriales.</p>
+                        <a href="/articulos/plc-siemens-guia-completa-saltillo-coahuila" style="color: var(--primary-color); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Más información &rarr;</a>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.8rem; transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Programación y Migración de Controladores</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.2rem;">Servicio llave en mano de reprogramación, modernización de cableado y reemplazo de microcontroladores por PLCs industriales.</p>
+                        <a href="/programacion-plc-saltillo" style="color: var(--primary-color); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Más información &rarr;</a>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.8rem; transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Refacciones y Módulos de PLC Siemens</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.2rem;">Disponibilidad de controladores y accesorios para entrega en Saltillo y la región.</p>
+                        <a href="/refacciones" style="color: var(--primary-color); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Más información &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque D: Aplicaciones Típicas -->
+            <!-- PENDIENTE: casos reales con permiso de Aaron -->
+            <div style="margin-bottom: 4rem;">
+                <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.8rem; margin-bottom: 0.8rem; border-left: 4px solid var(--secondary-color); padding-left: 1rem;">
+                    Aplicaciones Típicas que Atendemos
+                </h2>
+                <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 2rem;">
+                    Escenarios comunes de ingeniería y optimización en planta implementados bajo estándares internacionales:
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+                    <div style="background: var(--bg-card); border-left: 4px solid var(--primary-color); border-top: 1px solid #222; border-right: 1px solid #222; border-bottom: 1px solid #222; border-radius: 0 8px 8px 0; padding: 1.8rem;">
+                        <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.2rem; margin-bottom: 0.6rem;">Migración de módulo lógico en máquina de corte y formado</h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.6rem;">
+                            <strong>Situación:</strong> Máquina de formado con Siemens LOGO! saturado en memoria de bloques lógicos, sin capacidad para añadir control de temperatura multizona ni pantalla HMI táctil.
+                        </p>
+                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.6rem;">
+                            <strong>Solución técnica:</strong> Sustitución por PLC Siemens SIMATIC S7-1200 (CPU 1214C) con módulos analógicos RTD Pt100 y pantalla HMI KTP700 Basic conectada por PROFINET en TIA Portal.
+                        </p>
+                        <p style="color: var(--primary-color); font-size: 0.9rem; font-weight: 700;">
+                            Beneficio esperado: Control PID de temperatura preciso, visualización gráfica de alarmas, almacenamiento de recetas de producción y capacidad de expansión para módulos de pesaje.
+                        </p>
+                    </div>
+
+                    <div style="background: var(--bg-card); border-left: 4px solid var(--secondary-color); border-top: 1px solid #222; border-right: 1px solid #222; border-bottom: 1px solid #222; border-radius: 0 8px 8px 0; padding: 1.8rem;">
+                        <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.2rem; margin-bottom: 0.6rem;">Enlace de estaciones auxiliares hacia red SCADA de planta</h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.6rem;">
+                            <strong>Situación:</strong> Células de desengrase y lavado independientes con microcontroladores sin comunicación, impidiendo centralizar alarmas en el cuarto de control de planta.
+                        </p>
+                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.6rem;">
+                            <strong>Solución técnica:</strong> Migración hacia PLC S7-1200 con servidor OPC UA integrado para enlace transparente con el sistema SCADA y reporte automático de fallas y consumo hídrico.
+                        </p>
+                        <p style="color: var(--secondary-color); font-size: 0.9rem; font-weight: 700;">
+                            Beneficio esperado: Monitoreo centralizado 24/7, eliminación de inspecciones manuales periódicas y registro histórico de variables de proceso para auditorías ambientales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Componentes y Refacciones Relacionadas -->
+            <div style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 2.5rem; margin-bottom: 4rem;">
+                <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.5rem; margin-bottom: 1rem;">
+                    Enlaces a Fichas de Refacciones y Servicios Relacionados
+                </h2>
+                <ul style="color: var(--text-light); line-height: 1.9; font-size: 0.95rem; padding-left: 1.5rem;">
+                    <li><a href="/refacciones/siemens-6es7515-2am02-0ab0" style="color: var(--primary-color); text-decoration: underline;">CPU Siemens S7-1500 6ES7515-2AM02-0AB0</a></li><li><a href="/refacciones/siemens-6av2102-0aa02-5ah5" style="color: var(--primary-color); text-decoration: underline;">Licencia TIA Portal WinCC 6AV2102-0AA02-5AH5</a></li><li><a href="/refacciones/siemens-1fk7105-5af71-1th0" style="color: var(--primary-color); text-decoration: underline;">Servomotor Siemens 1FK7105-5AF71-1TH0</a></li><li><a href="/refacciones" style="color: var(--primary-color); text-decoration: underline;">Ver Catálogo de Refacciones Industriales</a></li>
+                </ul>
+            </div>
+
+            <!-- FAQs -->
+            <div style="margin-bottom: 4rem;">
+                <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">
+                    Preguntas Frecuentes sobre Siemens LOGO! & S7-1200
+                </h2>
+                <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem;">
+                    
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.5rem;">
+                        <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.6rem; font-family: var(--font-heading);">¿Cuáles son las principales limitaciones de un Siemens LOGO! frente a un S7-1200?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">El LOGO! tiene límite en cantidad de bloques de función (máximo 400), no maneja control de movimiento sincronizado con servomotores, su soporte para redes complejas es limitado y no cuenta con la potencia de TIA Portal para diagnósticos estructurados.</p>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.5rem;">
+                        <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.6rem; font-family: var(--font-heading);">¿Se puede conectar un LOGO! a un PLC S7-1200 o a una pantalla HMI?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">Sí, a través del protocolo S7 Ethernet o Modbus TCP, un LOGO! 8 puede intercambiar variables con un S7-1200 o conectarse a pantallas Siemens Simatic Basic Panel.</p>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.5rem;">
+                        <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.6rem; font-family: var(--font-heading);">¿Cuándo es estrictamente necesario migrar a S7-1200?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">Cuando se requiere control de ejes servo, manejo de más de 4 lazos PID analógicos, recetas de producto dinámicas, integración en red PROFINET RT/IRT o cumplimiento con estándares corporativos de planta automotriz.</p>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid #222; border-radius: 8px; padding: 1.5rem;">
+                        <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.6rem; font-family: var(--font-heading);">¿Robologix Automation realiza la conversión de programas LOGO! a TIA Portal?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">Sí, analizamos los diagramas de bloques FBD en LOGO! Soft Comfort y rediseñamos la arquitectura en TIA Portal aprovechando funciones estructuradas, arrays y tipos de datos de usuario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div id="contact" style="background: linear-gradient(135deg, rgba(0,243,255,0.08), rgba(255,102,0,0.08)); border: 1px solid rgba(0,243,255,0.3); border-radius: 8px; padding: 3rem 2rem; text-align: center;">
+                <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.9rem; margin-bottom: 0.8rem;">Soporte Técnico en Siemens LOGO! & S7-1200 en Saltillo</h2>
+                <p style="color: var(--text-light); max-width: 750px; margin: 0 auto 2rem auto; font-size: 1.05rem; line-height: 1.7;">
+                    Comunícate con nuestros ingenieros para cotizar proyectos, soporte correctivo a paros de línea o suministro de componentes industriales en Coahuila y Nuevo León.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://wa.me/528444551869?text=Hola%20Robologix%2C%20necesito%20soporte%20en%20planta%20para%20Siemens%20LOGO!%20&%20S7-1200." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="padding: 0.9rem 2rem; font-size: 1rem;"><i class="fab fa-whatsapp"></i> Hablar por WhatsApp (+52 844 455 1869)</a>
+                    <a href="mailto:aibarra.cepeda@gmail.com?subject=Consulta%20Tecnica%20Siemens%20LOGO!%20&%20S7-1200" class="btn-primary" style="padding: 0.9rem 2rem; font-size: 1rem;"><i class="fas fa-envelope"></i> Enviar Correo a Ingeniería</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links" style="margin-bottom: 1.2rem; font-family: var(--font-heading); font-size: 0.88rem; display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+                <a href="/" style="color: var(--text-light); text-decoration: none;">Inicio</a>
+                <a href="/automatizacion-industrial-saltillo" style="color: var(--text-light); text-decoration: none;">Automatización en Saltillo</a>
+                <a href="/programacion-plc-saltillo" style="color: var(--text-light); text-decoration: none;">Programación PLC</a>
+                <a href="/integracion-celdas-roboticas-saltillo" style="color: var(--text-light); text-decoration: none;">Robótica Industrial</a>
+                <a href="/cursos-de-plc-y-robotica-en-saltillo" style="color: var(--text-light); text-decoration: none;">Cursos DC-3</a>
+                <a href="/refacciones" style="color: var(--text-light); text-decoration: none;">Refacciones</a>
+                <a href="/podcast-y-articulos" style="color: var(--text-light); text-decoration: none;">Podcast &amp; Artículos</a>
+                <a href="#contact" style="color: var(--text-light); text-decoration: none;">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/aaron-ibarra-cepeda/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@roboticayplc" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@plcyrobotica" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Robologix-Automation/61581206799041/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p style="color: #cbd5e1; font-size: 0.9rem;">&copy; 2026 Robologix Automation. Todos los derechos reservados. | <a href="/automatizacion-industrial-saltillo" style="color: #00f3ff; text-decoration: underline;">Automatización Industrial en Saltillo y Ramos Arizpe</a></p>
+        </div>
+    </footer>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>

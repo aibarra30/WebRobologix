@@ -25,3 +25,14 @@
 - [Podcast en Spotify](https://open.spotify.com/show/3FbBZMjz9CfaeZgxeEuCiC)
 
 - [Automatización Industrial en Saltillo](https://rbl-automation.com/automatizacion-industrial-saltillo): Integración de celdas robóticas, programación de PLC Siemens y Allen-Bradley, retrofit y tableros UL508A en Saltillo y Ramos Arizpe.
+
+- [Allen-Bradley Rockwell en Saltillo](https://rbl-automation.com/allen-bradley-rockwell-saltillo): Programación Studio 5000, migración SLC 500 a CompactLogix y soporte 24/7.
+- [Robots FANUC en Saltillo](https://rbl-automation.com/robots-fanuc-saltillo): Integración de celdas de soldadura y paletizado, programación Teach Pendant y refacciones.
+- [Variadores de Frecuencia en Saltillo](https://rbl-automation.com/variadores-de-frecuencia-saltillo): Selección, parametrización y soporte para PowerFlex, SINAMICS, Yaskawa y Delta.
+- [Siemens LOGO! y Migración a S7-1200](https://rbl-automation.com/articulos/siemens-logo-saltillo): Análisis técnico de microautomatización y migración a TIA Portal.
+- [Servomotores y Drives en Saltillo](https://rbl-automation.com/reparacion-servomotores-drives-saltillo): Diagnóstico, calibración de encoders y soporte para Kinetix, SINAMICS y FANUC.
+- [Yaskawa en Saltillo](https://rbl-automation.com/yaskawa-saltillo): Programación de robots Motoman en lenguaje INFORM, variadores GA500/GA700 y servos Sigma.
+- [Turck en Saltillo](https://rbl-automation.com/turck-saltillo): Integración de bloques de E/S descentralizados IP67 TBEN, maestros IO-Link y sensores robustos.
+- [Robots KUKA en Saltillo](https://rbl-automation.com/kuka-robots-saltillo): Programación KRL, proyectos WorkVisual, SafeOperation y soporte a controladores KRC4/KRC5.
+- [PLC Omron en Saltillo](https://rbl-automation.com/plc-omron-saltillo): Automatización con Sysmac Studio, series NX/NJ, redes EtherCAT y soporte a paros.
+- [PLC y Variadores Delta en Saltillo](https://rbl-automation.com/plc-delta-saltillo): Programación de series DVP y AS, pantallas HMI DOP y variadores MS300.
