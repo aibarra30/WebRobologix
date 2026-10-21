@@ -16,29 +16,88 @@
     <!-- TODO: imagen de marca 1200x630 -->
     <meta property="og:image" content="https://rbl-automation.com/assets/hero-bg.webp" />
 
-    <!-- Schema.org TechArticle Markup -->
+        <!-- Schema.org TechArticle & FAQPage Markup -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Qué es un PLC Controlador Lógico Programable | Robologix",
-  "description": "Aprende qué es un PLC (Controlador Lógico Programable), cómo funciona su ciclo de escaneo, arquitecturas de hardware y lenguajes IEC 61131-3.",
-  "author": {
-    "@type": "Organization",
-    "name": "Robologix Automation",
-    "url": "https://rbl-automation.com/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Robologix Automation",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://rbl-automation.com/assets/hero-bg.webp"
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "Qué es un PLC Controlador Lógico Programable | Robologix",
+          "description": "Aprende qué es un PLC (Controlador Lógico Programable), cómo funciona su ciclo de escaneo, arquitecturas de hardware y lenguajes IEC 61131-3.",
+          "author": {
+            "@type": "Person",
+            "name": "Aaron Ibarra Cepeda",
+            "url": "https://www.linkedin.com/in/aaron-ibarra-cepeda/",
+            "jobTitle": "Ingeniero Especialista en Automatización y PLC"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Robologix Automation",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://rbl-automation.com/assets/og-robologix-1200x630.jpg"
+            }
+          },
+          "datePublished": "2026-09-11",
+          "dateModified": "2026-10-21",
+          "inLanguage": "es-MX"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rbl-automation.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://rbl-automation.com/articulos/" },
+            { "@type": "ListItem", "position": 3, "name": "¿Qué es un PLC?", "item": "https://rbl-automation.com/articulos/que-es-un-plc-controlador-logico-programable-guia" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuál es el significado de PLC y su definición formal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PLC significa Programmable Logic Controller (Controlador Lógico Programable). Es una computadora industrial diseñada para controlar procesos de manufactura, maquinaria y celdas robóticas en tiempo real."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la función principal de un PLC en una fábrica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Su función primordial es monitorear sensores de entrada, procesar una lógica de control programada y accionar salidas (motores, válvulas, pistones) de manera ininterrumpida y segura."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo funciona el ciclo de escaneo de un PLC?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Opera en cuatro fases continuas: lectura de entradas físicas, ejecución del código de programa del usuario, actualización de salidas físicas y autodiagnóstico de red."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué diferencia existe entre un PLC y una computadora normal (PC)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El PLC está blindado contra ruido eléctrico, temperatura y vibración, arranca al instante y ejecuta su ciclo de control de forma determinista en milisegundos sin depender de sistemas operativos comerciales."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Dónde capacitarse en programación de PLC en Saltillo y Ramos Arizpe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Robologix Automation imparte cursos prácticos presenciales e in-company en Allen-Bradley Studio 5000 y Siemens TIA Portal con entrega de constancia oficial STPS DC-3."
+              }
+            }
+          ]
+        }
+      ]
     }
-  },
-  "datePublished": "2026-09-11",
-  "inLanguage": "es"
-}
     </script>
 
 <noscript></noscript>
@@ -112,148 +171,270 @@
         <section style="padding: 3rem 5%; background-color: var(--bg-dark);">
             <article class="technical-post"
                 style="max-width: 850px; margin: 0 auto; padding: 2.5rem; background: var(--bg-card); border: 1px solid #282828; border-radius: 10px; line-height: 1.7; color: var(--text-light); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                
+                <nav class="breadcrumb" aria-label="Breadcrumb" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+                    <a href="/" style="color: var(--primary-color); text-decoration: none;">Inicio</a> &gt;
+                    <a href="/articulos/" style="color: var(--primary-color); text-decoration: none;">Artículos</a> &gt;
+                    <span>¿Qué es un PLC?</span>
+                </nav>
+
                 <span style="color: var(--primary-color); font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">FUNDAMENTOS DE AUTOMATIZACIÓN INDUSTRIAL</span>
+                
                 <h1 style="color: #fff; font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin: 0.8rem 0 1rem 0;">
-                    ¿Qué es un PLC? Guía Completa de Controladores Lógicos Programables en la Industria
+                    ¿Qué es un PLC? Guía Completa sobre el Controlador Lógico Programable en la Industria
                 </h1>
+                
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #222; padding-bottom: 1rem;">
-                    Basado en estándares industriales y mejores prácticas de ingeniería | Robologix Automation
+                    Por <a href="https://www.linkedin.com/in/aaron-ibarra-cepeda/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">Aaron Ibarra Cepeda</a> · Actualizado: 2026-10-21 | Robologix Automation
                 </p>
 
-                <!-- Resumen destacado para AI Overview -->
+                <!-- Resumen destacado para AI Overview / Featured Snippet -->
                 <div style="background: rgba(0, 243, 255, 0.05); border-left: 4px solid var(--primary-color); padding: 1.4rem; margin: 1.8rem 0; border-radius: 6px; border-top: 1px solid #222; border-right: 1px solid #222; border-bottom: 1px solid #222;">
-                    <p style="margin: 0; font-weight: 700; color: var(--primary-color); font-family: var(--font-heading);">Resumen de Ingeniería:</p>
-                    <p style="margin: 0.6rem 0 0 0; font-size: 0.98rem; color: var(--text-light); line-height: 1.6;">
-                        Un <strong>Controlador Lógico Programable (PLC)</strong> es una computadora industrial reforzada diseñada para controlar de forma autónoma y en tiempo real procesos electromecánicos, celdas robóticas y líneas de manufactura. Funciona ejecutando un ciclo continuo de escaneo (Scan Cycle): lectura de sensores de entrada, ejecución de la lógica programada, actualización de actuadores de salida y autodiagnóstico de red. Soporta lenguajes estandarizados (IEC 61131-3) y actúa como el núcleo de enlace entre el nivel de campo, sistemas HMI/SCADA y plataformas IIoT.
+                    <p style="margin: 0; font-weight: 700; color: var(--primary-color); font-family: var(--font-heading);">Definición de PLC en una frase:</p>
+                    <p style="margin: 0.6rem 0 0 0; font-size: 1rem; color: var(--text-light); line-height: 1.6;">
+                        Un <strong>Controlador Lógico Programable (PLC)</strong> es una computadora industrial reforzada diseñada específicamente para monitorear sensores, ejecutar programas lógicos de decisión y gobernar actuadores y maquinaria en tiempo real bajo condiciones industriales exigentes.
                     </p>
                 </div>
 
-                <img width="1024" height="1024" loading="lazy" decoding="async" src="../assets/que-es-un-plc-guia-completa.webp" alt="Qué es un PLC Controlador Lógico Programable Guía Completa" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
+                <img width="1024" height="1024" loading="lazy" decoding="async" src="/assets/que-es-un-plc-guia-completa.webp" alt="Qué es un PLC Controlador Lógico Programable Guía Completa" style="width: 100%; border-radius: 12px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.2);">
 
-                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">1. Definición y Propósito de un PLC</h2>
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    1. PLC Significado y Definición de PLC
+                </h2>
                 <p style="margin-bottom: 1.5rem;">
-                    Antes de la invención del PLC a finales de la década de 1960 por Richard Morley, el control industrial dependía de gigantescos tableros repletos de relés electromecánicos, temporizadores físicos y contadores cableados punto a punto. Modificar una secuencia de producción requería días o semanas de recableado manual.
+                    El acrónimo <strong>PLC</strong> proviene del término en inglés <em>Programmable Logic Controller</em>, traducido al español como <strong>Controlador Lógico Programable</strong>. Se trata del cerebro operativo de casi cualquier línea de manufactura moderna en plantas de Saltillo, Ramos Arizpe y Derramadero.
                 </p>
                 <p style="margin-bottom: 1.5rem;">
-                    El PLC reemplazó esta lógica cableada por <strong>lógica programada por software</strong> dentro de un equipo capaz de tolerar las condiciones más severas del entorno industrial: interferencia electromagnética (EMI), vibraciones intensas, humedad, polvo y variaciones extremas de temperatura.
+                    Antes de la creación del PLC en 1968 por Richard Morley, el control de las fábricas se realizaba mediante tableros repletos de cientos de relés electromecánicos cableados a mano. Cada cambio de modelo en una línea automotriz demandaba días o semanas de trabajo físico. El PLC sustituyó todo ese cableado por <strong>lógica de software modificable</strong>, permitiendo adaptar procesos en cuestión de minutos.
                 </p>
 
-                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">2. Arquitectura de Hardware de un PLC</h2>
-                <p style="margin-bottom: 1.2rem;">Un sistema de PLC típico se compone de cinco partes fundamentales:</p>
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    2. ¿Cuál es la Función Principal de un PLC?
+                </h2>
+                <p style="margin-bottom: 1.2rem;">
+                    La función primordial de un controlador lógico programable consiste en <strong>automatizar secuencias de trabajo sin intervención humana constante</strong>, garantizando seguridad, repetibilidad y alta velocidad. Entre sus tareas esenciales destacan:
+                </p>
                 <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Unidad Central de Procesamiento (CPU):</strong> El microprocesador ejecutor que procesa las instrucciones del programa, gestiona la memoria RAM/NVRAM y coordina las comunicaciones.
+                        <strong>Control Secuencial y Lógico:</strong> Coordinar el arranque ordenado de bandas transportadoras, prensas, hornos y brazos robóticos.
                     </li>
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Módulos de Entradas (Input Modules):</strong> Reciben señales digitales (24VDC, 120VAC) o analógicas (4-20 mA, 0-10V, sensores RTD/Termopar) desde elementos de campo como fotoceldas, encoders, finales de carrera y transmisores de presión.
+                        <strong>Monitoreo de Seguridad de Maquinaria:</strong> Procesar paros de emergencia, cortinas de luz y enclavamientos de seguridad en tiempo real.
                     </li>
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Módulos de Salidas (Output Modules):</strong> Envían órdenes de actuación a electroválvulas neumáticas, contactores de motores, arrancadores suaves, variadores de frecuencia (VFD) y lámparas indicadoras.
+                        <strong>Control de Variables Analógicas (Lazos PID):</strong> Regular con precisión temperatura, presión, caudal y velocidad de servomotores.
                     </li>
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Fuente de Alimentación (Power Supply):</strong> Convierte el voltaje de línea comercial (120/240 VAC) a los voltajes de corriente directa (generalmente 24 VDC y 5 VDC) requeridos para el bus del PLC y la electrónica sensible.
-                    </li>
-                    <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Chasis, Bastidor o Riel DIN:</strong> La estructura física que aloja los módulos y proporciona el bus de fondo (backplane) para transferencia de datos ultra rápida entre la CPU y los módulos I/O.
+                        <strong>Comunicación y Reporte:</strong> Enviar estados de producción y alarmas a pantallas táctiles HMI y sistemas SCADA de supervisión de planta.
                     </li>
                 </ul>
 
-                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">3. ¿Cómo Funciona un PLC? El Ciclo de Escaneo (Scan Cycle)</h2>
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    3. Componentes Fundamentales de un Sistema PLC
+                </h2>
+                <p style="margin-bottom: 1.2rem;">Todo sistema de control basado en PLC se compone de los siguientes elementos de hardware:</p>
+                <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Unidad Central de Procesamiento (CPU):</strong> El microprocesador que ejecuta el código del usuario, gestiona la memoria de programa y variables, y coordina las comunicaciones del bus.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Módulos de Entradas (Inputs):</strong> Interfaz que recibe señales de sensores de campo (24 VDC, 120 VAC o 4–20 mA), aislándolas galvánicamente para proteger la CPU. Consulta nuestra <a href="/articulos/que-es-un-sensor-industrial-tipos-y-funcionamiento-guia" style="color: var(--primary-color); text-decoration: underline;">guía de sensores industriales</a>.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Módulos de Salidas (Outputs):</strong> Transmiten órdenes de activación a bobinas de relevador, electroválvulas neumáticas, servodrives y lámparas indicadoras.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Fuente de Alimentación (Power Supply):</strong> Convierte el voltaje de línea (120/220 VAC) a voltajes regulados (24 VDC y 5 VDC) requeridos por la electrónica del controlador.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong style="color: #fff;">Módulos de Red y Comunicación:</strong> Puertos Ethernet/IP, PROFINET, Modbus TCP o DeviceNet para enlazar el PLC con islas de válvulas, robots y computadoras de ingeniería.
+                    </li>
+                </ul>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    4. ¿Cómo Funciona un PLC? El Ciclo de Escaneo (Scan Cycle)
+                </h2>
                 <p style="margin-bottom: 1.2rem;">
-                    A diferencia de una PC convencional que ejecuta tareas orientadas al usuario, un PLC opera en un bucle cerrado determinista y repetitivo llamado <strong>Ciclo de Escaneo (Scan Cycle)</strong>, ejecutado en milisegundos:
+                    A diferencia de una computadora comercial orientada a múltiples tareas en segundo plano, un PLC trabaja en un bucle cerrado continuo y determinista llamado <strong>Ciclo de Escaneo</strong>, repetido miles de veces por segundo:
                 </p>
                 <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
                     <li style="margin-bottom: 1rem;">
-                        <strong style="color: #fff;">1. Lectura de Entradas (Input Scan):</strong> El PLC examina el estado físico de todos los dispositivos de entrada conectados y copia sus valores lógicos (0 o 1) a una región de memoria interna denominada <em>Tabla de Imagen de Entradas</em>.
+                        <strong style="color: #fff;">1. Lectura de Entradas (Input Scan):</strong> El PLC lee el estado físico de todos los sensores conectados y copia sus valores a una tabla de memoria interna (Input Image Table).
                     </li>
                     <li style="margin-bottom: 1rem;">
-                        <strong style="color: #fff;">2. Ejecución del Programa (Program Scan):</strong> La CPU evalúa las instrucciones del programa línea por línea (de arriba a abajo y de izquierda a derecha), utilizando los datos congelados en la tabla de imagen de entradas para calcular los nuevos estados de salida.
+                        <strong style="color: #fff;">2. Ejecución del Programa (Program Scan):</strong> La CPU evalúa las instrucciones del programa de arriba hacia abajo y de izquierda a derecha con base en los datos leídos.
                     </li>
                     <li style="margin-bottom: 1rem;">
-                        <strong style="color: #fff;">3. Actualización de Salidas (Output Scan):</strong> Los resultados calculados se transfieren desde la <em>Tabla de Imagen de Salidas</em> hacia los módulos físicos de salida, energizando o desenergizando los actuadores de la máquina.
+                        <strong style="color: #fff;">3. Actualización de Salidas (Output Scan):</strong> La CPU vuelca el resultado de la lógica hacia los módulos de salida para energizar o apagar los actuadores físicos.
                     </li>
                     <li style="margin-bottom: 1rem;">
-                        <strong style="color: #fff;">4. Tareas de Mantenimiento y Comunicaciones (Housekeeping):</strong> El controlador realiza autodiagnósticos de hardware, verifica el estado de las redes industriales (EtherNet/IP, PROFINET) y responde a solicitudes de monitoreo de pantallas HMI o sistemas SCADA.
+                        <strong style="color: #fff;">4. Tareas de Comunicación y Diagnóstico (Housekeeping):</strong> El procesador verifica la integridad de la memoria, atiende peticiones de pantallas HMI y diagnostica el estado de la red.
                     </li>
                 </ol>
 
-                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">4. Tipos de PLC: Compactos vs. Modulares</h2>
-                <p style="margin-bottom: 1.2rem;">Según su construcción física, los PLCs se clasifican principalmente en dos categorías:</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                    <div style="background: rgba(255,255,255,0.02); border: 1px solid #333; padding: 1.5rem; border-radius: 6px;">
-                        <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fas fa-cube"></i> PLCs Compactos (Monoblock)</h3>
-                        <p style="font-size: 0.93rem; color: var(--text-light);">
-                            Integran CPU, fuente de poder y una cantidad fija de I/O en una sola carcasa. Son ideales para máquinas autónomas pequeñas, transportadores sencillos o sistemas HVAC (ejemplo: Allen-Bradley Micro800, Siemens S7-1200).
-                        </p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.02); border: 1px solid #333; padding: 1.5rem; border-radius: 6px;">
-                        <h3 style="color: var(--secondary-color); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fas fa-cubes"></i> PLCs Modulares</h3>
-                        <p style="font-size: 0.93rem; color: var(--text-light);">
-                            Permiten combinar libremente tarjetas de CPU, módulos de entradas/salidas y tarjetas de red en chasis expandibles. Diseñados para líneas complejas de ensamblaje automotriz y procesos continuos (ejemplo: Allen-Bradley CompactLogix 5380, ControlLogix 5580, Siemens S7-1500).
-                        </p>
-                    </div>
-                </div>
-
-                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">5. Lenguajes de Programación Estándar IEC 61131-3</h2>
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    5. Lenguajes de Programación Estándar IEC 61131-3
+                </h2>
                 <p style="margin-bottom: 1.2rem;">
-                    La norma internacional <strong>IEC 61131-3</strong> define cinco lenguajes de programación estandarizados para sistemas de automatización:
+                    La norma internacional <strong>IEC 61131-3</strong> rige los lenguajes de programación en automatización:
                 </p>
                 <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Diagrama de Escalera (Ladder Diagram - LD):</strong> Representación gráfica basada en contactos y bobinas similar a los esquemáticos de relés. Es el lenguaje dominante en Norteamérica por su facilidad de diagnóstico visual.
+                        <strong style="color: #fff;">Diagrama de Escalera (Ladder Diagram - LD):</strong> El más extendido en México y Norteamérica. Representa contactos abiertos/cerrados y bobinas, ideal para mantenimiento electromecánico.
                     </li>
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Texto Estructurado (Structured Text - ST):</strong> Lenguaje de alto nivel tipo código (similar a Pascal o C). Muy eficiente para algoritmos matemáticos complejos, manejo de cadenas de texto y manipulación de arreglos de datos.
+                        <strong style="color: #fff;">Texto Estructurado (Structured Text - ST):</strong> Lenguaje textual de alto nivel (parecido a C o Pascal), perfecto para cálculos matemáticos, fórmulas complejas y manipulación de datos.
                     </li>
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Diagrama de Bloques de Función (Function Block Diagram - FBD):</strong> Conecta bloques de software predeﬁnidos mediante líneas de señal. Ampliamente utilizado en control de procesos y Lazos PID.
+                        <strong style="color: #fff;">Diagrama de Bloques de Función (Function Block Diagram - FBD):</strong> Lenguaje gráfico donde las señales fluyen a través de bloques prediseñados (filtros, temporizadores, reguladores PID).
                     </li>
                     <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Diagrama de Funciones Secuenciales (Sequential Function Chart - SFC):</strong> Similar a un diagrama de flujo con etapas y transiciones. Excelente para coordinar secuencias de celdas robóticas y estaciones de maquinado.
-                    </li>
-                    <li style="margin-bottom: 0.8rem;">
-                        <strong style="color: #fff;">Lista de Instrucciones (Instruction List - IL):</strong> Lenguaje de bajo nivel estilo ensamblador (actualmente en proceso de retiro en revisiones recientes del estándar).
+                        <strong style="color: #fff;">Diagrama de Funciones Secuenciales (Sequential Function Chart - SFC):</strong> Basado en etapas y transiciones para gobernar procesos secuenciales y celdas robóticas.
                     </li>
                 </ul>
 
-                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">6. El Rol del PLC en SCADA y la Industria 4.0 (IIoT)</h2>
-                <p style="margin-bottom: 1.5rem;">
-                    En las fábricas modernas de la Región Sureste de Coahuila, los PLCs ya no operan de forma aislada. Mediante protocolos de red industrial como EtherNet/IP, PROFINET, Modbus TCP, <strong>OPC UA</strong> y <strong>MQTT</strong>, los controladores modernos transmiten variables críticas en tiempo real hacia plataformas HMI, sistemas SCADA de planta (Ignition, FactoryTalk View) y servidores en la nube.
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    6. Ejemplo Sencillo de Aplicación en Planta
+                </h2>
+                <p style="margin-bottom: 1.2rem;">
+                    Imaginemos el control automático de llenado de un tanque de enfriamiento en una planta automotriz:
                 </p>
-                <p style="margin-bottom: 1.5rem;">
-                    Esta conectividad permite calcular el indicador OEE (Eficiencia Global del Equipo), ejecutar mantenimiento predictivo impulsado por Inteligencia Artificial y garantizar la trazabilidad total del producto.
+                <div style="background: #141414; border: 1px solid #333; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                    <p style="margin-bottom: 8px;"><strong>Dispositivos de Entrada:</strong> Sensor de nivel bajo (I:0/0) y sensor de nivel alto (I:0/1).</p>
+                    <p style="margin-bottom: 8px;"><strong>Dispositivo de Salida:</strong> Bomba de alimentación de agua (O:0/0).</p>
+                    <p style="margin-bottom: 0; color: var(--text-muted); font-size: 0.95rem;">
+                        <strong>Lógica Ladder:</strong> Cuando el sensor detecta nivel bajo, la salida de la bomba se activa y queda autoenclavada (latch) hasta que el sensor de nivel alto se activa, desenergizando la bomba inmediatamente.
+                    </p>
+                </div>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    7. Comparativa: PLC vs. Relevadores vs. PC Industrial (IPC)
+                </h2>
+                <div style="overflow-x: auto; margin-bottom: 25px;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: rgba(0,243,255,0.1); color: var(--primary-color);">
+                                <th style="padding: 12px; border: 1px solid #333; text-align: left;">Criterio</th>
+                                <th style="padding: 12px; border: 1px solid #333; text-align: left;">Tablero de Relevadores</th>
+                                <th style="padding: 12px; border: 1px solid #333; text-align: left;">PLC Industrial</th>
+                                <th style="padding: 12px; border: 1px solid #333; text-align: left;">PC Industrial (IPC)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #222; font-weight: bold;">Flexibilidad</td>
+                                <td style="padding: 10px; border: 1px solid #222;">Nula (requiere recablear)</td>
+                                <td style="padding: 10px; border: 1px solid #222; color: #25d366;">Alta (modificación por software)</td>
+                                <td style="padding: 10px; border: 1px solid #222; color: #25d366;">Muy Alta</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #222; font-weight: bold;">Robustez y Vida Útil</td>
+                                <td style="padding: 10px; border: 1px solid #222;">Desgaste mecánico de contactos</td>
+                                <td style="padding: 10px; border: 1px solid #222; color: #25d366;">Excelente (>15 años)</td>
+                                <td style="padding: 10px; border: 1px solid #222;">Media a Alta</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #222; font-weight: bold;">Tiempo de Respuesta</td>
+                                <td style="padding: 10px; border: 1px solid #222;">10–50 ms por inercia mecánica</td>
+                                <td style="padding: 10px; border: 1px solid #222; color: #25d366;">1–10 ms (Determinista)</td>
+                                <td style="padding: 10px; border: 1px solid #222;">No determinista sin RTOS</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #222; font-weight: bold;">Mantenimiento</td>
+                                <td style="padding: 10px; border: 1px solid #222;">Difícil rastreo de cables</td>
+                                <td style="padding: 10px; border: 1px solid #222; color: #25d366;">Diagnóstico visual en software</td>
+                                <td style="padding: 10px; border: 1px solid #222;">Requiere parches y OS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 25px;">
+                    Para conocer más a fondo esta comparativa, consulta nuestro artículo: <a href="/articulos/plc-vs-pc-industrial-diferencias-guia" style="color: var(--primary-color); text-decoration: underline;">PLC vs. PC Industrial: Diferencias y Cuándo Utilizar Cada Uno</a>.
                 </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    8. Marcas Comunes de PLC en México y Arquitecturas
+                </h2>
+                <p style="margin-bottom: 1.2rem;">
+                    En la industria mexicana predominan dos grandes fabricantes líderes:
+                </p>
+                <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong>Allen-Bradley / Rockwell Automation:</strong> Estándar en la industria automotriz norteamericana instalada en Coahuila. Plataformas: Micro800, CompactLogix 5370/5380 y ControlLogix 5580. Consulta nuestra <a href="/articulos/guia-familias-plc-allen-bradley" style="color: var(--primary-color); text-decoration: underline;">Guía de Familias PLC Allen-Bradley</a>.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        <strong>Siemens:</strong> Amplia presencia en armadoras europeas y maquinaria empaquetadora. Familias SIMATIC S7-1200 y S7-1500 programadas con TIA Portal. Consulta nuestra <a href="/articulos/plc-siemens-s7-1200-guia-programacion-tia-portal" style="color: var(--primary-color); text-decoration: underline;">Guía de Programación Siemens S7-1200</a>.
+                    </li>
+                    <li style="margin-bottom: 0.8rem;">
+                        Otras marcas clave: Schneider Electric (Modicon), Omron (NJ/NX) y Mitsubishi Electric (MELSEC).
+                    </li>
+                </ul>
+                <p style="margin-bottom: 25px;">
+                    Revisa también nuestra clasificación exhaustiva: <a href="/articulos/tipos-de-plc-clasificacion-y-ejemplos-industriales" style="color: var(--primary-color); text-decoration: underline;">Tipos de PLC: Clasificación, Modulares, Compactos y Ejemplos Industriales</a>.
+                </p>
+
+                <h2 style="color: #fff; font-family: var(--font-heading); font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 1rem;">
+                    9. Glosario Rápido de Términos de PLC
+                </h2>
+                <ul style="padding-left: 1.5rem; margin-bottom: 2rem; color: var(--text-muted); font-size: 0.95rem;">
+                    <li><strong>I/O (Entradas/Salidas):</strong> Puntos de conexión física hacia el mundo exterior de la máquina.</li>
+                    <li><strong>Bit:</strong> Unidad mínima de información lógica (0 = falso/desenergizado, 1 = verdadero/energizado).</li>
+                    <li><strong>Tag o Variable:</strong> Nombre alfanumérico asignado a una dirección de memoria en controladores modernos.</li>
+                    <li><strong>Scan Time:</strong> Tiempo que tarda la CPU en completar una vuelta de su ciclo de escaneo (típicamente 1 a 20 ms).</li>
+                    <li><strong>Watchdog Timer:</strong> Mecanismo de seguridad de hardware que detiene el controlador si el ciclo de escaneo se traba.</li>
+                </ul>
 
                 <!-- Bloque de Diferenciadores Robologix Automation -->
                 <div style="background: rgba(0, 243, 255, 0.03); border: 1px solid #282828; border-radius: 8px; padding: 1.8rem; margin: 2.5rem 0;">
                     <h3 style="color: var(--primary-color); font-family: var(--font-heading); font-size: 1.25rem; margin-top: 0; margin-bottom: 1rem;">
-                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i> ¿Por qué elegir a Robologix Automation para tu proyecto de PLC?
+                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i> Servicios y Capacitación Robologix Automation
                     </h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
-                        <div>
-                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-microchip" style="color: var(--primary-color); margin-right: 5px;"></i> Dominio Multimarca</strong>
-                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Especialistas certificados en Allen-Bradley (Studio 5000) y Siemens (TIA Portal).</p>
-                        </div>
-                        <div>
-                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-code-branch" style="color: var(--secondary-color); margin-right: 5px;"></i> Estándar IEC 61131-3</strong>
-                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Desarrollo de código estructurado, limpio y 100% documentado para facilitar diagnósticos.</p>
-                        </div>
-                        <div>
-                            <strong style="color: #fff; display: block; font-size: 0.95rem; margin-bottom: 0.3rem;"><i class="fas fa-clock" style="color: var(--primary-color); margin-right: 5px;"></i> Atención Inmediata</strong>
-                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Soporte presencial en Saltillo, Ramos Arizpe y Derramadero en menos de 2 horas.</p>
-                        </div>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 15px;">
+                        ¿Tu planta requiere soporte en línea de producción o deseas profesionalizar a tu equipo técnico?
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="/programacion-plc-saltillo" class="btn-primary" style="font-size: 0.85rem;">
+                            <i class="fas fa-code"></i> Servicios de Programación PLC en Saltillo
+                        </a>
+                        <a href="/cursos-de-plc-y-robotica-en-saltillo" class="btn-primary" style="font-size: 0.85rem; border-color: var(--secondary-color);">
+                            <i class="fas fa-graduation-cap"></i> Cursos de PLC y Robótica con DC-3
+                        </a>
                     </div>
                 </div>
 
-                <!-- Bloque de Artículos Relacionados -->
-                <div style="border-top: 1px solid #222; padding-top: 1.8rem; margin-top: 2rem;">
-                    <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 1rem;">Artículos Técnicos Relacionados:</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem;">
-                        <li><a href="/programacion-plc-saltillo" style="color: var(--primary-color); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Programación de PLC en Saltillo</a></li>
-                        <li><a href="/articulos/diferencia-entre-plc-y-dcs-guia-automatizacion" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Diferencias entre PLC y DCS</a></li>
-                        <li><a href="/articulos/plc-vs-pc-industrial-diferencias-guia" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> PLC vs PC Industrial</a></li>
-                        <li><a href="/articulos/optimizacion-de-plc-en-saltillo-arquitectura-y-eficiencia-oee" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-angle-right"></i> Optimización de PLC y Eficiencia OEE</a></li>
-                    </ul>
+                <!-- Preguntas Frecuentes FAQ -->
+                <div style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 25px; margin-top: 30px;">
+                    <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.3rem; margin-bottom: 20px;">
+                        Preguntas Frecuentes sobre Controladores Lógicos Programables
+                    </h2>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <h3 style="color: var(--primary-color); font-size: 1.05rem; margin-bottom: 6px;">¿Cuál es el significado de PLC y su definición formal?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.6;">
+                            PLC significa <em>Programmable Logic Controller</em>. Su definición oficial es una computadora industrial reforzada para gobernar en tiempo real máquinas y procesos electromecánicos en entornos fabriles.
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 18px;">
+                        <h3 style="color: var(--primary-color); font-size: 1.05rem; margin-bottom: 6px;">¿Cuál es la función principal de un PLC en la industria?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.6;">
+                            Su función principal es leer señales de sensores, procesar una lógica programada en software y activar elementos finales de control (motores, cilindros, válvulas) de forma cíclica y segura.
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 18px;">
+                        <h3 style="color: var(--primary-color); font-size: 1.05rem; margin-bottom: 6px;">¿Cómo funciona el ciclo de escaneo de un PLC?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.6;">
+                            Ejecuta cuatro fases consecutivas: 1) lectura de entradas físicas, 2) ejecución secuencial de la lógica programada, 3) escritura de resultados a los módulos de salida física y 4) diagnósticos de comunicación.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 style="color: var(--primary-color); font-size: 1.05rem; margin-bottom: 6px;">¿Dónde puedo aprender programación de PLC práctica en Saltillo?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.6;">
+                            En Robologix Automation ofrecemos capacitación práctica presencial en Saltillo e in-company en Allen-Bradley Studio 5000 y Siemens TIA Portal con entrega de constancia oficial STPS DC-3. Conoce las fechas en <a href="/cursos-de-plc-y-robotica-en-saltillo" style="color: var(--primary-color); text-decoration: underline;">Cursos de PLC en Saltillo</a>.
+                        </p>
+                    </div>
                 </div>
 
                 <div style="background: linear-gradient(145deg, #161616 0%, #202020 100%); border: 1px solid var(--primary-color); padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center; box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);">
