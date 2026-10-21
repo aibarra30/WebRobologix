@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="rbl-chat-badge">1</span>
             💬
           </div>
-          <div class="rbl-chat-modal" id="rblChatModal">
+          <div class="rbl-chat-modal" id="rblChatModal" style="display: none;">
             <div class="rbl-chat-header">
               <div class="rbl-chat-title"><span style="color:#00E5FF;">⚡ Robologix</span> Automation</div>
               <span style="cursor:pointer;color:#8D99AE;font-size:20px;" onclick="toggleRblChat()">&times;</span>
