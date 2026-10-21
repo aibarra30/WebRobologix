@@ -472,7 +472,7 @@
         .hero p{font-size:1.2rem;margin-bottom:2rem;color:var(--text-muted)}
         .hero-buttons{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}
         .btn-primary{background:transparent;border:2px solid var(--primary-color);color:#fff;padding:.8rem 2rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:2px}
-        .btn-whatsapp{background-color:#25d366;border:2px solid #1a9e4a;color:#fff;padding:.8rem 2rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:2px;display:flex;align-items:center;gap:.5rem}
+        .btn-whatsapp{background-color:#138241;border:2px solid #0f6a35;color:#fff;padding:.8rem 2rem;font-family:var(--font-heading);text-decoration:none;font-weight:700;text-transform:uppercase;transition:all .3s;border-radius:2px;display:flex;align-items:center;gap:.5rem}
         /* FontAwesome swap override: visible text before fonts load */
         @font-face{font-family:'Font Awesome 6 Free';font-display:swap}
         @font-face{font-family:'Font Awesome 6 Brands';font-display:swap}
@@ -521,9 +521,9 @@
     <!-- Preconnect & Non-Blocking Font Delivery (Eliminates Render-Blocking CSS) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=optional">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=optional" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=optional"></noscript>
 
     <!-- Non-Blocking styles.css (elimina 185ms de ruta crítica) -->
     <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -559,6 +559,7 @@
             </div>
         </nav>
     </header>
+    <main id="main-content">
 
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
@@ -1185,6 +1186,8 @@
         </div>
     </section>
 
+    </main>
+
     <footer>
         <div class="footer-content">
             <div class="footer-links" style="margin-bottom: 1.2rem; font-family: var(--font-heading); font-size: 0.88rem; display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
@@ -1202,7 +1205,7 @@
                 <a href="https://www.tiktok.com/@plcyrobotica" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 <a href="https://www.facebook.com/people/Robologix-Automation/61581206799041/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
-            <p>&copy; 2026 Robologix Automation. Todos los derechos reservados. | <a href="programacion-plc-saltillo.html" style="color: var(--text-muted); text-decoration: underline;">Programación de PLC en Saltillo y Ramos Arizpe</a></p>
+            <p style="color: #cbd5e1; font-size: 0.9rem;">&copy; 2026 Robologix Automation. Todos los derechos reservados. | <a href="programacion-plc-saltillo.html" style="color: #00f3ff; text-decoration: underline;">Programación de PLC en Saltillo y Ramos Arizpe</a></p>
         </div>
     </footer>
 

@@ -197,8 +197,8 @@ header {
 }
 
 .btn-whatsapp {
-    background-color: #25d366;
-    border: 2px solid #25d366;
+    background-color: #138241;
+    border: 2px solid #0f6a35;
     color: #fff;
     padding: 0.8rem 2rem;
     font-family: var(--font-heading);
@@ -1100,7 +1100,7 @@ header {
 .btn-whatsapp-large {
     display: inline-flex;
     margin-top: 1rem;
-    background-color: #25d366;
+    background-color: #138241;
     color: white;
     padding: 1rem 2rem;
     border-radius: 4px;
@@ -2035,4 +2035,4 @@ footer p {
 
 
 
-
+
