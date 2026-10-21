@@ -1,0 +1,13 @@
+# Redirecciones 301 permanentes de servidor (Netlify)
+/podcast                                              /podcast/                                                301!
+/refacciones.html                                     /refacciones                                             301!
+/integracion-celdas-roboticas-saltillo.html          /integracion-celdas-roboticas-saltillo                   301!
+/podcast-y-articulos.html                             /podcast-y-articulos                                     301!
+/sensores-y-refacciones-industriales-saltillo.html    /sensores-y-refacciones-industriales-saltillo             301!
+/programacion-plc-saltillo.html                       /programacion-plc-saltillo                               301!
+/instalacion-de-maquinaria-industrial-saltillo.html   /instalacion-de-maquinaria-industrial-saltillo            301!
+/cursos-de-plc-y-robotica-en-saltillo.html            /cursos-de-plc-y-robotica-en-saltillo                    301!
+/curso-plc-saltillo.html                              /curso-plc-saltillo                                      301!
+/curso-robot-fanuc-saltillo.html                      /curso-robot-fanuc-saltillo                              301!
+/automatizacion-industrial-y-plc-en-torreon.html      /automatizacion-industrial-y-plc-en-torreon               301!
+/podcast.html                                         /podcast/                                                301!
